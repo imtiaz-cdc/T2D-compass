@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-12",
+  "application": "T2D Compass",
+  "version": "0.4.0",
+  "scope": "Clean submission source checkout; local tests and public ClinicalTrials.gov tool retrieval. No deployed app or real-model requests.",
+  "tests": {
+    "passed": 294,
+    "failed": 0,
+    "errors": 0,
+    "warnings": 2,
+    "pytest_elapsed_seconds": 7.08,
+    "xml_report": "tests.xml",
+    "public_report_redactions": [
+      "Test-machine hostname removed; original retained locally outside submission."
+    ]
+  },
+  "lint": {
+    "status": "passed",
+    "report": "ruff.txt",
+    "checked": [
+      "src",
+      "tests",
+      "main.py",
+      "scripts/build_bundles.py",
+      "scripts/collect_type2diabetes_data.py"
+    ]
+  },
+  "snapshot_mcp": {
+    "status": "passed",
+    "calls": 4,
+    "report": "snapshot-tool-replay.json"
+  },
+  "live_mcp": {
+    "status": "passed",
+    "calls": 4,
+    "median_tool_seconds": 0.078,
+    "slowest_tool_seconds": 0.469,
+    "report": "live-tool-replay.json"
+  },
+  "http_mcp": {
+    "status": "passed",
+    "report": "http-transport.json"
+  },
+  "python": "3.12.14",
+  "installed_packages": {
+    "fastmcp": "4.0.11",
+    "mcp": "2.3.0",
+    "httpx": "0.28.1",
+    "pydantic": "2.13.5",
+    "pydantic-settings": "2.15.0",
+    "pytest": "9.1.1",
+    "ruff": "0.16.10"
+  },
+  "secret_signature_scan": {
+    "files_checked": 96,
+    "patterns": [
+      "github_token",
+      "databricks_token",
+      "private_key",
+      "openai_token"
+    ],
+    "matches": [],
+    "limitation": "Heuristic signature scan, not a guarantee of absence of secrets. Generated package hashes matched reviewed source; final documentation may change after this check."
+  },
+  "reference_accuracy": null,
+  "real_model_scenarios": "not run",
+  "clinical_review": "pending",
+  "deployed_authentication": "not tested in this run",
+  "generated_package": {
+    "status": "passed",
+    "report": "package-smoke.json",
+    "checks": [
+      "three file hashes",
+      "isolated launcher startup",
+      "browser HTML/CSS/JS",
+      "health",
+      "MCP tool discovery",
+      "optional assistant unavailable without credentials"
+    ]
+  },
+  "notebook_placeholder_update": {
+    "status": "passed",
+    "tests": 30,
+    "elapsed_seconds": 1.72,
+    "change": "Legacy notebook app URL and output directory replaced with generic operator placeholders."
+  },
+  "test_warnings": [
+    "httpx2 raw-content argument deprecation in test input",
+    "FastMCP Tool.inputSchema accessor deprecation; tests passed"
+  ]
+}

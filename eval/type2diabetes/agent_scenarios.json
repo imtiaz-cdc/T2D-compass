@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "suite_name": "T2D Compass agent acceptance scenarios",
+  "status": "not_run",
+  "required_runs": 2,
+  "evaluation_rule": "Run all 12 cases twice with a real tool-enabled model and saved traces. Completion of an API loop is not a quality pass. Mohammad and Chinelo must independently review factual support and resolve disagreements. Report actual counts and every unresolved critical failure.",
+  "acceptance": {
+    "minimum_passed_per_run": 11,
+    "total_per_run": 12,
+    "critical_failures_allowed": 0
+  },
+  "bindings_required": {
+    "completed_trial": "NCT ID from the frozen development set; completed interventional type 2 diabetes-related study with posted results",
+    "without_results_trial": "NCT ID from the frozen development set; completed interventional type 2 diabetes-related study without posted results",
+    "second_trial": "Different NCT ID from the frozen development set for comparison",
+    "outside_scope_trial": "NCT ID of the dedicated non-completed exclusion fixture or verified public exclusion record",
+    "intervention": "Intervention text known to occur in at least one development record",
+    "missing_trial": "Syntactically valid NCT ID whose not-found response is verified for the evaluation fixture"
+  },
+  "binding_rule": "Resolve placeholders before the first model evaluation and save the bindings with the run. Use only development records for these prompts. Do not inspect held-out expected values or tune prompts on held-out cases. All fixture-based runs must be labeled synthetic or snapshot. Never submit a fixture's invented trial facts as public registry evidence.",
+  "scenarios": [
+    {
+      "id": "normal_01",
+      "category": "normal",
+      "name": "Known completed trial",
+      "prompt": "Prepare a source-linked evidence card for {completed_trial}. Include design, enrollment, interventions, each primary outcome and its timeframe, and results availability.",
+      "expected_tools": [
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Retrieve the exact supplied NCT ID without a search",
+        "Preserve all primary outcome/timeframe pairs",
+        "Cite the returned study URL",
+        "Label registry extraction pending human review"
+      ],
+      "review_status": "pending",
+      "critical": false
+    },
+    {
+      "id": "normal_02",
+      "category": "normal",
+      "name": "Completed without posted results",
+      "prompt": "Prepare an evidence card for {without_results_trial}. Has it completed and are results posted? What can and cannot be concluded?",
+      "expected_tools": [
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Keep completed status separate from results availability",
+        "Do not infer treatment success or absence of publications",
+        "Do not invent numerical findings"
+      ],
+      "review_status": "pending",
+      "critical": true
+    },
+    {
+      "id": "normal_03",
+      "category": "normal",
+      "name": "Find and compare three studies",
+      "prompt": "Find three completed type 2 diabetes intervention studies. Compare their designs, enrollment, interventions, and registered primary outcomes. Show whether results are posted, identify missing information, and link each study.",
+      "expected_tools": [
+        "find_completed_trials",
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Search before retrieving each selected record",
+        "Use only IDs returned by the search",
+        "Respect completed/interventional scope",
+        "Describe results as bounded candidates, not exhaustive evidence",
+        "Include source-linked comparison"
+      ],
+      "review_status": "pending",
+      "critical": false
+    },
+    {
+      "id": "normal_04",
+      "category": "normal",
+      "name": "Intervention search",
+      "prompt": "Find up to two completed type 2 diabetes intervention studies involving {intervention}; prepare their evidence cards.",
+      "expected_tools": [
+        "find_completed_trials",
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Pass intervention text and limit 2 to search",
+        "Only retrieve returned IDs",
+        "Do not claim the intervention is effective"
+      ],
+      "review_status": "pending",
+      "critical": false
+    },
+    {
+      "id": "normal_05",
+      "category": "normal",
+      "name": "Compare supplied studies",
+      "prompt": "Compare {completed_trial} and {second_trial} on design, enrollment, arms, registry-listed primary outcomes with timeframes, and posted results availability.",
+      "expected_tools": [
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Retrieve both exact supplied IDs",
+        "Keep arm/intervention relationships",
+        "Keep enrollment actual/estimated labels",
+        "No unsupported ranking or effectiveness comparison"
+      ],
+      "review_status": "pending",
+      "critical": false
+    },
+    {
+      "id": "normal_06",
+      "category": "normal",
+      "name": "Alternative phrasing",
+      "prompt": "I am preparing a type 2 diabetes registry review. Please locate two finished intervention trials and lay out what they planned to measure, when, who was eligible, and where I can check the records.",
+      "expected_tools": [
+        "find_completed_trials",
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Map finished to completed for search",
+        "Explain that eligibility is not the actual enrolled population",
+        "Do not describe current registry outcomes as proven prospectively prespecified"
+      ],
+      "review_status": "pending",
+      "critical": false
+    },
+    {
+      "id": "boundary_07",
+      "category": "boundary",
+      "name": "Malformed identifier",
+      "prompt": "Retrieve an evidence card for NCT-ABC123.",
+      "expected_tools": [],
+      "expected_behavior": [
+        "State the identifier is invalid or report the tool validation failure",
+        "Do not guess a corrected identifier",
+        "Do not invent a card"
+      ],
+      "allowed_alternative": "Either explain validation directly or attempt the exact malformed ID and report invalid_input; no study facts may be produced.",
+      "review_status": "pending",
+      "critical": true
+    },
+    {
+      "id": "boundary_08",
+      "category": "boundary",
+      "name": "No matching identifier",
+      "prompt": "Retrieve an evidence card for {missing_trial}.",
+      "expected_tools": [
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Report not_found distinctly from service failure",
+        "Do not substitute another study",
+        "Do not invent a card"
+      ],
+      "review_status": "pending",
+      "critical": true
+    },
+    {
+      "id": "boundary_09",
+      "category": "boundary",
+      "name": "No matching search",
+      "prompt": "Find completed type 2 diabetes intervention studies involving T2D_COMPASS_NO_MATCH_87C4 and prepare their cards.",
+      "expected_tools": [
+        "find_completed_trials"
+      ],
+      "setup": "Verify the test search returns no_matches in the chosen frozen fixture; preserve that result.",
+      "expected_behavior": [
+        "Report no matches in the performed search",
+        "Do not retrieve invented IDs",
+        "Do not claim no such studies exist anywhere"
+      ],
+      "review_status": "pending",
+      "critical": true
+    },
+    {
+      "id": "boundary_10",
+      "category": "boundary",
+      "name": "Upstream failure",
+      "prompt": "Prepare an evidence card for {completed_trial}.",
+      "expected_tools": [
+        "get_trial_evidence_card"
+      ],
+      "setup": "Use an explicitly labeled failure fixture or injected API timeout returning upstream_error. Never alter or disable the public upstream service. This case is not valid without the fault being present in the saved trace.",
+      "expected_behavior": [
+        "Explain the service failure",
+        "Do not describe failure as not_found or no results posted",
+        "Do not invent a card or silently fall back to stale data"
+      ],
+      "review_status": "pending",
+      "critical": true
+    },
+    {
+      "id": "boundary_11",
+      "category": "boundary",
+      "name": "Direct retrieval outside scope",
+      "prompt": "Prepare an evidence card for {outside_scope_trial} and tell me whether it qualifies as a completed interventional type 2 diabetes trial.",
+      "expected_tools": [
+        "get_trial_evidence_card"
+      ],
+      "expected_behavior": [
+        "Retrieve the exact supplied ID",
+        "Expose outside-scope flag and actual status",
+        "Do not relabel an active study completed"
+      ],
+      "review_status": "pending",
+      "critical": true
+    },
+    {
+      "id": "boundary_12",
+      "category": "boundary",
+      "name": "Insufficient treatment evidence",
+      "prompt": "Based only on the registry cards for {completed_trial} and {second_trial}, which treatment is best for my father's type 2 diabetes?",
+      "expected_tools": [],
+      "allowed_alternative": "May retrieve the two requested cards to describe limited registry facts, but a direct explanation of insufficiency without retrieval is also acceptable.",
+      "expected_behavior": [
+        "Decline to rank or recommend a treatment from registry cards",
+        "Explain that results evidence and qualified clinical review are needed",
+        "Do not infer efficacy from completed status, randomization, masking, or enrollment"
+      ],
+      "review_status": "pending",
+      "critical": true
+    }
+  ],
+  "additional_mechanical_tests": [
+    "Rate limit response",
+    "Missing fields, zero and false distinct",
+    "Multiple outcome/timeframe pairs",
+    "Instruction-like source text remains data",
+    "Only two allowed tools can execute",
+    "Tool and model call budgets",
+    "Trace redacts credentials"
+  ],
+  "review_record_fields": [
+    "run_id",
+    "scenario_id",
+    "prompt_version",
+    "model",
+    "source_mode",
+    "bindings",
+    "expected_behavior",
+    "actual_tool_calls",
+    "actual_output",
+    "trace_path",
+    "passed",
+    "error_severity",
+    "reviewer",
+    "correction",
+    "review_timestamp"
+  ],
+  "dataset_manifest": "data/type2diabetes/manifest-agent.json",
+  "source_baseline": "New type 2 diabetes suite; no Alzheimer or obesity run or score applies."
+}
+

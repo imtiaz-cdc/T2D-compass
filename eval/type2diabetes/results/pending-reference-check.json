@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-10-28T16:58:46.238270Z",
+  "type": "independent_reference_comparison",
+  "heldout_included": false,
+  "records": [
+    {
+      "nct_id": "NCT03244800",
+      "status": "pending_review"
+    },
+    {
+      "nct_id": "NCT05790681",
+      "status": "pending_review"
+    },
+    {
+      "nct_id": "NCT04214600",
+      "status": "pending_review"
+    },
+    {
+      "nct_id": "NCT01596244",
+      "status": "pending_review"
+    },
+    {
+      "nct_id": "NCT01614769",
+      "status": "pending_review"
+    },
+    {
+      "nct_id": "NCT02811055",
+      "status": "pending_review"
+    }
+  ],
+  "compared_fields": 0,
+  "correct_fields": 0,
+  "passed_cards": 0,
+  "compared_cards": 0,
+  "pending_cards": 6,
+  "critical_errors": [],
+  "clinical_validation": "requires human interpretation review",
+  "status": "pending_review",
+  "field_accuracy": null
+}

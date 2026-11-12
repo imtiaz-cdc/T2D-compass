@@ -1,0 +1,1421 @@
+{
+  "started_at": "2026-11-12T14:02:35.506515Z",
+  "verification_type": "actual_mcp_tool_replay",
+  "source_mode": "live",
+  "model_used": false,
+  "clinical_review": "pending Mohammad",
+  "reference_review": "pending independent annotation",
+  "heldout_evaluation": "not_run",
+  "calls": [
+    {
+      "tool": "find_completed_trials",
+      "arguments": {
+        "limit": 3
+      },
+      "duration_seconds": 0.469,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "criteria": {
+          "condition": "Type 2 Diabetes",
+          "condition_label_filter": "explicit_type2_diabetes_labels",
+          "status": "COMPLETED",
+          "study_type": "INTERVENTIONAL",
+          "intervention": null,
+          "limit": 3,
+          "api_parameters": {
+            "query.cond": "Type 2 Diabetes",
+            "filter.overallStatus": "COMPLETED",
+            "filter.advanced": "AREA[StudyType]INTERVENTIONAL",
+            "format": "json",
+            "pageSize": 20
+          }
+        },
+        "coverage": "bounded_candidates",
+        "search_semantics": "registry_query_and_condition_labels",
+        "retrieved_at": "2026-11-12T14:02:35.630334Z",
+        "studies": [
+          {
+            "nct_id": "NCT01931982",
+            "title": "Effect of Glucagon-like Peptide 1 (GLP-1) on Microvascular Myocardial Function in Patients With Type 2 Diabetes.",
+            "conditions": [
+              "Type 2 Diabetes",
+              "Microvascular Dysfunction"
+            ],
+            "overall_status": "COMPLETED",
+            "study_type": "INTERVENTIONAL",
+            "has_results": false,
+            "results_status": "not_posted",
+            "study_url": "https://clinicaltrials.gov/study/NCT01931982"
+          },
+          {
+            "nct_id": "NCT01115088",
+            "title": "Effects of Stevia on Satiety and Eating Attitudes in Healthy, Overweight and Obese Adults",
+            "conditions": [
+              "Obesity",
+              "Type 2 Diabetes"
+            ],
+            "overall_status": "COMPLETED",
+            "study_type": "INTERVENTIONAL",
+            "has_results": false,
+            "results_status": "not_posted",
+            "study_url": "https://clinicaltrials.gov/study/NCT01115088"
+          },
+          {
+            "nct_id": "NCT00111540",
+            "title": "Study to Examine the Effect on Glucose Control and Safety/Tolerability of Exenatide Given Two Times a Day to Subjects With Type 2 Diabetes",
+            "conditions": [
+              "Diabetes Mellitus, Type 2"
+            ],
+            "overall_status": "COMPLETED",
+            "study_type": "INTERVENTIONAL",
+            "has_results": false,
+            "results_status": "not_posted",
+            "study_url": "https://clinicaltrials.gov/study/NCT00111540"
+          }
+        ],
+        "returned_count": 3,
+        "pages_fetched": 1,
+        "records_examined": 4,
+        "excluded_condition_count": 1,
+        "search_incomplete": true,
+        "review_flags": [
+          {
+            "code": "NOT_AN_EXHAUSTIVE_SEARCH",
+            "message": "These are candidate records for review, not an exhaustive evidence search."
+          },
+          {
+            "code": "CONSERVATIVE_CONDITION_FILTER",
+            "message": "Candidates must have an explicit supported type 2 diabetes condition label. This conservative screen may miss relevant studies labeled only as diabetes or described in other fields. A matching label is not a participant diagnosis."
+          },
+          {
+            "code": "CONDITION_LABELS_EXCLUDED",
+            "message": "Excluded 1 examined candidate records without a supported affirmative type 2 diabetes condition label. Review broad or ambiguous records separately if needed."
+          },
+          {
+            "code": "SEARCH_INCOMPLETE",
+            "message": "Search stopped at a requested or retrieval limit, or encountered an upstream problem. Additional matching records may exist."
+          }
+        ]
+      }
+    },
+    {
+      "tool": "get_trial_evidence_card",
+      "arguments": {
+        "nct_id": "NCT01931982"
+      },
+      "duration_seconds": 0.078,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "card": {
+          "schema_version": "1.0",
+          "label": "Registry extraction pending human review",
+          "source_mode": "live",
+          "identity": {
+            "nct_id": "NCT01931982",
+            "title": "Effect of Glucagon-like Peptide 1 (GLP-1) on Microvascular Myocardial Function in Patients With Type 2 Diabetes.",
+            "official_title": "Effect of GLP-1 on Microvascular Myocardial Function in Patients With Type 2",
+            "conditions": [
+              "Type 2 Diabetes",
+              "Microvascular Dysfunction"
+            ],
+            "study_url": "https://clinicaltrials.gov/study/NCT01931982"
+          },
+          "status": {
+            "study_type": "INTERVENTIONAL",
+            "overall_status": "COMPLETED",
+            "completion_date": "2014-04",
+            "completion_date_type": "ACTUAL"
+          },
+          "design": {
+            "phases": [
+              "PHASE4"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "CROSSOVER",
+            "masking": "SINGLE",
+            "who_masked": [
+              "INVESTIGATOR"
+            ]
+          },
+          "enrollment": {
+            "count": 20,
+            "type": "ACTUAL"
+          },
+          "population": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Type 2 diabetes on monotherapy with metformin or sulfonylurea or combination therapy of metformin and sulfonylurea.\n* Age: 25-75 years\n* BMI\\>25 kg/m2\n* HbA1c 6,0-10 %\n\nExclusion Criteria:\n\n* Current treatment with insulin or Dipeptidyl peptidase IV inhibitor.\n* Haemoglobin \\< 6.5 mmol/l\n* Documented significant stenosis of the left anterior descending artery (LAD) at coronary angiography or CT-angiography or regional dysfunction documented during dipyridamol stress-echocardiography. If stress test at baseline shows significant stenosis the patient will be excluded from the study.\n* Allergy towards victoza ® (liraglutide ), Dipyridamol, Nitroglycerin or rescue medicine: Theophyllin\n* Pregnancy\n* Severe asthma\n* Active cancer\n* Severe co-morbidity with limited life-expectancy\n* Estimated glomerular filtration rate (eGFR) \\<60 (measured at baseline)\n* Severe hepatic co-morbidity\n* Chronic alcohol abuse\n* Heart failure with a left ventricular ejection fraction \\</= 45%\n* Atrial fibrillation\n* Chronic or previous acute pancreatitis\n* Inflammatory bowel disease.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "25 Years",
+            "maximum_age": "75 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "arms": [
+            {
+              "label": "victoza",
+              "type": "ACTIVE_COMPARATOR",
+              "description": "The study is a cross over study. Patients randomised to start with victoza are treated with victoza for 10 weeks. After a wash out period of 2 weeks they cross over to 10 weeks of no treatment",
+              "intervention_names": [
+                "Drug: Victoza"
+              ]
+            },
+            {
+              "label": "No treatment",
+              "type": "NO_INTERVENTION",
+              "description": null,
+              "intervention_names": null
+            }
+          ],
+          "interventions": [
+            {
+              "name": "Victoza",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": [
+                "victoza"
+              ],
+              "other_names": null
+            }
+          ],
+          "primary_outcomes": [
+            {
+              "measure": "Change in coronary flow reserve (CFR)",
+              "description": "CFR can be reliably assessed non-invasively by trans-thoracic Doppler flow echocardiography of the left anterior descending artery with a success rate of over 90% even in an obese population with a relative poor acoustic window. CFR is the ratio of flow during stress to during rest.",
+              "time_frame": "CFR is measured at baseline and after 10 weeks of intervention"
+            }
+          ],
+          "results": {
+            "has_results": false,
+            "status": "not_posted",
+            "url": "https://clinicaltrials.gov/study/NCT01931982"
+          },
+          "provenance": {
+            "retrieved_at": "2026-11-12T14:02:36.178144Z",
+            "registry_update_date": "2014-06-25",
+            "source_url": "https://clinicaltrials.gov/study/NCT01931982",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01931982",
+            "snapshot_sha256": null,
+            "fields": {
+              "$.identity.nct_id": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT01931982"
+              },
+              "$.identity.study_url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT01931982",
+                "derivation": "Canonical study URL from validated NCT ID."
+              },
+              "$.identity.title": {
+                "source_path": "$.protocolSection.identificationModule.briefTitle",
+                "source_value": "Effect of Glucagon-like Peptide 1 (GLP-1) on Microvascular Myocardial Function in Patients With Type 2 Diabetes."
+              },
+              "$.identity.official_title": {
+                "source_path": "$.protocolSection.identificationModule.officialTitle",
+                "source_value": "Effect of GLP-1 on Microvascular Myocardial Function in Patients With Type 2"
+              },
+              "$.identity.conditions": {
+                "source_path": "$.protocolSection.conditionsModule.conditions",
+                "source_value": [
+                  "Type 2 Diabetes",
+                  "Microvascular Dysfunction"
+                ]
+              },
+              "$.identity.conditions[0]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[0]",
+                "source_value": "Type 2 Diabetes"
+              },
+              "$.identity.conditions[1]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[1]",
+                "source_value": "Microvascular Dysfunction"
+              },
+              "$.status.study_type": {
+                "source_path": "$.protocolSection.designModule.studyType",
+                "source_value": "INTERVENTIONAL"
+              },
+              "$.status.overall_status": {
+                "source_path": "$.protocolSection.statusModule.overallStatus",
+                "source_value": "COMPLETED"
+              },
+              "$.status.completion_date": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.date",
+                "source_value": "2014-04"
+              },
+              "$.status.completion_date_type": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.type",
+                "source_value": "ACTUAL"
+              },
+              "$.design.phases": {
+                "source_path": "$.protocolSection.designModule.phases",
+                "source_value": [
+                  "PHASE4"
+                ]
+              },
+              "$.design.phases[0]": {
+                "source_path": "$.protocolSection.designModule.phases[0]",
+                "source_value": "PHASE4"
+              },
+              "$.design.allocation": {
+                "source_path": "$.protocolSection.designModule.designInfo.allocation",
+                "source_value": "RANDOMIZED"
+              },
+              "$.design.intervention_model": {
+                "source_path": "$.protocolSection.designModule.designInfo.interventionModel",
+                "source_value": "CROSSOVER"
+              },
+              "$.design.masking": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.masking",
+                "source_value": "SINGLE"
+              },
+              "$.design.who_masked": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked",
+                "source_value": [
+                  "INVESTIGATOR"
+                ]
+              },
+              "$.design.who_masked[0]": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked[0]",
+                "source_value": "INVESTIGATOR"
+              },
+              "$.enrollment.count": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.count",
+                "source_value": 20
+              },
+              "$.enrollment.type": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.type",
+                "source_value": "ACTUAL"
+              },
+              "$.population.eligibility_criteria": {
+                "source_path": "$.protocolSection.eligibilityModule.eligibilityCriteria",
+                "source_value": "Inclusion Criteria:\n\n* Type 2 diabetes on monotherapy with metformin or sulfonylurea or combination therapy of metformin and sulfonylurea.\n* Age: 25-75 years\n* BMI\\>25 kg/m2\n* HbA1c 6,0-10 %\n\nExclusion Criteria:\n\n* Current treatment with insulin or Dipeptidyl peptidase IV inhibitor.\n* Haemoglobin \\< 6.5 mmol/l\n* Documented significant stenosis of the left anterior descending artery (LAD) at coronary angiography or CT-angiography or regional dysfunction documented during dipyridamol stress-echocardiography. If stress test at baseline shows significant stenosis the patient will be excluded from the study.\n* Allergy towards victoza ® (liraglutide ), Dipyridamol, Nitroglycerin or rescue medicine: Theophyllin\n* Pregnancy\n* Severe asthma\n* Active cancer\n* Severe co-morbidity with limited life-expectancy\n* Estimated glomerular filtration rate (eGFR) \\<60 (measured at baseline)\n* Severe hepatic co-morbidity\n* Chronic alcohol abuse\n* Heart failure with a left ventricular ejection fraction \\</= 45%\n* Atrial fibrillation\n* Chronic or previous acute pancreatitis\n* Inflammatory bowel disease."
+              },
+              "$.population.healthy_volunteers": {
+                "source_path": "$.protocolSection.eligibilityModule.healthyVolunteers",
+                "source_value": false
+              },
+              "$.population.sex": {
+                "source_path": "$.protocolSection.eligibilityModule.sex",
+                "source_value": "ALL"
+              },
+              "$.population.minimum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.minimumAge",
+                "source_value": "25 Years"
+              },
+              "$.population.maximum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.maximumAge",
+                "source_value": "75 Years"
+              },
+              "$.arms": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups",
+                "source_value": [
+                  {
+                    "label": "victoza",
+                    "type": "ACTIVE_COMPARATOR",
+                    "description": "The study is a cross over study. Patients randomised to start with victoza are treated with victoza for 10 weeks. After a wash out period of 2 weeks they cross over to 10 weeks of no treatment",
+                    "interventionNames": [
+                      "Drug: Victoza"
+                    ]
+                  },
+                  {
+                    "label": "No treatment",
+                    "type": "NO_INTERVENTION"
+                  }
+                ]
+              },
+              "$.arms[0].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].label",
+                "source_value": "victoza"
+              },
+              "$.arms[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].type",
+                "source_value": "ACTIVE_COMPARATOR"
+              },
+              "$.arms[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].description",
+                "source_value": "The study is a cross over study. Patients randomised to start with victoza are treated with victoza for 10 weeks. After a wash out period of 2 weeks they cross over to 10 weeks of no treatment"
+              },
+              "$.arms[0].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames",
+                "source_value": [
+                  "Drug: Victoza"
+                ]
+              },
+              "$.arms[0].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames[0]",
+                "source_value": "Drug: Victoza"
+              },
+              "$.arms[1].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].label",
+                "source_value": "No treatment"
+              },
+              "$.arms[1].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].type",
+                "source_value": "NO_INTERVENTION"
+              },
+              "$.arms[1].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].description",
+                "source_value": null
+              },
+              "$.arms[1].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].interventionNames",
+                "source_value": null
+              },
+              "$.interventions": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions",
+                "source_value": [
+                  {
+                    "type": "DRUG",
+                    "name": "Victoza",
+                    "armGroupLabels": [
+                      "victoza"
+                    ]
+                  }
+                ]
+              },
+              "$.interventions[0].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].name",
+                "source_value": "Victoza"
+              },
+              "$.interventions[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].type",
+                "source_value": "DRUG"
+              },
+              "$.interventions[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].description",
+                "source_value": null
+              },
+              "$.interventions[0].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels",
+                "source_value": [
+                  "victoza"
+                ]
+              },
+              "$.interventions[0].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[0]",
+                "source_value": "victoza"
+              },
+              "$.interventions[0].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames",
+                "source_value": null
+              },
+              "$.primary_outcomes": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes",
+                "source_value": [
+                  {
+                    "measure": "Change in coronary flow reserve (CFR)",
+                    "description": "CFR can be reliably assessed non-invasively by trans-thoracic Doppler flow echocardiography of the left anterior descending artery with a success rate of over 90% even in an obese population with a relative poor acoustic window. CFR is the ratio of flow during stress to during rest.",
+                    "timeFrame": "CFR is measured at baseline and after 10 weeks of intervention"
+                  }
+                ]
+              },
+              "$.primary_outcomes[0].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].measure",
+                "source_value": "Change in coronary flow reserve (CFR)"
+              },
+              "$.primary_outcomes[0].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].description",
+                "source_value": "CFR can be reliably assessed non-invasively by trans-thoracic Doppler flow echocardiography of the left anterior descending artery with a success rate of over 90% even in an obese population with a relative poor acoustic window. CFR is the ratio of flow during stress to during rest."
+              },
+              "$.primary_outcomes[0].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].timeFrame",
+                "source_value": "CFR is measured at baseline and after 10 weeks of intervention"
+              },
+              "$.results.has_results": {
+                "source_path": "$.hasResults",
+                "source_value": false
+              },
+              "$.results.status": {
+                "source_path": "$.hasResults",
+                "source_value": false,
+                "derivation": "Strict boolean true -> posted; false -> not_posted; other -> unknown."
+              },
+              "$.results.url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT01931982",
+                "derivation": "Canonical study URL; results tab only when hasResults is true."
+              },
+              "$.provenance.registry_update_date": {
+                "source_path": "$.protocolSection.statusModule.lastUpdatePostDateStruct.date",
+                "source_value": "2014-06-25"
+              }
+            }
+          },
+          "review_flags": [
+            {
+              "code": "MISSING_FIELD",
+              "field": "$.arms[1].description",
+              "message": "Not reported in this record."
+            },
+            {
+              "code": "MISSING_FIELD",
+              "field": "$.interventions[0].description",
+              "message": "Not reported in this record."
+            },
+            {
+              "code": "DISEASE_RELEVANCE_REQUIRES_REVIEW",
+              "field": "$.population.eligibility_criteria",
+              "message": "Confirm type 2 diabetes relevance and eligibility/population context manually, including prevention studies and mixed populations. Condition labels and eligibility criteria do not establish enrolled participants' diagnoses, glucose control, complications or a treatment effect."
+            },
+            {
+              "code": "RESULTS_NOT_POSTED",
+              "field": "$.results.has_results",
+              "message": "No results posted in this registry; findings or publications may exist elsewhere."
+            },
+            {
+              "code": "ARM_INTERVENTION_LINK_NOT_REPORTED",
+              "field": "$.arms[1].intervention_names",
+              "message": "No explicit association is reported here; do not infer it by array order."
+            }
+          ],
+          "limitations": [
+            "Completed does not mean successful treatment or available results.",
+            "No results posted in this registry does not mean no findings or publications exist.",
+            "Eligibility criteria do not describe the actual enrolled population.",
+            "Enrollment is not the number analyzed for a particular outcome.",
+            "Registry-listed outcomes are not proof of prospective specification.",
+            "Randomization and masking fields do not establish low risk of bias.",
+            "Registry extraction does not establish treatment effectiveness or support treatment ranking."
+          ]
+        }
+      }
+    },
+    {
+      "tool": "get_trial_evidence_card",
+      "arguments": {
+        "nct_id": "NCT01115088"
+      },
+      "duration_seconds": 0.078,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "card": {
+          "schema_version": "1.0",
+          "label": "Registry extraction pending human review",
+          "source_mode": "live",
+          "identity": {
+            "nct_id": "NCT01115088",
+            "title": "Effects of Stevia on Satiety and Eating Attitudes in Healthy, Overweight and Obese Adults",
+            "official_title": "Effects of Stevia on Satiety and Eating Attitudes in Healthy, Overweight and Obese Adults: A Pilot Study",
+            "conditions": [
+              "Obesity",
+              "Type 2 Diabetes"
+            ],
+            "study_url": "https://clinicaltrials.gov/study/NCT01115088"
+          },
+          "status": {
+            "study_type": "INTERVENTIONAL",
+            "overall_status": "COMPLETED",
+            "completion_date": "2010-04",
+            "completion_date_type": "ACTUAL"
+          },
+          "design": {
+            "phases": [
+              "NA"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "SINGLE_GROUP",
+            "masking": "SINGLE",
+            "who_masked": [
+              "PARTICIPANT"
+            ]
+          },
+          "enrollment": {
+            "count": 30,
+            "type": "ACTUAL"
+          },
+          "population": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Healthy and have a body mass index \\> 30 kg/m2 and \\< 39.9 kg/m2, or have a body mass index \\> 20 kg/m2 and \\< 24.9 kg/m2\n* If BMI is between 30 and 39.9, waist circumference must be \\> 36 for women and \\> 40 for men.\n* Age 18 to 45 years\n* Nonsmokers\n* Willing to consume meat products\n* Women on monophasic oral contraceptives or who have physiologically controlled cycles\n\nExclusion Criteria:\n\n* A history of diabetes, cardiovascular disease, or other chronic illnesses\n* Presence of an eating disorder including Anorexia and/or Bulimia Nervosa\n* Other health problems that might interfere with your ability to participate in the study\n* Taking medications, other than monophasic birth control or monophasic (same dose every day) hormone replacement therapy and allergy medication\n* Taking allergy medication for a period of time less than 6 months\n* Dislike of or allergy to foods/sweeteners (Sucrose, Stevia, or Aspartame) used in test meals\n* Smokers\n* High scores on the Dietary Restraint, Disinhibition, and Perceived Hunger scales of the Three Factor Eating Questionnaire\n* Use of oral contraceptives other than monophasic (same dose every day) contraceptives",
+            "healthy_volunteers": true,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": "45 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "arms": [
+            {
+              "label": "Aspartame",
+              "type": "EXPERIMENTAL",
+              "description": "Food or beverages containing Aspartame in comparison to Stevia or Sucrose",
+              "intervention_names": [
+                "Dietary Supplement: Aspartame"
+              ]
+            },
+            {
+              "label": "Sucrose",
+              "type": "EXPERIMENTAL",
+              "description": "Food or beverages containing Sucrose in comparison to Aspartame or Stevia",
+              "intervention_names": [
+                "Dietary Supplement: Sucrose"
+              ]
+            },
+            {
+              "label": "Stevia",
+              "type": "EXPERIMENTAL",
+              "description": "Food or beverages containing Stevia in comparison to Aspartame or Sucrose",
+              "intervention_names": [
+                "Dietary Supplement: Stevia"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "name": "Aspartame",
+              "type": "DIETARY_SUPPLEMENT",
+              "description": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)",
+              "arm_group_labels": [
+                "Aspartame"
+              ],
+              "other_names": [
+                "equal sweetener"
+              ]
+            },
+            {
+              "name": "Sucrose",
+              "type": "DIETARY_SUPPLEMENT",
+              "description": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)",
+              "arm_group_labels": [
+                "Sucrose"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Stevia",
+              "type": "DIETARY_SUPPLEMENT",
+              "description": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)",
+              "arm_group_labels": [
+                "Stevia"
+              ],
+              "other_names": null
+            }
+          ],
+          "primary_outcomes": [
+            {
+              "measure": "Effects of stevia, aspartame, and sucrose on food intake, satiety, and postprandial glucose and insulin levels.",
+              "description": "Test whether preloads of tea and crackers with cream cheese sweetened with Stevia lover postprandial insulin levels compared to preloads of tea and crackers with cream cheese sweetened with Sucrose or Aspartame by measuring blood insulin and glucose levels immediately prior to the lunch preload,immediately before lunch test meal, and at thirty minutes, one hour, and two hours after the lunch test meal.",
+              "time_frame": "24 hours"
+            }
+          ],
+          "results": {
+            "has_results": false,
+            "status": "not_posted",
+            "url": "https://clinicaltrials.gov/study/NCT01115088"
+          },
+          "provenance": {
+            "retrieved_at": "2026-11-12T14:02:36.256531Z",
+            "registry_update_date": "2016-02-12",
+            "source_url": "https://clinicaltrials.gov/study/NCT01115088",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01115088",
+            "snapshot_sha256": null,
+            "fields": {
+              "$.identity.nct_id": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT01115088"
+              },
+              "$.identity.study_url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT01115088",
+                "derivation": "Canonical study URL from validated NCT ID."
+              },
+              "$.identity.title": {
+                "source_path": "$.protocolSection.identificationModule.briefTitle",
+                "source_value": "Effects of Stevia on Satiety and Eating Attitudes in Healthy, Overweight and Obese Adults"
+              },
+              "$.identity.official_title": {
+                "source_path": "$.protocolSection.identificationModule.officialTitle",
+                "source_value": "Effects of Stevia on Satiety and Eating Attitudes in Healthy, Overweight and Obese Adults: A Pilot Study"
+              },
+              "$.identity.conditions": {
+                "source_path": "$.protocolSection.conditionsModule.conditions",
+                "source_value": [
+                  "Obesity",
+                  "Type 2 Diabetes"
+                ]
+              },
+              "$.identity.conditions[0]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[0]",
+                "source_value": "Obesity"
+              },
+              "$.identity.conditions[1]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[1]",
+                "source_value": "Type 2 Diabetes"
+              },
+              "$.status.study_type": {
+                "source_path": "$.protocolSection.designModule.studyType",
+                "source_value": "INTERVENTIONAL"
+              },
+              "$.status.overall_status": {
+                "source_path": "$.protocolSection.statusModule.overallStatus",
+                "source_value": "COMPLETED"
+              },
+              "$.status.completion_date": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.date",
+                "source_value": "2010-04"
+              },
+              "$.status.completion_date_type": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.type",
+                "source_value": "ACTUAL"
+              },
+              "$.design.phases": {
+                "source_path": "$.protocolSection.designModule.phases",
+                "source_value": [
+                  "NA"
+                ]
+              },
+              "$.design.phases[0]": {
+                "source_path": "$.protocolSection.designModule.phases[0]",
+                "source_value": "NA"
+              },
+              "$.design.allocation": {
+                "source_path": "$.protocolSection.designModule.designInfo.allocation",
+                "source_value": "RANDOMIZED"
+              },
+              "$.design.intervention_model": {
+                "source_path": "$.protocolSection.designModule.designInfo.interventionModel",
+                "source_value": "SINGLE_GROUP"
+              },
+              "$.design.masking": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.masking",
+                "source_value": "SINGLE"
+              },
+              "$.design.who_masked": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked",
+                "source_value": [
+                  "PARTICIPANT"
+                ]
+              },
+              "$.design.who_masked[0]": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked[0]",
+                "source_value": "PARTICIPANT"
+              },
+              "$.enrollment.count": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.count",
+                "source_value": 30
+              },
+              "$.enrollment.type": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.type",
+                "source_value": "ACTUAL"
+              },
+              "$.population.eligibility_criteria": {
+                "source_path": "$.protocolSection.eligibilityModule.eligibilityCriteria",
+                "source_value": "Inclusion Criteria:\n\n* Healthy and have a body mass index \\> 30 kg/m2 and \\< 39.9 kg/m2, or have a body mass index \\> 20 kg/m2 and \\< 24.9 kg/m2\n* If BMI is between 30 and 39.9, waist circumference must be \\> 36 for women and \\> 40 for men.\n* Age 18 to 45 years\n* Nonsmokers\n* Willing to consume meat products\n* Women on monophasic oral contraceptives or who have physiologically controlled cycles\n\nExclusion Criteria:\n\n* A history of diabetes, cardiovascular disease, or other chronic illnesses\n* Presence of an eating disorder including Anorexia and/or Bulimia Nervosa\n* Other health problems that might interfere with your ability to participate in the study\n* Taking medications, other than monophasic birth control or monophasic (same dose every day) hormone replacement therapy and allergy medication\n* Taking allergy medication for a period of time less than 6 months\n* Dislike of or allergy to foods/sweeteners (Sucrose, Stevia, or Aspartame) used in test meals\n* Smokers\n* High scores on the Dietary Restraint, Disinhibition, and Perceived Hunger scales of the Three Factor Eating Questionnaire\n* Use of oral contraceptives other than monophasic (same dose every day) contraceptives"
+              },
+              "$.population.healthy_volunteers": {
+                "source_path": "$.protocolSection.eligibilityModule.healthyVolunteers",
+                "source_value": true
+              },
+              "$.population.sex": {
+                "source_path": "$.protocolSection.eligibilityModule.sex",
+                "source_value": "ALL"
+              },
+              "$.population.minimum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.minimumAge",
+                "source_value": "18 Years"
+              },
+              "$.population.maximum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.maximumAge",
+                "source_value": "45 Years"
+              },
+              "$.arms": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups",
+                "source_value": [
+                  {
+                    "label": "Aspartame",
+                    "type": "EXPERIMENTAL",
+                    "description": "Food or beverages containing Aspartame in comparison to Stevia or Sucrose",
+                    "interventionNames": [
+                      "Dietary Supplement: Aspartame"
+                    ]
+                  },
+                  {
+                    "label": "Sucrose",
+                    "type": "EXPERIMENTAL",
+                    "description": "Food or beverages containing Sucrose in comparison to Aspartame or Stevia",
+                    "interventionNames": [
+                      "Dietary Supplement: Sucrose"
+                    ]
+                  },
+                  {
+                    "label": "Stevia",
+                    "type": "EXPERIMENTAL",
+                    "description": "Food or beverages containing Stevia in comparison to Aspartame or Sucrose",
+                    "interventionNames": [
+                      "Dietary Supplement: Stevia"
+                    ]
+                  }
+                ]
+              },
+              "$.arms[0].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].label",
+                "source_value": "Aspartame"
+              },
+              "$.arms[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].description",
+                "source_value": "Food or beverages containing Aspartame in comparison to Stevia or Sucrose"
+              },
+              "$.arms[0].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames",
+                "source_value": [
+                  "Dietary Supplement: Aspartame"
+                ]
+              },
+              "$.arms[0].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames[0]",
+                "source_value": "Dietary Supplement: Aspartame"
+              },
+              "$.arms[1].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].label",
+                "source_value": "Sucrose"
+              },
+              "$.arms[1].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[1].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].description",
+                "source_value": "Food or beverages containing Sucrose in comparison to Aspartame or Stevia"
+              },
+              "$.arms[1].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].interventionNames",
+                "source_value": [
+                  "Dietary Supplement: Sucrose"
+                ]
+              },
+              "$.arms[1].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].interventionNames[0]",
+                "source_value": "Dietary Supplement: Sucrose"
+              },
+              "$.arms[2].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].label",
+                "source_value": "Stevia"
+              },
+              "$.arms[2].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[2].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].description",
+                "source_value": "Food or beverages containing Stevia in comparison to Aspartame or Sucrose"
+              },
+              "$.arms[2].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].interventionNames",
+                "source_value": [
+                  "Dietary Supplement: Stevia"
+                ]
+              },
+              "$.arms[2].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].interventionNames[0]",
+                "source_value": "Dietary Supplement: Stevia"
+              },
+              "$.interventions": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions",
+                "source_value": [
+                  {
+                    "type": "DIETARY_SUPPLEMENT",
+                    "name": "Aspartame",
+                    "description": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)",
+                    "armGroupLabels": [
+                      "Aspartame"
+                    ],
+                    "otherNames": [
+                      "equal sweetener"
+                    ]
+                  },
+                  {
+                    "type": "DIETARY_SUPPLEMENT",
+                    "name": "Sucrose",
+                    "description": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)",
+                    "armGroupLabels": [
+                      "Sucrose"
+                    ]
+                  },
+                  {
+                    "type": "DIETARY_SUPPLEMENT",
+                    "name": "Stevia",
+                    "description": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)",
+                    "armGroupLabels": [
+                      "Stevia"
+                    ]
+                  }
+                ]
+              },
+              "$.interventions[0].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].name",
+                "source_value": "Aspartame"
+              },
+              "$.interventions[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].type",
+                "source_value": "DIETARY_SUPPLEMENT"
+              },
+              "$.interventions[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].description",
+                "source_value": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)"
+              },
+              "$.interventions[0].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels",
+                "source_value": [
+                  "Aspartame"
+                ]
+              },
+              "$.interventions[0].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[0]",
+                "source_value": "Aspartame"
+              },
+              "$.interventions[0].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames",
+                "source_value": [
+                  "equal sweetener"
+                ]
+              },
+              "$.interventions[0].other_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames[0]",
+                "source_value": "equal sweetener"
+              },
+              "$.interventions[1].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[1].name",
+                "source_value": "Sucrose"
+              },
+              "$.interventions[1].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[1].type",
+                "source_value": "DIETARY_SUPPLEMENT"
+              },
+              "$.interventions[1].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[1].description",
+                "source_value": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)"
+              },
+              "$.interventions[1].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[1].armGroupLabels",
+                "source_value": [
+                  "Sucrose"
+                ]
+              },
+              "$.interventions[1].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[1].armGroupLabels[0]",
+                "source_value": "Sucrose"
+              },
+              "$.interventions[1].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[1].otherNames",
+                "source_value": null
+              },
+              "$.interventions[2].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[2].name",
+                "source_value": "Stevia"
+              },
+              "$.interventions[2].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[2].type",
+                "source_value": "DIETARY_SUPPLEMENT"
+              },
+              "$.interventions[2].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[2].description",
+                "source_value": "The morning breakfast after a 12-h fast and consumed a standard 469 kcal breakfast consisting of cereal, milk, toast with butter, and orange juice. Tea and crackers with cream cheese sweetened with stevia Whole Foods 365 Brand, aspartame equal sweetener, or sucrose participants consumed this preload 20 min before their test lunch and dinner meals. The Test lunch meal consisted of sandwiches, potato chips, and cookies, and the test dinner meal was a self-selected buffet-type meal (I.e., Macronutrient Self-Selection Paradigm) Geiselman et al,. 1998)"
+              },
+              "$.interventions[2].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[2].armGroupLabels",
+                "source_value": [
+                  "Stevia"
+                ]
+              },
+              "$.interventions[2].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[2].armGroupLabels[0]",
+                "source_value": "Stevia"
+              },
+              "$.interventions[2].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[2].otherNames",
+                "source_value": null
+              },
+              "$.primary_outcomes": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes",
+                "source_value": [
+                  {
+                    "measure": "Effects of stevia, aspartame, and sucrose on food intake, satiety, and postprandial glucose and insulin levels.",
+                    "description": "Test whether preloads of tea and crackers with cream cheese sweetened with Stevia lover postprandial insulin levels compared to preloads of tea and crackers with cream cheese sweetened with Sucrose or Aspartame by measuring blood insulin and glucose levels immediately prior to the lunch preload,immediately before lunch test meal, and at thirty minutes, one hour, and two hours after the lunch test meal.",
+                    "timeFrame": "24 hours"
+                  }
+                ]
+              },
+              "$.primary_outcomes[0].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].measure",
+                "source_value": "Effects of stevia, aspartame, and sucrose on food intake, satiety, and postprandial glucose and insulin levels."
+              },
+              "$.primary_outcomes[0].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].description",
+                "source_value": "Test whether preloads of tea and crackers with cream cheese sweetened with Stevia lover postprandial insulin levels compared to preloads of tea and crackers with cream cheese sweetened with Sucrose or Aspartame by measuring blood insulin and glucose levels immediately prior to the lunch preload,immediately before lunch test meal, and at thirty minutes, one hour, and two hours after the lunch test meal."
+              },
+              "$.primary_outcomes[0].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].timeFrame",
+                "source_value": "24 hours"
+              },
+              "$.results.has_results": {
+                "source_path": "$.hasResults",
+                "source_value": false
+              },
+              "$.results.status": {
+                "source_path": "$.hasResults",
+                "source_value": false,
+                "derivation": "Strict boolean true -> posted; false -> not_posted; other -> unknown."
+              },
+              "$.results.url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT01115088",
+                "derivation": "Canonical study URL; results tab only when hasResults is true."
+              },
+              "$.provenance.registry_update_date": {
+                "source_path": "$.protocolSection.statusModule.lastUpdatePostDateStruct.date",
+                "source_value": "2016-02-12"
+              }
+            }
+          },
+          "review_flags": [
+            {
+              "code": "DISEASE_RELEVANCE_REQUIRES_REVIEW",
+              "field": "$.population.eligibility_criteria",
+              "message": "Confirm type 2 diabetes relevance and eligibility/population context manually, including prevention studies and mixed populations. Condition labels and eligibility criteria do not establish enrolled participants' diagnoses, glucose control, complications or a treatment effect."
+            },
+            {
+              "code": "RESULTS_NOT_POSTED",
+              "field": "$.results.has_results",
+              "message": "No results posted in this registry; findings or publications may exist elsewhere."
+            }
+          ],
+          "limitations": [
+            "Completed does not mean successful treatment or available results.",
+            "No results posted in this registry does not mean no findings or publications exist.",
+            "Eligibility criteria do not describe the actual enrolled population.",
+            "Enrollment is not the number analyzed for a particular outcome.",
+            "Registry-listed outcomes are not proof of prospective specification.",
+            "Randomization and masking fields do not establish low risk of bias.",
+            "Registry extraction does not establish treatment effectiveness or support treatment ranking."
+          ]
+        }
+      }
+    },
+    {
+      "tool": "get_trial_evidence_card",
+      "arguments": {
+        "nct_id": "NCT00111540"
+      },
+      "duration_seconds": 0.078,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "card": {
+          "schema_version": "1.0",
+          "label": "Registry extraction pending human review",
+          "source_mode": "live",
+          "identity": {
+            "nct_id": "NCT00111540",
+            "title": "Study to Examine the Effect on Glucose Control and Safety/Tolerability of Exenatide Given Two Times a Day to Subjects With Type 2 Diabetes",
+            "official_title": "An Open Label Study to Examine the Long Term Effect on Glucose Control (HbA1c) and Safety and Tolerability of Exenatide Given Two Times a Day to Subjects With Type 2 Diabetes Mellitus",
+            "conditions": [
+              "Diabetes Mellitus, Type 2"
+            ],
+            "study_url": "https://clinicaltrials.gov/study/NCT00111540"
+          },
+          "status": {
+            "study_type": "INTERVENTIONAL",
+            "overall_status": "COMPLETED",
+            "completion_date": "2006-09",
+            "completion_date_type": "ACTUAL"
+          },
+          "design": {
+            "phases": [
+              "PHASE3"
+            ],
+            "allocation": "NA",
+            "intervention_model": "SINGLE_GROUP",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "enrollment": {
+            "count": 456,
+            "type": "ACTUAL"
+          },
+          "population": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* The subject has an HbA1c value \\<=11.0%\n* The subject has a body mass index (BMI) of 25 kg/m\\^2 to 45 kg/m\\^2, inclusive\n\nExclusion Criteria:\n\n* Is currently treated with certain medications, including exogenous insulin",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": "70 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "arms": [
+            {
+              "label": "Exenatide",
+              "type": "EXPERIMENTAL",
+              "description": "Exenatide 5 mcg for 4 weeks (transition) then 10 mcg to study termination",
+              "intervention_names": [
+                "Drug: exenatide"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "name": "exenatide",
+              "type": "DRUG",
+              "description": "subcutaneous injection, 5 mcg, twice a day for 4 weeks (transition period), then 10 mcg twice a day till study termination",
+              "arm_group_labels": [
+                "Exenatide"
+              ],
+              "other_names": [
+                "Byetta",
+                "exendin-4",
+                "AC2993"
+              ]
+            }
+          ],
+          "primary_outcomes": [
+            {
+              "measure": "Change in HbA1c (glycosylated hemoglobin) from Visit 1 to each protocol visit",
+              "description": "Change in HbA1c from Visit 1 to each visit up to open-ended study termination",
+              "time_frame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+            },
+            {
+              "measure": "Change in body weight from Visit 1 to each protocol visit",
+              "description": "Change in body weight (kg) from Visit 1 to each visit up to open-ended study termination",
+              "time_frame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+            },
+            {
+              "measure": "Change in fasting plasma glucose from Visit 1 to each protocol visit",
+              "description": "Change in fasting plasma glucose from Visit 1 to each visit up to open-ended study termination",
+              "time_frame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+            },
+            {
+              "measure": "Change in lipids from Visit 1 to each protocol visit",
+              "description": "Change in lipids from Visit 1 to each visit up to open-ended study termination",
+              "time_frame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+            }
+          ],
+          "results": {
+            "has_results": false,
+            "status": "not_posted",
+            "url": "https://clinicaltrials.gov/study/NCT00111540"
+          },
+          "provenance": {
+            "retrieved_at": "2026-11-12T14:02:36.337798Z",
+            "registry_update_date": "2015-02-23",
+            "source_url": "https://clinicaltrials.gov/study/NCT00111540",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00111540",
+            "snapshot_sha256": null,
+            "fields": {
+              "$.identity.nct_id": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT00111540"
+              },
+              "$.identity.study_url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT00111540",
+                "derivation": "Canonical study URL from validated NCT ID."
+              },
+              "$.identity.title": {
+                "source_path": "$.protocolSection.identificationModule.briefTitle",
+                "source_value": "Study to Examine the Effect on Glucose Control and Safety/Tolerability of Exenatide Given Two Times a Day to Subjects With Type 2 Diabetes"
+              },
+              "$.identity.official_title": {
+                "source_path": "$.protocolSection.identificationModule.officialTitle",
+                "source_value": "An Open Label Study to Examine the Long Term Effect on Glucose Control (HbA1c) and Safety and Tolerability of Exenatide Given Two Times a Day to Subjects With Type 2 Diabetes Mellitus"
+              },
+              "$.identity.conditions": {
+                "source_path": "$.protocolSection.conditionsModule.conditions",
+                "source_value": [
+                  "Diabetes Mellitus, Type 2"
+                ]
+              },
+              "$.identity.conditions[0]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[0]",
+                "source_value": "Diabetes Mellitus, Type 2"
+              },
+              "$.status.study_type": {
+                "source_path": "$.protocolSection.designModule.studyType",
+                "source_value": "INTERVENTIONAL"
+              },
+              "$.status.overall_status": {
+                "source_path": "$.protocolSection.statusModule.overallStatus",
+                "source_value": "COMPLETED"
+              },
+              "$.status.completion_date": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.date",
+                "source_value": "2006-09"
+              },
+              "$.status.completion_date_type": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.type",
+                "source_value": "ACTUAL"
+              },
+              "$.design.phases": {
+                "source_path": "$.protocolSection.designModule.phases",
+                "source_value": [
+                  "PHASE3"
+                ]
+              },
+              "$.design.phases[0]": {
+                "source_path": "$.protocolSection.designModule.phases[0]",
+                "source_value": "PHASE3"
+              },
+              "$.design.allocation": {
+                "source_path": "$.protocolSection.designModule.designInfo.allocation",
+                "source_value": "NA"
+              },
+              "$.design.intervention_model": {
+                "source_path": "$.protocolSection.designModule.designInfo.interventionModel",
+                "source_value": "SINGLE_GROUP"
+              },
+              "$.design.masking": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.masking",
+                "source_value": "NONE"
+              },
+              "$.design.who_masked": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked",
+                "source_value": null
+              },
+              "$.enrollment.count": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.count",
+                "source_value": 456
+              },
+              "$.enrollment.type": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.type",
+                "source_value": "ACTUAL"
+              },
+              "$.population.eligibility_criteria": {
+                "source_path": "$.protocolSection.eligibilityModule.eligibilityCriteria",
+                "source_value": "Inclusion Criteria:\n\n* The subject has an HbA1c value \\<=11.0%\n* The subject has a body mass index (BMI) of 25 kg/m\\^2 to 45 kg/m\\^2, inclusive\n\nExclusion Criteria:\n\n* Is currently treated with certain medications, including exogenous insulin"
+              },
+              "$.population.healthy_volunteers": {
+                "source_path": "$.protocolSection.eligibilityModule.healthyVolunteers",
+                "source_value": false
+              },
+              "$.population.sex": {
+                "source_path": "$.protocolSection.eligibilityModule.sex",
+                "source_value": "ALL"
+              },
+              "$.population.minimum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.minimumAge",
+                "source_value": "18 Years"
+              },
+              "$.population.maximum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.maximumAge",
+                "source_value": "70 Years"
+              },
+              "$.arms": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups",
+                "source_value": [
+                  {
+                    "label": "Exenatide",
+                    "type": "EXPERIMENTAL",
+                    "description": "Exenatide 5 mcg for 4 weeks (transition) then 10 mcg to study termination",
+                    "interventionNames": [
+                      "Drug: exenatide"
+                    ]
+                  }
+                ]
+              },
+              "$.arms[0].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].label",
+                "source_value": "Exenatide"
+              },
+              "$.arms[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].description",
+                "source_value": "Exenatide 5 mcg for 4 weeks (transition) then 10 mcg to study termination"
+              },
+              "$.arms[0].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames",
+                "source_value": [
+                  "Drug: exenatide"
+                ]
+              },
+              "$.arms[0].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames[0]",
+                "source_value": "Drug: exenatide"
+              },
+              "$.interventions": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions",
+                "source_value": [
+                  {
+                    "type": "DRUG",
+                    "name": "exenatide",
+                    "description": "subcutaneous injection, 5 mcg, twice a day for 4 weeks (transition period), then 10 mcg twice a day till study termination",
+                    "armGroupLabels": [
+                      "Exenatide"
+                    ],
+                    "otherNames": [
+                      "Byetta",
+                      "exendin-4",
+                      "AC2993"
+                    ]
+                  }
+                ]
+              },
+              "$.interventions[0].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].name",
+                "source_value": "exenatide"
+              },
+              "$.interventions[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].type",
+                "source_value": "DRUG"
+              },
+              "$.interventions[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].description",
+                "source_value": "subcutaneous injection, 5 mcg, twice a day for 4 weeks (transition period), then 10 mcg twice a day till study termination"
+              },
+              "$.interventions[0].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels",
+                "source_value": [
+                  "Exenatide"
+                ]
+              },
+              "$.interventions[0].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[0]",
+                "source_value": "Exenatide"
+              },
+              "$.interventions[0].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames",
+                "source_value": [
+                  "Byetta",
+                  "exendin-4",
+                  "AC2993"
+                ]
+              },
+              "$.interventions[0].other_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames[0]",
+                "source_value": "Byetta"
+              },
+              "$.interventions[0].other_names[1]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames[1]",
+                "source_value": "exendin-4"
+              },
+              "$.interventions[0].other_names[2]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames[2]",
+                "source_value": "AC2993"
+              },
+              "$.primary_outcomes": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes",
+                "source_value": [
+                  {
+                    "measure": "Change in HbA1c (glycosylated hemoglobin) from Visit 1 to each protocol visit",
+                    "description": "Change in HbA1c from Visit 1 to each visit up to open-ended study termination",
+                    "timeFrame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+                  },
+                  {
+                    "measure": "Change in body weight from Visit 1 to each protocol visit",
+                    "description": "Change in body weight (kg) from Visit 1 to each visit up to open-ended study termination",
+                    "timeFrame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+                  },
+                  {
+                    "measure": "Change in fasting plasma glucose from Visit 1 to each protocol visit",
+                    "description": "Change in fasting plasma glucose from Visit 1 to each visit up to open-ended study termination",
+                    "timeFrame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+                  },
+                  {
+                    "measure": "Change in lipids from Visit 1 to each protocol visit",
+                    "description": "Change in lipids from Visit 1 to each visit up to open-ended study termination",
+                    "timeFrame": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+                  }
+                ]
+              },
+              "$.primary_outcomes[0].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].measure",
+                "source_value": "Change in HbA1c (glycosylated hemoglobin) from Visit 1 to each protocol visit"
+              },
+              "$.primary_outcomes[0].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].description",
+                "source_value": "Change in HbA1c from Visit 1 to each visit up to open-ended study termination"
+              },
+              "$.primary_outcomes[0].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].timeFrame",
+                "source_value": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+              },
+              "$.primary_outcomes[1].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[1].measure",
+                "source_value": "Change in body weight from Visit 1 to each protocol visit"
+              },
+              "$.primary_outcomes[1].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[1].description",
+                "source_value": "Change in body weight (kg) from Visit 1 to each visit up to open-ended study termination"
+              },
+              "$.primary_outcomes[1].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[1].timeFrame",
+                "source_value": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+              },
+              "$.primary_outcomes[2].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[2].measure",
+                "source_value": "Change in fasting plasma glucose from Visit 1 to each protocol visit"
+              },
+              "$.primary_outcomes[2].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[2].description",
+                "source_value": "Change in fasting plasma glucose from Visit 1 to each visit up to open-ended study termination"
+              },
+              "$.primary_outcomes[2].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[2].timeFrame",
+                "source_value": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+              },
+              "$.primary_outcomes[3].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[3].measure",
+                "source_value": "Change in lipids from Visit 1 to each protocol visit"
+              },
+              "$.primary_outcomes[3].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[3].description",
+                "source_value": "Change in lipids from Visit 1 to each visit up to open-ended study termination"
+              },
+              "$.primary_outcomes[3].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[3].timeFrame",
+                "source_value": "Day 1, Weeks 2, 4, 8, 15, 22, 30, 38, 46 and every 12 weeks while on study (78 week target)"
+              },
+              "$.results.has_results": {
+                "source_path": "$.hasResults",
+                "source_value": false
+              },
+              "$.results.status": {
+                "source_path": "$.hasResults",
+                "source_value": false,
+                "derivation": "Strict boolean true -> posted; false -> not_posted; other -> unknown."
+              },
+              "$.results.url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT00111540",
+                "derivation": "Canonical study URL; results tab only when hasResults is true."
+              },
+              "$.provenance.registry_update_date": {
+                "source_path": "$.protocolSection.statusModule.lastUpdatePostDateStruct.date",
+                "source_value": "2015-02-23"
+              }
+            }
+          },
+          "review_flags": [
+            {
+              "code": "DISEASE_RELEVANCE_REQUIRES_REVIEW",
+              "field": "$.population.eligibility_criteria",
+              "message": "Confirm type 2 diabetes relevance and eligibility/population context manually, including prevention studies and mixed populations. Condition labels and eligibility criteria do not establish enrolled participants' diagnoses, glucose control, complications or a treatment effect."
+            },
+            {
+              "code": "RESULTS_NOT_POSTED",
+              "field": "$.results.has_results",
+              "message": "No results posted in this registry; findings or publications may exist elsewhere."
+            }
+          ],
+          "limitations": [
+            "Completed does not mean successful treatment or available results.",
+            "No results posted in this registry does not mean no findings or publications exist.",
+            "Eligibility criteria do not describe the actual enrolled population.",
+            "Enrollment is not the number analyzed for a particular outcome.",
+            "Registry-listed outcomes are not proof of prospective specification.",
+            "Randomization and masking fields do not establish low risk of bias.",
+            "Registry extraction does not establish treatment effectiveness or support treatment ranking."
+          ]
+        }
+      }
+    }
+  ],
+  "discovered_tools": [
+    "find_completed_trials",
+    "get_trial_evidence_card"
+  ],
+  "status": "passed",
+  "median_tool_seconds": 0.078,
+  "slowest_tool_seconds": 0.469,
+  "disclosure": "Actual tool calls through MCP, not an LLM evaluation or physician-reviewed accuracy benchmark. Snapshot mode searches only the six development records."
+}

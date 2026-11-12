@@ -1,0 +1,1356 @@
+{
+  "started_at": "2026-10-28T17:00:48.629996Z",
+  "verification_type": "actual_mcp_tool_replay",
+  "source_mode": "live",
+  "model_used": false,
+  "clinical_review": "pending Mohammad",
+  "reference_review": "pending independent annotation",
+  "heldout_evaluation": "not_run",
+  "calls": [
+    {
+      "tool": "find_completed_trials",
+      "arguments": {
+        "limit": 3
+      },
+      "duration_seconds": 0.36,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "criteria": {
+          "condition": "Type 2 Diabetes",
+          "condition_label_filter": "explicit_type2_diabetes_labels",
+          "status": "COMPLETED",
+          "study_type": "INTERVENTIONAL",
+          "intervention": null,
+          "limit": 3,
+          "api_parameters": {
+            "query.cond": "Type 2 Diabetes",
+            "filter.overallStatus": "COMPLETED",
+            "filter.advanced": "AREA[StudyType]INTERVENTIONAL",
+            "format": "json",
+            "pageSize": 20
+          }
+        },
+        "coverage": "bounded_candidates",
+        "search_semantics": "registry_query_and_condition_labels",
+        "retrieved_at": "2026-10-28T17:00:48.797497Z",
+        "studies": [
+          {
+            "nct_id": "NCT05790681",
+            "title": "A Study to Test How New Long-acting Insulin (Insulin Icodec) Works in the Body of Children and Teenagers",
+            "conditions": [
+              "Diabetes Mellitus, Type 2"
+            ],
+            "overall_status": "COMPLETED",
+            "study_type": "INTERVENTIONAL",
+            "has_results": false,
+            "results_status": "not_posted",
+            "study_url": "https://clinicaltrials.gov/study/NCT05790681"
+          },
+          {
+            "nct_id": "NCT02491801",
+            "title": "Form of Dairy Products on Satiety, Food Intake and Post-meal Glycaemia in Young and Older Adults",
+            "conditions": [
+              "Type 2 Diabetes Mellitus",
+              "Obesity"
+            ],
+            "overall_status": "COMPLETED",
+            "study_type": "INTERVENTIONAL",
+            "has_results": false,
+            "results_status": "not_posted",
+            "study_url": "https://clinicaltrials.gov/study/NCT02491801"
+          },
+          {
+            "nct_id": "NCT04214600",
+            "title": "Cognitive Behavioral Therapy for Adherence in Patients With Type 2 Diabetes",
+            "conditions": [
+              "Type 2 Diabetes",
+              "Depression"
+            ],
+            "overall_status": "COMPLETED",
+            "study_type": "INTERVENTIONAL",
+            "has_results": true,
+            "results_status": "posted",
+            "study_url": "https://clinicaltrials.gov/study/NCT04214600"
+          }
+        ],
+        "returned_count": 3,
+        "pages_fetched": 1,
+        "records_examined": 3,
+        "excluded_condition_count": 0,
+        "search_incomplete": true,
+        "review_flags": [
+          {
+            "code": "NOT_AN_EXHAUSTIVE_SEARCH",
+            "message": "These are candidate records for review, not an exhaustive evidence search."
+          },
+          {
+            "code": "CONSERVATIVE_CONDITION_FILTER",
+            "message": "Candidates must have an explicit supported type 2 diabetes condition label. This conservative screen may miss relevant studies labeled only as diabetes or described in other fields. A matching label is not a participant diagnosis."
+          },
+          {
+            "code": "SEARCH_INCOMPLETE",
+            "message": "Search stopped at a requested or retrieval limit, or encountered an upstream problem. Additional matching records may exist."
+          }
+        ]
+      }
+    },
+    {
+      "tool": "get_trial_evidence_card",
+      "arguments": {
+        "nct_id": "NCT05790681"
+      },
+      "duration_seconds": 0.062,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "card": {
+          "schema_version": "1.0",
+          "label": "Registry extraction pending human review",
+          "source_mode": "live",
+          "identity": {
+            "nct_id": "NCT05790681",
+            "title": "A Study to Test How New Long-acting Insulin (Insulin Icodec) Works in the Body of Children and Teenagers",
+            "official_title": "A Study Investigating the Pharmacokinetic Properties of Insulin Icodec in Children and Adolescents With Type 2 Diabetes",
+            "conditions": [
+              "Diabetes Mellitus, Type 2"
+            ],
+            "study_url": "https://clinicaltrials.gov/study/NCT05790681"
+          },
+          "status": {
+            "study_type": "INTERVENTIONAL",
+            "overall_status": "COMPLETED",
+            "completion_date": "2024-02-08",
+            "completion_date_type": "ACTUAL"
+          },
+          "design": {
+            "phases": [
+              "PHASE1"
+            ],
+            "allocation": "NA",
+            "intervention_model": "SINGLE_GROUP",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "enrollment": {
+            "count": 18,
+            "type": "ACTUAL"
+          },
+          "population": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Male or female\n* Aged 10 to less than (\\<) 18 years at the time of signing informed consent\n* Diagnosed with type 2 diabetes mellitus greater than or equal to (\\>=) 30 days prior to the day of screening\n* Glycated haemoglobin (HbA1c) less than or equal to (\\<=) 10% (86 millimoles per mole \\[mmol/mol\\]) at screening\n* Treated with basal insulin, premix insulin or continuous subcutaneous insulin infusion (CSII) with or without bolus insulin or additional anti-diabetic drug(s).\n* Current daily basal insulin treatment \\>= 0.2 (I) units per kilogram per day (U/kg/day) with stable doses \\>=30 days prior to the day of screening\n\nExclusion Criteria:\n\n* Known or suspected hypersensitivity to study interventions or related products\n* Female who is pregnant, breast-feeding or intends to become pregnant or is of childbearing potential and not using adequate contraceptive method",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "10 Years",
+            "maximum_age": "18 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "arms": [
+            {
+              "label": "Participants with Type 2 Diabetes",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive single subcutaneous (s.c.) fixed dose of insulin icodec (700 units per milliliter \\[U/mL\\]) that is 5.6 units per kilogram (U/kg) bodyweight. Subjects will be followed up for 5 weeks after dosing.",
+              "intervention_names": [
+                "Drug: Insulin icodec"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "name": "Insulin icodec",
+              "type": "DRUG",
+              "description": "Participants will receive subcutaneously fixed dose of insulin icodec (700 U/mL) that is 5.6 U/kg bodyweight.",
+              "arm_group_labels": [
+                "Participants with Type 2 Diabetes"
+              ],
+              "other_names": null
+            }
+          ],
+          "primary_outcomes": [
+            {
+              "measure": "Area under the serum insulin icodec concentration-time curve after a single dose (AUCIco,0-inf,SD)",
+              "description": "Measured in picomoles\\*hours per liter (pmol\\*h/L).",
+              "time_frame": "From 0 hours until infinity after trial product administration (day 1)"
+            },
+            {
+              "measure": "Maximum observed serum insulin icodec concentration after a single dose (Cmax,Ico,SD)",
+              "description": "Measured in picomoles per liter (pmol/L).",
+              "time_frame": "From 0 hours until last measurement time after trial product administration (day 1)"
+            },
+            {
+              "measure": "Time to maximum observed serum insulin icodec concentration after a single dose (tmax,Ico,SD)",
+              "description": "Measured in hours.",
+              "time_frame": "From 0 hours until last measurement time after trial product administration (day 1)"
+            }
+          ],
+          "results": {
+            "has_results": false,
+            "status": "not_posted",
+            "url": "https://clinicaltrials.gov/study/NCT05790681"
+          },
+          "provenance": {
+            "retrieved_at": "2026-10-28T17:00:49.217179Z",
+            "registry_update_date": "2026-04-09",
+            "source_url": "https://clinicaltrials.gov/study/NCT05790681",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05790681",
+            "snapshot_sha256": null,
+            "fields": {
+              "$.identity.nct_id": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT05790681"
+              },
+              "$.identity.study_url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT05790681",
+                "derivation": "Canonical study URL from validated NCT ID."
+              },
+              "$.identity.title": {
+                "source_path": "$.protocolSection.identificationModule.briefTitle",
+                "source_value": "A Study to Test How New Long-acting Insulin (Insulin Icodec) Works in the Body of Children and Teenagers"
+              },
+              "$.identity.official_title": {
+                "source_path": "$.protocolSection.identificationModule.officialTitle",
+                "source_value": "A Study Investigating the Pharmacokinetic Properties of Insulin Icodec in Children and Adolescents With Type 2 Diabetes"
+              },
+              "$.identity.conditions": {
+                "source_path": "$.protocolSection.conditionsModule.conditions",
+                "source_value": [
+                  "Diabetes Mellitus, Type 2"
+                ]
+              },
+              "$.identity.conditions[0]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[0]",
+                "source_value": "Diabetes Mellitus, Type 2"
+              },
+              "$.status.study_type": {
+                "source_path": "$.protocolSection.designModule.studyType",
+                "source_value": "INTERVENTIONAL"
+              },
+              "$.status.overall_status": {
+                "source_path": "$.protocolSection.statusModule.overallStatus",
+                "source_value": "COMPLETED"
+              },
+              "$.status.completion_date": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.date",
+                "source_value": "2024-02-08"
+              },
+              "$.status.completion_date_type": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.type",
+                "source_value": "ACTUAL"
+              },
+              "$.design.phases": {
+                "source_path": "$.protocolSection.designModule.phases",
+                "source_value": [
+                  "PHASE1"
+                ]
+              },
+              "$.design.phases[0]": {
+                "source_path": "$.protocolSection.designModule.phases[0]",
+                "source_value": "PHASE1"
+              },
+              "$.design.allocation": {
+                "source_path": "$.protocolSection.designModule.designInfo.allocation",
+                "source_value": "NA"
+              },
+              "$.design.intervention_model": {
+                "source_path": "$.protocolSection.designModule.designInfo.interventionModel",
+                "source_value": "SINGLE_GROUP"
+              },
+              "$.design.masking": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.masking",
+                "source_value": "NONE"
+              },
+              "$.design.who_masked": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked",
+                "source_value": null
+              },
+              "$.enrollment.count": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.count",
+                "source_value": 18
+              },
+              "$.enrollment.type": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.type",
+                "source_value": "ACTUAL"
+              },
+              "$.population.eligibility_criteria": {
+                "source_path": "$.protocolSection.eligibilityModule.eligibilityCriteria",
+                "source_value": "Inclusion Criteria:\n\n* Male or female\n* Aged 10 to less than (\\<) 18 years at the time of signing informed consent\n* Diagnosed with type 2 diabetes mellitus greater than or equal to (\\>=) 30 days prior to the day of screening\n* Glycated haemoglobin (HbA1c) less than or equal to (\\<=) 10% (86 millimoles per mole \\[mmol/mol\\]) at screening\n* Treated with basal insulin, premix insulin or continuous subcutaneous insulin infusion (CSII) with or without bolus insulin or additional anti-diabetic drug(s).\n* Current daily basal insulin treatment \\>= 0.2 (I) units per kilogram per day (U/kg/day) with stable doses \\>=30 days prior to the day of screening\n\nExclusion Criteria:\n\n* Known or suspected hypersensitivity to study interventions or related products\n* Female who is pregnant, breast-feeding or intends to become pregnant or is of childbearing potential and not using adequate contraceptive method"
+              },
+              "$.population.healthy_volunteers": {
+                "source_path": "$.protocolSection.eligibilityModule.healthyVolunteers",
+                "source_value": false
+              },
+              "$.population.sex": {
+                "source_path": "$.protocolSection.eligibilityModule.sex",
+                "source_value": "ALL"
+              },
+              "$.population.minimum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.minimumAge",
+                "source_value": "10 Years"
+              },
+              "$.population.maximum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.maximumAge",
+                "source_value": "18 Years"
+              },
+              "$.arms": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups",
+                "source_value": [
+                  {
+                    "label": "Participants with Type 2 Diabetes",
+                    "type": "EXPERIMENTAL",
+                    "description": "Participants will receive single subcutaneous (s.c.) fixed dose of insulin icodec (700 units per milliliter \\[U/mL\\]) that is 5.6 units per kilogram (U/kg) bodyweight. Subjects will be followed up for 5 weeks after dosing.",
+                    "interventionNames": [
+                      "Drug: Insulin icodec"
+                    ]
+                  }
+                ]
+              },
+              "$.arms[0].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].label",
+                "source_value": "Participants with Type 2 Diabetes"
+              },
+              "$.arms[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].description",
+                "source_value": "Participants will receive single subcutaneous (s.c.) fixed dose of insulin icodec (700 units per milliliter \\[U/mL\\]) that is 5.6 units per kilogram (U/kg) bodyweight. Subjects will be followed up for 5 weeks after dosing."
+              },
+              "$.arms[0].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames",
+                "source_value": [
+                  "Drug: Insulin icodec"
+                ]
+              },
+              "$.arms[0].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames[0]",
+                "source_value": "Drug: Insulin icodec"
+              },
+              "$.interventions": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions",
+                "source_value": [
+                  {
+                    "type": "DRUG",
+                    "name": "Insulin icodec",
+                    "description": "Participants will receive subcutaneously fixed dose of insulin icodec (700 U/mL) that is 5.6 U/kg bodyweight.",
+                    "armGroupLabels": [
+                      "Participants with Type 2 Diabetes"
+                    ]
+                  }
+                ]
+              },
+              "$.interventions[0].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].name",
+                "source_value": "Insulin icodec"
+              },
+              "$.interventions[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].type",
+                "source_value": "DRUG"
+              },
+              "$.interventions[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].description",
+                "source_value": "Participants will receive subcutaneously fixed dose of insulin icodec (700 U/mL) that is 5.6 U/kg bodyweight."
+              },
+              "$.interventions[0].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels",
+                "source_value": [
+                  "Participants with Type 2 Diabetes"
+                ]
+              },
+              "$.interventions[0].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[0]",
+                "source_value": "Participants with Type 2 Diabetes"
+              },
+              "$.interventions[0].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames",
+                "source_value": null
+              },
+              "$.primary_outcomes": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes",
+                "source_value": [
+                  {
+                    "measure": "Area under the serum insulin icodec concentration-time curve after a single dose (AUCIco,0-inf,SD)",
+                    "description": "Measured in picomoles\\*hours per liter (pmol\\*h/L).",
+                    "timeFrame": "From 0 hours until infinity after trial product administration (day 1)"
+                  },
+                  {
+                    "measure": "Maximum observed serum insulin icodec concentration after a single dose (Cmax,Ico,SD)",
+                    "description": "Measured in picomoles per liter (pmol/L).",
+                    "timeFrame": "From 0 hours until last measurement time after trial product administration (day 1)"
+                  },
+                  {
+                    "measure": "Time to maximum observed serum insulin icodec concentration after a single dose (tmax,Ico,SD)",
+                    "description": "Measured in hours.",
+                    "timeFrame": "From 0 hours until last measurement time after trial product administration (day 1)"
+                  }
+                ]
+              },
+              "$.primary_outcomes[0].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].measure",
+                "source_value": "Area under the serum insulin icodec concentration-time curve after a single dose (AUCIco,0-inf,SD)"
+              },
+              "$.primary_outcomes[0].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].description",
+                "source_value": "Measured in picomoles\\*hours per liter (pmol\\*h/L)."
+              },
+              "$.primary_outcomes[0].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].timeFrame",
+                "source_value": "From 0 hours until infinity after trial product administration (day 1)"
+              },
+              "$.primary_outcomes[1].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[1].measure",
+                "source_value": "Maximum observed serum insulin icodec concentration after a single dose (Cmax,Ico,SD)"
+              },
+              "$.primary_outcomes[1].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[1].description",
+                "source_value": "Measured in picomoles per liter (pmol/L)."
+              },
+              "$.primary_outcomes[1].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[1].timeFrame",
+                "source_value": "From 0 hours until last measurement time after trial product administration (day 1)"
+              },
+              "$.primary_outcomes[2].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[2].measure",
+                "source_value": "Time to maximum observed serum insulin icodec concentration after a single dose (tmax,Ico,SD)"
+              },
+              "$.primary_outcomes[2].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[2].description",
+                "source_value": "Measured in hours."
+              },
+              "$.primary_outcomes[2].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[2].timeFrame",
+                "source_value": "From 0 hours until last measurement time after trial product administration (day 1)"
+              },
+              "$.results.has_results": {
+                "source_path": "$.hasResults",
+                "source_value": false
+              },
+              "$.results.status": {
+                "source_path": "$.hasResults",
+                "source_value": false,
+                "derivation": "Strict boolean true -> posted; false -> not_posted; other -> unknown."
+              },
+              "$.results.url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT05790681",
+                "derivation": "Canonical study URL; results tab only when hasResults is true."
+              },
+              "$.provenance.registry_update_date": {
+                "source_path": "$.protocolSection.statusModule.lastUpdatePostDateStruct.date",
+                "source_value": "2026-04-09"
+              }
+            }
+          },
+          "review_flags": [
+            {
+              "code": "DISEASE_RELEVANCE_REQUIRES_REVIEW",
+              "field": "$.population.eligibility_criteria",
+              "message": "Confirm type 2 diabetes relevance and eligibility/population context manually, including prevention studies and mixed populations. Condition labels and eligibility criteria do not establish enrolled participants' diagnoses, glucose control, complications or a treatment effect."
+            },
+            {
+              "code": "RESULTS_NOT_POSTED",
+              "field": "$.results.has_results",
+              "message": "No results posted in this registry; findings or publications may exist elsewhere."
+            }
+          ],
+          "limitations": [
+            "Completed does not mean successful treatment or available results.",
+            "No results posted in this registry does not mean no findings or publications exist.",
+            "Eligibility criteria do not describe the actual enrolled population.",
+            "Enrollment is not the number analyzed for a particular outcome.",
+            "Registry-listed outcomes are not proof of prospective specification.",
+            "Randomization and masking fields do not establish low risk of bias.",
+            "Registry extraction does not establish treatment effectiveness or support treatment ranking."
+          ]
+        }
+      }
+    },
+    {
+      "tool": "get_trial_evidence_card",
+      "arguments": {
+        "nct_id": "NCT02491801"
+      },
+      "duration_seconds": 0.063,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "card": {
+          "schema_version": "1.0",
+          "label": "Registry extraction pending human review",
+          "source_mode": "live",
+          "identity": {
+            "nct_id": "NCT02491801",
+            "title": "Form of Dairy Products on Satiety, Food Intake and Post-meal Glycaemia in Young and Older Adults",
+            "official_title": "The Effect of Solid, Semi-solid and Liquid Dairy Products on Satiety, Food Intake and Post-meal Glycaemia in Young and Older Adults",
+            "conditions": [
+              "Type 2 Diabetes Mellitus",
+              "Obesity"
+            ],
+            "study_url": "https://clinicaltrials.gov/study/NCT02491801"
+          },
+          "status": {
+            "study_type": "INTERVENTIONAL",
+            "overall_status": "COMPLETED",
+            "completion_date": "2018-02-21",
+            "completion_date_type": "ACTUAL"
+          },
+          "design": {
+            "phases": [
+              "NA"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "CROSSOVER",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "enrollment": {
+            "count": 150,
+            "type": "ACTUAL"
+          },
+          "population": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Healthy, non-smoking male and female participants aged 20-30 and 60-70 years old\n* Young adults with body mass index (BMI) of 18.5-24.9 kg/m2 (normal weight) and older adults with BMI between 18.5-29.9 kg/m2 (normal/overweight).\n\nExclusion Criteria:\n\n* Diabetic\n* Individuals on medication affecting appetite\n* Lactose-intolerant or allergic to dairy (including milk, yogurt, and cheese)\n* Breakfast skippers\n* Gastrointestinal problems\n* Individuals on an energy-restricted diet",
+            "healthy_volunteers": true,
+            "sex": "ALL",
+            "minimum_age": "20 Years",
+            "maximum_age": "70 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "arms": [
+            {
+              "label": "3.25% M.F. Milk",
+              "type": "EXPERIMENTAL",
+              "description": "3.25% M.F. Milk",
+              "intervention_names": [
+                "Other: Dietary intervention"
+              ]
+            },
+            {
+              "label": "Greek Yogurt",
+              "type": "EXPERIMENTAL",
+              "description": "Greek Yogurt (2% M.F.)",
+              "intervention_names": [
+                "Other: Dietary intervention"
+              ]
+            },
+            {
+              "label": "Cheddar Cheese",
+              "type": "EXPERIMENTAL",
+              "description": "Regular Fat Cheddar Cheese",
+              "intervention_names": [
+                "Other: Dietary intervention"
+              ]
+            },
+            {
+              "label": "Control 1",
+              "type": "EXPERIMENTAL",
+              "description": "Skim milk",
+              "intervention_names": [
+                "Other: Dietary intervention"
+              ]
+            },
+            {
+              "label": "Control 2",
+              "type": "EXPERIMENTAL",
+              "description": "Filtered water, calorie-free control",
+              "intervention_names": [
+                "Other: Dietary intervention"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "name": "Dietary intervention",
+              "type": "OTHER",
+              "description": "All arms are given to all participants, in a randomized order",
+              "arm_group_labels": [
+                "3.25% M.F. Milk",
+                "Cheddar Cheese",
+                "Control 1",
+                "Control 2",
+                "Greek Yogurt"
+              ],
+              "other_names": null
+            }
+          ],
+          "primary_outcomes": [
+            {
+              "measure": "Blood Glucose (Study 1, 2 and 3)",
+              "description": "Blood glucose (mmol/L) is measured by using finger prick capillary blood samples.\n\nTime frame and frequency vary for each study.\n\nStudy 1: Baseline measure (0 minute) then every 15 minutes up to 120 min (post-treatment), 8 times; 140 to 170 min (post-meal) every 30 mintes, 2 times . A total of 10 times\n\nStudy 2: Baseline measure (0 minute) then post-treatment every 15 minutes up to 90 minutes and last measure at 120 minutes. A total of 7 times.\n\nStudy 3: Part 1: Baseline measure (0 minute) then every 15 minutes up to 30 minutes post-treatment, then 50 minutes and every 15 minutes until 125 minutes. A total of 9 times.\n\nPart 2: Baseline measure (0 minute) then at 15 post-treatment and, 35 and 50 minutes post-meal. A total of 4 times",
+              "time_frame": "Post-treatment and post-meal"
+            }
+          ],
+          "results": {
+            "has_results": false,
+            "status": "not_posted",
+            "url": "https://clinicaltrials.gov/study/NCT02491801"
+          },
+          "provenance": {
+            "retrieved_at": "2026-10-28T17:00:49.282950Z",
+            "registry_update_date": "2020-11-03",
+            "source_url": "https://clinicaltrials.gov/study/NCT02491801",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02491801",
+            "snapshot_sha256": null,
+            "fields": {
+              "$.identity.nct_id": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT02491801"
+              },
+              "$.identity.study_url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT02491801",
+                "derivation": "Canonical study URL from validated NCT ID."
+              },
+              "$.identity.title": {
+                "source_path": "$.protocolSection.identificationModule.briefTitle",
+                "source_value": "Form of Dairy Products on Satiety, Food Intake and Post-meal Glycaemia in Young and Older Adults"
+              },
+              "$.identity.official_title": {
+                "source_path": "$.protocolSection.identificationModule.officialTitle",
+                "source_value": "The Effect of Solid, Semi-solid and Liquid Dairy Products on Satiety, Food Intake and Post-meal Glycaemia in Young and Older Adults"
+              },
+              "$.identity.conditions": {
+                "source_path": "$.protocolSection.conditionsModule.conditions",
+                "source_value": [
+                  "Type 2 Diabetes Mellitus",
+                  "Obesity"
+                ]
+              },
+              "$.identity.conditions[0]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[0]",
+                "source_value": "Type 2 Diabetes Mellitus"
+              },
+              "$.identity.conditions[1]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[1]",
+                "source_value": "Obesity"
+              },
+              "$.status.study_type": {
+                "source_path": "$.protocolSection.designModule.studyType",
+                "source_value": "INTERVENTIONAL"
+              },
+              "$.status.overall_status": {
+                "source_path": "$.protocolSection.statusModule.overallStatus",
+                "source_value": "COMPLETED"
+              },
+              "$.status.completion_date": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.date",
+                "source_value": "2018-02-21"
+              },
+              "$.status.completion_date_type": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.type",
+                "source_value": "ACTUAL"
+              },
+              "$.design.phases": {
+                "source_path": "$.protocolSection.designModule.phases",
+                "source_value": [
+                  "NA"
+                ]
+              },
+              "$.design.phases[0]": {
+                "source_path": "$.protocolSection.designModule.phases[0]",
+                "source_value": "NA"
+              },
+              "$.design.allocation": {
+                "source_path": "$.protocolSection.designModule.designInfo.allocation",
+                "source_value": "RANDOMIZED"
+              },
+              "$.design.intervention_model": {
+                "source_path": "$.protocolSection.designModule.designInfo.interventionModel",
+                "source_value": "CROSSOVER"
+              },
+              "$.design.masking": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.masking",
+                "source_value": "NONE"
+              },
+              "$.design.who_masked": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked",
+                "source_value": null
+              },
+              "$.enrollment.count": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.count",
+                "source_value": 150
+              },
+              "$.enrollment.type": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.type",
+                "source_value": "ACTUAL"
+              },
+              "$.population.eligibility_criteria": {
+                "source_path": "$.protocolSection.eligibilityModule.eligibilityCriteria",
+                "source_value": "Inclusion Criteria:\n\n* Healthy, non-smoking male and female participants aged 20-30 and 60-70 years old\n* Young adults with body mass index (BMI) of 18.5-24.9 kg/m2 (normal weight) and older adults with BMI between 18.5-29.9 kg/m2 (normal/overweight).\n\nExclusion Criteria:\n\n* Diabetic\n* Individuals on medication affecting appetite\n* Lactose-intolerant or allergic to dairy (including milk, yogurt, and cheese)\n* Breakfast skippers\n* Gastrointestinal problems\n* Individuals on an energy-restricted diet"
+              },
+              "$.population.healthy_volunteers": {
+                "source_path": "$.protocolSection.eligibilityModule.healthyVolunteers",
+                "source_value": true
+              },
+              "$.population.sex": {
+                "source_path": "$.protocolSection.eligibilityModule.sex",
+                "source_value": "ALL"
+              },
+              "$.population.minimum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.minimumAge",
+                "source_value": "20 Years"
+              },
+              "$.population.maximum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.maximumAge",
+                "source_value": "70 Years"
+              },
+              "$.arms": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups",
+                "source_value": [
+                  {
+                    "label": "3.25% M.F. Milk",
+                    "type": "EXPERIMENTAL",
+                    "description": "3.25% M.F. Milk",
+                    "interventionNames": [
+                      "Other: Dietary intervention"
+                    ]
+                  },
+                  {
+                    "label": "Greek Yogurt",
+                    "type": "EXPERIMENTAL",
+                    "description": "Greek Yogurt (2% M.F.)",
+                    "interventionNames": [
+                      "Other: Dietary intervention"
+                    ]
+                  },
+                  {
+                    "label": "Cheddar Cheese",
+                    "type": "EXPERIMENTAL",
+                    "description": "Regular Fat Cheddar Cheese",
+                    "interventionNames": [
+                      "Other: Dietary intervention"
+                    ]
+                  },
+                  {
+                    "label": "Control 1",
+                    "type": "EXPERIMENTAL",
+                    "description": "Skim milk",
+                    "interventionNames": [
+                      "Other: Dietary intervention"
+                    ]
+                  },
+                  {
+                    "label": "Control 2",
+                    "type": "EXPERIMENTAL",
+                    "description": "Filtered water, calorie-free control",
+                    "interventionNames": [
+                      "Other: Dietary intervention"
+                    ]
+                  }
+                ]
+              },
+              "$.arms[0].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].label",
+                "source_value": "3.25% M.F. Milk"
+              },
+              "$.arms[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].description",
+                "source_value": "3.25% M.F. Milk"
+              },
+              "$.arms[0].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames",
+                "source_value": [
+                  "Other: Dietary intervention"
+                ]
+              },
+              "$.arms[0].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames[0]",
+                "source_value": "Other: Dietary intervention"
+              },
+              "$.arms[1].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].label",
+                "source_value": "Greek Yogurt"
+              },
+              "$.arms[1].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[1].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].description",
+                "source_value": "Greek Yogurt (2% M.F.)"
+              },
+              "$.arms[1].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].interventionNames",
+                "source_value": [
+                  "Other: Dietary intervention"
+                ]
+              },
+              "$.arms[1].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].interventionNames[0]",
+                "source_value": "Other: Dietary intervention"
+              },
+              "$.arms[2].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].label",
+                "source_value": "Cheddar Cheese"
+              },
+              "$.arms[2].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[2].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].description",
+                "source_value": "Regular Fat Cheddar Cheese"
+              },
+              "$.arms[2].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].interventionNames",
+                "source_value": [
+                  "Other: Dietary intervention"
+                ]
+              },
+              "$.arms[2].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[2].interventionNames[0]",
+                "source_value": "Other: Dietary intervention"
+              },
+              "$.arms[3].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[3].label",
+                "source_value": "Control 1"
+              },
+              "$.arms[3].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[3].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[3].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[3].description",
+                "source_value": "Skim milk"
+              },
+              "$.arms[3].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[3].interventionNames",
+                "source_value": [
+                  "Other: Dietary intervention"
+                ]
+              },
+              "$.arms[3].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[3].interventionNames[0]",
+                "source_value": "Other: Dietary intervention"
+              },
+              "$.arms[4].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[4].label",
+                "source_value": "Control 2"
+              },
+              "$.arms[4].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[4].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[4].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[4].description",
+                "source_value": "Filtered water, calorie-free control"
+              },
+              "$.arms[4].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[4].interventionNames",
+                "source_value": [
+                  "Other: Dietary intervention"
+                ]
+              },
+              "$.arms[4].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[4].interventionNames[0]",
+                "source_value": "Other: Dietary intervention"
+              },
+              "$.interventions": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions",
+                "source_value": [
+                  {
+                    "type": "OTHER",
+                    "name": "Dietary intervention",
+                    "description": "All arms are given to all participants, in a randomized order",
+                    "armGroupLabels": [
+                      "3.25% M.F. Milk",
+                      "Cheddar Cheese",
+                      "Control 1",
+                      "Control 2",
+                      "Greek Yogurt"
+                    ]
+                  }
+                ]
+              },
+              "$.interventions[0].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].name",
+                "source_value": "Dietary intervention"
+              },
+              "$.interventions[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].type",
+                "source_value": "OTHER"
+              },
+              "$.interventions[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].description",
+                "source_value": "All arms are given to all participants, in a randomized order"
+              },
+              "$.interventions[0].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels",
+                "source_value": [
+                  "3.25% M.F. Milk",
+                  "Cheddar Cheese",
+                  "Control 1",
+                  "Control 2",
+                  "Greek Yogurt"
+                ]
+              },
+              "$.interventions[0].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[0]",
+                "source_value": "3.25% M.F. Milk"
+              },
+              "$.interventions[0].arm_group_labels[1]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[1]",
+                "source_value": "Cheddar Cheese"
+              },
+              "$.interventions[0].arm_group_labels[2]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[2]",
+                "source_value": "Control 1"
+              },
+              "$.interventions[0].arm_group_labels[3]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[3]",
+                "source_value": "Control 2"
+              },
+              "$.interventions[0].arm_group_labels[4]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[4]",
+                "source_value": "Greek Yogurt"
+              },
+              "$.interventions[0].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames",
+                "source_value": null
+              },
+              "$.primary_outcomes": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes",
+                "source_value": [
+                  {
+                    "measure": "Blood Glucose (Study 1, 2 and 3)",
+                    "description": "Blood glucose (mmol/L) is measured by using finger prick capillary blood samples.\n\nTime frame and frequency vary for each study.\n\nStudy 1: Baseline measure (0 minute) then every 15 minutes up to 120 min (post-treatment), 8 times; 140 to 170 min (post-meal) every 30 mintes, 2 times . A total of 10 times\n\nStudy 2: Baseline measure (0 minute) then post-treatment every 15 minutes up to 90 minutes and last measure at 120 minutes. A total of 7 times.\n\nStudy 3: Part 1: Baseline measure (0 minute) then every 15 minutes up to 30 minutes post-treatment, then 50 minutes and every 15 minutes until 125 minutes. A total of 9 times.\n\nPart 2: Baseline measure (0 minute) then at 15 post-treatment and, 35 and 50 minutes post-meal. A total of 4 times",
+                    "timeFrame": "Post-treatment and post-meal"
+                  }
+                ]
+              },
+              "$.primary_outcomes[0].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].measure",
+                "source_value": "Blood Glucose (Study 1, 2 and 3)"
+              },
+              "$.primary_outcomes[0].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].description",
+                "source_value": "Blood glucose (mmol/L) is measured by using finger prick capillary blood samples.\n\nTime frame and frequency vary for each study.\n\nStudy 1: Baseline measure (0 minute) then every 15 minutes up to 120 min (post-treatment), 8 times; 140 to 170 min (post-meal) every 30 mintes, 2 times . A total of 10 times\n\nStudy 2: Baseline measure (0 minute) then post-treatment every 15 minutes up to 90 minutes and last measure at 120 minutes. A total of 7 times.\n\nStudy 3: Part 1: Baseline measure (0 minute) then every 15 minutes up to 30 minutes post-treatment, then 50 minutes and every 15 minutes until 125 minutes. A total of 9 times.\n\nPart 2: Baseline measure (0 minute) then at 15 post-treatment and, 35 and 50 minutes post-meal. A total of 4 times"
+              },
+              "$.primary_outcomes[0].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].timeFrame",
+                "source_value": "Post-treatment and post-meal"
+              },
+              "$.results.has_results": {
+                "source_path": "$.hasResults",
+                "source_value": false
+              },
+              "$.results.status": {
+                "source_path": "$.hasResults",
+                "source_value": false,
+                "derivation": "Strict boolean true -> posted; false -> not_posted; other -> unknown."
+              },
+              "$.results.url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT02491801",
+                "derivation": "Canonical study URL; results tab only when hasResults is true."
+              },
+              "$.provenance.registry_update_date": {
+                "source_path": "$.protocolSection.statusModule.lastUpdatePostDateStruct.date",
+                "source_value": "2020-11-03"
+              }
+            }
+          },
+          "review_flags": [
+            {
+              "code": "DISEASE_RELEVANCE_REQUIRES_REVIEW",
+              "field": "$.population.eligibility_criteria",
+              "message": "Confirm type 2 diabetes relevance and eligibility/population context manually, including prevention studies and mixed populations. Condition labels and eligibility criteria do not establish enrolled participants' diagnoses, glucose control, complications or a treatment effect."
+            },
+            {
+              "code": "RESULTS_NOT_POSTED",
+              "field": "$.results.has_results",
+              "message": "No results posted in this registry; findings or publications may exist elsewhere."
+            }
+          ],
+          "limitations": [
+            "Completed does not mean successful treatment or available results.",
+            "No results posted in this registry does not mean no findings or publications exist.",
+            "Eligibility criteria do not describe the actual enrolled population.",
+            "Enrollment is not the number analyzed for a particular outcome.",
+            "Registry-listed outcomes are not proof of prospective specification.",
+            "Randomization and masking fields do not establish low risk of bias.",
+            "Registry extraction does not establish treatment effectiveness or support treatment ranking."
+          ]
+        }
+      }
+    },
+    {
+      "tool": "get_trial_evidence_card",
+      "arguments": {
+        "nct_id": "NCT04214600"
+      },
+      "duration_seconds": 0.062,
+      "result": {
+        "status": "ok",
+        "source_mode": "live",
+        "card": {
+          "schema_version": "1.0",
+          "label": "Registry extraction pending human review",
+          "source_mode": "live",
+          "identity": {
+            "nct_id": "NCT04214600",
+            "title": "Cognitive Behavioral Therapy for Adherence in Patients With Type 2 Diabetes",
+            "official_title": "Brief Cognitive Behavioral Therapy for Adherence and Depression in Patients With Type 2 Diabetes in an Urban Primary Care Facility: Randomized Controlled Trial",
+            "conditions": [
+              "Type 2 Diabetes",
+              "Depression"
+            ],
+            "study_url": "https://clinicaltrials.gov/study/NCT04214600"
+          },
+          "status": {
+            "study_type": "INTERVENTIONAL",
+            "overall_status": "COMPLETED",
+            "completion_date": "2020-03-18",
+            "completion_date_type": "ACTUAL"
+          },
+          "design": {
+            "phases": [
+              "NA"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "SINGLE",
+            "who_masked": [
+              "PARTICIPANT"
+            ]
+          },
+          "enrollment": {
+            "count": 100,
+            "type": "ACTUAL"
+          },
+          "population": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Patients meeting the American Diabetes Association (ADA) criteria for T2D (glycated hemoglobin (HbA1c) ≥6.5%, fasting glucose ≥126mg/dL) with diagnosis confirmed by the participants' medical clinicians.\n* Participants aged more than 35 years; ambulatory; able to give informed consent; and able to obtain reliable information.\n* Eligible patients will be screened for depressive symptoms using the Beck Depression Inventory (BDI). They will be included if they score 11-30 based on BDI (Mild mood disturbance to Moderate depression).\n\nExclusion Criteria:\n\n* Participants will be excluded if they have type I diabetes and psychiatric disorders other than mood or personality disorders. Depressed patients on treatment for depression will not be included.\n* Suicidal patients and those diagnosed with major depressive disorder will be referred to a psychiatrist.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "35 Years",
+            "maximum_age": "80 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "arms": [
+            {
+              "label": "Cognitive Behavioral Therapy",
+              "type": "EXPERIMENTAL",
+              "description": "This group will receive four CBT sessions twice a month for two months",
+              "intervention_names": [
+                "Behavioral: Cognitive Behavioral Therapy (CBT)"
+              ]
+            },
+            {
+              "label": "Control",
+              "type": "NO_INTERVENTION",
+              "description": "This group will be scheduled the same number of visits as a follow up for diabetes",
+              "intervention_names": null
+            }
+          ],
+          "interventions": [
+            {
+              "name": "Cognitive Behavioral Therapy (CBT)",
+              "type": "BEHAVIORAL",
+              "description": "Patients in the CBT intervention group will receive four educational sessions for 30-45 minutes on one to one basis every two weeks during patients' regular follow up visits. The visits will be scheduled depending on the patient's availability. The sessions will be delivered by a trained physician. The sessions will include:\n\nSession 1: Dealing with thoughts of sadness and depression Session 2: Dealing with thoughts of anxiety and stress Session 3: Dealing with anger Session 4: Enhancement of coping and problem-solving skills",
+              "arm_group_labels": [
+                "Cognitive Behavioral Therapy"
+              ],
+              "other_names": null
+            }
+          ],
+          "primary_outcomes": [
+            {
+              "measure": "Change of Glycated Hemoglobin A1c (Hb A1c) After the Cognitive Behavioral Therapy Sessions",
+              "description": "Assess the effect of the CBT combined with diabetes education versus control receiving diabetes education alone on glycemic measures of patients with T2D and depression",
+              "time_frame": "Baseline and 3 months"
+            }
+          ],
+          "results": {
+            "has_results": true,
+            "status": "posted",
+            "url": "https://clinicaltrials.gov/study/NCT04214600?tab=results"
+          },
+          "provenance": {
+            "retrieved_at": "2026-10-28T17:00:49.346758Z",
+            "registry_update_date": "2020-11-27",
+            "source_url": "https://clinicaltrials.gov/study/NCT04214600",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04214600",
+            "snapshot_sha256": null,
+            "fields": {
+              "$.identity.nct_id": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT04214600"
+              },
+              "$.identity.study_url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT04214600",
+                "derivation": "Canonical study URL from validated NCT ID."
+              },
+              "$.identity.title": {
+                "source_path": "$.protocolSection.identificationModule.briefTitle",
+                "source_value": "Cognitive Behavioral Therapy for Adherence in Patients With Type 2 Diabetes"
+              },
+              "$.identity.official_title": {
+                "source_path": "$.protocolSection.identificationModule.officialTitle",
+                "source_value": "Brief Cognitive Behavioral Therapy for Adherence and Depression in Patients With Type 2 Diabetes in an Urban Primary Care Facility: Randomized Controlled Trial"
+              },
+              "$.identity.conditions": {
+                "source_path": "$.protocolSection.conditionsModule.conditions",
+                "source_value": [
+                  "Type 2 Diabetes",
+                  "Depression"
+                ]
+              },
+              "$.identity.conditions[0]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[0]",
+                "source_value": "Type 2 Diabetes"
+              },
+              "$.identity.conditions[1]": {
+                "source_path": "$.protocolSection.conditionsModule.conditions[1]",
+                "source_value": "Depression"
+              },
+              "$.status.study_type": {
+                "source_path": "$.protocolSection.designModule.studyType",
+                "source_value": "INTERVENTIONAL"
+              },
+              "$.status.overall_status": {
+                "source_path": "$.protocolSection.statusModule.overallStatus",
+                "source_value": "COMPLETED"
+              },
+              "$.status.completion_date": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.date",
+                "source_value": "2020-03-18"
+              },
+              "$.status.completion_date_type": {
+                "source_path": "$.protocolSection.statusModule.completionDateStruct.type",
+                "source_value": "ACTUAL"
+              },
+              "$.design.phases": {
+                "source_path": "$.protocolSection.designModule.phases",
+                "source_value": [
+                  "NA"
+                ]
+              },
+              "$.design.phases[0]": {
+                "source_path": "$.protocolSection.designModule.phases[0]",
+                "source_value": "NA"
+              },
+              "$.design.allocation": {
+                "source_path": "$.protocolSection.designModule.designInfo.allocation",
+                "source_value": "RANDOMIZED"
+              },
+              "$.design.intervention_model": {
+                "source_path": "$.protocolSection.designModule.designInfo.interventionModel",
+                "source_value": "PARALLEL"
+              },
+              "$.design.masking": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.masking",
+                "source_value": "SINGLE"
+              },
+              "$.design.who_masked": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked",
+                "source_value": [
+                  "PARTICIPANT"
+                ]
+              },
+              "$.design.who_masked[0]": {
+                "source_path": "$.protocolSection.designModule.designInfo.maskingInfo.whoMasked[0]",
+                "source_value": "PARTICIPANT"
+              },
+              "$.enrollment.count": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.count",
+                "source_value": 100
+              },
+              "$.enrollment.type": {
+                "source_path": "$.protocolSection.designModule.enrollmentInfo.type",
+                "source_value": "ACTUAL"
+              },
+              "$.population.eligibility_criteria": {
+                "source_path": "$.protocolSection.eligibilityModule.eligibilityCriteria",
+                "source_value": "Inclusion Criteria:\n\n* Patients meeting the American Diabetes Association (ADA) criteria for T2D (glycated hemoglobin (HbA1c) ≥6.5%, fasting glucose ≥126mg/dL) with diagnosis confirmed by the participants' medical clinicians.\n* Participants aged more than 35 years; ambulatory; able to give informed consent; and able to obtain reliable information.\n* Eligible patients will be screened for depressive symptoms using the Beck Depression Inventory (BDI). They will be included if they score 11-30 based on BDI (Mild mood disturbance to Moderate depression).\n\nExclusion Criteria:\n\n* Participants will be excluded if they have type I diabetes and psychiatric disorders other than mood or personality disorders. Depressed patients on treatment for depression will not be included.\n* Suicidal patients and those diagnosed with major depressive disorder will be referred to a psychiatrist."
+              },
+              "$.population.healthy_volunteers": {
+                "source_path": "$.protocolSection.eligibilityModule.healthyVolunteers",
+                "source_value": false
+              },
+              "$.population.sex": {
+                "source_path": "$.protocolSection.eligibilityModule.sex",
+                "source_value": "ALL"
+              },
+              "$.population.minimum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.minimumAge",
+                "source_value": "35 Years"
+              },
+              "$.population.maximum_age": {
+                "source_path": "$.protocolSection.eligibilityModule.maximumAge",
+                "source_value": "80 Years"
+              },
+              "$.arms": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups",
+                "source_value": [
+                  {
+                    "label": "Cognitive Behavioral Therapy",
+                    "type": "EXPERIMENTAL",
+                    "description": "This group will receive four CBT sessions twice a month for two months",
+                    "interventionNames": [
+                      "Behavioral: Cognitive Behavioral Therapy (CBT)"
+                    ]
+                  },
+                  {
+                    "label": "Control",
+                    "type": "NO_INTERVENTION",
+                    "description": "This group will be scheduled the same number of visits as a follow up for diabetes"
+                  }
+                ]
+              },
+              "$.arms[0].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].label",
+                "source_value": "Cognitive Behavioral Therapy"
+              },
+              "$.arms[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].type",
+                "source_value": "EXPERIMENTAL"
+              },
+              "$.arms[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].description",
+                "source_value": "This group will receive four CBT sessions twice a month for two months"
+              },
+              "$.arms[0].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames",
+                "source_value": [
+                  "Behavioral: Cognitive Behavioral Therapy (CBT)"
+                ]
+              },
+              "$.arms[0].intervention_names[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[0].interventionNames[0]",
+                "source_value": "Behavioral: Cognitive Behavioral Therapy (CBT)"
+              },
+              "$.arms[1].label": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].label",
+                "source_value": "Control"
+              },
+              "$.arms[1].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].type",
+                "source_value": "NO_INTERVENTION"
+              },
+              "$.arms[1].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].description",
+                "source_value": "This group will be scheduled the same number of visits as a follow up for diabetes"
+              },
+              "$.arms[1].intervention_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.armGroups[1].interventionNames",
+                "source_value": null
+              },
+              "$.interventions": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions",
+                "source_value": [
+                  {
+                    "type": "BEHAVIORAL",
+                    "name": "Cognitive Behavioral Therapy (CBT)",
+                    "description": "Patients in the CBT intervention group will receive four educational sessions for 30-45 minutes on one to one basis every two weeks during patients' regular follow up visits. The visits will be scheduled depending on the patient's availability. The sessions will be delivered by a trained physician. The sessions will include:\n\nSession 1: Dealing with thoughts of sadness and depression Session 2: Dealing with thoughts of anxiety and stress Session 3: Dealing with anger Session 4: Enhancement of coping and problem-solving skills",
+                    "armGroupLabels": [
+                      "Cognitive Behavioral Therapy"
+                    ]
+                  }
+                ]
+              },
+              "$.interventions[0].name": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].name",
+                "source_value": "Cognitive Behavioral Therapy (CBT)"
+              },
+              "$.interventions[0].type": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].type",
+                "source_value": "BEHAVIORAL"
+              },
+              "$.interventions[0].description": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].description",
+                "source_value": "Patients in the CBT intervention group will receive four educational sessions for 30-45 minutes on one to one basis every two weeks during patients' regular follow up visits. The visits will be scheduled depending on the patient's availability. The sessions will be delivered by a trained physician. The sessions will include:\n\nSession 1: Dealing with thoughts of sadness and depression Session 2: Dealing with thoughts of anxiety and stress Session 3: Dealing with anger Session 4: Enhancement of coping and problem-solving skills"
+              },
+              "$.interventions[0].arm_group_labels": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels",
+                "source_value": [
+                  "Cognitive Behavioral Therapy"
+                ]
+              },
+              "$.interventions[0].arm_group_labels[0]": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].armGroupLabels[0]",
+                "source_value": "Cognitive Behavioral Therapy"
+              },
+              "$.interventions[0].other_names": {
+                "source_path": "$.protocolSection.armsInterventionsModule.interventions[0].otherNames",
+                "source_value": null
+              },
+              "$.primary_outcomes": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes",
+                "source_value": [
+                  {
+                    "measure": "Change of Glycated Hemoglobin A1c (Hb A1c) After the Cognitive Behavioral Therapy Sessions",
+                    "description": "Assess the effect of the CBT combined with diabetes education versus control receiving diabetes education alone on glycemic measures of patients with T2D and depression",
+                    "timeFrame": "Baseline and 3 months"
+                  }
+                ]
+              },
+              "$.primary_outcomes[0].measure": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].measure",
+                "source_value": "Change of Glycated Hemoglobin A1c (Hb A1c) After the Cognitive Behavioral Therapy Sessions"
+              },
+              "$.primary_outcomes[0].description": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].description",
+                "source_value": "Assess the effect of the CBT combined with diabetes education versus control receiving diabetes education alone on glycemic measures of patients with T2D and depression"
+              },
+              "$.primary_outcomes[0].time_frame": {
+                "source_path": "$.protocolSection.outcomesModule.primaryOutcomes[0].timeFrame",
+                "source_value": "Baseline and 3 months"
+              },
+              "$.results.has_results": {
+                "source_path": "$.hasResults",
+                "source_value": true
+              },
+              "$.results.status": {
+                "source_path": "$.hasResults",
+                "source_value": true,
+                "derivation": "Strict boolean true -> posted; false -> not_posted; other -> unknown."
+              },
+              "$.results.url": {
+                "source_path": "$.protocolSection.identificationModule.nctId",
+                "source_value": "NCT04214600",
+                "derivation": "Canonical study URL; results tab only when hasResults is true."
+              },
+              "$.provenance.registry_update_date": {
+                "source_path": "$.protocolSection.statusModule.lastUpdatePostDateStruct.date",
+                "source_value": "2020-11-27"
+              }
+            }
+          },
+          "review_flags": [
+            {
+              "code": "DISEASE_RELEVANCE_REQUIRES_REVIEW",
+              "field": "$.population.eligibility_criteria",
+              "message": "Confirm type 2 diabetes relevance and eligibility/population context manually, including prevention studies and mixed populations. Condition labels and eligibility criteria do not establish enrolled participants' diagnoses, glucose control, complications or a treatment effect."
+            },
+            {
+              "code": "ARM_INTERVENTION_LINK_NOT_REPORTED",
+              "field": "$.arms[1].intervention_names",
+              "message": "No explicit association is reported here; do not infer it by array order."
+            }
+          ],
+          "limitations": [
+            "Completed does not mean successful treatment or available results.",
+            "No results posted in this registry does not mean no findings or publications exist.",
+            "Eligibility criteria do not describe the actual enrolled population.",
+            "Enrollment is not the number analyzed for a particular outcome.",
+            "Registry-listed outcomes are not proof of prospective specification.",
+            "Randomization and masking fields do not establish low risk of bias.",
+            "Registry extraction does not establish treatment effectiveness or support treatment ranking."
+          ]
+        }
+      }
+    }
+  ],
+  "discovered_tools": [
+    "find_completed_trials",
+    "get_trial_evidence_card"
+  ],
+  "status": "passed",
+  "median_tool_seconds": 0.0625,
+  "slowest_tool_seconds": 0.36,
+  "disclosure": "Actual tool calls through MCP, not an LLM evaluation or physician-reviewed accuracy benchmark. Snapshot mode searches only the six development records."
+}

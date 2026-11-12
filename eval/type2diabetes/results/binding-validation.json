@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-28T16:58:46.240515Z",
+  "verification_type": "snapshot_fixture_binding_verification",
+  "status": "passed",
+  "default_core_loaded_development_records": 6,
+  "agent_loaded_development_and_exclusion_records": 7,
+  "heldout_loaded": false,
+  "type2diabetes_search": "passed",
+  "all_six_development_records_match_shared_label_screen": true,
+  "all_core_hashes_unchanged": true,
+  "posted_and_unposted_bindings": "passed",
+  "intervention_binding": "passed",
+  "active_exclusion_not_in_search": "passed",
+  "direct_exclusion_flag": "passed",
+  "snapshot_missing_id": "not_found",
+  "snapshot_no_match_search": "no_matches",
+  "reference_review": "pending; zero cards compared",
+  "model_evaluation": "not_run",
+  "clinical_review": "pending"
+}

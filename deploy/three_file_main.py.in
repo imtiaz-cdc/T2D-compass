@@ -1,0 +1,52 @@
+"""Generated T2D Compass launcher: application code/assets embedded for upload.
+
+Rebuild with scripts/build_bundles.py after editing src/alz_compass. This is a
+packaging format, not a secret: the embedded ZIP contains only public app files.
+"""
+
+import base64
+import hashlib
+import io
+from pathlib import Path, PurePosixPath
+import sys
+import tempfile
+from zipfile import ZipFile
+
+PAYLOAD_SHA256 = "@@PAYLOAD_SHA256@@"
+PAYLOAD_BASE64 = (
+@@PAYLOAD_BASE64@@
+)
+
+
+def main():
+    payload = base64.b64decode(PAYLOAD_BASE64, validate=True)
+    if hashlib.sha256(payload).hexdigest() != PAYLOAD_SHA256:
+        raise RuntimeError("Application payload changed; upload the supplied main.py.")
+    with tempfile.TemporaryDirectory(prefix="t2d-compass-") as runtime:
+        with ZipFile(io.BytesIO(payload)) as archive:
+            for name in archive.namelist():
+                path = PurePosixPath(name)
+                if (
+                    path.is_absolute()
+                    or ".." in path.parts
+                    or "\\" in name
+                    or not name.startswith("alz_compass/")
+                ):
+                    raise RuntimeError("Invalid path in application package.")
+            archive.extractall(runtime)
+        sys.path.insert(0, runtime)
+        import alz_compass
+
+        if not Path(alz_compass.__file__).resolve().is_relative_to(Path(runtime).resolve()):
+            raise RuntimeError("Application files were not loaded from this package.")
+        from alz_compass.app import main as run_app
+
+        print(
+            f"Starting T2D Compass {alz_compass.__version__} from three-file package",
+            flush=True,
+        )
+        run_app()
+
+
+if __name__ == "__main__":
+    main()

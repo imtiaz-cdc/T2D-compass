@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d40">
+  <meta name="description" content="Explore source-linked evidence from completed type 2 diabetes-related studies in ClinicalTrials.gov.">
+  <title>T2D Compass · Trial evidence, in context</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="T2D Compass home">
+        <svg class="brand-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.5"/><path d="m26 10-3 13-13 7 7-13 9-7Z" fill="currentColor"/><path d="m17 17 6 6" stroke="#102d40" stroke-width="1.5"/></svg>
+        <span>T2D <strong>Compass</strong><span class="brand-subtitle">Type 2 diabetes trial evidence</span></span>
+      </a>
+      <div class="header-status"><span class="status-indicator" id="source-status">Checking data source…</span><span class="version" id="version"></span></div>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">PUBLIC RESEARCH · CLINICALTRIALS.GOV</p><h1 id="page-title">Type 2 diabetes trials,<br><span>with the context intact.</span></h1><p class="intro-copy">Find completed type 2 diabetes-related studies. Review what the registry reports, what is missing, and where every record comes from.</p></div>
+      <aside class="intro-note"><span class="note-number">01 / SOURCE</span><p>One public registry.<br>Evidence you can inspect.</p><span>Source links, retrieval dates, and review flags travel with each evidence card.</span></aside>
+    </section>
+
+    <div id="connection-notice" class="notice warning" role="status" hidden></div>
+    <div class="view-tabs" role="tablist" aria-label="Choose a research workflow">
+      <button class="view-tab" id="explore-tab" role="tab" aria-selected="true" aria-controls="explore-panel" tabindex="0">Explore evidence</button>
+      <button class="view-tab" id="assistant-tab" role="tab" aria-selected="false" aria-controls="assistant-panel" tabindex="-1">Ask assistant <span class="tab-caption">Optional</span></button>
+    </div>
+
+    <section id="explore-panel" role="tabpanel" aria-labelledby="explore-tab">
+      <div class="workspace-grid">
+        <div class="research-main">
+          <section class="panel search-panel" aria-labelledby="search-title">
+            <div class="section-heading"><div><p class="eyebrow">START WITH A QUESTION</p><h2 id="search-title">Find completed trials</h2></div><span class="scope-tag">Interventional studies</span></div>
+            <p class="muted">Search type 2 diabetes-related candidate records by intervention, or leave the field blank to browse.</p>
+            <form id="search-form">
+              <div class="search-fields"><div class="field field-grow"><label for="intervention">Intervention <span class="optional">(optional)</span></label><input id="intervention" name="intervention" maxlength="120" placeholder="e.g., metformin" autocomplete="off"></div><div class="field"><label for="limit">Show up to</label><select id="limit" name="limit"><option value="3" selected>3 trials</option><option value="5">5 trials</option><option value="1">1 trial</option><option value="2">2 trials</option><option value="4">4 trials</option></select></div><button class="button primary search-submit" type="submit">Find trials <span aria-hidden="true">→</span></button></div>
+            </form>
+            <p class="field-hint">Results require an explicit type 2 diabetes condition label. Review eligibility and population; this bounded search may miss broadly labeled studies.</p>
+          </section>
+          <div id="search-feedback" class="feedback" role="status" aria-live="polite"></div>
+          <section id="search-results" class="results-section" aria-label="Trial search results" hidden></section>
+          <section id="card-area" class="results-section" aria-label="Trial evidence card" hidden></section>
+          <section id="starting-state" class="starting-state" aria-labelledby="starting-title"><span class="empty-mark" aria-hidden="true">↗</span><h2 id="starting-title">Start with the source.</h2><p>Search for trials or enter an NCT ID. Your results and evidence cards will appear here.</p><div class="journey"><span><b>1</b> Find a record</span><span><b>2</b> Inspect the evidence</span><span><b>3</b> Export for review</span></div></section>
+        </div>
+        <aside class="research-sidebar">
+          <section class="panel lookup-panel" aria-labelledby="lookup-title"><p class="eyebrow">HAVE A TRIAL IN MIND?</p><h2 id="lookup-title">Open an evidence card</h2><p class="muted">Look up a registry record by its NCT identifier.</p><form id="card-form"><div class="field"><label for="nct-id">NCT ID</label><input id="nct-id" name="nct-id" required pattern="[Nn][Cc][Tt][0-9]{8}" maxlength="11" placeholder="NCT03244800" autocomplete="off" spellcheck="false" aria-describedby="nct-hint"><span class="field-hint" id="nct-hint">NCT followed by 8 digits.</span></div><button class="button secondary full-width" type="submit">Get evidence card</button></form><div id="card-feedback" class="feedback" role="status" aria-live="polite"></div></section>
+          <section class="reading-guide"><span class="eyebrow">READ WITH CARE</span><h3>A completed trial is a starting point.</h3><p>“Completed” does not mean a treatment worked. Registry outcomes describe what was listed, and results may not be posted.</p><p>Review the source and missing fields before drawing conclusions. These records do not support treatment ranking or individual medical advice.</p><a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">About the source <span aria-hidden="true">↗</span><span class="sr-only"> (opens a new tab)</span></a></section>
+        </aside>
+      </div>
+    </section>
+
+    <section id="assistant-panel" role="tabpanel" aria-labelledby="assistant-tab" hidden>
+      <div class="workspace-grid">
+        <div class="research-main"><section class="panel assistant-panel" aria-labelledby="assistant-title"><p class="eyebrow">ASK ABOUT THE EVIDENCE</p><h2 id="assistant-title">A research assistant with sources</h2><p class="muted">Ask the assistant to find trials or explain a registry record. Inspect the retrieved evidence alongside its answer.</p><div id="assistant-availability" class="notice neutral" role="status">Checking assistant availability…</div><form id="ask-form"><div class="field"><label for="question">Your research question</label><textarea id="question" name="question" rows="4" maxlength="4000" required placeholder="Find completed type 2 diabetes-related trials of metformin and explain which records have results posted." disabled aria-describedby="question-hint"></textarea><span class="field-hint" id="question-hint">Use public research questions only. Do not enter patient details or other sensitive information.</span></div><div class="assistant-actions"><span class="muted small">AI answers need human review. Model usage may incur costs.</span><button id="ask-submit" class="button primary" type="submit" disabled>Ask assistant <span aria-hidden="true">→</span></button></div></form></section><div id="ask-feedback" class="feedback" role="status" aria-live="polite"></div><section id="assistant-results" class="results-section" aria-label="Assistant answer and retrieved evidence" hidden></section></div>
+        <aside class="research-sidebar"><section class="reading-guide"><span class="eyebrow">KEEP THE EVIDENCE CLOSE</span><h3>Read the answer. Check the record.</h3><p>The assistant can discover candidate trials and retrieve evidence cards. An answer is not proof of clinical effectiveness.</p><p>The export includes the actual question, tool calls, and returned evidence for review.</p><div class="model-info"><span class="eyebrow">CONFIGURED MODEL</span><p id="assistant-model">Not yet checked</p></div></section></aside>
+      </div>
+    </section>
+
+    <footer class="site-footer"><p><strong>T2D Compass</strong> · Research prototype</p><p>ClinicalTrials.gov is the only data source. Registry extractions and AI answers are pending human review.</p></footer>
+  </main>
+  <noscript><div class="noscript">Enable JavaScript to search the registry and view evidence cards.</div></noscript>
+</body>
+</html>

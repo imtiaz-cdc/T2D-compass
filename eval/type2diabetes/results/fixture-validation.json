@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-10-28T16:57:46.302342Z",
+  "status": "passed",
+  "verification_type": "public_source_capture_and_fixture_checks",
+  "core_records": 10,
+  "development_records": 6,
+  "heldout_records": 4,
+  "exclusion_records": 1,
+  "all_snapshot_hashes_verified": true,
+  "development_strata": [
+    "drug_results_true",
+    "drug_results_false",
+    "behavioral_results_true",
+    "behavioral_results_false",
+    "procedure_results_true",
+    "procedure_results_false"
+  ],
+  "all_development_records_completed_interventional": true,
+  "active_exclusion_status": "ACTIVE_NOT_RECRUITING",
+  "active_exclusion_id": "NCT05743387",
+  "all_twelve_scenario_placeholders_resolved": true,
+  "missing_identifier_absent_from_snapshot": true,
+  "live_missing_identifier_check": "not_performed; recheck before live evaluation",
+  "heldout_content_used_for_tuning": false,
+  "reference_answers": "blank_pending_independent_review",
+  "model_evaluation": "not_run",
+  "clinical_review": "pending",
+  "disclosure": "Mechanical capture and fixture suitability checks are not clinical validation, reviewed reference accuracy or model evaluation."
+}

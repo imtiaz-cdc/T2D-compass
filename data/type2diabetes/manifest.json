@@ -1,0 +1,112 @@
+[
+  {
+    "nct_id": "NCT03244800",
+    "split": "development",
+    "file": "public/development/NCT03244800.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT03244800",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03244800?format=json",
+    "retrieved_at": "2026-10-28T16:57:37.858299Z",
+    "sha256": "9c397473ff92bdbdc7df4203ef7e38098a40ded5f1f6ed493e9097d3a86563cf",
+    "review_status": "pending_independent_review",
+    "selection_reason": "drug_results_true"
+  },
+  {
+    "nct_id": "NCT05790681",
+    "split": "development",
+    "file": "public/development/NCT05790681.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT05790681",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05790681?format=json",
+    "retrieved_at": "2026-10-28T16:57:38.841264Z",
+    "sha256": "a48024687bd5493e93e769a34520b786a8f2d112d8d699bd830b630c337364fc",
+    "review_status": "pending_independent_review",
+    "selection_reason": "drug_results_false"
+  },
+  {
+    "nct_id": "NCT04214600",
+    "split": "development",
+    "file": "public/development/NCT04214600.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT04214600",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04214600?format=json",
+    "retrieved_at": "2026-10-28T16:57:39.832788Z",
+    "sha256": "eae68f66d47001072cff7662ff7e17949bc55374e72aa1b56c7fb6b3f33deda9",
+    "review_status": "pending_independent_review",
+    "selection_reason": "behavioral_results_true"
+  },
+  {
+    "nct_id": "NCT01596244",
+    "split": "development",
+    "file": "public/development/NCT01596244.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT01596244",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01596244?format=json",
+    "retrieved_at": "2026-10-28T16:57:40.783434Z",
+    "sha256": "88cafa7a07cdbfadd00d5ae7df376fd0f32404cbef34d48e42d69892099efe92",
+    "review_status": "pending_independent_review",
+    "selection_reason": "behavioral_results_false"
+  },
+  {
+    "nct_id": "NCT01614769",
+    "split": "development",
+    "file": "public/development/NCT01614769.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT01614769",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01614769?format=json",
+    "retrieved_at": "2026-10-28T16:57:41.792274Z",
+    "sha256": "55dafa1bd395e17d62380eb5cb931e623f856c64d132eaf0b50ee49354caeff2",
+    "review_status": "pending_independent_review",
+    "selection_reason": "procedure_results_true"
+  },
+  {
+    "nct_id": "NCT02811055",
+    "split": "development",
+    "file": "public/development/NCT02811055.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT02811055",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02811055?format=json",
+    "retrieved_at": "2026-10-28T16:57:42.802912Z",
+    "sha256": "dbe35f935ed6da0bad00efbf1b8770ab00b3de6ecd0b18b9371f0ec683156b3d",
+    "review_status": "pending_independent_review",
+    "selection_reason": "procedure_results_false"
+  },
+  {
+    "nct_id": "NCT00004266",
+    "split": "heldout",
+    "file": "public/heldout/NCT00004266.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT00004266",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00004266?format=json",
+    "retrieved_at": "2026-10-28T16:57:43.734366Z",
+    "sha256": "0072c47b38ee91871a58dbdeeece970ea339002d28f15d2afac88237ae8daeb8",
+    "review_status": "pending_independent_review",
+    "selection_reason": "first_unused_id_from_separate_condition_query"
+  },
+  {
+    "nct_id": "NCT00000620",
+    "split": "heldout",
+    "file": "public/heldout/NCT00000620.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT00000620",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00000620?format=json",
+    "retrieved_at": "2026-10-28T16:57:44.243042Z",
+    "sha256": "60c8ec2b1bd38f9322b452a222c04d1b3d6eac8b28ac135127eaa32275ec914a",
+    "review_status": "pending_independent_review",
+    "selection_reason": "first_unused_id_from_separate_condition_query"
+  },
+  {
+    "nct_id": "NCT00001870",
+    "split": "heldout",
+    "file": "public/heldout/NCT00001870.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT00001870",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00001870?format=json",
+    "retrieved_at": "2026-10-28T16:57:44.708569Z",
+    "sha256": "145c3a6b3d4bf9baed5603922699487e6b16afd8c4684fcdd192bf467255237c",
+    "review_status": "pending_independent_review",
+    "selection_reason": "first_unused_id_from_separate_condition_query"
+  },
+  {
+    "nct_id": "NCT00001723",
+    "split": "heldout",
+    "file": "public/heldout/NCT00001723.json",
+    "source_url": "https://clinicaltrials.gov/study/NCT00001723",
+    "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00001723?format=json",
+    "retrieved_at": "2026-10-28T16:57:45.217775Z",
+    "sha256": "a2812840683e8646f5d1510e6e310555538f38f341352d8e02488e6411151a25",
+    "review_status": "pending_independent_review",
+    "selection_reason": "first_unused_id_from_separate_condition_query"
+  }
+]

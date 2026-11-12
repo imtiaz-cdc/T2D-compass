@@ -1,0 +1,1087 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-28T16:57:46.291836Z",
+  "instructions": "Annotate directly from the source before viewing generated cards. expected is a JSON value; set annotated=true even for an intentionally missing/null value. Each record requires two independent reviewers and agreement before review_status=approved. Do not derive gold answers from the mapper. Do not use held-out answers to tune implementation or prompts.",
+  "records": [
+    {
+      "nct_id": "NCT03244800",
+      "split": "development",
+      "source_url": "https://clinicaltrials.gov/study/NCT03244800",
+      "snapshot_sha256": "9c397473ff92bdbdc7df4203ef7e38098a40ded5f1f6ed493e9097d3a86563cf",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT05790681",
+      "split": "development",
+      "source_url": "https://clinicaltrials.gov/study/NCT05790681",
+      "snapshot_sha256": "a48024687bd5493e93e769a34520b786a8f2d112d8d699bd830b630c337364fc",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT04214600",
+      "split": "development",
+      "source_url": "https://clinicaltrials.gov/study/NCT04214600",
+      "snapshot_sha256": "eae68f66d47001072cff7662ff7e17949bc55374e72aa1b56c7fb6b3f33deda9",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT01596244",
+      "split": "development",
+      "source_url": "https://clinicaltrials.gov/study/NCT01596244",
+      "snapshot_sha256": "88cafa7a07cdbfadd00d5ae7df376fd0f32404cbef34d48e42d69892099efe92",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT01614769",
+      "split": "development",
+      "source_url": "https://clinicaltrials.gov/study/NCT01614769",
+      "snapshot_sha256": "55dafa1bd395e17d62380eb5cb931e623f856c64d132eaf0b50ee49354caeff2",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT02811055",
+      "split": "development",
+      "source_url": "https://clinicaltrials.gov/study/NCT02811055",
+      "snapshot_sha256": "dbe35f935ed6da0bad00efbf1b8770ab00b3de6ecd0b18b9371f0ec683156b3d",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00004266",
+      "split": "heldout",
+      "source_url": "https://clinicaltrials.gov/study/NCT00004266",
+      "snapshot_sha256": "0072c47b38ee91871a58dbdeeece970ea339002d28f15d2afac88237ae8daeb8",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00000620",
+      "split": "heldout",
+      "source_url": "https://clinicaltrials.gov/study/NCT00000620",
+      "snapshot_sha256": "60c8ec2b1bd38f9322b452a222c04d1b3d6eac8b28ac135127eaa32275ec914a",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00001870",
+      "split": "heldout",
+      "source_url": "https://clinicaltrials.gov/study/NCT00001870",
+      "snapshot_sha256": "145c3a6b3d4bf9baed5603922699487e6b16afd8c4684fcdd192bf467255237c",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00001723",
+      "split": "heldout",
+      "source_url": "https://clinicaltrials.gov/study/NCT00001723",
+      "snapshot_sha256": "a2812840683e8646f5d1510e6e310555538f38f341352d8e02488e6411151a25",
+      "review_status": "pending",
+      "reviewed_by": [],
+      "fields": [
+        {
+          "path": "identity.nct_id",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.title",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "identity.conditions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.study_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.overall_status",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "status.completion_date_type",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "design",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "enrollment",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "population",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "arms",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "interventions",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "primary_outcomes",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        },
+        {
+          "path": "results.has_results",
+          "expected": null,
+          "annotated": false,
+          "source_location": "",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

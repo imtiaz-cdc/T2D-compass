@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/GSA-TTS/mcp-hackathon-template",
+  "commit": "6e5fb39b4de044de4f39950ded44fa128416f11a",
+  "license": "MIT",
+  "retrieved_date_local": "2026-10-18",
+  "adapted_components": ["FastMCP entrypoint", "transport selection", "per-tool registration", "fixed-origin API pattern", "Python dependency configuration", "uv dependency lock", "Databricks app configuration"],
+  "notes": "Original selected sources are preserved in upstream. The working lock changes only the local package identity until dependency verification."
+}

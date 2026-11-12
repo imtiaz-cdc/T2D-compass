@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-11-12T14:04:24.812359+00:00",
+  "status": "passed",
+  "package": "t2d-compass-three-files",
+  "file_hashes": "matched generated manifest",
+  "health": {
+    "status": "healthy",
+    "version": "0.4.0",
+    "condition": "Type 2 Diabetes",
+    "data_mode": "live"
+  },
+  "browser_html_and_assets": "passed",
+  "mcp_tools": [
+    "find_completed_trials",
+    "get_trial_evidence_card"
+  ],
+  "assistant_without_user_credentials": "unavailable as expected",
+  "disclosure": "Generated package startup and local browser/MCP discovery only. No registry retrieval, model call, Databricks deployment or platform authentication in this check."
+}

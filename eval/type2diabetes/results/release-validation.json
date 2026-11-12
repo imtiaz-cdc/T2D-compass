@@ -1,0 +1,43 @@
+{
+  "validation_date": "2026-10-28",
+  "application": "T2D Compass",
+  "version": "0.4.0",
+  "condition": "Type 2 Diabetes",
+  "status": "local_software_checks_passed",
+  "automated_tests": {
+    "passed": 294,
+    "failures": 0,
+    "report": "tests.xml"
+  },
+  "tool_replays": [
+    {"mode": "live", "calls": 4, "status": "passed", "report": "live-tool-replay.json", "model_used": false},
+    {"mode": "snapshot", "calls": 4, "status": "passed", "report": "snapshot-tool-replay.json", "model_used": false}
+  ],
+  "local_http_transport": {"status": "passed", "report": "http-transport.json"},
+  "packaged_browser": {
+    "package": "bundles/t2d-compass-three-files",
+    "mode": "live",
+    "status": "passed",
+    "unfiltered_search_count": 3,
+    "metformin_search_count": 3,
+    "evidence_card": "NCT03244800",
+    "outside_scope_lookup": "NCT05024032",
+    "outside_scope_warning_observed": true,
+    "screenshot": "browser-evidence-card.png",
+    "export_download": "not_reverified_for_this_release"
+  },
+  "dataset": {
+    "core_records": 10,
+    "development": 6,
+    "held_out": 4,
+    "additional_active_exclusion_record": 1,
+    "agent_scenarios": 12,
+    "independent_references": "pending"
+  },
+  "pending": [
+    "Databricks deployment and platform authentication verification",
+    "Scored real-model acceptance run",
+    "Independent reference annotations and clinical interpretation review"
+  ],
+  "disclosure": "Public registry data and local software checks only. No cloud deployment, model accuracy, held-out evaluation or clinical validation is claimed."
+}
