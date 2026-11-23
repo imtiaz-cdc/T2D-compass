@@ -10,7 +10,7 @@ from typing import Any
 
 APP_NAME = "T2D Compass"
 SEARCH_CONDITION = "Type 2 Diabetes"
-PROMPT_VERSION = "t2d-compass-1.0"
+PROMPT_VERSION = "t2d-compass-1.1"
 DEFAULT_MANIFEST = "data/type2diabetes/manifest.json"
 SCOPE_FLAG_CODE = "TYPE2_DIABETES_SCOPE_UNCONFIRMED"
 CONDITION_MATCH_RULE = "explicit_type2_diabetes_labels"

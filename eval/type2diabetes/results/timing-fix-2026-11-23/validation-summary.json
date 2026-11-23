@@ -1,0 +1,50 @@
+{
+  "prepared_on": "2026-11-23",
+  "app_version": "0.4.1",
+  "prompt_version": "t2d-compass-1.1",
+  "hosted_verified": true,
+  "all_selected_checks_passed": true,
+  "software_tests_passed": 310,
+  "lint_passed": true,
+  "runs": [
+    {
+      "case_id": "NCT03244800",
+      "trace_file": "live-exact-card.json",
+      "trace_sha256": "738e584cd04bf43c874c279b2991fa44516d9941623cc5d2d17ab9aa579b4e0c",
+      "status": "completed",
+      "started_at": "2026-11-23T17:08:03.262565+00:00",
+      "duration_seconds": 11.548,
+      "model": "models.ai.gpt-5-6-luna",
+      "data_mode": "live",
+      "model_turns": 2,
+      "tool_calls": 1,
+      "exact_final_outcome_pairs": 2,
+      "source_fidelity_status": "source_backed_fallback",
+      "selected_checks_passed": true
+    },
+    {
+      "case_id": "NCT05790681",
+      "trace_file": "live-no-results.json",
+      "trace_sha256": "634880d332a6362d7a0b118435002627cc0f5060fb8b797cf344944289a146d3",
+      "status": "completed",
+      "started_at": "2026-11-23T17:08:52.952344+00:00",
+      "duration_seconds": 11.571,
+      "model": "models.ai.gpt-5-6-luna",
+      "data_mode": "live",
+      "model_turns": 2,
+      "tool_calls": 1,
+      "exact_final_outcome_pairs": 3,
+      "source_fidelity_status": "source_backed_fallback",
+      "selected_checks_passed": true
+    }
+  ],
+  "limits": [
+    "Two selected live cases, not a complete live scenario suite",
+    "Exact block checks do not semantically validate every sentence",
+    "Source-backed fallback can replace a substantively correct draft because formatting differs",
+    "Original 0.4.0 audit and all historical traces remain unchanged",
+    "Assistant technical review; no independent human clinical approval claimed",
+    "No new permissions or model settings changed"
+  ],
+  "original_source_audit_candidate": "ae42c913c4870376c269a387713cf2718df4eac4"
+}

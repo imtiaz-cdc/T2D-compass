@@ -1,0 +1,42 @@
+{
+  "review_date": "2026-11-23",
+  "reviewer_type": "independent_assistant_visual_review",
+  "scope": {
+    "scene_backgrounds_inspected": 20,
+    "decoded_caption_samples_inspected": 10,
+    "full_size_priority_scenes": [
+      8,
+      14,
+      15,
+      19
+    ],
+    "selected_narrations_read": [
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "entire_video_watched": false,
+    "audio_listened": false,
+    "full_audio_video_decode": "Separately reported passed by parent; not repeated by this visual review"
+  },
+  "result": "pass",
+  "blocking_findings": [],
+  "observations": [
+    "No clipped titles or body copy found across all twenty backgrounds.",
+    "Ten decoded caption samples fit the caption band without clipping.",
+    "Scene14 app capture is small; essential version, timing and trace facts are repeated in readable text.",
+    "Corrected0.4.1 evidence and310 tests remain separate from frozen0.4.0 source audit.",
+    "Two live durations are11.548s and11.571s. Selected checks are bounded and no independent clinical validation is claimed.",
+    "Fresh raw drafts are not described as repeating the earlier timing error."
+  ],
+  "preview": {
+    "path": "output\\submission-final-2026-11-23\\review\\Demo-Storyboard-Preview.png",
+    "sha256": "843b5109afa26ecdcd9bc502defdc4f6b58443e5b03875c25793cfa91960eb6f",
+    "bytes": 541033
+  }
+}

@@ -1,84 +1,82 @@
 {
   "created_date": "2026-11-23",
   "file": "output\\submission-final-2026-11-23\\01-T2D-Compass-Demo.mp4",
-  "bytes": 7325778,
+  "bytes": 7191458,
   "under_50_MB": true,
-  "duration_seconds": 416.47877551020383,
+  "duration_seconds": 414.2468934240361,
   "full_audio_and_video_decode_exit_code": 0,
   "full_decode_errors": "",
-  "video_stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 56 kb/s, 15 fps, 15 tbr, 15360 tbn (default)",
+  "video_stream": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 54 kb/s, 15 fps, 15 tbr, 15360 tbn (default)",
   "audio_stream": "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 22050 Hz, mono, fltp, 80 kb/s (default)",
   "audio_levels": [
-    "[Parsed_volumedetect_0 @ 0000029e17133640] mean_volume: -20.5 dB",
-    "[Parsed_volumedetect_0 @ 0000029e17133640] max_volume: -2.4 dB"
+    "[Parsed_volumedetect_0 @ 000001f50b133280] mean_volume: -20.5 dB",
+    "[Parsed_volumedetect_0 @ 000001f50b133280] max_volume: -2.4 dB"
   ],
-  "sha256": "75fd418b205e594eb5c894a84d79372f938575480c6d015df4b02290db5781c6",
-  "caption_count": 89,
+  "sha256": "3a3eb3d7be66039a22c041ce0f3d6b85eaf3df26232aaefe77646298970a9de6",
+  "caption_count": 93,
   "embedded_chapter_count": 20,
   "caption_sequence_matches_spoken_chunks": true,
   "timeline_continuous": true,
   "samples": [
     {
       "scene": 1,
-      "seconds": 12.539659863945579,
+      "seconds": 13.191950113378686,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-01.png"
     },
     {
       "scene": 5,
-      "seconds": 83.26979591836734,
+      "seconds": 82.31981859410432,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-05.png"
     },
     {
       "scene": 8,
-      "seconds": 140.10297052154195,
+      "seconds": 142.10879818594105,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-08.png"
     },
     {
       "scene": 9,
-      "seconds": 159.9322222222222,
+      "seconds": 161.98047619047622,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-09.png"
     },
     {
       "scene": 14,
-      "seconds": 264.1289115646258,
+      "seconds": 259.8290249433106,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-14.png"
     },
     {
       "scene": 16,
-      "seconds": 307.102290249433,
+      "seconds": 304.7410204081632,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-16.png"
     },
     {
       "scene": 17,
-      "seconds": 331.0277777777776,
+      "seconds": 328.6665079365078,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-17.png"
     },
     {
       "scene": 18,
-      "seconds": 355.3782993197277,
+      "seconds": 353.6992290249432,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-18.png"
     },
     {
       "scene": 19,
-      "seconds": 375.59517006802696,
+      "seconds": 377.09176870748286,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-19.png"
     },
     {
       "scene": 20,
-      "seconds": 406.46526077097485,
+      "seconds": 404.2333786848071,
       "image": "tmp\\submission-final-2026-11-23\\video\\decoded-sample-scene-20.png"
     }
   ],
   "visual_review": "All twenty scene layouts inspected in contact sheet; representative decoded caption frames inspected separately.",
-  "factual_review": "Narration checked against dated source exports, the November 21 trace audit, supplied reviewer assessments, and the November 23 assistant source-reference comparison. Historical browser screenshot explicitly dated October 28.",
+  "factual_review": "Narration checked against dated source exports, the November 21 trace audit, attributed reviewer assessments, the immutable original 0.4.0 source audit, and the separate 0.4.1 release review and two new hosted traces. The updated app screenshot was captured November 23.",
   "disclosures": [
     "Automated Microsoft Zira Desktop narration",
-    "Recorded-evidence walkthrough, not a fresh screen recording or assistant run",
+    "Edited evidence walkthrough with new hosted observations; not an uninterrupted live screen recording",
     "Assistant source references do not confer independent human clinical approval",
-    "Initial hosted model authentication failures preserved; any later evidence requires separate attribution"
+    "Original failures and wording discrepancy remain dated historical evidence",
+    "Both fresh raw drafts retained source timing; conservative fallback activated for canonical formatting differences"
   ],
-  "playback_check": "Complete audio/video decode plus timestamped decoded-frame sampling; not a claim of fresh browser screen capture or human listening review",
-  "independent_assistant_factual_review": "A separate assistant reviewed all 20 scene narrations against the evidence and found no concrete factual overclaim. Suggested approval wording clarification was incorporated. This is not human clinical approval.",
-  "original_video_preserved": true,
-  "builder_sha256": "e0b66b428bfd08b15438bc384a835a5c6f9418e0bc2d11cb73043e50eaed1f43"
+  "playback_check": "Complete audio/video decode plus timestamped decoded-frame sampling; not a claim of fresh browser screen capture or human listening review"
 }

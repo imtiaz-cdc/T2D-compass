@@ -4,11 +4,11 @@
 
 T2D Compass is an independent hackathon prototype built with the [GSA MCP server template](https://github.com/GSA-TTS/mcp-hackathon-template). It turns public registry records into structured evidence cards with source links, field-level provenance, results-availability labels, and explicit review flags. A browser interface supports search, card inspection and JSON export. An optional Databricks assistant uses the same two MCP tools to answer research questions.
 
-**Version:** 0.4.0 · **Data source:** ClinicalTrials.gov only · **Platform:** Databricks Apps
+**Version:** 0.4.1 · **Data source:** ClinicalTrials.gov only · **Platform:** Databricks Apps
 
 [Open the app](https://t2d-compass-7474654188777746.aws.databricksapps.com) · [Quick start](QUICKSTART.md) · [Evaluation report](docs/EVALUATION.md) · [Presentation](presentation/README.md) · [Submission checklist](docs/SUBMISSION.md)
 
-The hosted app requires authorized Databricks access. Authorized browser search, card retrieval, scope warnings and exports were verified on November 23. Nine direct browser checks passed. After an administrator-reported fix, two hosted assistant questions also completed with live retrieval. One answer had a minor timeframe-wording discrepancy; see the later-verification findings below. Earlier authentication failures are retained as historical evidence.
+The hosted app requires authorized Databricks access. Authorized browser search, card retrieval, scope warnings and exports were verified on November 23. Nine direct browser checks passed. The current version 0.4.1 corrects the outcome/timeframe presentation issue. Two fresh hosted assistant checks completed on this version with live retrieval and passed the selected source-fidelity checks. Earlier failures and the original wording discrepancy remain dated evidence.
 
 ## Problem and mission
 
@@ -112,4 +112,10 @@ Imtiaz leads the project and repository. Chinelo leads delivery and evaluation. 
 
 Adapted from the GSA starter at commit `6e5fb39b4de044de4f39950ded44fa128416f11a`; aligned with the current template structure at `f39249f1768309e3ef8b31742390a4f3a656b5f3` on November 12, 2026. See [provenance](docs/PROVENANCE.md). [MIT license](LICENSE), retaining the original Technology Transformation Services notice. This independent prototype does not imply endorsement by GSA, CDC or any vendor.
 
-After the administrator reported a fix, two later hosted assistant checks completed with live retrieval: the previously failed exact-ID question and a completed-without-posted-results question. Each used one evidence-card tool call. Assistant review found one minor pre-meal/post-meal wording discrepancy in the first answer; the underlying card was correct. The second answer met the selected critical scenario criteria. These bounded checks establish restored execution in the tested session, not a full live-suite pass or independent human clinical approval. The earlier failures remain historical evidence.
+## Timing correction and current hosted verification
+
+Version **0.4.1**, prompt **t2d-compass-1.1**, was separately tested and deployed on November 23. The original answer changed a zero-minute pre-meal sample into an after-meal sample; the underlying registry card was correct. The revised prompt requires exact study/outcome-index/measure/timeframe blocks. A bounded check uses source-backed cards when those blocks are absent or changed, while preserving the model draft and the check result in the trace. This is a presentation safeguard, not semantic validation of every sentence.
+
+The updated candidate passed **310 software tests** and lint. Two fresh hosted questions (NCT03244800 and NCT05790681) completed in **11.548 and 11.571 seconds**, respectively, each with one live evidence-card tool call. The reviewed final answers preserved all five primary-outcome/timeframe pairs, the pre-meal boundary, results-availability distinctions and relevant population context. These two selected checks do not establish a complete live-suite pass or independent clinical approval.
+
+The original **0.4.0** source-audit candidate, annotations and first held-out result remain unchanged: **140/140 groups, 10/10 cards**. That original result is not relabeled as an evaluation of the changed prompt. The evaluation PDF, video and slides now describe the correction and current verified state consistently. See the [release validation summary](eval/type2diabetes/results/timing-fix-2026-11-23/validation-summary.json).

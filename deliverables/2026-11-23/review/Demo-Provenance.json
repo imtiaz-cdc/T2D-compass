@@ -1,16 +1,18 @@
 {
   "created_date": "2026-11-23",
-  "duration_seconds": 416.47877551020383,
-  "size_bytes": 7325778,
+  "duration_seconds": 414.2468934240361,
+  "size_bytes": 7191458,
   "video": "output\\submission-final-2026-11-23\\01-T2D-Compass-Demo.mp4",
   "narration": "Microsoft Zira Desktop; automated",
-  "mode": "Narrated recorded-evidence walkthrough; not a fresh screen recording or a new assistant execution",
-  "candidate_reference": "output/reference-review-2026-11-23/candidate-freeze.json",
-  "human_clinical_approval": "not claimed; pending",
+  "mode": "Edited recorded-evidence walkthrough with new hosted 0.4.1 observations; not an uninterrupted live screen recording",
+  "current_candidate": "0.4.1",
+  "current_prompt": "t2d-compass-1.1",
+  "original_candidate_reference": "output/reference-review-2026-11-23/candidate-freeze.json",
+  "human_clinical_approval": "not claimed",
   "evidence": [
     {
       "file": "output\\reference-review-2026-11-23\\live-app-review\\review-summary.json",
-      "sha256": "65372a2bd36c3f5aae8e877f454c631dc6a4750fe3e5b7e226de5182109f8af1"
+      "sha256": "516455638e6fc0a5ee097b83a74bffdb282b9f5aba5cd90a3522e055307aba98"
     },
     {
       "file": "output\\reference-review-2026-11-23\\live-app-review\\live-search-MEDI0382.json",
@@ -67,6 +69,22 @@
     {
       "file": "research\\evaluation-delivery-2026-11-23\\MCP_document_final.docx",
       "sha256": "cf751872593ea3f351ec3a9f7759584897ae160f77a95bf06aa29a64b9ebe22f"
+    },
+    {
+      "file": "output\\timing-fix-review-2026-11-23\\release-review.json",
+      "sha256": "ecc49f930384f0dfe49fa7ba2cbb90d79350be9bdd5f022995f2a58e50ab7d5e"
+    },
+    {
+      "file": "output\\timing-fix-review-2026-11-23\\live-exact-card.json",
+      "sha256": "738e584cd04bf43c874c279b2991fa44516d9941623cc5d2d17ab9aa579b4e0c"
+    },
+    {
+      "file": "output\\timing-fix-review-2026-11-23\\live-no-results.json",
+      "sha256": "634880d332a6362d7a0b118435002627cc0f5060fb8b797cf344944289a146d3"
+    },
+    {
+      "file": "output\\timing-fix-review-2026-11-23\\corrected-timing-detail.jpg",
+      "sha256": "c2cedcd63a94f3aab682e5bbaad3ec3298199a357f7e7d43aae73bd7ef090c82"
     }
   ]
 }

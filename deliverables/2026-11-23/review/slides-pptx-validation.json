@@ -1,7 +1,7 @@
 {
   "schemaVersion": "presentation-finalization.v1",
-  "finalSha256": "da47bcb34fb15c8935b6d9c35c979f4dda6cf119d9c05df283f314a7f4119524",
-  "byteCount": 519064,
+  "finalSha256": "236bba6c7c13e28a425af77616b68a69f8cc83ee53eeb5268ff2c873838e91ad",
+  "byteCount": 520668,
   "packageIntegrity": {
     "chart_count": 0,
     "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
@@ -19,13 +19,13 @@
     "finding_count": 0,
     "findings": [],
     "font_policy": {
-      "checked_text_script_count": 76,
+      "checked_text_script_count": 78,
       "native_font_rendering_verified": false,
       "observed_font_families": [
         "Arial"
       ],
       "observed_font_use_counts": {
-        "Arial": 76
+        "Arial": 78
       },
       "passed": true,
       "performed": true
@@ -40,13 +40,13 @@
     "exitCode": 0,
     "findingCount": 0,
     "fontPolicy": {
-      "checked_text_script_count": 76,
+      "checked_text_script_count": 78,
       "native_font_rendering_verified": false,
       "observed_font_families": [
         "Arial"
       ],
       "observed_font_use_counts": {
-        "Arial": 76
+        "Arial": 78
       },
       "passed": true,
       "performed": true
@@ -60,13 +60,13 @@
     "scriptFonts": {},
     "referenceSha256": "5ecc178895eb122b569c4a3dc4b798adec289abb7240b01e01b8ca110e3e8cc1",
     "referenceFontsVerifiedInEncodedText": true,
-    "checked_text_script_count": 76,
+    "checked_text_script_count": 78,
     "native_font_rendering_verified": false,
     "observed_font_families": [
       "Arial"
     ],
     "observed_font_use_counts": {
-      "Arial": 76
+      "Arial": 78
     },
     "passed": true,
     "performed": true
@@ -75,7 +75,7 @@
     "performed": true,
     "passed": true,
     "slideCount": 9,
-    "sha256": "da47bcb34fb15c8935b6d9c35c979f4dda6cf119d9c05df283f314a7f4119524",
+    "sha256": "236bba6c7c13e28a425af77616b68a69f8cc83ee53eeb5268ff2c873838e91ad",
     "runtimeNodeModules": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\\dependencies\\node\\node_modules",
     "nodeExecutable": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1119-907-0_26.1119.907.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe"
   },
@@ -109,7 +109,7 @@
     "native_chart_count": 0,
     "native_powerpoint_verified": false,
     "passed": true,
-    "presentation_sha256": "da47bcb34fb15c8935b6d9c35c979f4dda6cf119d9c05df283f314a7f4119524",
+    "presentation_sha256": "236bba6c7c13e28a425af77616b68a69f8cc83ee53eeb5268ff2c873838e91ad",
     "schema_version": "presentation-native-chart-titles.v1",
     "slide_count": 9,
     "source_text_emitted": false,

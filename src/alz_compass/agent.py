@@ -24,6 +24,7 @@ from urllib.parse import urlparse
 
 import httpx
 
+from alz_compass.answer_fidelity import preserve_outcome_wording
 from alz_compass.disease import APP_NAME, PROMPT_VERSION, SEARCH_CONDITION
 
 ALLOWED_TOOLS = frozenset({"find_completed_trials", "get_trial_evidence_card"})
@@ -354,7 +355,12 @@ class ToolCallingAgent:
                     raise AgentError(
                         "empty_answer", "The model did not return an answer."
                     )
-                trace.update(status="completed", final_output=output)
+                output, fidelity = preserve_outcome_wording(
+                    question, output, trace["tool_calls"]
+                )
+                trace.update(
+                    status="completed", final_output=output, source_fidelity=fidelity
+                )
                 return
             if len(trace["tool_calls"]) + len(calls) > self.max_tool_calls:
                 raise AgentError(

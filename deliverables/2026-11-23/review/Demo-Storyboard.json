@@ -1,14 +1,14 @@
 [
   {
     "title": "T2D Compass",
-    "tag": "DATA TRACK  /  VERSION 0.4.0",
-    "source": "Prepared November 23, 2026 | Dated evidence, clearly separated",
-    "narration": "T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies. This narrated recorded-evidence walkthrough uses automated speech and captions. It combines dated browser evidence, exported tool results, real-model traces, and a new source-reference audit. The panels summarize those saved artifacts; this video is not a fresh screen recording or a new assistant run.",
+    "tag": "DATA TRACK  /  VERSION 0.4.1",
+    "source": "Prepared November 23, 2026 | Updated app, dated evidence",
+    "narration": "T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies. This updated walkthrough includes the corrected app and new hosted assistant checks from November twenty third. Automated narration and captions accompany saved browser views, exported evidence and evaluation results. This is an edited evidence walkthrough, not an uninterrupted live screen recording.",
     "chunks": [
       "T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies.",
-      "This narrated recorded-evidence walkthrough uses automated speech and captions.",
-      "It combines dated browser evidence, exported tool results, real-model traces, and a new source-reference audit.",
-      "The panels summarize those saved artifacts; this video is not a fresh screen recording or a new assistant run."
+      "This updated walkthrough includes the corrected app and new hosted assistant checks from November twenty third.",
+      "Automated narration and captions accompany saved browser views, exported evidence and evaluation results.",
+      "This is an edited evidence walkthrough, not an uninterrupted live screen recording."
     ],
     "kind": "cover",
     "data": [
@@ -17,8 +17,8 @@
         "One MCP server. Two read-only tools."
       ],
       [
-        "Recorded-evidence walkthrough",
-        "Dated artifacts, automated narration and captions."
+        "Updated demonstration",
+        "Version 0.4.1; new hosted verification included."
       ]
     ]
   },
@@ -186,30 +186,28 @@
     ]
   },
   {
-    "title": "Keep outcomes with their timeframes",
-    "tag": "HOSTED BROWSER EXPORT  / NOVEMBER 23",
-    "source": "live-card-NCT03244800.json | Primary outcome 2 of 2",
-    "narration": "This record contains two primary outcomes. The example shown here is percent change in body weight to day fifty, paired with the reported timeframe, day one through day fifty. The full export also retains the glucose outcome and its timed sampling schedule. Compass keeps outcomes and timeframes together instead of reducing them to names alone. These are registry descriptions, not extracted numerical findings or proof of prospective specification.",
+    "title": "Preserve the exact outcome timing",
+    "tag": "SOURCE FIDELITY  /  VERSION 0.4.1",
+    "source": "NCT03244800 | First primary outcome | Registry wording retained",
+    "narration": "The first primary outcome illustrates why exact timing matters. The source says zero minutes before the meal, followed by the listed samples after the meal. An earlier assistant summary incorrectly grouped zero minutes with the after-meal samples. Version zero point four point one requires the original outcome and timeframe together. A bounded check replaces a draft that changes or omits these blocks with source-backed cards. The original draft remains in the trace. This check does not validate every other claim.",
     "chunks": [
-      "This record contains two primary outcomes.",
-      "The example shown here is percent change in body weight to day fifty, paired with the reported timeframe, day one through day fifty.",
-      "The full export also retains the glucose outcome and its timed sampling schedule.",
-      "Compass keeps outcomes and timeframes together instead of reducing them to names alone.",
-      "These are registry descriptions, not extracted numerical findings or proof of prospective specification."
+      "The first primary outcome illustrates why exact timing matters.",
+      "The source says zero minutes before the meal, followed by the listed samples after the meal.",
+      "An earlier assistant summary incorrectly grouped zero minutes with the after-meal samples.",
+      "Version zero point four point one requires the original outcome and timeframe together.",
+      "A bounded check replaces a draft that changes or omits these blocks with source-backed cards.",
+      "The original draft remains in the trace.",
+      "This check does not validate every other claim."
     ],
-    "kind": "cards",
+    "kind": "timing",
     "data": [
       [
-        "Registered outcome",
-        "Cohort 1: Percent Change From Baseline in Body Weight to Day 50"
+        "Registry timeframe \u2014 verbatim",
+        "Zero minutes before and 15, 30, 45, 60, 90, 120, 180, and 240 minutes after consumption of the standardised liquid meal"
       ],
       [
-        "Registered timeframe",
-        "Day 1 through Day 50"
-      ],
-      [
-        "Interpretation boundary",
-        "No numerical findings or treatment ranking extracted."
+        "Second primary outcome",
+        "Body weight: Day 1 through Day 50"
       ]
     ]
   },
@@ -347,44 +345,58 @@
     ]
   },
   {
-    "title": "Evidence cards in the browser",
-    "tag": "HISTORICAL LIVE CAPTURE / OCTOBER 28",
-    "source": "browser-evidence-card.png | Date retained; new exports are separate",
-    "narration": "This preserved October twenty eighth browser image illustrates the evidence-card layout for the same study identifier. Visible fields include completed status, results posted, actual enrollment, a review flag, a source link, and the export control. The image is historical evidence, not a new screen recording. The November twenty third exports just discussed are separate artifacts and provide the current direct browser observations and downloaded data.",
+    "title": "The updated assistant in the app",
+    "tag": "HOSTED APP CAPTURE  /  NOVEMBER 23",
+    "source": "Version 0.4.1 | New browser capture and exported trace",
+    "narration": "This view comes from the updated hosted app. We repeated the same evidence-card question that exposed the wording issue. The answer retained both primary outcomes and the exact before-and-after meal timeframe. The exported trace records the question, actual tool result, model draft, final answer and wording check. Keeping the draft and final answer distinct lets a reviewer see when source-backed presentation was used.",
     "chunks": [
-      "This preserved October twenty eighth browser image illustrates the evidence-card layout for the same study identifier.",
-      "Visible fields include completed status, results posted, actual enrollment, a review flag, a source link, and the export control.",
-      "The image is historical evidence, not a new screen recording.",
-      "The November twenty third exports just discussed are separate artifacts and provide the current direct browser observations and downloaded data."
+      "This view comes from the updated hosted app.",
+      "We repeated the same evidence-card question that exposed the wording issue.",
+      "The answer retained both primary outcomes and the exact before-and-after meal timeframe.",
+      "The exported trace records the question, actual tool result, model draft, final answer and wording check.",
+      "Keeping the draft and final answer distinct lets a reviewer see when source-backed presentation was used."
     ],
-    "kind": "screenshot",
-    "data": []
+    "kind": "live_screenshot",
+    "data": [
+      [
+        "Verified app",
+        "Version 0.4.1"
+      ],
+      [
+        "Source timing",
+        "Zero minutes before the meal"
+      ],
+      [
+        "Trace retained",
+        "Model draft and final answer"
+      ]
+    ]
   },
   {
-    "title": "Software checks support the workflow",
-    "tag": "DATED SOFTWARE VERIFICATION",
-    "source": "November 12 baseline; November 17 certificate-repair verification",
-    "narration": "The saved automated suite passed two hundred ninety four tests, with no failures or errors, alongside static checks. Earlier package verification covered startup, browser assets, health, and both MCP tools. Actual local MCP replays also tested live and snapshot retrieval. These are software and integration checks, not two hundred ninety four clinical cases. Some tests use synthetic inputs or mocked model responses, so real-model evidence is reported separately.",
+    "title": "Software checks support the correction",
+    "tag": "NEW CANDIDATE  /  NOVEMBER 23",
+    "source": "Timing correction validation receipt | Distinct from frozen source audit",
+    "narration": "The revised candidate passed 310 automated software tests and the static checks. Focused regression cases cover the original before-and-after error, outcome pairing, missing timeframes, multiple studies, and keeping a results-only answer unchanged. The deployment package is built from these tested sources. These checks assess software behavior and presentation fidelity. They are not clinical cases or a model accuracy estimate.",
     "chunks": [
-      "The saved automated suite passed two hundred ninety four tests, with no failures or errors, alongside static checks.",
-      "Earlier package verification covered startup, browser assets, health, and both MCP tools.",
-      "Actual local MCP replays also tested live and snapshot retrieval.",
-      "These are software and integration checks, not two hundred ninety four clinical cases.",
-      "Some tests use synthetic inputs or mocked model responses, so real-model evidence is reported separately."
+      "The revised candidate passed 310 automated software tests and the static checks.",
+      "Focused regression cases cover the original before-and-after error, outcome pairing, missing timeframes, multiple studies, and keeping a results-only answer unchanged.",
+      "The deployment package is built from these tested sources.",
+      "These checks assess software behavior and presentation fidelity.",
+      "They are not clinical cases or a model accuracy estimate."
     ],
     "kind": "cards",
     "data": [
       [
-        "294 passed",
-        "Saved automated suite and static checks."
+        "310 passed",
+        "Current automated suite; static checks passed."
       ],
       [
-        "Integration evidence",
-        "Package startup, MCP tools and source replays."
+        "Focused regressions",
+        "Timing, pairing, missing values and multiple studies."
       ],
       [
-        "Limited claim",
-        "Software tests are not clinical or model accuracy."
+        "Versioned correction",
+        "Original source-audit candidate remains unchanged."
       ]
     ]
   },
@@ -445,15 +457,15 @@
   },
   {
     "title": "A complete source-reference comparison",
-    "tag": "ASSISTANT SOURCE AUDIT / NOVEMBER 23",
-    "source": "reference-evaluation.json | Frozen candidate; first held-out run preserved",
-    "narration": "Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated. After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups. Candidate and source hashes stayed unchanged. This completes an assistant source-reference audit, not independent human clinical approval. The original human approval gate remains pending, separate from the completed assistant audit.",
+    "tag": "FROZEN BASELINE AUDIT  /  NOVEMBER 23",
+    "source": "reference-evaluation.json | Original 0.4.0 candidate and first held-out run retained",
+    "narration": "Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated. After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups. That original source-audit candidate and its first held-out result remain unchanged. The timing correction is a later candidate with separate checks. This source-reference audit does not create a human clinical approval.",
     "chunks": [
       "Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated.",
       "After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups.",
-      "Candidate and source hashes stayed unchanged.",
-      "This completes an assistant source-reference audit, not independent human clinical approval.",
-      "The original human approval gate remains pending, separate from the completed assistant audit."
+      "That original source-audit candidate and its first held-out result remain unchanged.",
+      "The timing correction is a later candidate with separate checks.",
+      "This source-reference audit does not create a human clinical approval."
     ],
     "kind": "cards",
     "data": [
@@ -462,40 +474,41 @@
         "84 development + 56 held-out; 10 / 10 cards."
       ],
       [
-        "Frozen comparison",
-        "First held-out result preserved; no mapper tuning."
+        "Frozen baseline preserved",
+        "Original 0.4.0 source-audit evidence."
       ],
       [
-        "No human approval attributed",
-        "Assistant source audit; original human approval gate retained."
+        "Separate correction",
+        "0.4.1 tests and hosted checks reported separately."
       ]
     ]
   },
   {
-    "title": "Hosted assistant status is separate",
-    "tag": "LIVE APP REVIEW / NOVEMBER 23",
-    "source": "live-app-review/review-summary.json | Initial failures preserved",
-    "narration": "The signed-in direct browser workflow passed nine checks, including downloads. The initial two hosted assistant attempts failed at model authentication, with zero model turns and zero tool calls. Their traces are preserved. The hosted configuration differs from the November twenty first snapshot model, so those successful scenario runs do not by themselves prove the current hosted assistant. Any later successful run must be recorded and reviewed separately, rather than erasing these failures.",
+    "title": "Two fresh hosted checks completed",
+    "tag": "CORRECTED CANDIDATE  /  NOVEMBER 23",
+    "source": "release-review.json | Two new live runs; bounded source-fidelity review",
+    "narration": "Two fresh hosted assistant checks completed on the corrected candidate, each retrieving a live evidence card. The first preserved the exact timing and both outcomes. The second kept completed status separate from results not posted, retained the pediatric context and did not invent efficacy findings. Both passed the selected source-fidelity checks. The earlier failed attempts and the earlier wording issue remain dated evidence. Two successful checks are not a complete live scenario suite or independent clinical validation.",
     "chunks": [
-      "The signed-in direct browser workflow passed nine checks, including downloads.",
-      "The initial two hosted assistant attempts failed at model authentication, with zero model turns and zero tool calls.",
-      "Their traces are preserved.",
-      "The hosted configuration differs from the November twenty first snapshot model, so those successful scenario runs do not by themselves prove the current hosted assistant.",
-      "Any later successful run must be recorded and reviewed separately, rather than erasing these failures."
+      "Two fresh hosted assistant checks completed on the corrected candidate, each retrieving a live evidence card.",
+      "The first preserved the exact timing and both outcomes.",
+      "The second kept completed status separate from results not posted, retained the pediatric context and did not invent efficacy findings.",
+      "Both passed the selected source-fidelity checks.",
+      "The earlier failed attempts and the earlier wording issue remain dated evidence.",
+      "Two successful checks are not a complete live scenario suite or independent clinical validation."
     ],
     "kind": "cards",
     "data": [
       [
-        "Direct workflow",
-        "Nine observed checks passed, including exports."
+        "2 / 2 completed",
+        "Live registry; one evidence-card call per question."
       ],
       [
-        "Initial assistant attempts",
-        "2 authentication failures; 0 tool calls."
+        "Observed durations",
+        "11.548 s / 11.571 s"
       ],
       [
-        "Separate model evidence",
-        "Snapshot suite does not prove hosted-model access."
+        "Selected checks passed",
+        "Exact timing; results availability and population context."
       ]
     ]
   },

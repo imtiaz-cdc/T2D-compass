@@ -1,6 +1,6 @@
 [project]
 name = "alz-compass"
-version = "0.4.0"
+version = "0.4.1"
 description = "Source-linked type 2 diabetes trial review tools and agent"
 readme = "README.md"
 requires-python = ">=3.11"

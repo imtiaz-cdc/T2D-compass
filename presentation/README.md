@@ -1,7 +1,5 @@
 # T2D Compass presentation
 
-The updated nine-slide presentation is included in [the November 23 delivery package](../deliverables/2026-11-23/README.md). It covers the research problem, the two-tool workflow, architecture and design choices, evaluation, security, limitations and recorded demonstration.
+The updated nine-slide presentation is included in [the November 23 delivery package](../deliverables/2026-11-23/README.md), as editable PPTX and PDF. The refreshed narrated MP4 includes version 0.4.1, the exact timing correction and new hosted checks. It uses dated browser captures and exported evidence with disclosed automated narration; it is an edited walkthrough, not an uninterrupted screen recording.
 
-The evidence distinguishes dated software checks, the 24 November 21 snapshot model executions and attributed scenario scores, the November 23 assistant source audit (140/140 configured groups), and observed live browser behavior. The original October 28 browser capture remains explicitly dated. The narrated demo is an updated recorded-evidence walkthrough with automated narration.
-
-The deck makes no general clinical-accuracy, treatment-benefit, measured time-saving or production-readiness claim. New assistant-authored source annotations do not sign on either human reviewer's behalf.
+The evidence distinguishes the 24 November 21 snapshot model executions and attributed scenario assessments, the original 0.4.0 assistant source audit (140/140 configured groups), and separate 0.4.1 software and hosted checks. Original evidence and human-review attribution remain intact. No general clinical-accuracy, treatment-benefit, measured time-saving or production-readiness claim is made.

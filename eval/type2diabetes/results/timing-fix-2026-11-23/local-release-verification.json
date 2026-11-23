@@ -1,0 +1,358 @@
+{
+  "type": "local_timing_wording_fix_verification",
+  "created_at": "2026-11-23T16:58:43.602051+00:00",
+  "application_version": "0.4.1",
+  "prompt_version": "t2d-compass-1.1",
+  "prompt_sha256": "eb164fe2938491907b8cd6b053e3f9b3c745cae8f1810c2cb606ceb9ad49b27b",
+  "candidate_sha256": "efb4fbd423115fcab7f8e7ae61e87adf72cd8ad24d7781f80d10c87c42385f77",
+  "candidate_hash_recipe": "SHA256 UTF-8 compact sorted-key JSON of ordered files list below",
+  "files": [
+    {
+      "path": "app.yaml",
+      "sha256": "c108b62e2dba65b6cf24c731edb5b9fae1316ea1a2182dda024fd98164801c80"
+    },
+    {
+      "path": "main.py",
+      "sha256": "4aba1c2c076f42de621bb5a0eb4f52c6af90604d40f2cf5dcec54b4ba87b47b0"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "a2b5256c26f7bd1c73b487ab0b6a772727a71caf22d34ff0e7a0c37d0010e466"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "e7ad2503ab50ceda942cce9044c41afdae172f469f94d606606ae37de7e9d591"
+    },
+    {
+      "path": "src/alz_compass/__init__.py",
+      "sha256": "63c23b82056a8c022164d0bd308783ffe04ae2de2f9b78f315406c9b91133153"
+    },
+    {
+      "path": "src/alz_compass/agent.py",
+      "sha256": "660b9c1ec109dceff398e80709c31ba55009ec5edeb96b91bb34f766c575297e"
+    },
+    {
+      "path": "src/alz_compass/agent_prompt.txt",
+      "sha256": "eb164fe2938491907b8cd6b053e3f9b3c745cae8f1810c2cb606ceb9ad49b27b"
+    },
+    {
+      "path": "src/alz_compass/answer_fidelity.py",
+      "sha256": "96d0a1934cf467473a45e8dd5c1d33e3a50255611c90cda11adaeeebce00eed1"
+    },
+    {
+      "path": "src/alz_compass/app.py",
+      "sha256": "d23332e037feb69cfcf1bef586ba12741cba466c8f43f651531fbfef1b98d0a2"
+    },
+    {
+      "path": "src/alz_compass/config.py",
+      "sha256": "82ac2f4d3d8bc317eda6f38300f0360c25d3279e860d85c6978cd4e7c433fde1"
+    },
+    {
+      "path": "src/alz_compass/disease.py",
+      "sha256": "f20fd694191103151628d579d3ce42c7338e8876b69b5158724ee148a986e0d5"
+    },
+    {
+      "path": "src/alz_compass/gateway.py",
+      "sha256": "8141e8dccf0b11f5c29de70757d2c3332d2071702309e4eac69cc9bfa9704468"
+    },
+    {
+      "path": "src/alz_compass/mapping.py",
+      "sha256": "c7cf120edc12d7c4b9898ac97e3df8c3771804298e4f871b0c0686f6ddfc9226"
+    },
+    {
+      "path": "src/alz_compass/registry.py",
+      "sha256": "704e4f92251826eb748eda560f8826b77df0577519f8accca1dbad4a4605baa8"
+    },
+    {
+      "path": "src/alz_compass/review.py",
+      "sha256": "4f68d6bba6496d2225095c38c63b51036ca959e1f02d268aadc0082f9e42a21b"
+    },
+    {
+      "path": "src/alz_compass/service.py",
+      "sha256": "37f42d47ad2e8628681499f3d7465632dfa92996cefb05e09cae05e8233bb8b6"
+    },
+    {
+      "path": "src/alz_compass/tools/__init__.py",
+      "sha256": "797e470430791b27480c54d882bd279a2618c5a9ac725ff73aa3bfbe880e49d8"
+    },
+    {
+      "path": "src/alz_compass/tools/find_completed_trials.py",
+      "sha256": "02f7c87a0835cd7dfdac91c9ea19ae641558d5c02d1dfcc8285d810d5f705997"
+    },
+    {
+      "path": "src/alz_compass/tools/get_trial_evidence_card.py",
+      "sha256": "566ec4cc1bb56b1271c57738fc64cf802c0dfd6f5bb5faf333cdebd85b2f2485"
+    },
+    {
+      "path": "src/alz_compass/verify.py",
+      "sha256": "f748a9adcaeea3d7a5d455da0f05dd3f371e149b53abd53d2630dbc0b96341aa"
+    },
+    {
+      "path": "src/alz_compass/verify_http.py",
+      "sha256": "f2cc0ca898bb2273635f5f90f862cf8f3e51e4d561775a82ab345c2713e02fc3"
+    },
+    {
+      "path": "src/alz_compass/web/app.js",
+      "sha256": "ac31b7d6a6b66ac887a3ec778cd728b4013907ca9043bcb874e9cb1eb96589dd"
+    },
+    {
+      "path": "src/alz_compass/web/index.html",
+      "sha256": "0c9d931ee6943ce6c18fda1e68a6674abd3c72afa8a72c1ea90afe5896e49acd"
+    },
+    {
+      "path": "src/alz_compass/web/styles.css",
+      "sha256": "3fd80099ddf7c7c4738544ed36b9c0013431ab8df25f35e341faf7fbde0e523c"
+    },
+    {
+      "path": "src/alz_compass/webapp.py",
+      "sha256": "9ab3aa201670d1e01dd216566a072d29fb8e1de8cfcf9006259843260b82d8b3"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "82e361256e2ed1ef7f0f8cb43235c51a110eae4ccb460578bf045b019faedace"
+    }
+  ],
+  "guard_sha256": "96d0a1934cf467473a45e8dd5c1d33e3a50255611c90cda11adaeeebce00eed1",
+  "tests": {
+    "passed": 310,
+    "failures": 0,
+    "errors": 0,
+    "new_regression_cases": 16,
+    "existing_tests": 294,
+    "warnings": 2,
+    "junit": "tests.xml",
+    "ruff": "passed"
+  },
+  "test_environment_note": "Initial restricted Windows run hit temporary-folder ACL failures. Full normal-access suite passed without runtime/test semantics changes. Generated pytest fixtures were moved into repository cache, excluded from source bundles.",
+  "replays": [
+    {
+      "type": "local_saved_draft_replay",
+      "source_trace": "live-exact-card.json",
+      "source_trace_sha256": "415c690691a76b860a79813b5f380d812becf0e530b837ce4402a9de472ceeb7",
+      "source_trace_unchanged": true,
+      "pairs": [
+        {
+          "nct_id": "NCT03244800",
+          "outcome_index": 1,
+          "exact_pair_present": true
+        },
+        {
+          "nct_id": "NCT03244800",
+          "outcome_index": 2,
+          "exact_pair_present": true
+        }
+      ],
+      "model_calls": 0,
+      "network_calls": 0,
+      "human_approval": "not_claimed",
+      "source_fidelity_status": "source_backed_fallback"
+    },
+    {
+      "type": "local_saved_draft_replay",
+      "source_trace": "live-no-results.json",
+      "source_trace_sha256": "e326f4a57aaa4184868b5f0f187d3a2a6ecc6b13f8f629791b8c04ebf58d24b8",
+      "source_trace_unchanged": true,
+      "pairs": [
+        {
+          "nct_id": "NCT05790681",
+          "outcome_index": 1,
+          "exact_pair_present": true
+        },
+        {
+          "nct_id": "NCT05790681",
+          "outcome_index": 2,
+          "exact_pair_present": true
+        },
+        {
+          "nct_id": "NCT05790681",
+          "outcome_index": 3,
+          "exact_pair_present": true
+        }
+      ],
+      "model_calls": 0,
+      "network_calls": 0,
+      "human_approval": "not_claimed",
+      "source_fidelity_status": "source_backed_fallback"
+    }
+  ],
+  "frozen_source_data_and_extraction_checks": [
+    {
+      "path": "data/type2diabetes/manifest.json",
+      "matches_frozen_reference_candidate": true
+    },
+    {
+      "path": "data/type2diabetes/review/reference-annotations.json",
+      "matches_frozen_reference_candidate": true
+    },
+    {
+      "path": "src/alz_compass/review.py",
+      "matches_frozen_reference_candidate": true
+    },
+    {
+      "path": "src/alz_compass/service.py",
+      "matches_frozen_reference_candidate": true
+    }
+  ],
+  "package_validation": {
+    "created_at": "2026-11-23T16:58:26.496763+00:00",
+    "status": "passed",
+    "package": "t2d-compass-three-files",
+    "file_hashes": "matched generated manifest",
+    "health": {
+      "status": "healthy",
+      "version": "0.4.1",
+      "condition": "Type 2 Diabetes",
+      "data_mode": "live"
+    },
+    "browser_html_and_assets": "passed",
+    "mcp_tools": [
+      "find_completed_trials",
+      "get_trial_evidence_card"
+    ],
+    "assistant_without_user_credentials": "unavailable as expected",
+    "disclosure": "Generated package startup and local browser/MCP discovery only. No registry retrieval, model call, Databricks deployment or platform authentication in this check."
+  },
+  "three_file_manifest": {
+    "package": "t2d-compass-three-files",
+    "version": "0.4.1",
+    "data_mode": "live",
+    "files": [
+      {
+        "path": "app.yaml",
+        "bytes": 152,
+        "sha256": "c108b62e2dba65b6cf24c731edb5b9fae1316ea1a2182dda024fd98164801c80"
+      },
+      {
+        "path": "main.py",
+        "bytes": 84640,
+        "sha256": "c5a4ee3108f72c8593d9637fe61fd2c98ad58555a437b59721bac460beac3fd9"
+      },
+      {
+        "path": "requirements.txt",
+        "bytes": 71664,
+        "sha256": "e7ad2503ab50ceda942cce9044c41afdae172f469f94d606606ae37de7e9d591"
+      }
+    ],
+    "embedded_files": [
+      {
+        "path": "alz_compass/__init__.py",
+        "bytes": 81,
+        "sha256": "63c23b82056a8c022164d0bd308783ffe04ae2de2f9b78f315406c9b91133153"
+      },
+      {
+        "path": "alz_compass/agent.py",
+        "bytes": 31516,
+        "sha256": "660b9c1ec109dceff398e80709c31ba55009ec5edeb96b91bb34f766c575297e"
+      },
+      {
+        "path": "alz_compass/agent_prompt.txt",
+        "bytes": 5454,
+        "sha256": "eb164fe2938491907b8cd6b053e3f9b3c745cae8f1810c2cb606ceb9ad49b27b"
+      },
+      {
+        "path": "alz_compass/answer_fidelity.py",
+        "bytes": 10599,
+        "sha256": "96d0a1934cf467473a45e8dd5c1d33e3a50255611c90cda11adaeeebce00eed1"
+      },
+      {
+        "path": "alz_compass/app.py",
+        "bytes": 3335,
+        "sha256": "d23332e037feb69cfcf1bef586ba12741cba466c8f43f651531fbfef1b98d0a2"
+      },
+      {
+        "path": "alz_compass/config.py",
+        "bytes": 835,
+        "sha256": "82ac2f4d3d8bc317eda6f38300f0360c25d3279e860d85c6978cd4e7c433fde1"
+      },
+      {
+        "path": "alz_compass/disease.py",
+        "bytes": 4010,
+        "sha256": "f20fd694191103151628d579d3ce42c7338e8876b69b5158724ee148a986e0d5"
+      },
+      {
+        "path": "alz_compass/gateway.py",
+        "bytes": 11381,
+        "sha256": "8141e8dccf0b11f5c29de70757d2c3332d2071702309e4eac69cc9bfa9704468"
+      },
+      {
+        "path": "alz_compass/mapping.py",
+        "bytes": 14219,
+        "sha256": "c7cf120edc12d7c4b9898ac97e3df8c3771804298e4f871b0c0686f6ddfc9226"
+      },
+      {
+        "path": "alz_compass/registry.py",
+        "bytes": 16140,
+        "sha256": "704e4f92251826eb748eda560f8826b77df0577519f8accca1dbad4a4605baa8"
+      },
+      {
+        "path": "alz_compass/review.py",
+        "bytes": 7277,
+        "sha256": "4f68d6bba6496d2225095c38c63b51036ca959e1f02d268aadc0082f9e42a21b"
+      },
+      {
+        "path": "alz_compass/service.py",
+        "bytes": 10919,
+        "sha256": "37f42d47ad2e8628681499f3d7465632dfa92996cefb05e09cae05e8233bb8b6"
+      },
+      {
+        "path": "alz_compass/tools/__init__.py",
+        "bytes": 269,
+        "sha256": "797e470430791b27480c54d882bd279a2618c5a9ac725ff73aa3bfbe880e49d8"
+      },
+      {
+        "path": "alz_compass/tools/find_completed_trials.py",
+        "bytes": 1203,
+        "sha256": "02f7c87a0835cd7dfdac91c9ea19ae641558d5c02d1dfcc8285d810d5f705997"
+      },
+      {
+        "path": "alz_compass/tools/get_trial_evidence_card.py",
+        "bytes": 1053,
+        "sha256": "566ec4cc1bb56b1271c57738fc64cf802c0dfd6f5bb5faf333cdebd85b2f2485"
+      },
+      {
+        "path": "alz_compass/verify.py",
+        "bytes": 3449,
+        "sha256": "f748a9adcaeea3d7a5d455da0f05dd3f371e149b53abd53d2630dbc0b96341aa"
+      },
+      {
+        "path": "alz_compass/verify_http.py",
+        "bytes": 4071,
+        "sha256": "f2cc0ca898bb2273635f5f90f862cf8f3e51e4d561775a82ab345c2713e02fc3"
+      },
+      {
+        "path": "alz_compass/web/app.js",
+        "bytes": 23028,
+        "sha256": "ac31b7d6a6b66ac887a3ec778cd728b4013907ca9043bcb874e9cb1eb96589dd"
+      },
+      {
+        "path": "alz_compass/web/index.html",
+        "bytes": 8736,
+        "sha256": "0c9d931ee6943ce6c18fda1e68a6674abd3c72afa8a72c1ea90afe5896e49acd"
+      },
+      {
+        "path": "alz_compass/web/styles.css",
+        "bytes": 16598,
+        "sha256": "3fd80099ddf7c7c4738544ed36b9c0013431ab8df25f35e341faf7fbde0e523c"
+      },
+      {
+        "path": "alz_compass/webapp.py",
+        "bytes": 8488,
+        "sha256": "9ab3aa201670d1e01dd216566a072d29fb8e1de8cfcf9006259843260b82d8b3"
+      }
+    ],
+    "payload_sha256": "28029b5eafe57752bfbf0d5d111049005248d6b4eb7c073d8bbdbac660acb88d"
+  },
+  "coverage": "For evidence-card, primary-outcome, timeframe or comparison requests, or drafts explicitly presenting primary outcomes/timeframes, checks exact per-study, per-index measure/timeframe blocks. Missing/changed blocks cause a complete source-backed card view; the raw model draft remains in model_calls.",
+  "limitations": [
+    "Exact block presence is not semantic validation of other model prose.",
+    "Requests and drafts outside the covered wording can be not_applicable.",
+    "This receipt contains no fresh model execution, hosted retest or human clinical approval.",
+    "Original 0.4.0 source audit and historical traces are preserved; this is a new candidate, not a relabeling of prior held-out evidence."
+  ],
+  "evaluation_status": "passed",
+  "human_approval": "not_claimed",
+  "final_boundary_check": "Canonical blocks must match at whole-line boundaries; appended timeframe text is rejected.",
+  "prompt_sha256_meaning": "SHA256 of original prompt file bytes; CRLF retained",
+  "prompt_normalized_text_sha256": "43baab65567a7ff0260227ca618dd2f4163b8aa6066c1eefeef29688f0d6794e",
+  "prompt_normalized_text_sha256_meaning": "SHA256 after Python text-mode newline normalization, as recorded in live traces"
+}
