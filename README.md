@@ -8,7 +8,7 @@ T2D Compass is an independent hackathon prototype built with the [GSA MCP server
 
 [Open the app](https://t2d-compass-7474654188777746.aws.databricksapps.com) · [Quick start](QUICKSTART.md) · [Evaluation report](docs/EVALUATION.md) · [Presentation](presentation/README.md) · [Submission checklist](docs/SUBMISSION.md)
 
-The hosted app requires authorized Databricks access. Authorized browser search, card retrieval, scope warnings and exports were verified on November 23. Nine direct browser checks passed. Two hosted assistant attempts failed with `model_authentication_failed` and zero tool calls, including one retry after reopening the app. This is an observed authentication limitation, not a passing live model suite.
+The hosted app requires authorized Databricks access. Authorized browser search, card retrieval, scope warnings and exports were verified on November 23. Nine direct browser checks passed. After an administrator-reported fix, two hosted assistant questions also completed with live retrieval. One answer had a minor timeframe-wording discrepancy; see the later-verification findings below. Earlier authentication failures are retained as historical evidence.
 
 ## Problem and mission
 
@@ -112,4 +112,4 @@ Imtiaz leads the project and repository. Chinelo leads delivery and evaluation. 
 
 Adapted from the GSA starter at commit `6e5fb39b4de044de4f39950ded44fa128416f11a`; aligned with the current template structure at `f39249f1768309e3ef8b31742390a4f3a656b5f3` on November 12, 2026. See [provenance](docs/PROVENANCE.md). [MIT license](LICENSE), retaining the original Technology Transformation Services notice. This independent prototype does not imply endorsement by GSA, CDC or any vendor.
 
-The user subsequently reported that the hosted assistant also failed in a private browser session. No successful live assistant result is claimed. Detailed operational diagnostics are retained locally.
+After the administrator reported a fix, two later hosted assistant checks completed with live retrieval: the previously failed exact-ID question and a completed-without-posted-results question. Each used one evidence-card tool call. Assistant review found one minor pre-meal/post-meal wording discrepancy in the first answer; the underlying card was correct. The second answer met the selected critical scenario criteria. These bounded checks establish restored execution in the tested session, not a full live-suite pass or independent human clinical approval. The earlier failures remain historical evidence.

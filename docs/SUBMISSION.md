@@ -12,7 +12,7 @@ The user-supplied organizer form, inspected November 16, accepts a video under 5
 
 The supplied November 21 archive contains all 24 snapshot-mode model executions and the Word documents report both reviewers' scenario assessments. The November 23 assistant source audit contains all 140 references and exact comparison results. Human clinical approval of those newly prepared annotations is not claimed. Historical raw review-status labels are preserved rather than rewritten to create approval.
 
-Nine direct browser checks passed. Two hosted assistant attempts failed with `model_authentication_failed` and zero tool calls, including one retry after reopening the app. This is an observed authentication limitation, not a passing live model suite.
+Nine direct browser checks passed. After an administrator-reported fix, two hosted assistant questions also completed with live retrieval. One answer had a minor timeframe-wording discrepancy; see the later-verification findings below. Earlier authentication failures are retained as historical evidence.
 
 The [ordinary app URL](https://t2d-compass-7474654188777746.aws.databricksapps.com/) requires authorized Databricks access. Management access is not required to read the submitted files. Individual judges' app permissions are not inferred from the signed-in testing account.
 
@@ -20,4 +20,4 @@ The [ordinary app URL](https://t2d-compass-7474654188777746.aws.databricksapps.c
 
 T2D Compass helps researchers inspect completed type 2 diabetes intervention studies using source-linked ClinicalTrials.gov evidence cards with explicit missing information, results-availability labels and interpretation limits.
 
-The user subsequently reported that the hosted assistant also failed in a private browser session. No successful live assistant result is claimed. Detailed operational diagnostics are retained locally.
+After the administrator reported a fix, two later hosted assistant checks completed with live retrieval: the previously failed exact-ID question and a completed-without-posted-results question. Each used one evidence-card tool call. Assistant review found one minor pre-meal/post-meal wording discrepancy in the first answer; the underlying card was correct. The second answer met the selected critical scenario criteria. These bounded checks establish restored execution in the tested session, not a full live-suite pass or independent human clinical approval. The earlier failures remain historical evidence.
