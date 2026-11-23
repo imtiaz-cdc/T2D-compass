@@ -6,7 +6,7 @@
 
 Find completed type 2 diabetes studies and review their registry evidence in one place.
 
-[Open the app](https://t2d-compass-7474654188777746.aws.databricksapps.com/) · [Quick start](QUICKSTART.md) · [Deliverables](deliverables/README.md) · [Evaluation](docs/EVALUATION.md) · [Documentation](docs/README.md)
+[Open the app](https://t2d-compass-7474654188777746.aws.databricksapps.com/) · [Quick start](QUICKSTART.md) · [Deliverables](deliverables/README.md) · [Evaluation report (PDF)](deliverables/2026-11-23/02-T2D-Compass-Evaluation-Report.pdf) · [Documentation](docs/README.md)
 
 [![Repository checks](https://github.com/imtiaz-cdc/T2D-compass/actions/workflows/ci.yml/badge.svg)](https://github.com/imtiaz-cdc/T2D-compass/actions/workflows/ci.yml)
 
@@ -73,7 +73,7 @@ The registry adapter selects live or snapshot data. Mapping preserves source val
 
 Version 0.4.1 passed **310 software tests and lint**. Two hosted checks on November 23, 2026 preserved all **five reviewed primary-outcome/timeframe pairs**. These checks cover selected cases, not every possible model response.
 
-The [evaluation report](docs/EVALUATION.md) documents the software checks, 24 recorded scenario executions, team assessments, reference-source audit, and their respective methods and limitations. Dated evidence and the original frozen reference candidate are preserved under [`eval/type2diabetes/`](eval/type2diabetes/).
+The [final evaluation report (PDF)](deliverables/2026-11-23/02-T2D-Compass-Evaluation-Report.pdf) follows the GSA sample and brings together the testing methodology, latest results, Chinelo Njoku's and Mohammad Alpha Jalloh's review findings, security considerations, and lessons learned. The [evaluation guide](docs/EVALUATION.md) provides supporting detail and reproduction instructions. Dated evidence and the original frozen reference candidate are preserved under [`eval/type2diabetes/`](eval/type2diabetes/).
 
 ```sh
 uv run python -m pytest -q

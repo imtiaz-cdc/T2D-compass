@@ -6,8 +6,10 @@ November 23, 2026 · Application version 0.4.1
 
 | Document | Format |
 | --- | --- |
-| [Evaluation report](02-T2D-Compass-Evaluation-Report.pdf) | PDF |
+| [Final evaluation report](02-T2D-Compass-Evaluation-Report.pdf) | PDF, 6 pages |
 | [Public code submission](04-T2D-Compass-Code-Submission.pdf) | PDF |
+
+The final evaluation report follows the GSA sample and includes the latest results, Chinelo Njoku's and Mohammad Alpha Jalloh's review findings, security considerations, and recommendations.
 
 The final presentation and demo video are distributed separately.
 

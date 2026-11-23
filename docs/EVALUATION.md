@@ -37,7 +37,7 @@ This is a technical source-agreement audit, not independent human clinical appro
 
 | Record | Contents |
 | --- | --- |
-| [Evaluation report PDF](../deliverables/2026-11-23/02-T2D-Compass-Evaluation-Report.pdf) | Current release addendum and original evaluation report |
+| [Evaluation report PDF](../deliverables/2026-11-23/02-T2D-Compass-Evaluation-Report.pdf) | Final six-page report following the GSA sample, with current results, team review findings, security considerations, and recommendations |
 | [Reference annotations](../eval/type2diabetes/results/reference-audit-2026-11-23/reference-annotations.json) | Expected values for all configured groups |
 | [Source checks and reconciliation](../eval/type2diabetes/results/reference-audit-2026-11-23/source-check-reconciliation.json) | Source locations, hashes and agreement record |
 | [Reference results](../eval/type2diabetes/results/reference-audit-2026-11-23/reference-evaluation.json) | Development and first held-out comparisons |
