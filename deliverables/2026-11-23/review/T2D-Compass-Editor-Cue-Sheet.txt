@@ -1,0 +1,68 @@
+T2D COMPASS - EDITOR CUE SHEET
+Target runtime 6:54. App sequence 1:14-4:14 (3:00).
+Keep live demonstration observations separate from the dated evaluation denominators. Do not transfer the earlier 11.548/11.571-second timings to the newly recorded demo run.
+Always preserve a short genuine working state before the result. Any wait compression is labeled Pause shortened. Use only observed UI responses.
+
+00:00-00:24 | A clear starting point
+Show title and version 0.4.1. Synthetic edition: show “Synthetic narration”. Both editions: show “Recorded app walkthrough; pauses edited”.
+Capture keys: 
+
+00:24-00:52 | Why this workflow matters
+Show three plain labels: Find the record / Keep the context / Check the source. Use one simple evidence-card visual, not a dense text slide.
+Capture keys: 
+
+00:52-01:14 | Two tools, one source
+Show search → evidence card → source link. Keep tool names small; the spoken explanation uses plain language.
+Capture keys: 
+
+01:14-01:41 | Search in the live app
+Show actual home page, type MEDI0382, leave limit at 3, click Find trials, then show actual returned results. Retain a brief loading state. Do not draw a fake response.
+Capture keys: home, search_typed, search_loading, search_results
+
+01:41-02:01 | Read the results in context
+Show the actual three returned records and the coverage notice. Pause on the record later opened; do not imply relevance ranking or exhaustiveness.
+Capture keys: search_results, search_coverage
+
+02:01-02:28 | Open the evidence card
+Enter NCT03244800 in the exact-ID field, click Get evidence card, show its header, then expand Study design and enrollment. Keep 65 / ACTUAL visible.
+Capture keys: card_lookup, card_loading, card_header, card_design
+
+02:28-02:56 | Keep the outcome timing intact
+Expand Primary outcomes listed in the registry. Hold on both outcomes. Point to “Zero minutes before” without altering the source text; then show “Day 1 through Day 50”.
+Capture keys: card_outcomes, timing_detail
+
+02:56-03:29 | Ask the assistant
+Open Ask assistant. Enter the exact assistant prompt from the setup notes, submit, show the actual working state, then the actual final answer. Label any waiting edit “Pause shortened”. Never reuse an older answer as the new response.
+Capture keys: assistant_tab, assistant_prompt, assistant_working, assistant_answer
+
+03:29-03:43 | Export the record of the answer
+Expand Full run trace only if readable without private data. Click Export trace and capture the real download confirmation. Avoid showing account screens or unrelated Downloads content.
+Capture keys: trace_expanded, export_clicked, trace_downloaded
+
+03:43-04:14 | Completion is not results availability
+Retrieve NCT05790681 by exact ID. Show COMPLETED and Results not posted together, then open population/eligibility. If using the assistant, preserve its separate fresh trace.
+Capture keys: no_results_lookup, no_results_header, no_results_population
+
+04:14-04:39 | How the pieces connect
+Show researcher → browser/assistant → two MCP tools → ClinicalTrials.gov. Emphasize read-only arrows and an evidence export returning to the reviewer.
+Capture keys: 
+
+04:39-05:08 | Check the software and hosted answers
+Show 310 software tests; 16 new regressions. Separately show earlier Nov 23 v0.4.1 checks: 11.548 s and 11.571 s; 5 final source pairs exact. Label these saved checks, not the fresh demo-run duration.
+Capture keys: 
+
+05:08-05:41 | Check real-model scenarios separately
+Show November 21 / frozen snapshots / 12 scenarios × 2 / 24 completed. Attribute scenario pass assessments to supplied team documents. Do not blend these timings with live app results.
+Capture keys: 
+
+05:41-06:14 | Check the extracted fields
+Show Original v0.4.0 source audit: 10 cards / 140 of 140 groups / 84 development + 56 held-out. Put “Assistant source audit” visibly underneath.
+Capture keys: 
+
+06:14-06:38 | What this prototype supports
+Show three concise labels: Registry context / Explicit missingness / Human review. Avoid a wall of warnings; keep the source link visible.
+Capture keys: 
+
+06:38-06:54 | Take the evidence with you
+Show app URL and public repository, plus evaluation report and trace-export icons. End with T2D Compass. Synthetic edition retains synthetic-narration disclosure in credits.
+Capture keys: 

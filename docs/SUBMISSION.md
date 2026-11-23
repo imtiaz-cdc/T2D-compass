@@ -4,7 +4,7 @@ Prepared November 23, 2026 for the Data track. Scope: current version 0.4.1, one
 
 ## Delivery files
 
-The [dated package](../deliverables/2026-11-23/README.md) provides the demonstration MP4, evaluation PDF, slide deck, public-repository-link PDF and supporting evidence. These files describe actual completed work and bounded findings. The narrated demo uses dated recorded evidence with automated narration; it is not a new uninterrupted live screen recording.
+The [dated package](../deliverables/2026-11-23/README.md) provides the demonstration MP4, evaluation PDF, slide deck, public-repository-link PDF and supporting evidence. These files describe actual completed work and bounded findings. The 6:54 narrated demo includes fresh app search, card inspection, an assistant response and trace export, with natural synthetic narration. Pauses are edited; the walkthrough uses actual browser captures and is not a continuous screen recording. A timed script and editor cues are included for a presenter to record.
 
 The user-supplied organizer form, inspected November 16, accepts a video under 50 MB (MP4/ZIP), an evaluation PDF, a PPTX/PDF deck and a PDF containing the public repository link. Contact details and the actual event-form response are separate from preparing or publishing these files. Repository publication is not event submission.
 

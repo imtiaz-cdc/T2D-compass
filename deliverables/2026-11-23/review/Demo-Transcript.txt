@@ -1,104 +1,53 @@
-T2D COMPASS - DEMO TRANSCRIPT
-Prepared November 23, 2026. Edited recorded-evidence walkthrough; automated narration.
-Current candidate 0.4.1 / prompt 1.1. Original 0.4.0 source-audit freeze and first held-out results remain unchanged. Evidence dates and source modes remain distinct.
-https://github.com/imtiaz-cdc/T2D-compass
+T2D COMPASS - LIVE APP DEMONSTRATION
+6:54 | 1280 x 720 | Prepared November 23, 2026
+Natural synthetic narration: Kokoro af_heart, normal speed. Not a human recording.
+Recorded app walkthrough; pauses edited. Constructed from actual browser captures, not a continuous screen recording.
+Fresh demonstration observations remain separate from historical evaluation denominators.
 
-00:00 - T2D Compass
-DATA TRACK  /  VERSION 0.4.1
-T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies. This updated walkthrough includes the corrected app and new hosted assistant checks from November twenty third. Automated narration and captions accompany saved browser views, exported evidence and evaluation results. This is an edited evidence walkthrough, not an uninterrupted live screen recording.
-Evidence: Prepared November 23, 2026 | Updated app, dated evidence
+00:00 - A clear starting point
+This is T two D Compass. It helps researchers explore completed type two diabetes studies and keep the source close to every summary. The idea is simple: find a study, inspect what the registry actually says, and carry that evidence into review. Let's walk through the app, then look at how we checked it.
 
-00:19 - A repeatable research task
-PURPOSE
-Researchers repeatedly collect study identifiers, design, enrollment, interventions, registered outcomes, and results availability. Compass organizes the registry fields into a consistent evidence card, keeping source links and review flags attached. Its intended output is a starting point for human review. It does not turn registry descriptions into a treatment recommendation.
-Evidence: README.md | Research workflow and interpretation limits
+00:24 - Why this workflow matters
+A study's title rarely tells the whole story. We still need its design, enrollment, interventions, outcomes, and results status. We also need to know what is missing. Collecting those details repeatedly is the task Compass supports. It organizes public registry information into a consistent card, while keeping the original record available for the questions a summary cannot answer.
 
-00:37 - Two tools with clear purposes
-IMPLEMENTED SCOPE
-The first tool searches for completed interventional studies with an explicit supported type two diabetes condition label. The second retrieves an evidence card for a specified trial identifier. Both tools are read only and use a fixed public source, with no patient records. The browser and optional Databricks assistant use these same tools.
-Evidence: README.md | Public ClinicalTrials.gov data only
+00:52 - Two tools, one source
+There are two tools behind the workflow. One finds candidate completed studies. The other retrieves a card for a specific trial identifier. Both read public ClinicalTrials dot gov records. The browser and the optional assistant use these same tools. Let's start with a search.
 
-00:53 - Start with the recorded live search
-HOSTED BROWSER EXPORT  /  NOVEMBER 23
-The November twenty third signed-in browser review searched for MEDI zero three eight two, with a limit of three. The exported response reports live source mode, completed status, and interventional study type. The app also applied its explicit condition-label screen. The response is preserved so the visible summary can be checked against the actual returned JSON.
-Evidence: live-app-review/live-search-MEDI0382.json | No model used
+01:14 - Search in the live app
+Here in the app, I'll enter MEDI zero three eight two and ask for up to three trials. The search looks for completed interventional studies with a supported type two diabetes condition label. That screen gives us a focused starting list. It is still a bounded candidate search, so we keep the coverage notice with the results.
 
-01:10 - Three candidates returned
-HOSTED BROWSER EXPORT  /  NOVEMBER 23
-The response returned these three study identifiers, each with its registry title and source URL. These are candidate records to inspect, not recommendations or a ranked evidence synthesis. A matching condition label also does not prove that every enrolled participant had type two diabetes. Population context and the complete registry record still need review before drawing conclusions.
-Evidence: live-search-MEDI0382.json | Actual returned order
+01:41 - Read the results in context
+Each result has a trial identifier, a title, and a link back to the registry. These are records to inspect, not treatment recommendations. A matching condition label also does not describe everyone who enrolled. That is why the next step is to open the evidence card.
 
-01:29 - Coverage limits stay visible
-HOSTED BROWSER EXPORT  / NOVEMBER 23
-The same response reports three returned records, four examined records, and one excluded for its condition labels. It marks the search incomplete because the requested limit was reached. This is deliberately a bounded candidate search. Broadly labeled studies can be missed by the conservative screen. Users should therefore retain the coverage warning when exporting or explaining results, rather than presenting this list as an exhaustive literature search.
-Evidence: live-search-MEDI0382.json | Coverage and review flags
+02:01 - Open the evidence card
+I'll open this trial by its identifier. The card reports a completed study, randomized parallel groups, and enrollment of sixty five, labeled actual. The design and enrollment are easy to find, but they are still registry fields. The source link, retrieval date, and review flags stay attached, so a reviewer can check the details in context.
 
-01:49 - Retrieve a specific evidence card
-HOSTED BROWSER EXPORT  / NOVEMBER 23
-The same review retrieved this specific study by its identifier. Its exported card reports a completed interventional study, a randomized parallel design, and enrollment of sixty five labeled actual. The card retains the notice, registry extraction pending human review. Enrollment also remains separate from the number analyzed for a particular outcome, which the current card does not determine.
-Evidence: live-card-NCT03244800.json | Structured registry extraction
+02:28 - Keep the outcome timing intact
+The timing matters here. The first outcome keeps the zero-minute sample before the meal, and the listed samples after it. The second outcome has its own timeframe, day one through day fifty. An earlier assistant summary blurred that before-and-after distinction. Version zero point four point one now checks the required outcome and timeframe blocks against the retrieved card.
 
-02:08 - Preserve the exact outcome timing
-SOURCE FIDELITY  /  VERSION 0.4.1
-The first primary outcome illustrates why exact timing matters. The source says zero minutes before the meal, followed by the listed samples after the meal. An earlier assistant summary incorrectly grouped zero minutes with the after-meal samples. Version zero point four point one requires the original outcome and timeframe together. A bounded check replaces a draft that changes or omits these blocks with source-backed cards. The original draft remains in the trace. This check does not validate every other claim.
-Evidence: NCT03244800 | First primary outcome | Registry wording retained
+02:56 - Ask the assistant
+Now let's ask the assistant for the same study, including design, enrollment, interventions, every primary outcome, and results availability. The assistant retrieves the evidence card through the tool. If the required outcome blocks are changed or missing, the app shows a source-backed card view instead. The original model draft remains in the trace. That lets us inspect what was generated and what was finally displayed.
 
-02:33 - Trace a field to the source
-HOSTED BROWSER EXPORT  / NOVEMBER 23
-The export lets a reviewer trace enrollment back to the registry design module and enrollment count field, preserving the original value sixty five. It also retains the canonical study URL, retrieval timestamp, and registry update date. These dates answer different questions: when the app retrieved information, and when the registry record was updated.
-Evidence: live-card-NCT03244800.json | provenance.fields
+03:29 - Export the record of the answer
+The export gives us more than a copied answer. It preserves the question, the actual tool calls, the returned evidence, and the final output. That makes the answer easier to review later.
 
-02:49 - Completion and results are separate
-HOSTED BROWSER EXPORT  / NOVEMBER 23
-A second exported card is completed but has no results posted in the registry. Those are separate facts. Completed does not mean successful treatment, and no posted registry results does not prove that findings or publications are absent elsewhere. This study also has pediatric eligibility criteria. The complete eligibility text is retained as entry rules, not as observed characteristics of the actual enrolled participants.
-Evidence: live-card-NCT05790681.json | Status, results and eligibility
+03:43 - Completion is not results availability
+Here is a different study. It is marked completed, but the registry has no posted results. Those are separate facts. We can describe the study record; we cannot turn completion into a claim that a treatment worked. This record also concerns children and teenagers. And no posted registry results does not prove that findings or publications are absent elsewhere. Those distinctions stay visible.
 
-03:10 - Export the evidence for review
-OBSERVED BROWSER WORKFLOW / NOVEMBER 23
-The reviewer used visible browser controls to export the search, three evidence cards, an error response, and assistant traces. Those files were downloaded and parsed during the November twenty third review. A reviewer can carry the source fields, review flags, and interpretation limits into a separate review rather than relying on a copied summary.
-Evidence: live-app-review/review-summary.json | Downloaded artifacts preserved
+04:14 - How the pieces connect
+The architecture is deliberately small. The browser and the optional assistant reach the same two tools, and those tools use one public registry. Search inputs and trial identifiers are bounded. The app reads records; it does not change them. The useful result is an inspectable starting point, with source links and explicit gaps, that a person can take forward.
 
-03:26 - Boundary cases remain distinct
-HOSTED BROWSER REVIEW / NOVEMBER 23
-The direct browser checks also retrieved an active study and retained its outside-completed-scope warning. A missing identifier returned not found without a substitute card. A no-match search returned zero candidates without claiming global absence. An invalid identifier triggered browser format validation. These are observed direct workflow behaviors, not four extra model-quality passes. The active exclusion record is separate from the ten-card source-reference accuracy denominator.
-Evidence: review-summary.json | Active study, absent ID and no-match exports
+04:39 - Check the software and hosted answers
+The current version passed three hundred ten software tests, including sixteen new regression cases. Earlier today, two hosted questions also completed in about eleven and a half seconds each. Their final answers retained all five outcome and timeframe pairs. Those are two selected checks, not a complete live scenario suite. The fresh demonstration you just saw is documented separately.
 
-03:49 - Source modes are explicit
-REPRODUCIBILITY
-The November twenty first model scenarios used frozen public snapshots. The November twenty third direct browser checks used the live registry. Frozen inputs make comparisons reproducible, while live retrieval separately tests current source access. The two modes can return different candidate sets, and neither should be relabeled as the other. Two current live cards also matched all twenty eight corresponding frozen reference groups, a limited two-card consistency check.
-Evidence: November 21 traces | November 23 live exports and frozen comparison
+05:08 - Check real-model scenarios separately
+We also preserved the November twenty first model evaluation: twelve scenarios, repeated twice, with all twenty four executions completing. These runs used frozen public snapshots, so the inputs are reproducible. The supplied team review documents report all twelve scenario passes, including seven critical cases, in both runs. Execution completion and those reported assessments are distinct evidence. The original documents and traces remain available, with their review wording preserved.
 
-04:12 - The updated assistant in the app
-HOSTED APP CAPTURE  /  NOVEMBER 23
-This view comes from the updated hosted app. We repeated the same evidence-card question that exposed the wording issue. The answer retained both primary outcomes and the exact before-and-after meal timeframe. The exported trace records the question, actual tool result, model draft, final answer and wording check. Keeping the draft and final answer distinct lets a reviewer see when source-backed presentation was used.
-Evidence: Version 0.4.1 | New browser capture and exported trace
+05:41 - Check the extracted fields
+For the original version zero point four point zero, a separate source-reference audit compared ten cards with sealed references from the saved registry records. All one hundred forty configured field groups matched: eighty four development groups and fifty six held-out groups. That first held-out result remains unchanged. The newer timing correction has its own checks. This is an assistant-authored source audit, not a signature or clinical approval from a human reviewer.
 
-04:31 - Software checks support the correction
-NEW CANDIDATE  /  NOVEMBER 23
-The revised candidate passed 310 automated software tests and the static checks. Focused regression cases cover the original before-and-after error, outcome pairing, missing timeframes, multiple studies, and keeping a results-only answer unchanged. The deployment package is built from these tested sources. These checks assess software behavior and presentation fidelity. They are not clinical cases or a model accuracy estimate.
-Evidence: Timing correction validation receipt | Distinct from frozen source audit
+06:14 - What this prototype supports
+Compass supports research preparation. It does not rank treatments or recommend care. Registry eligibility describes entry rules, not necessarily the people who enrolled, and enrollment is not the number analyzed for every outcome. The value is in keeping those limits, missing fields, and source details visible while making a repeatable review task easier to follow.
 
-04:53 - Real-model scenarios were completed
-SNAPSHOT MODEL RUNS / NOVEMBER 21
-The delivered November twenty first archive contains twelve scenarios repeated twice, with all twenty four executions completing. The recorded model is Databricks G P T five five. The traces preserve fifty two model turns and thirty eight tool calls, all using snapshot data. Median case time was seventeen point five seconds, with a range of two point eight to thirty six point four seconds. These timings are not hosted load-test results.
-Evidence: scenarios-20261121.json | databricks-gpt-5-5
-
-05:15 - Team assessments and failure evidence
-SCENARIO REVIEW / NOVEMBER 21 DELIVERY
-The supplied review documents naming Chinelo and Mohammad report twelve of twelve scenario passes, including seven critical cases, in each run. Both injected upstream-failure scenarios visibly returned the controlled error and avoided invented evidence. These are reported team assessments, distinct from execution completion. Some document sign-off wording remains inconsistent and is disclosed in the evaluation report; raw trace review fields remain unchanged rather than being retrospectively overwritten.
-Evidence: Chinelo and Mohammad review documents | Original traces preserved
-
-05:38 - A complete source-reference comparison
-FROZEN BASELINE AUDIT  /  NOVEMBER 23
-Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated. After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups. That original source-audit candidate and its first held-out result remain unchanged. The timing correction is a later candidate with separate checks. This source-reference audit does not create a human clinical approval.
-Evidence: reference-evaluation.json | Original 0.4.0 candidate and first held-out run retained
-
-06:01 - Two fresh hosted checks completed
-CORRECTED CANDIDATE  /  NOVEMBER 23
-Two fresh hosted assistant checks completed on the corrected candidate, each retrieving a live evidence card. The first preserved the exact timing and both outcomes. The second kept completed status separate from results not posted, retained the pediatric context and did not invent efficacy findings. Both passed the selected source-fidelity checks. The earlier failed attempts and the earlier wording issue remain dated evidence. Two successful checks are not a complete live scenario suite or independent clinical validation.
-Evidence: release-review.json | Two new live runs; bounded source-fidelity review
-
-06:26 - Inspect the source and evidence
-T2D COMPASS / DATA TRACK
-The public repository and delivery package let reviewers inspect the source, tool contracts, saved records, model traces, and evaluation results. The evidence now includes real snapshot model executions, supplied team scenario assessments, a completed assistant source-reference comparison, and current direct browser exports. Compass supports source-based human review of registry information. It does not rank treatments, prescribe care, replace a systematic review, or establish clinical effectiveness. Thank you for reviewing T two D Compass.
-Evidence: github.com/imtiaz-cdc/T2D-compass | Evaluation artifacts supplied separately
+06:38 - Take the evidence with you
+The repository and submission package include the source, evaluation report, and supporting evidence. Try the search, inspect a card, and export the trace. T two D Compass keeps the registry context close to the answer. Thank you.

@@ -1,0 +1,96 @@
+T2D COMPASS - HUMAN RECORDING SCRIPT
+Target: 6:54 | 16 scenes | 3:00 actual app sequence
+Prepared November 23, 2026
+
+Read only the NARRATION paragraphs. The SCREEN cues are instructions for the editor, not spoken lines.
+Use a relaxed, clear voice. Record one scene at a time; leave a clean breath before and after each take. Aim for about 140 words per minute while speaking, then use short visual pauses to meet the timeline. If a take overruns, record it again rather than rushing or removing a source limitation.
+The synthetic edition must remain labeled as synthetic narration. The human edition becomes a human recording only after you or Mohammad records it. The visual demonstration uses actual app captures with pauses edited; it is not presented as an uninterrupted screen recording.
+
+PRONUNCIATION
+T2D = T two D; MCP = M C P; MEDI0382 = MEDI zero three eight two. Point to the trial IDs instead of reading every digit.
+
+EXACT ASSISTANT QUESTION
+Prepare a source-linked evidence card for NCT03244800. Include design, enrollment, interventions, each primary outcome and its timeframe, and results availability.
+
+OPTIONAL NO-RESULTS ASSISTANT QUESTION
+Prepare an evidence card for NCT05790681. Has it completed and are results posted? What can and cannot be concluded?
+
+00:00-00:24 | 01. A clear starting point | 24 seconds
+SCREEN: Show title and version 0.4.1. Synthetic edition: show “Synthetic narration”. Both editions: show “Recorded app walkthrough; pauses edited”.
+NARRATION:
+This is T two D Compass. It helps researchers explore completed type two diabetes studies and keep the source close to every summary. The idea is simple: find a study, inspect what the registry actually says, and carry that evidence into review. Let's walk through the app, then look at how we checked it.
+
+00:24-00:52 | 02. Why this workflow matters | 28 seconds
+SCREEN: Show three plain labels: Find the record / Keep the context / Check the source. Use one simple evidence-card visual, not a dense text slide.
+NARRATION:
+A study's title rarely tells the whole story. We still need its design, enrollment, interventions, outcomes, and results status. We also need to know what is missing. Collecting those details repeatedly is the task Compass supports. It organizes public registry information into a consistent card, while keeping the original record available for the questions a summary cannot answer.
+
+00:52-01:14 | 03. Two tools, one source | 22 seconds
+SCREEN: Show search → evidence card → source link. Keep tool names small; the spoken explanation uses plain language.
+NARRATION:
+There are two tools behind the workflow. One finds candidate completed studies. The other retrieves a card for a specific trial identifier. Both read public ClinicalTrials dot gov records. The browser and the optional assistant use these same tools. Let's start with a search.
+
+01:14-01:41 | 04. Search in the live app | 27 seconds
+SCREEN: Show actual home page, type MEDI0382, leave limit at 3, click Find trials, then show actual returned results. Retain a brief loading state. Do not draw a fake response.
+NARRATION:
+Here in the app, I'll enter MEDI zero three eight two and ask for up to three trials. The search looks for completed interventional studies with a supported type two diabetes condition label. That screen gives us a focused starting list. It is still a bounded candidate search, so we keep the coverage notice with the results.
+
+01:41-02:01 | 05. Read the results in context | 20 seconds
+SCREEN: Show the actual three returned records and the coverage notice. Pause on the record later opened; do not imply relevance ranking or exhaustiveness.
+NARRATION:
+Each result has a trial identifier, a title, and a link back to the registry. These are records to inspect, not treatment recommendations. A matching condition label also does not describe everyone who enrolled. That is why the next step is to open the evidence card.
+
+02:01-02:28 | 06. Open the evidence card | 27 seconds
+SCREEN: Enter NCT03244800 in the exact-ID field, click Get evidence card, show its header, then expand Study design and enrollment. Keep 65 / ACTUAL visible.
+NARRATION:
+I'll open this trial by its identifier. The card reports a completed study, randomized parallel groups, and enrollment of sixty five, labeled actual. The design and enrollment are easy to find, but they are still registry fields. The source link, retrieval date, and review flags stay attached, so a reviewer can check the details in context.
+
+02:28-02:56 | 07. Keep the outcome timing intact | 28 seconds
+SCREEN: Expand Primary outcomes listed in the registry. Hold on both outcomes. Point to “Zero minutes before” without altering the source text; then show “Day 1 through Day 50”.
+NARRATION:
+The timing matters here. The first outcome keeps the zero-minute sample before the meal, and the listed samples after it. The second outcome has its own timeframe, day one through day fifty. An earlier assistant summary blurred that before-and-after distinction. Version zero point four point one now checks the required outcome and timeframe blocks against the retrieved card.
+
+02:56-03:29 | 08. Ask the assistant | 33 seconds
+SCREEN: Open Ask assistant. Enter the exact assistant prompt from the setup notes, submit, show the actual working state, then the actual final answer. Label any waiting edit “Pause shortened”. Never reuse an older answer as the new response.
+NARRATION:
+Now let's ask the assistant for the same study, including design, enrollment, interventions, every primary outcome, and results availability. The assistant retrieves the evidence card through the tool. If the required outcome blocks are changed or missing, the app shows a source-backed card view instead. The original model draft remains in the trace. That lets us inspect what was generated and what was finally displayed.
+
+03:29-03:43 | 09. Export the record of the answer | 14 seconds
+SCREEN: Expand Full run trace only if readable without private data. Click Export trace and capture the real download confirmation. Avoid showing account screens or unrelated Downloads content.
+NARRATION:
+The export gives us more than a copied answer. It preserves the question, the actual tool calls, the returned evidence, and the final output. That makes the answer easier to review later.
+
+03:43-04:14 | 10. Completion is not results availability | 31 seconds
+SCREEN: Retrieve NCT05790681 by exact ID. Show COMPLETED and Results not posted together, then open population/eligibility. If using the assistant, preserve its separate fresh trace.
+NARRATION:
+Here is a different study. It is marked completed, but the registry has no posted results. Those are separate facts. We can describe the study record; we cannot turn completion into a claim that a treatment worked. This record also concerns children and teenagers. And no posted registry results does not prove that findings or publications are absent elsewhere. Those distinctions stay visible.
+
+04:14-04:39 | 11. How the pieces connect | 25 seconds
+SCREEN: Show researcher → browser/assistant → two MCP tools → ClinicalTrials.gov. Emphasize read-only arrows and an evidence export returning to the reviewer.
+NARRATION:
+The architecture is deliberately small. The browser and the optional assistant reach the same two tools, and those tools use one public registry. Search inputs and trial identifiers are bounded. The app reads records; it does not change them. The useful result is an inspectable starting point, with source links and explicit gaps, that a person can take forward.
+
+04:39-05:08 | 12. Check the software and hosted answers | 29 seconds
+SCREEN: Show 310 software tests; 16 new regressions. Separately show earlier Nov 23 v0.4.1 checks: 11.548 s and 11.571 s; 5 final source pairs exact. Label these saved checks, not the fresh demo-run duration.
+NARRATION:
+The current version passed three hundred ten software tests, including sixteen new regression cases. Earlier today, two hosted questions also completed in about eleven and a half seconds each. Their final answers retained all five outcome and timeframe pairs. Those are two selected checks, not a complete live scenario suite. The fresh demonstration you just saw is documented separately.
+
+05:08-05:41 | 13. Check real-model scenarios separately | 33 seconds
+SCREEN: Show November 21 / frozen snapshots / 12 scenarios × 2 / 24 completed. Attribute scenario pass assessments to supplied team documents. Do not blend these timings with live app results.
+NARRATION:
+We also preserved the November twenty first model evaluation: twelve scenarios, repeated twice, with all twenty four executions completing. These runs used frozen public snapshots, so the inputs are reproducible. The supplied team review documents report all twelve scenario passes, including seven critical cases, in both runs. Execution completion and those reported assessments are distinct evidence. The original documents and traces remain available, with their review wording preserved.
+
+05:41-06:14 | 14. Check the extracted fields | 33 seconds
+SCREEN: Show Original v0.4.0 source audit: 10 cards / 140 of 140 groups / 84 development + 56 held-out. Put “Assistant source audit” visibly underneath.
+NARRATION:
+For the original version zero point four point zero, a separate source-reference audit compared ten cards with sealed references from the saved registry records. All one hundred forty configured field groups matched: eighty four development groups and fifty six held-out groups. That first held-out result remains unchanged. The newer timing correction has its own checks. This is an assistant-authored source audit, not a signature or clinical approval from a human reviewer.
+
+06:14-06:38 | 15. What this prototype supports | 24 seconds
+SCREEN: Show three concise labels: Registry context / Explicit missingness / Human review. Avoid a wall of warnings; keep the source link visible.
+NARRATION:
+Compass supports research preparation. It does not rank treatments or recommend care. Registry eligibility describes entry rules, not necessarily the people who enrolled, and enrollment is not the number analyzed for every outcome. The value is in keeping those limits, missing fields, and source details visible while making a repeatable review task easier to follow.
+
+06:38-06:54 | 16. Take the evidence with you | 16 seconds
+SCREEN: Show app URL and public repository, plus evaluation report and trace-export icons. End with T2D Compass. Synthetic edition retains synthetic-narration disclosure in credits.
+NARRATION:
+The repository and submission package include the source, evaluation report, and supporting evidence. Try the search, inspect a card, and export the trace. T two D Compass keeps the registry context close to the answer. Thank you.

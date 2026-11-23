@@ -1,90 +1,174 @@
 {
   "created_date": "2026-11-23",
-  "duration_seconds": 414.2468934240361,
-  "size_bytes": 7191458,
-  "video": "output\\submission-final-2026-11-23\\01-T2D-Compass-Demo.mp4",
-  "narration": "Microsoft Zira Desktop; automated",
-  "mode": "Edited recorded-evidence walkthrough with new hosted 0.4.1 observations; not an uninterrupted live screen recording",
+  "duration_seconds": 414,
+  "size_bytes": 9190800,
+  "sha256": "89b407d4420121af829ead5644dc3284cefcff7a5ada4d02d89814e4f0c30525",
+  "dimensions": [
+    1280,
+    720
+  ],
+  "frames_per_second": 15,
+  "chapters": 16,
+  "captions": 80,
+  "actual_app_section_seconds": 180,
+  "app_capture_count": 25,
+  "narration": "Kokoro-82M v1.0 ONNX, af_heart, speed 1.0; synthetic; generated locally",
+  "mode": "Recorded app walkthrough; pauses edited. Constructed from actual browser captures, not a continuous screen recording. Do not draw or invent app responses.",
+  "captions_timing": "Estimated phrase timing within each synthesized scene; matching narration text",
   "current_candidate": "0.4.1",
   "current_prompt": "t2d-compass-1.1",
-  "original_candidate_reference": "output/reference-review-2026-11-23/candidate-freeze.json",
   "human_clinical_approval": "not claimed",
-  "evidence": [
+  "historical_denominators": "Original 0.4.0 field audit and November 21 snapshot scenarios unchanged. Fresh demonstration stored separately.",
+  "captures": [
     {
-      "file": "output\\reference-review-2026-11-23\\live-app-review\\review-summary.json",
-      "sha256": "516455638e6fc0a5ee097b83a74bffdb282b9f5aba5cd90a3522e055307aba98"
+      "id": 1,
+      "file": "001-landscape-home.jpg",
+      "captured_at": "2026-11-23T17:33:41.558Z",
+      "sha256": "4b3da02de15b0dff3637efb608079723eac2a18a724b739d6cb534b8b7134fb2"
     },
     {
-      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-search-MEDI0382.json",
-      "sha256": "6feaa40b9041a372fb4dceaf0fe57960a0320208b3aeea5b822ac16844e37049"
+      "id": 2,
+      "file": "002-search-typing-medi.jpg",
+      "captured_at": "2026-11-23T17:33:41.643Z",
+      "sha256": "622bb0b9b9da8fc2f0dd18d839ae429c8fe04eacc3a06fe65fa8da68daf6f58d"
     },
     {
-      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-card-NCT03244800.json",
-      "sha256": "6e7eed87151822309648ae319c4dd72ed316e37fac11f46fa07191a1a591f4a2"
+      "id": 3,
+      "file": "003-search-input.jpg",
+      "captured_at": "2026-11-23T17:33:41.705Z",
+      "sha256": "e96b8bb6512df21d4b782d4218d9ae5ea3d82e9d81ae6aba4a5b0a2daf1f7c7c"
     },
     {
-      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-card-NCT05790681.json",
-      "sha256": "b5cfdf6c2964e19ce76738787f915977243e9f2d2d11f3bca94d5eb0c34697eb"
+      "id": 4,
+      "file": "004-search-loading.jpg",
+      "captured_at": "2026-11-23T17:33:46.602Z",
+      "sha256": "5a3c7139525fdcf7d17f1c560a7ce8273d5d421b0077554f74051d7c6451dc17"
     },
     {
-      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-card-NCT05743387.json",
-      "sha256": "77f214beaa972e918d807357efdcb4e45790ee98509b08472c5f68dd78d8e9fb"
+      "id": 6,
+      "file": "006-results-heading.jpg",
+      "captured_at": "2026-11-23T17:34:16.468Z",
+      "sha256": "89b84505aa13dc818e2204be7d46c5980bf4874398537e8afd0798ee3927524e"
     },
     {
-      "file": "output\\reference-review-2026-11-23\\reference-evaluation.json",
-      "sha256": "f82add997640c6160056f349ec4ff09e875858cee60f228080fe0be4498dc373"
+      "id": 7,
+      "file": "007-results-cards.jpg",
+      "captured_at": "2026-11-23T17:36:25.910Z",
+      "sha256": "4981b7cb31afdbeff85547af00f36473ff0ee481b66174122bab47e5afb409c4"
     },
     {
-      "file": "output\\reference-review-2026-11-23\\human-gated-reference-evaluation.json",
-      "sha256": "f5e57cc94a6c25ff5f618dde24004b6066a4eb141bfea49d383b3ad5a2c893dc"
+      "id": 8,
+      "file": "008-card-lookup.jpg",
+      "captured_at": "2026-11-23T17:36:29.215Z",
+      "sha256": "efa8d0bd67a1d02069c823186ca2dc2e03aacf662d93ea3381bd83ea75b6693e"
     },
     {
-      "file": "output\\reference-review-2026-11-23\\candidate-freeze.json",
-      "sha256": "fe04eec8a2c22b9f894783e638d1d6ab1f8c10e70e6eedb3e94f3d88bed869c7"
+      "id": 9,
+      "file": "009-card-loading.jpg",
+      "captured_at": "2026-11-23T17:36:29.589Z",
+      "sha256": "f08bcfd8159a3f9435e3e54cd11a2c29893a069a22e398aa83e265097948ab72"
     },
     {
-      "file": "research\\evaluation-delivery-2026-11-23\\trace-audit.json",
-      "sha256": "7501af3e547d2b4bef069aca04be140534ca3c7bd7ee611fd297af51899d0eeb"
+      "id": 10,
+      "file": "010-card-header.jpg",
+      "captured_at": "2026-11-23T17:36:36.761Z",
+      "sha256": "5cc7f8ad4ab20179a316923bfeae14c3d9b719dea0d8ea5618f9df9e186d1673"
     },
     {
-      "file": "submission\\T2D-compass\\eval\\type2diabetes\\results\\submission-2026-11-12\\validation-summary.json",
-      "sha256": "7ee5ed08aa8bfe0f6bcd5f04b2529262ea3020854cbe6cf3df353aaf942ff67a"
+      "id": 11,
+      "file": "011-card-design.jpg",
+      "captured_at": "2026-11-23T17:36:42.608Z",
+      "sha256": "8121e1b0023274f952535d3dc4e92942e76008d13409806afbe133e174ecce70"
     },
     {
-      "file": "submission\\T2D-compass\\eval\\type2diabetes\\results\\browser-evidence-card.png",
-      "sha256": "65c759b7541786f7a8a8c0364ae42e23e56aaea1e4af2bdb1278c77726cef38c"
+      "id": 13,
+      "file": "013-timing-detail.jpg",
+      "captured_at": "2026-11-23T17:36:46.328Z",
+      "sha256": "0a68b2bfd2903bd2ac525f3ab5a191ca53ffe49cb3a0eef5c905c1b96bdf41e4"
     },
     {
-      "file": "tmp\\certifi-fix-2026-11-17\\repair-summary.json",
-      "sha256": "5ebed4db2b3bde145068ead931ee95042bb8d54c93d350783a33b245afe51b1e"
+      "id": 14,
+      "file": "014-assistant-tab.jpg",
+      "captured_at": "2026-11-23T17:36:50.398Z",
+      "sha256": "5495d6004a013da18f819509c3a353ecbc06d465ff36d07c7f604765033e12c0"
     },
     {
-      "file": "research\\evaluation-delivery-2026-11-23\\Individual_reviewer1.docx",
-      "sha256": "3a81125b59d0049f1f6fbecd7b3589d499bfbd07fb455faf25a5fbfc514838da"
+      "id": 15,
+      "file": "015-assistant-prompt.jpg",
+      "captured_at": "2026-11-23T17:36:53.620Z",
+      "sha256": "8b699118dfba2a428f8e202c08986b9682e041cf88aa68d38150856bb0b9a01d"
     },
     {
-      "file": "research\\evaluation-delivery-2026-11-23\\Individual_reviewer2.docx",
-      "sha256": "60a7076ab640f61c286ffe12f9ff597bc121bfc6ea47b1ff097fdd9860710b16"
+      "id": 16,
+      "file": "016-assistant-working.jpg",
+      "captured_at": "2026-11-23T17:36:53.998Z",
+      "sha256": "82d828254060ea5dd449fa4d3b84bf18d0910269be832f58bd53945cf48af35d"
     },
     {
-      "file": "research\\evaluation-delivery-2026-11-23\\MCP_document_final.docx",
-      "sha256": "cf751872593ea3f351ec3a9f7759584897ae160f77a95bf06aa29a64b9ebe22f"
+      "id": 18,
+      "file": "018-assistant-answer-header.jpg",
+      "captured_at": "2026-11-23T17:37:10.965Z",
+      "sha256": "300e235a29f0a2a58fb403ecc46706e87a3639c0ee3c014fecf3ee7344f6dbac"
     },
     {
-      "file": "output\\timing-fix-review-2026-11-23\\release-review.json",
-      "sha256": "ecc49f930384f0dfe49fa7ba2cbb90d79350be9bdd5f022995f2a58e50ab7d5e"
+      "id": 19,
+      "file": "019-assistant-answer-design.jpg",
+      "captured_at": "2026-11-23T17:37:16.282Z",
+      "sha256": "14b0e06749624262e867d34d8e7588bf1c65f77e28a2a67f9d5b3d1c3f53cb4c"
     },
     {
-      "file": "output\\timing-fix-review-2026-11-23\\live-exact-card.json",
-      "sha256": "738e584cd04bf43c874c279b2991fa44516d9941623cc5d2d17ab9aa579b4e0c"
+      "id": 21,
+      "file": "021-assistant-timing-detail.jpg",
+      "captured_at": "2026-11-23T17:37:19.963Z",
+      "sha256": "5d114dda81be5f37bfaf2e413762d410b2e7d89173f4984bee76dcc6b6368074"
     },
     {
-      "file": "output\\timing-fix-review-2026-11-23\\live-no-results.json",
-      "sha256": "634880d332a6362d7a0b118435002627cc0f5060fb8b797cf344944289a146d3"
+      "id": 23,
+      "file": "023-trace-visible.jpg",
+      "captured_at": "2026-11-23T17:37:27.591Z",
+      "sha256": "d7291f56547d459bb982e282967a7a2ded069e2894eab7d37d1d1120f8928101"
     },
     {
-      "file": "output\\timing-fix-review-2026-11-23\\corrected-timing-detail.jpg",
-      "sha256": "c2cedcd63a94f3aab682e5bbaad3ec3298199a357f7e7d43aae73bd7ef090c82"
+      "id": 24,
+      "file": "024-export-clicked.jpg",
+      "captured_at": "2026-11-23T17:37:28.743Z",
+      "sha256": "d6227f546afecbe923c54ac5fd1e02076266876eb6d98e575e5f9baa76bc6c26"
+    },
+    {
+      "id": 25,
+      "file": "025-no-results-lookup.jpg",
+      "captured_at": "2026-11-23T17:37:29.561Z",
+      "sha256": "ee9bcdf2761497cfc8fe46fdef476720d0371efbc78abfb18771171723dc93e9"
+    },
+    {
+      "id": 26,
+      "file": "026-no-results-loading.jpg",
+      "captured_at": "2026-11-23T17:37:30.443Z",
+      "sha256": "ff114cc97e82cd1d4c9e1466d8d3c5b50231dbc921d5e0e89794eaff4994eae9"
+    },
+    {
+      "id": 27,
+      "file": "027-no-results-header.jpg",
+      "captured_at": "2026-11-23T17:37:39.157Z",
+      "sha256": "0b60b6e7c7bb754557842fcc3c2ab8699b966b9fbfad1ae8e1b981e49e94e8dc"
+    },
+    {
+      "id": 28,
+      "file": "028-no-results-population.jpg",
+      "captured_at": "2026-11-23T17:37:39.839Z",
+      "sha256": "38793068d265e46ae3521e8b70883e504e5635ae84bcd0664bdd5d4b65b8aca5"
+    },
+    {
+      "id": 29,
+      "file": "029-no-results-population-detail.jpg",
+      "captured_at": "2026-11-23T17:37:45.953Z",
+      "sha256": "885e34a54b19b148631270561a7b42fb85b45af336c776e37f69f6113adc22a1"
+    },
+    {
+      "id": 30,
+      "file": "030-no-results-status-detail.jpg",
+      "captured_at": "2026-11-23T17:37:46.572Z",
+      "sha256": "3c8e38b25f08d221e2855d1b3c75df1bcff7f0b439818cb470fe91dc813f8762"
     }
   ]
 }

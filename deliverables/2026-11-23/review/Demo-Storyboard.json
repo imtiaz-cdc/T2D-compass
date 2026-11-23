@@ -1,539 +1,309 @@
-[
-  {
-    "title": "T2D Compass",
-    "tag": "DATA TRACK  /  VERSION 0.4.1",
-    "source": "Prepared November 23, 2026 | Updated app, dated evidence",
-    "narration": "T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies. This updated walkthrough includes the corrected app and new hosted assistant checks from November twenty third. Automated narration and captions accompany saved browser views, exported evidence and evaluation results. This is an edited evidence walkthrough, not an uninterrupted live screen recording.",
-    "chunks": [
-      "T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies.",
-      "This updated walkthrough includes the corrected app and new hosted assistant checks from November twenty third.",
-      "Automated narration and captions accompany saved browser views, exported evidence and evaluation results.",
-      "This is an edited evidence walkthrough, not an uninterrupted live screen recording."
-    ],
-    "kind": "cover",
-    "data": [
-      [
-        "Traceable registry evidence",
-        "One MCP server. Two read-only tools."
-      ],
-      [
-        "Updated demonstration",
-        "Version 0.4.1; new hosted verification included."
-      ]
-    ]
+{
+  "prepared_on": "2026-11-23",
+  "target_duration_seconds": 414,
+  "target_runtime": "6:54",
+  "app_capture_seconds": 180,
+  "narration_words": 882,
+  "suggested_human_delivery": "Conversational, about 140 words per minute while speaking; leave the remaining time for visual pauses. Record scene by scene, then fit pauses to the stated timeline.",
+  "capture_disclosure": "Recorded app walkthrough; pauses edited. Constructed from actual browser captures, not a continuous screen recording. Do not draw or invent app responses.",
+  "synthetic_edition_disclosure": "Synthetic narration. Do not describe this as a human recording.",
+  "human_edition_rule": "Replace the synthetic audio only after the presenter records these lines. Keep the source captures and evidence labels intact.",
+  "assistant_question": "Prepare a source-linked evidence card for NCT03244800. Include design, enrollment, interventions, each primary outcome and its timeframe, and results availability.",
+  "no_results_question": "Prepare an evidence card for NCT05790681. Has it completed and are results posted? What can and cannot be concluded?",
+  "pronunciation_notes": {
+    "T2D": "T two D",
+    "ClinicalTrials.gov": "Clinical Trials dot gov",
+    "MCP": "M C P",
+    "MEDI0382": "MEDI zero three eight two",
+    "NCT IDs": "Point to the on-screen identifier; do not read all eight digits unless necessary",
+    "v0.4.1": "version zero point four point one"
   },
-  {
-    "title": "A repeatable research task",
-    "tag": "PURPOSE",
-    "source": "README.md | Research workflow and interpretation limits",
-    "narration": "Researchers repeatedly collect study identifiers, design, enrollment, interventions, registered outcomes, and results availability. Compass organizes the registry fields into a consistent evidence card, keeping source links and review flags attached. Its intended output is a starting point for human review. It does not turn registry descriptions into a treatment recommendation.",
-    "chunks": [
-      "Researchers repeatedly collect study identifiers, design, enrollment, interventions, registered outcomes, and results availability.",
-      "Compass organizes the registry fields into a consistent evidence card, keeping source links and review flags attached.",
-      "Its intended output is a starting point for human review.",
-      "It does not turn registry descriptions into a treatment recommendation."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "Find",
-        "Search bounded candidate records."
-      ],
-      [
-        "Inspect",
-        "Read structured evidence and source paths."
-      ],
-      [
-        "Review",
-        "Resolve limitations with the original registry record."
+  "scenes": [
+    {
+      "id": 1,
+      "title": "A clear starting point",
+      "start_seconds": 0,
+      "end_seconds": 24,
+      "duration_seconds": 24,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show title and version 0.4.1. Synthetic edition: show “Synthetic narration”. Both editions: show “Recorded app walkthrough; pauses edited”.",
+      "narration": "This is T two D Compass. It helps researchers explore completed type two diabetes studies and keep the source close to every summary. The idea is simple: find a study, inspect what the registry actually says, and carry that evidence into review. Let's walk through the app, then look at how we checked it.",
+      "word_count": 54,
+      "evidence": [
+        "README.md",
+        "src/alz_compass/__init__.py"
       ]
-    ]
-  },
-  {
-    "title": "Two tools with clear purposes",
-    "tag": "IMPLEMENTED SCOPE",
-    "source": "README.md | Public ClinicalTrials.gov data only",
-    "narration": "The first tool searches for completed interventional studies with an explicit supported type two diabetes condition label. The second retrieves an evidence card for a specified trial identifier. Both tools are read only and use a fixed public source, with no patient records. The browser and optional Databricks assistant use these same tools.",
-    "chunks": [
-      "The first tool searches for completed interventional studies with an explicit supported type two diabetes condition label.",
-      "The second retrieves an evidence card for a specified trial identifier.",
-      "Both tools are read only and use a fixed public source, with no patient records.",
-      "The browser and optional Databricks assistant use these same tools."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "find_completed_trials",
-        "Optional intervention text; limit 1 to 5."
-      ],
-      [
-        "get_trial_evidence_card",
-        "A validated NCT identifier with eight digits."
-      ],
-      [
-        "Shared evidence",
-        "Browser and optional assistant use the same tools."
+    },
+    {
+      "id": 2,
+      "title": "Why this workflow matters",
+      "start_seconds": 24,
+      "end_seconds": 52,
+      "duration_seconds": 28,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show three plain labels: Find the record / Keep the context / Check the source. Use one simple evidence-card visual, not a dense text slide.",
+      "narration": "A study's title rarely tells the whole story. We still need its design, enrollment, interventions, outcomes, and results status. We also need to know what is missing. Collecting those details repeatedly is the task Compass supports. It organizes public registry information into a consistent card, while keeping the original record available for the questions a summary cannot answer.",
+      "word_count": 58,
+      "evidence": [
+        "README.md",
+        "docs/FIELD_DICTIONARY.md"
       ]
-    ]
-  },
-  {
-    "title": "Start with the recorded live search",
-    "tag": "HOSTED BROWSER EXPORT  /  NOVEMBER 23",
-    "source": "live-app-review/live-search-MEDI0382.json | No model used",
-    "narration": "The November twenty third signed-in browser review searched for MEDI zero three eight two, with a limit of three. The exported response reports live source mode, completed status, and interventional study type. The app also applied its explicit condition-label screen. The response is preserved so the visible summary can be checked against the actual returned JSON.",
-    "chunks": [
-      "The November twenty third signed-in browser review searched for MEDI zero three eight two, with a limit of three.",
-      "The exported response reports live source mode, completed status, and interventional study type.",
-      "The app also applied its explicit condition-label screen.",
-      "The response is preserved so the visible summary can be checked against the actual returned JSON."
-    ],
-    "kind": "code",
-    "data": [
-      [
-        "Recorded search input",
-        "intervention: MEDI0382\nlimit: 3\n\nsource_mode: live"
-      ],
-      [
-        "Returned criteria",
-        "Type 2 Diabetes\nCOMPLETED\nINTERVENTIONAL\nExplicit condition-label screen"
+    },
+    {
+      "id": 3,
+      "title": "Two tools, one source",
+      "start_seconds": 52,
+      "end_seconds": 74,
+      "duration_seconds": 22,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show search → evidence card → source link. Keep tool names small; the spoken explanation uses plain language.",
+      "narration": "There are two tools behind the workflow. One finds candidate completed studies. The other retrieves a card for a specific trial identifier. Both read public ClinicalTrials dot gov records. The browser and the optional assistant use these same tools. Let's start with a search.",
+      "word_count": 44,
+      "evidence": [
+        "README.md",
+        "src/alz_compass/tools/"
       ]
-    ]
-  },
-  {
-    "title": "Three candidates returned",
-    "tag": "HOSTED BROWSER EXPORT  /  NOVEMBER 23",
-    "source": "live-search-MEDI0382.json | Actual returned order",
-    "narration": "The response returned these three study identifiers, each with its registry title and source URL. These are candidate records to inspect, not recommendations or a ranked evidence synthesis. A matching condition label also does not prove that every enrolled participant had type two diabetes. Population context and the complete registry record still need review before drawing conclusions.",
-    "chunks": [
-      "The response returned these three study identifiers, each with its registry title and source URL.",
-      "These are candidate records to inspect, not recommendations or a ranked evidence synthesis.",
-      "A matching condition label also does not prove that every enrolled participant had type two diabetes.",
-      "Population context and the complete registry record still need review before drawing conclusions."
-    ],
-    "kind": "results",
-    "data": [
-      [
-        "NCT03745937",
-        "A Study to Evaluate the Safety and Tolerability of MEDI0382 in Overweight and Obese Participants With Type 2 Diabetes Mellitus"
+    },
+    {
+      "id": 4,
+      "title": "Search in the live app",
+      "start_seconds": 74,
+      "end_seconds": 101,
+      "duration_seconds": 27,
+      "visual_type": "app_capture",
+      "capture_keys": [
+        "home",
+        "search_typed",
+        "search_loading",
+        "search_results"
       ],
-      [
-        "NCT03645421",
-        "Safety and Tolerability Study of MEDI0382 in Japanese Preobese or Obese Subjects With Type 2 Diabetes"
-      ],
-      [
-        "NCT03244800",
-        "A Study to Investigate Different Doses of 0382 in Overweight and Obese Subjects With Type 2 Diabetes Mellitus."
+      "ui_cue": "Show actual home page, type MEDI0382, leave limit at 3, click Find trials, then show actual returned results. Retain a brief loading state. Do not draw a fake response.",
+      "narration": "Here in the app, I'll enter MEDI zero three eight two and ask for up to three trials. The search looks for completed interventional studies with a supported type two diabetes condition label. That screen gives us a focused starting list. It is still a bounded candidate search, so we keep the coverage notice with the results.",
+      "word_count": 57,
+      "evidence": [
+        "fresh app captures",
+        "live-search-MEDI0382.json"
       ]
-    ]
-  },
-  {
-    "title": "Coverage limits stay visible",
-    "tag": "HOSTED BROWSER EXPORT  / NOVEMBER 23",
-    "source": "live-search-MEDI0382.json | Coverage and review flags",
-    "narration": "The same response reports three returned records, four examined records, and one excluded for its condition labels. It marks the search incomplete because the requested limit was reached. This is deliberately a bounded candidate search. Broadly labeled studies can be missed by the conservative screen. Users should therefore retain the coverage warning when exporting or explaining results, rather than presenting this list as an exhaustive literature search.",
-    "chunks": [
-      "The same response reports three returned records, four examined records, and one excluded for its condition labels.",
-      "It marks the search incomplete because the requested limit was reached.",
-      "This is deliberately a bounded candidate search.",
-      "Broadly labeled studies can be missed by the conservative screen.",
-      "Users should therefore retain the coverage warning when exporting or explaining results, rather than presenting this list as an exhaustive literature search."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "3 returned",
-        "Requested limit: 3"
+    },
+    {
+      "id": 5,
+      "title": "Read the results in context",
+      "start_seconds": 101,
+      "end_seconds": 121,
+      "duration_seconds": 20,
+      "visual_type": "app_capture",
+      "capture_keys": [
+        "search_results",
+        "search_coverage"
       ],
-      [
-        "4 examined",
-        "1 excluded by condition-label screening"
-      ],
-      [
-        "Incomplete search",
-        "Additional matching records may exist."
+      "ui_cue": "Show the actual three returned records and the coverage notice. Pause on the record later opened; do not imply relevance ranking or exhaustiveness.",
+      "narration": "Each result has a trial identifier, a title, and a link back to the registry. These are records to inspect, not treatment recommendations. A matching condition label also does not describe everyone who enrolled. That is why the next step is to open the evidence card.",
+      "word_count": 46,
+      "evidence": [
+        "fresh app captures",
+        "live-search-MEDI0382.json"
       ]
-    ]
-  },
-  {
-    "title": "Retrieve a specific evidence card",
-    "tag": "HOSTED BROWSER EXPORT  / NOVEMBER 23",
-    "source": "live-card-NCT03244800.json | Structured registry extraction",
-    "narration": "The same review retrieved this specific study by its identifier. Its exported card reports a completed interventional study, a randomized parallel design, and enrollment of sixty five labeled actual. The card retains the notice, registry extraction pending human review. Enrollment also remains separate from the number analyzed for a particular outcome, which the current card does not determine.",
-    "chunks": [
-      "The same review retrieved this specific study by its identifier.",
-      "Its exported card reports a completed interventional study, a randomized parallel design, and enrollment of sixty five labeled actual.",
-      "The card retains the notice, registry extraction pending human review.",
-      "Enrollment also remains separate from the number analyzed for a particular outcome, which the current card does not determine."
-    ],
-    "kind": "fields",
-    "data": [
-      [
-        "Identifier",
-        "NCT03244800"
+    },
+    {
+      "id": 6,
+      "title": "Open the evidence card",
+      "start_seconds": 121,
+      "end_seconds": 148,
+      "duration_seconds": 27,
+      "visual_type": "app_capture",
+      "capture_keys": [
+        "card_lookup",
+        "card_loading",
+        "card_header",
+        "card_design"
       ],
-      [
-        "Study status",
-        "COMPLETED"
-      ],
-      [
-        "Design",
-        "RANDOMIZED / PARALLEL"
-      ],
-      [
-        "Enrollment",
-        "65 / ACTUAL"
+      "ui_cue": "Enter NCT03244800 in the exact-ID field, click Get evidence card, show its header, then expand Study design and enrollment. Keep 65 / ACTUAL visible.",
+      "narration": "I'll open this trial by its identifier. The card reports a completed study, randomized parallel groups, and enrollment of sixty five, labeled actual. The design and enrollment are easy to find, but they are still registry fields. The source link, retrieval date, and review flags stay attached, so a reviewer can check the details in context.",
+      "word_count": 56,
+      "evidence": [
+        "fresh app captures",
+        "live-card-NCT03244800.json"
       ]
-    ]
-  },
-  {
-    "title": "Preserve the exact outcome timing",
-    "tag": "SOURCE FIDELITY  /  VERSION 0.4.1",
-    "source": "NCT03244800 | First primary outcome | Registry wording retained",
-    "narration": "The first primary outcome illustrates why exact timing matters. The source says zero minutes before the meal, followed by the listed samples after the meal. An earlier assistant summary incorrectly grouped zero minutes with the after-meal samples. Version zero point four point one requires the original outcome and timeframe together. A bounded check replaces a draft that changes or omits these blocks with source-backed cards. The original draft remains in the trace. This check does not validate every other claim.",
-    "chunks": [
-      "The first primary outcome illustrates why exact timing matters.",
-      "The source says zero minutes before the meal, followed by the listed samples after the meal.",
-      "An earlier assistant summary incorrectly grouped zero minutes with the after-meal samples.",
-      "Version zero point four point one requires the original outcome and timeframe together.",
-      "A bounded check replaces a draft that changes or omits these blocks with source-backed cards.",
-      "The original draft remains in the trace.",
-      "This check does not validate every other claim."
-    ],
-    "kind": "timing",
-    "data": [
-      [
-        "Registry timeframe \u2014 verbatim",
-        "Zero minutes before and 15, 30, 45, 60, 90, 120, 180, and 240 minutes after consumption of the standardised liquid meal"
+    },
+    {
+      "id": 7,
+      "title": "Keep the outcome timing intact",
+      "start_seconds": 148,
+      "end_seconds": 176,
+      "duration_seconds": 28,
+      "visual_type": "app_capture",
+      "capture_keys": [
+        "card_outcomes",
+        "timing_detail"
       ],
-      [
-        "Second primary outcome",
-        "Body weight: Day 1 through Day 50"
+      "ui_cue": "Expand Primary outcomes listed in the registry. Hold on both outcomes. Point to “Zero minutes before” without altering the source text; then show “Day 1 through Day 50”.",
+      "narration": "The timing matters here. The first outcome keeps the zero-minute sample before the meal, and the listed samples after it. The second outcome has its own timeframe, day one through day fifty. An earlier assistant summary blurred that before-and-after distinction. Version zero point four point one now checks the required outcome and timeframe blocks against the retrieved card.",
+      "word_count": 58,
+      "evidence": [
+        "fresh app captures",
+        "output/timing-fix-review-2026-11-23/release-review.json"
       ]
-    ]
-  },
-  {
-    "title": "Trace a field to the source",
-    "tag": "HOSTED BROWSER EXPORT  / NOVEMBER 23",
-    "source": "live-card-NCT03244800.json | provenance.fields",
-    "narration": "The export lets a reviewer trace enrollment back to the registry design module and enrollment count field, preserving the original value sixty five. It also retains the canonical study URL, retrieval timestamp, and registry update date. These dates answer different questions: when the app retrieved information, and when the registry record was updated.",
-    "chunks": [
-      "The export lets a reviewer trace enrollment back to the registry design module and enrollment count field, preserving the original value sixty five.",
-      "It also retains the canonical study URL, retrieval timestamp, and registry update date.",
-      "These dates answer different questions: when the app retrieved information, and when the registry record was updated."
-    ],
-    "kind": "code",
-    "data": [
-      [
-        "Field provenance",
-        "$.enrollment.count\n\nsource_path:\n$.protocolSection.designModule\n  .enrollmentInfo.count\n\nsource_value: 65"
+    },
+    {
+      "id": 8,
+      "title": "Ask the assistant",
+      "start_seconds": 176,
+      "end_seconds": 209,
+      "duration_seconds": 33,
+      "visual_type": "app_capture",
+      "capture_keys": [
+        "assistant_tab",
+        "assistant_prompt",
+        "assistant_working",
+        "assistant_answer"
       ],
-      [
-        "Source and capture",
-        "clinicaltrials.gov/study/NCT03244800\n\nSource mode: live\nRetrieved: November 23, 2026\nRegistry update date retained"
+      "ui_cue": "Open Ask assistant. Enter the exact assistant prompt from the setup notes, submit, show the actual working state, then the actual final answer. Label any waiting edit “Pause shortened”. Never reuse an older answer as the new response.",
+      "narration": "Now let's ask the assistant for the same study, including design, enrollment, interventions, every primary outcome, and results availability. The assistant retrieves the evidence card through the tool. If the required outcome blocks are changed or missing, the app shows a source-backed card view instead. The original model draft remains in the trace. That lets us inspect what was generated and what was finally displayed.",
+      "word_count": 65,
+      "evidence": [
+        "fresh assistant demonstration trace",
+        "src/alz_compass/answer_fidelity.py"
       ]
-    ]
-  },
-  {
-    "title": "Completion and results are separate",
-    "tag": "HOSTED BROWSER EXPORT  / NOVEMBER 23",
-    "source": "live-card-NCT05790681.json | Status, results and eligibility",
-    "narration": "A second exported card is completed but has no results posted in the registry. Those are separate facts. Completed does not mean successful treatment, and no posted registry results does not prove that findings or publications are absent elsewhere. This study also has pediatric eligibility criteria. The complete eligibility text is retained as entry rules, not as observed characteristics of the actual enrolled participants.",
-    "chunks": [
-      "A second exported card is completed but has no results posted in the registry.",
-      "Those are separate facts.",
-      "Completed does not mean successful treatment, and no posted registry results does not prove that findings or publications are absent elsewhere.",
-      "This study also has pediatric eligibility criteria.",
-      "The complete eligibility text is retained as entry rules, not as observed characteristics of the actual enrolled participants."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "NCT05790681",
-        "COMPLETED; 18 actual enrollment"
+    },
+    {
+      "id": 9,
+      "title": "Export the record of the answer",
+      "start_seconds": 209,
+      "end_seconds": 223,
+      "duration_seconds": 14,
+      "visual_type": "app_capture",
+      "capture_keys": [
+        "trace_expanded",
+        "export_clicked",
+        "trace_downloaded"
       ],
-      [
-        "RESULTS NOT POSTED",
-        "Registry availability, not proof of no publications."
-      ],
-      [
-        "Population context",
-        "Pediatric eligibility is visible; no adult-only inference."
+      "ui_cue": "Expand Full run trace only if readable without private data. Click Export trace and capture the real download confirmation. Avoid showing account screens or unrelated Downloads content.",
+      "narration": "The export gives us more than a copied answer. It preserves the question, the actual tool calls, the returned evidence, and the final output. That makes the answer easier to review later.",
+      "word_count": 32,
+      "evidence": [
+        "fresh app export",
+        "src/alz_compass/web/app.js"
       ]
-    ]
-  },
-  {
-    "title": "Export the evidence for review",
-    "tag": "OBSERVED BROWSER WORKFLOW / NOVEMBER 23",
-    "source": "live-app-review/review-summary.json | Downloaded artifacts preserved",
-    "narration": "The reviewer used visible browser controls to export the search, three evidence cards, an error response, and assistant traces. Those files were downloaded and parsed during the November twenty third review. A reviewer can carry the source fields, review flags, and interpretation limits into a separate review rather than relying on a copied summary.",
-    "chunks": [
-      "The reviewer used visible browser controls to export the search, three evidence cards, an error response, and assistant traces.",
-      "Those files were downloaded and parsed during the November twenty third review.",
-      "A reviewer can carry the source fields, review flags, and interpretation limits into a separate review rather than relying on a copied summary."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "Search export",
-        "Bounded criteria, returned IDs and source links."
+    },
+    {
+      "id": 10,
+      "title": "Completion is not results availability",
+      "start_seconds": 223,
+      "end_seconds": 254,
+      "duration_seconds": 31,
+      "visual_type": "app_capture",
+      "capture_keys": [
+        "no_results_lookup",
+        "no_results_header",
+        "no_results_population"
       ],
-      [
-        "Card export",
-        "Fields, source paths, timestamps and review flags."
-      ],
-      [
-        "Trace export",
-        "Actual tool calls, errors and model output when present."
+      "ui_cue": "Retrieve NCT05790681 by exact ID. Show COMPLETED and Results not posted together, then open population/eligibility. If using the assistant, preserve its separate fresh trace.",
+      "narration": "Here is a different study. It is marked completed, but the registry has no posted results. Those are separate facts. We can describe the study record; we cannot turn completion into a claim that a treatment worked. This record also concerns children and teenagers. And no posted registry results does not prove that findings or publications are absent elsewhere. Those distinctions stay visible.",
+      "word_count": 63,
+      "evidence": [
+        "fresh app captures",
+        "live-card-NCT05790681.json"
       ]
-    ]
-  },
-  {
-    "title": "Boundary cases remain distinct",
-    "tag": "HOSTED BROWSER REVIEW / NOVEMBER 23",
-    "source": "review-summary.json | Active study, absent ID and no-match exports",
-    "narration": "The direct browser checks also retrieved an active study and retained its outside-completed-scope warning. A missing identifier returned not found without a substitute card. A no-match search returned zero candidates without claiming global absence. An invalid identifier triggered browser format validation. These are observed direct workflow behaviors, not four extra model-quality passes. The active exclusion record is separate from the ten-card source-reference accuracy denominator.",
-    "chunks": [
-      "The direct browser checks also retrieved an active study and retained its outside-completed-scope warning.",
-      "A missing identifier returned not found without a substitute card.",
-      "A no-match search returned zero candidates without claiming global absence.",
-      "An invalid identifier triggered browser format validation.",
-      "These are observed direct workflow behaviors, not four extra model-quality passes.",
-      "The active exclusion record is separate from the ten-card source-reference accuracy denominator."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "Active record",
-        "NCT05743387: ACTIVE_NOT_RECRUITING"
-      ],
-      [
-        "Absent / no match",
-        "Distinct responses; no invented substitute."
-      ],
-      [
-        "Invalid identifier",
-        "Browser format validation; no model scenario claimed."
+    },
+    {
+      "id": 11,
+      "title": "How the pieces connect",
+      "start_seconds": 254,
+      "end_seconds": 279,
+      "duration_seconds": 25,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show researcher → browser/assistant → two MCP tools → ClinicalTrials.gov. Emphasize read-only arrows and an evidence export returning to the reviewer.",
+      "narration": "The architecture is deliberately small. The browser and the optional assistant reach the same two tools, and those tools use one public registry. Search inputs and trial identifiers are bounded. The app reads records; it does not change them. The useful result is an inspectable starting point, with source links and explicit gaps, that a person can take forward.",
+      "word_count": 59,
+      "evidence": [
+        "docs/ARCHITECTURE.md",
+        "README.md"
       ]
-    ]
-  },
-  {
-    "title": "Source modes are explicit",
-    "tag": "REPRODUCIBILITY",
-    "source": "November 21 traces | November 23 live exports and frozen comparison",
-    "narration": "The November twenty first model scenarios used frozen public snapshots. The November twenty third direct browser checks used the live registry. Frozen inputs make comparisons reproducible, while live retrieval separately tests current source access. The two modes can return different candidate sets, and neither should be relabeled as the other. Two current live cards also matched all twenty eight corresponding frozen reference groups, a limited two-card consistency check.",
-    "chunks": [
-      "The November twenty first model scenarios used frozen public snapshots.",
-      "The November twenty third direct browser checks used the live registry.",
-      "Frozen inputs make comparisons reproducible, while live retrieval separately tests current source access.",
-      "The two modes can return different candidate sets, and neither should be relabeled as the other.",
-      "Two current live cards also matched all twenty eight corresponding frozen reference groups, a limited two-card consistency check."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "Snapshot scenarios",
-        "Fixed public records; reproducible model inputs."
-      ],
-      [
-        "Live browser review",
-        "Current source access; nine direct checks passed."
-      ],
-      [
-        "Two-card check",
-        "28 of 28 groups match the frozen references."
+    },
+    {
+      "id": 12,
+      "title": "Check the software and hosted answers",
+      "start_seconds": 279,
+      "end_seconds": 308,
+      "duration_seconds": 29,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show 310 software tests; 16 new regressions. Separately show earlier Nov 23 v0.4.1 checks: 11.548 s and 11.571 s; 5 final source pairs exact. Label these saved checks, not the fresh demo-run duration.",
+      "narration": "The current version passed three hundred ten software tests, including sixteen new regression cases. Earlier today, two hosted questions also completed in about eleven and a half seconds each. Their final answers retained all five outcome and timeframe pairs. Those are two selected checks, not a complete live scenario suite. The fresh demonstration you just saw is documented separately.",
+      "word_count": 59,
+      "evidence": [
+        "output/timing-fix-review-2026-11-23/release-review.json",
+        "local-release-verification.json"
       ]
-    ]
-  },
-  {
-    "title": "The updated assistant in the app",
-    "tag": "HOSTED APP CAPTURE  /  NOVEMBER 23",
-    "source": "Version 0.4.1 | New browser capture and exported trace",
-    "narration": "This view comes from the updated hosted app. We repeated the same evidence-card question that exposed the wording issue. The answer retained both primary outcomes and the exact before-and-after meal timeframe. The exported trace records the question, actual tool result, model draft, final answer and wording check. Keeping the draft and final answer distinct lets a reviewer see when source-backed presentation was used.",
-    "chunks": [
-      "This view comes from the updated hosted app.",
-      "We repeated the same evidence-card question that exposed the wording issue.",
-      "The answer retained both primary outcomes and the exact before-and-after meal timeframe.",
-      "The exported trace records the question, actual tool result, model draft, final answer and wording check.",
-      "Keeping the draft and final answer distinct lets a reviewer see when source-backed presentation was used."
-    ],
-    "kind": "live_screenshot",
-    "data": [
-      [
-        "Verified app",
-        "Version 0.4.1"
-      ],
-      [
-        "Source timing",
-        "Zero minutes before the meal"
-      ],
-      [
-        "Trace retained",
-        "Model draft and final answer"
+    },
+    {
+      "id": 13,
+      "title": "Check real-model scenarios separately",
+      "start_seconds": 308,
+      "end_seconds": 341,
+      "duration_seconds": 33,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show November 21 / frozen snapshots / 12 scenarios × 2 / 24 completed. Attribute scenario pass assessments to supplied team documents. Do not blend these timings with live app results.",
+      "narration": "We also preserved the November twenty first model evaluation: twelve scenarios, repeated twice, with all twenty four executions completing. These runs used frozen public snapshots, so the inputs are reproducible. The supplied team review documents report all twelve scenario passes, including seven critical cases, in both runs. Execution completion and those reported assessments are distinct evidence. The original documents and traces remain available, with their review wording preserved.",
+      "word_count": 68,
+      "evidence": [
+        "research/evaluation-delivery-2026-11-23/trace-audit.json",
+        "Individual_reviewer1.docx",
+        "Individual_reviewer2.docx"
       ]
-    ]
-  },
-  {
-    "title": "Software checks support the correction",
-    "tag": "NEW CANDIDATE  /  NOVEMBER 23",
-    "source": "Timing correction validation receipt | Distinct from frozen source audit",
-    "narration": "The revised candidate passed 310 automated software tests and the static checks. Focused regression cases cover the original before-and-after error, outcome pairing, missing timeframes, multiple studies, and keeping a results-only answer unchanged. The deployment package is built from these tested sources. These checks assess software behavior and presentation fidelity. They are not clinical cases or a model accuracy estimate.",
-    "chunks": [
-      "The revised candidate passed 310 automated software tests and the static checks.",
-      "Focused regression cases cover the original before-and-after error, outcome pairing, missing timeframes, multiple studies, and keeping a results-only answer unchanged.",
-      "The deployment package is built from these tested sources.",
-      "These checks assess software behavior and presentation fidelity.",
-      "They are not clinical cases or a model accuracy estimate."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "310 passed",
-        "Current automated suite; static checks passed."
-      ],
-      [
-        "Focused regressions",
-        "Timing, pairing, missing values and multiple studies."
-      ],
-      [
-        "Versioned correction",
-        "Original source-audit candidate remains unchanged."
+    },
+    {
+      "id": 14,
+      "title": "Check the extracted fields",
+      "start_seconds": 341,
+      "end_seconds": 374,
+      "duration_seconds": 33,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show Original v0.4.0 source audit: 10 cards / 140 of 140 groups / 84 development + 56 held-out. Put “Assistant source audit” visibly underneath.",
+      "narration": "For the original version zero point four point zero, a separate source-reference audit compared ten cards with sealed references from the saved registry records. All one hundred forty configured field groups matched: eighty four development groups and fifty six held-out groups. That first held-out result remains unchanged. The newer timing correction has its own checks. This is an assistant-authored source audit, not a signature or clinical approval from a human reviewer.",
+      "word_count": 71,
+      "evidence": [
+        "output/reference-review-2026-11-23/reference-evaluation.json",
+        "candidate-freeze.json"
       ]
-    ]
-  },
-  {
-    "title": "Real-model scenarios were completed",
-    "tag": "SNAPSHOT MODEL RUNS / NOVEMBER 21",
-    "source": "scenarios-20261121.json | databricks-gpt-5-5",
-    "narration": "The delivered November twenty first archive contains twelve scenarios repeated twice, with all twenty four executions completing. The recorded model is Databricks G P T five five. The traces preserve fifty two model turns and thirty eight tool calls, all using snapshot data. Median case time was seventeen point five seconds, with a range of two point eight to thirty six point four seconds. These timings are not hosted load-test results.",
-    "chunks": [
-      "The delivered November twenty first archive contains twelve scenarios repeated twice, with all twenty four executions completing.",
-      "The recorded model is Databricks G P T five five.",
-      "The traces preserve fifty two model turns and thirty eight tool calls, all using snapshot data.",
-      "Median case time was seventeen point five seconds, with a range of two point eight to thirty six point four seconds.",
-      "These timings are not hosted load-test results."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "24 completed",
-        "12 scenarios \u00d7 2 repeats; no failed execution."
-      ],
-      [
-        "38 tool calls",
-        "52 model turns; snapshot data throughout."
-      ],
-      [
-        "17.5 s median",
-        "2.8\u201336.4 s range; 24 cases only."
+    },
+    {
+      "id": 15,
+      "title": "What this prototype supports",
+      "start_seconds": 374,
+      "end_seconds": 398,
+      "duration_seconds": 24,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show three concise labels: Registry context / Explicit missingness / Human review. Avoid a wall of warnings; keep the source link visible.",
+      "narration": "Compass supports research preparation. It does not rank treatments or recommend care. Registry eligibility describes entry rules, not necessarily the people who enrolled, and enrollment is not the number analyzed for every outcome. The value is in keeping those limits, missing fields, and source details visible while making a repeatable review task easier to follow.",
+      "word_count": 55,
+      "evidence": [
+        "docs/FIELD_DICTIONARY.md",
+        "README.md"
       ]
-    ]
-  },
-  {
-    "title": "Team assessments and failure evidence",
-    "tag": "SCENARIO REVIEW / NOVEMBER 21 DELIVERY",
-    "source": "Chinelo and Mohammad review documents | Original traces preserved",
-    "narration": "The supplied review documents naming Chinelo and Mohammad report twelve of twelve scenario passes, including seven critical cases, in each run. Both injected upstream-failure scenarios visibly returned the controlled error and avoided invented evidence. These are reported team assessments, distinct from execution completion. Some document sign-off wording remains inconsistent and is disclosed in the evaluation report; raw trace review fields remain unchanged rather than being retrospectively overwritten.",
-    "chunks": [
-      "The supplied review documents naming Chinelo and Mohammad report twelve of twelve scenario passes, including seven critical cases, in each run.",
-      "Both injected upstream-failure scenarios visibly returned the controlled error and avoided invented evidence.",
-      "These are reported team assessments, distinct from execution completion.",
-      "Some document sign-off wording remains inconsistent and is disclosed in the evaluation report; raw trace review fields remain unchanged rather than being retrospectively overwritten."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "Reported scenario passes",
-        "12 / 12 in each run; 7 / 7 critical."
-      ],
-      [
-        "Controlled failure observed",
-        "Both repeats: upstream_error; no fabricated card."
-      ],
-      [
-        "Attribution retained",
-        "Team documents; approval wording caveat disclosed."
+    },
+    {
+      "id": 16,
+      "title": "Take the evidence with you",
+      "start_seconds": 398,
+      "end_seconds": 414,
+      "duration_seconds": 16,
+      "visual_type": "graphic",
+      "capture_keys": [],
+      "ui_cue": "Show app URL and public repository, plus evaluation report and trace-export icons. End with T2D Compass. Synthetic edition retains synthetic-narration disclosure in credits.",
+      "narration": "The repository and submission package include the source, evaluation report, and supporting evidence. Try the search, inspect a card, and export the trace. T two D Compass keeps the registry context close to the answer. Thank you.",
+      "word_count": 37,
+      "evidence": [
+        "https://github.com/imtiaz-cdc/T2D-compass",
+        "output/submission-final-2026-11-23/"
       ]
-    ]
-  },
-  {
-    "title": "A complete source-reference comparison",
-    "tag": "FROZEN BASELINE AUDIT  /  NOVEMBER 23",
-    "source": "reference-evaluation.json | Original 0.4.0 candidate and first held-out run retained",
-    "narration": "Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated. After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups. That original source-audit candidate and its first held-out result remain unchanged. The timing correction is a later candidate with separate checks. This source-reference audit does not create a human clinical approval.",
-    "chunks": [
-      "Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated.",
-      "After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups.",
-      "That original source-audit candidate and its first held-out result remain unchanged.",
-      "The timing correction is a later candidate with separate checks.",
-      "This source-reference audit does not create a human clinical approval."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "140 / 140 groups",
-        "84 development + 56 held-out; 10 / 10 cards."
-      ],
-      [
-        "Frozen baseline preserved",
-        "Original 0.4.0 source-audit evidence."
-      ],
-      [
-        "Separate correction",
-        "0.4.1 tests and hosted checks reported separately."
-      ]
-    ]
-  },
-  {
-    "title": "Two fresh hosted checks completed",
-    "tag": "CORRECTED CANDIDATE  /  NOVEMBER 23",
-    "source": "release-review.json | Two new live runs; bounded source-fidelity review",
-    "narration": "Two fresh hosted assistant checks completed on the corrected candidate, each retrieving a live evidence card. The first preserved the exact timing and both outcomes. The second kept completed status separate from results not posted, retained the pediatric context and did not invent efficacy findings. Both passed the selected source-fidelity checks. The earlier failed attempts and the earlier wording issue remain dated evidence. Two successful checks are not a complete live scenario suite or independent clinical validation.",
-    "chunks": [
-      "Two fresh hosted assistant checks completed on the corrected candidate, each retrieving a live evidence card.",
-      "The first preserved the exact timing and both outcomes.",
-      "The second kept completed status separate from results not posted, retained the pediatric context and did not invent efficacy findings.",
-      "Both passed the selected source-fidelity checks.",
-      "The earlier failed attempts and the earlier wording issue remain dated evidence.",
-      "Two successful checks are not a complete live scenario suite or independent clinical validation."
-    ],
-    "kind": "cards",
-    "data": [
-      [
-        "2 / 2 completed",
-        "Live registry; one evidence-card call per question."
-      ],
-      [
-        "Observed durations",
-        "11.548 s / 11.571 s"
-      ],
-      [
-        "Selected checks passed",
-        "Exact timing; results availability and population context."
-      ]
-    ]
-  },
-  {
-    "title": "Inspect the source and evidence",
-    "tag": "T2D COMPASS / DATA TRACK",
-    "source": "github.com/imtiaz-cdc/T2D-compass | Evaluation artifacts supplied separately",
-    "narration": "The public repository and delivery package let reviewers inspect the source, tool contracts, saved records, model traces, and evaluation results. The evidence now includes real snapshot model executions, supplied team scenario assessments, a completed assistant source-reference comparison, and current direct browser exports. Compass supports source-based human review of registry information. It does not rank treatments, prescribe care, replace a systematic review, or establish clinical effectiveness. Thank you for reviewing T two D Compass.",
-    "chunks": [
-      "The public repository and delivery package let reviewers inspect the source, tool contracts, saved records, model traces, and evaluation results.",
-      "The evidence now includes real snapshot model executions, supplied team scenario assessments, a completed assistant source-reference comparison, and current direct browser exports.",
-      "Compass supports source-based human review of registry information.",
-      "It does not rank treatments, prescribe care, replace a systematic review, or establish clinical effectiveness.",
-      "Thank you for reviewing T two D Compass."
-    ],
-    "kind": "cover",
-    "data": [
-      [
-        "Public repository",
-        "github.com/imtiaz-cdc/T2D-compass"
-      ],
-      [
-        "Review the evidence",
-        "Evaluation report, source references and dated traces."
-      ]
-    ]
-  }
-]
+    }
+  ]
+}

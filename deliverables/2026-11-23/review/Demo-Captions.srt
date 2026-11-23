@@ -1,371 +1,319 @@
 1
-00:00:00,000 --> 00:00:06,077
-T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies.
+00:00:00,100 --> 00:00:01,663
+This is T two D Compass.
 
 2
-00:00:06,077 --> 00:00:10,655
-This updated walkthrough includes the corrected app and new hosted assistant checks from November twenty third.
+00:00:01,663 --> 00:00:08,697
+It helps researchers explore completed type two diabetes studies and keep the source close to every summary.
 
 3
-00:00:10,655 --> 00:00:15,728
-Automated narration and captions accompany saved browser views, exported evidence and evaluation results.
+00:00:08,697 --> 00:00:15,927
+The idea is simple: find a study, inspect what the registry actually says, and carry that evidence into review.
 
 4
-00:00:15,728 --> 00:00:19,797
-This is an edited evidence walkthrough, not an uninterrupted live screen recording.
+00:00:15,927 --> 00:00:19,770
+Let's walk through the app, then look at how we checked it.
 
 5
-00:00:19,797 --> 00:00:26,134
-Researchers repeatedly collect study identifiers, design, enrollment, interventions, registered outcomes, and results availability.
+00:00:24,100 --> 00:00:27,072
+A study's title rarely tells the whole story.
 
 6
-00:00:26,134 --> 00:00:31,507
-Compass organizes the registry fields into a consistent evidence card, keeping source links and review flags attached.
+00:00:27,072 --> 00:00:32,487
+We still need its design, enrollment, interventions, outcomes, and results status.
 
 7
-00:00:31,507 --> 00:00:34,366
-Its intended output is a starting point for human review.
+00:00:32,487 --> 00:00:34,931
+We also need to know what is missing.
 
 8
-00:00:34,366 --> 00:00:37,789
-It does not turn registry descriptions into a treatment recommendation.
+00:00:34,931 --> 00:00:39,224
+Collecting those details repeatedly is the task Compass supports.
 
 9
-00:00:37,789 --> 00:00:42,866
-The first tool searches for completed interventional studies with an explicit supported type two diabetes condition label.
+00:00:39,224 --> 00:00:46,356
+It organizes public registry information into a consistent card, while keeping the original record available
 
 10
-00:00:42,866 --> 00:00:46,350
-The second retrieves an evidence card for a specified trial identifier.
+00:00:46,356 --> 00:00:49,130
+for the questions a summary cannot answer.
 
 11
-00:00:46,350 --> 00:00:50,413
-Both tools are read only and use a fixed public source, with no patient records.
+00:00:52,100 --> 00:00:54,812
+There are two tools behind the workflow.
 
 12
-00:00:50,413 --> 00:00:53,737
-The browser and optional Databricks assistant use these same tools.
+00:00:54,812 --> 00:00:57,389
+One finds candidate completed studies.
 
 13
-00:00:53,737 --> 00:00:58,565
-The November twenty third signed-in browser review searched for MEDI zero three eight two, with a limit of three.
+00:00:57,389 --> 00:01:01,389
+The other retrieves a card for a specific trial identifier.
 
 14
-00:00:58,565 --> 00:01:03,143
-The exported response reports live source mode, completed status, and interventional study type.
+00:01:01,389 --> 00:01:04,644
+Both read public ClinicalTrials dot gov records.
 
 15
-00:01:03,143 --> 00:01:06,066
-The app also applied its explicit condition-label screen.
+00:01:04,644 --> 00:01:08,712
+The browser and the optional assistant use these same tools.
 
 16
-00:01:06,066 --> 00:01:10,595
-The response is preserved so the visible summary can be checked against the actual returned JSON.
+00:01:08,712 --> 00:01:10,475
+Let's start with a search.
 
 17
-00:01:10,595 --> 00:01:15,508
-The response returned these three study identifiers, each with its registry title and source URL.
+00:01:14,100 --> 00:01:19,357
+Here in the app, I'll enter MEDI zero three eight two and ask for up to three trials.
 
 18
-00:01:15,508 --> 00:01:20,006
-These are candidate records to inspect, not recommendations or a ranked evidence synthesis.
+00:01:19,357 --> 00:01:25,850
+The search looks for completed interventional studies with a supported type two diabetes condition label.
 
 19
-00:01:20,006 --> 00:01:24,634
-A matching condition label also does not prove that every enrolled participant had type two diabetes.
+00:01:25,850 --> 00:01:28,633
+That screen gives us a focused starting list.
 
 20
-00:01:24,634 --> 00:01:29,082
-Population context and the complete registry record still need review before drawing conclusions.
+00:01:28,633 --> 00:01:34,075
+It is still a bounded candidate search, so we keep the coverage notice with the results.
 
 21
-00:01:29,082 --> 00:01:34,640
-The same response reports three returned records, four examined records, and one excluded for its condition labels.
+00:01:41,100 --> 00:01:46,255
+Each result has a trial identifier, a title, and a link back to the registry.
 
 22
-00:01:34,640 --> 00:01:37,853
-It marks the search incomplete because the requested limit was reached.
+00:01:46,255 --> 00:01:50,272
+These are records to inspect, not treatment recommendations.
 
 23
-00:01:37,853 --> 00:01:40,337
-This is deliberately a bounded candidate search.
+00:01:50,272 --> 00:01:55,093
+A matching condition label also does not describe everyone who enrolled.
 
 24
-00:01:40,337 --> 00:01:43,321
-Broadly labeled studies can be missed by the conservative screen.
+00:01:55,093 --> 00:01:58,775
+That is why the next step is to open the evidence card.
 
 25
-00:01:43,321 --> 00:01:49,778
-Users should therefore retain the coverage warning when exporting or explaining results, rather than presenting this list as an exhaustive literature search.
+00:02:01,100 --> 00:02:03,570
+I'll open this trial by its identifier.
 
 26
-00:01:49,778 --> 00:01:53,006
-The same review retrieved this specific study by its identifier.
+00:02:03,570 --> 00:02:10,473
+The card reports a completed study, randomized parallel groups, and enrollment of sixty five, labeled actual.
 
 27
-00:01:53,006 --> 00:01:59,378
-Its exported card reports a completed interventional study, a randomized parallel design, and enrollment of sixty five labeled actual.
+00:02:10,473 --> 00:02:15,477
+The design and enrollment are easy to find, but they are still registry fields.
 
 28
-00:01:59,378 --> 00:02:03,112
-The card retains the notice, registry extraction pending human review.
+00:02:15,477 --> 00:02:22,570
+The source link, retrieval date, and review flags stay attached, so a reviewer can check the details in context.
 
 29
-00:02:03,112 --> 00:02:08,715
-Enrollment also remains separate from the number analyzed for a particular outcome, which the current card does not determine.
+00:02:28,100 --> 00:02:29,593
+The timing matters here.
 
 30
-00:02:08,715 --> 00:02:11,978
-The first primary outcome illustrates why exact timing matters.
+00:02:29,593 --> 00:02:35,564
+The first outcome keeps the zero-minute sample before the meal, and the listed samples after it.
 
 31
-00:02:11,978 --> 00:02:16,082
-The source says zero minutes before the meal, followed by the listed samples after the meal.
+00:02:35,564 --> 00:02:39,793
+The second outcome has its own timeframe, day one through day fifty.
 
 32
-00:02:16,082 --> 00:02:20,065
-An earlier assistant summary incorrectly grouped zero minutes with the after-meal samples.
+00:02:39,793 --> 00:02:44,209
+An earlier assistant summary blurred that before-and-after distinction.
 
 33
-00:02:20,065 --> 00:02:24,153
-Version zero point four point one requires the original outcome and timeframe together.
+00:02:44,209 --> 00:02:51,300
+Version zero point four point one now checks the required outcome and timeframe blocks against the retrieved card.
 
 34
-00:02:24,153 --> 00:02:28,366
-A bounded check replaces a draft that changes or omits these blocks with source-backed cards.
+00:02:56,100 --> 00:03:04,552
+Now let's ask the assistant for the same study, including design, enrollment, interventions, every primary outcome, and results availability.
 
 35
-00:02:28,366 --> 00:02:30,565
-The original draft remains in the trace.
+00:03:04,552 --> 00:03:08,088
+The assistant retrieves the evidence card through the tool.
 
 36
-00:02:30,565 --> 00:02:33,174
-This check does not validate every other claim.
+00:03:08,088 --> 00:03:14,262
+If the required outcome blocks are changed or missing, the app shows a source-backed card view instead.
 
 37
-00:02:33,174 --> 00:02:39,691
-The export lets a reviewer trace enrollment back to the registry design module and enrollment count field, preserving the original value sixty five.
+00:03:14,262 --> 00:03:17,019
+The original model draft remains in the trace.
 
 38
-00:02:39,691 --> 00:02:44,270
-It also retains the canonical study URL, retrieval timestamp, and registry update date.
+00:03:17,019 --> 00:03:21,275
+That lets us inspect what was generated and what was finally displayed.
 
 39
-00:02:44,270 --> 00:02:49,668
-These dates answer different questions: when the app retrieved information, and when the registry record was updated.
+00:03:29,100 --> 00:03:32,003
+The export gives us more than a copied answer.
 
 40
-00:02:49,668 --> 00:02:53,421
-A second exported card is completed but has no results posted in the registry.
+00:03:32,003 --> 00:03:37,935
+It preserves the question, the actual tool calls, the returned evidence, and the final output.
 
 41
-00:02:53,421 --> 00:02:55,140
-Those are separate facts.
+00:03:37,935 --> 00:03:40,775
+That makes the answer easier to review later.
 
 42
-00:02:55,140 --> 00:03:01,453
-Completed does not mean successful treatment, and no posted registry results does not prove that findings or publications are absent elsewhere.
+00:03:43,100 --> 00:03:44,758
+Here is a different study.
 
 43
-00:03:01,453 --> 00:03:04,516
-This study also has pediatric eligibility criteria.
+00:03:44,758 --> 00:03:48,774
+It is marked completed, but the registry has no posted results.
 
 44
-00:03:04,516 --> 00:03:10,394
-The complete eligibility text is retained as entry rules, not as observed characteristics of the actual enrolled participants.
+00:03:48,774 --> 00:03:50,368
+Those are separate facts.
 
 45
-00:03:10,394 --> 00:03:16,697
-The reviewer used visible browser controls to export the search, three evidence cards, an error response, and assistant traces.
+00:03:50,368 --> 00:03:56,552
+We can describe the study record; we cannot turn completion into a claim that a treatment worked.
 
 46
-00:03:16,697 --> 00:03:20,185
-Those files were downloaded and parsed during the November twenty third review.
+00:03:56,552 --> 00:03:59,676
+This record also concerns children and teenagers.
 
 47
-00:03:20,185 --> 00:03:26,678
-A reviewer can carry the source fields, review flags, and interpretation limits into a separate review rather than relying on a copied summary.
+00:03:59,676 --> 00:04:05,860
+And no posted registry results does not prove that findings or publications are absent elsewhere.
 
 48
-00:03:26,678 --> 00:03:31,236
-The direct browser checks also retrieved an active study and retained its outside-completed-scope warning.
+00:04:05,860 --> 00:04:07,900
+Those distinctions stay visible.
 
 49
-00:03:31,236 --> 00:03:34,624
-A missing identifier returned not found without a substitute card.
+00:04:14,100 --> 00:04:16,602
+The architecture is deliberately small.
 
 50
-00:03:34,624 --> 00:03:38,258
-A no-match search returned zero candidates without claiming global absence.
+00:04:16,602 --> 00:04:23,339
+The browser and the optional assistant reach the same two tools, and those tools use one public registry.
 
 51
-00:03:38,258 --> 00:03:41,396
-An invalid identifier triggered browser format validation.
+00:04:23,339 --> 00:04:26,419
+Search inputs and trial identifiers are bounded.
 
 52
-00:03:41,396 --> 00:03:45,664
-These are observed direct workflow behaviors, not four extra model-quality passes.
+00:04:26,419 --> 00:04:29,435
+The app reads records; it does not change them.
 
 53
-00:03:45,664 --> 00:03:49,947
-The active exclusion record is separate from the ten-card source-reference accuracy denominator.
+00:04:29,435 --> 00:04:35,081
+The useful result is an inspectable starting point, with source links and explicit gaps,
 
 54
-00:03:49,947 --> 00:03:53,621
-The November twenty first model scenarios used frozen public snapshots.
+00:04:35,081 --> 00:04:37,070
+that a person can take forward.
 
 55
-00:03:53,621 --> 00:03:56,839
-The November twenty third direct browser checks used the live registry.
+00:04:39,100 --> 00:04:45,327
+The current version passed three hundred ten software tests, including sixteen new regression cases.
 
 56
-00:03:56,839 --> 00:04:02,017
-Frozen inputs make comparisons reproducible, while live retrieval separately tests current source access.
+00:04:45,327 --> 00:04:50,994
+Earlier today, two hosted questions also completed in about eleven and a half seconds each.
 
 57
-00:04:02,017 --> 00:04:06,145
-The two modes can return different candidate sets, and neither should be relabeled as the other.
+00:04:50,994 --> 00:04:55,104
+Their final answers retained all five outcome and timeframe pairs.
 
 58
-00:04:06,145 --> 00:04:12,138
-Two current live cards also matched all twenty eight corresponding frozen reference groups, a limited two-card consistency check.
+00:04:55,104 --> 00:04:59,214
+Those are two selected checks, not a complete live scenario suite.
 
 59
-00:04:12,138 --> 00:04:14,492
-This view comes from the updated hosted app.
+00:04:59,214 --> 00:05:03,075
+The fresh demonstration you just saw is documented separately.
 
 60
-00:04:14,492 --> 00:04:17,770
-We repeated the same evidence-card question that exposed the wording issue.
+00:05:08,100 --> 00:05:16,894
+We also preserved the November twenty first model evaluation: twelve scenarios, repeated twice, with all twenty four executions completing.
 
 61
-00:04:17,770 --> 00:04:21,888
-The answer retained both primary outcomes and the exact before-and-after meal timeframe.
+00:05:16,894 --> 00:05:21,450
+These runs used frozen public snapshots, so the inputs are reproducible.
 
 62
-00:04:21,888 --> 00:04:27,266
-The exported trace records the question, actual tool result, model draft, final answer and wording check.
+00:05:21,450 --> 00:05:28,726
+The supplied team review documents report all twelve scenario passes, including seven critical cases, in both runs.
 
 63
-00:04:27,266 --> 00:04:31,879
-Keeping the draft and final answer distinct lets a reviewer see when source-backed presentation was used.
+00:05:28,726 --> 00:05:33,407
+Execution completion and those reported assessments are distinct evidence.
 
 64
-00:04:31,879 --> 00:04:36,222
-The revised candidate passed 310 automated software tests and the static checks.
+00:05:33,407 --> 00:05:38,975
+The original documents and traces remain available, with their review wording preserved.
 
 65
-00:04:36,222 --> 00:04:44,404
-Focused regression cases cover the original before-and-after error, outcome pairing, missing timeframes, multiple studies, and keeping a results-only answer unchanged.
+00:05:41,100 --> 00:05:46,912
+For the original version zero point four point zero, a separate source-reference audit compared ten
 
 66
-00:04:44,404 --> 00:04:47,183
-The deployment package is built from these tested sources.
+00:05:46,912 --> 00:05:50,493
+cards with sealed references from the saved registry records.
 
 67
-00:04:47,183 --> 00:04:50,377
-These checks assess software behavior and presentation fidelity.
+00:05:50,493 --> 00:05:57,303
+All one hundred forty configured field groups matched: eighty four development groups and fifty six held-out groups.
 
 68
-00:04:50,377 --> 00:04:53,470
-They are not clinical cases or a model accuracy estimate.
+00:05:57,303 --> 00:05:59,944
+That first held-out result remains unchanged.
 
 69
-00:04:53,470 --> 00:04:59,388
-The delivered November twenty first archive contains twelve scenarios repeated twice, with all twenty four executions completing.
+00:05:59,944 --> 00:06:02,703
+The newer timing correction has its own checks.
 
 70
-00:04:59,388 --> 00:05:02,377
-The recorded model is Databricks G P T five five.
+00:06:02,703 --> 00:06:08,750
+This is an assistant-authored source audit, not a signature or clinical approval from a human reviewer.
 
 71
-00:05:02,377 --> 00:05:07,105
-The traces preserve fifty two model turns and thirty eight tool calls, all using snapshot data.
+00:06:14,100 --> 00:06:16,568
+Compass supports research preparation.
 
 72
-00:05:07,105 --> 00:05:12,578
-Median case time was seventeen point five seconds, with a range of two point eight to thirty six point four seconds.
+00:06:16,568 --> 00:06:19,555
+It does not rank treatments or recommend care.
 
 73
-00:05:12,578 --> 00:05:15,302
-These timings are not hosted load-test results.
+00:06:19,555 --> 00:06:25,011
+Registry eligibility describes entry rules, not necessarily the people who enrolled,
 
 74
-00:05:15,302 --> 00:05:22,210
-The supplied review documents naming Chinelo and Mohammad report twelve of twelve scenario passes, including seven critical cases, in each run.
+00:06:25,011 --> 00:06:28,907
+and enrollment is not the number analyzed for every outcome.
 
 75
-00:05:22,210 --> 00:05:26,812
-Both injected upstream-failure scenarios visibly returned the controlled error and avoided invented evidence.
+00:06:28,907 --> 00:06:34,947
+The value is in keeping those limits, missing fields, and source details visible while making
 
 76
-00:05:26,812 --> 00:05:30,521
-These are reported team assessments, distinct from execution completion.
+00:06:34,947 --> 00:06:37,675
+a repeatable review task easier to follow.
 
 77
-00:05:30,521 --> 00:05:38,413
-Some document sign-off wording remains inconsistent and is disclosed in the evaluation report; raw trace review fields remain unchanged rather than being retrospectively overwritten.
+00:06:38,100 --> 00:06:45,074
+The repository and submission package include the source, evaluation report, and supporting evidence.
 
 78
-00:05:38,413 --> 00:05:44,150
-Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated.
+00:06:45,074 --> 00:06:48,734
+Try the search, inspect a card, and export the trace.
 
 79
-00:05:44,150 --> 00:05:51,763
-After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups.
+00:06:48,734 --> 00:06:53,084
+T two D Compass keeps the registry context close to the answer.
 
 80
-00:05:51,763 --> 00:05:55,636
-That original source-audit candidate and its first held-out result remain unchanged.
-
-81
-00:05:55,636 --> 00:05:58,589
-The timing correction is a later candidate with separate checks.
-
-82
-00:05:58,589 --> 00:06:01,943
-This source-reference audit does not create a human clinical approval.
-
-83
-00:06:01,943 --> 00:06:06,761
-Two fresh hosted assistant checks completed on the corrected candidate, each retrieving a live evidence card.
-
-84
-00:06:06,761 --> 00:06:09,575
-The first preserved the exact timing and both outcomes.
-
-85
-00:06:09,575 --> 00:06:15,812
-The second kept completed status separate from results not posted, retained the pediatric context and did not invent efficacy findings.
-
-86
-00:06:15,812 --> 00:06:18,371
-Both passed the selected source-fidelity checks.
-
-87
-00:06:18,371 --> 00:06:21,785
-The earlier failed attempts and the earlier wording issue remain dated evidence.
-
-88
-00:06:21,785 --> 00:06:26,228
-Two successful checks are not a complete live scenario suite or independent clinical validation.
-
-89
-00:06:26,228 --> 00:06:34,045
-The public repository and delivery package let reviewers inspect the source, tool contracts, saved records, model traces, and evaluation results.
-
-90
-00:06:34,045 --> 00:06:42,607
-The evidence now includes real snapshot model executions, supplied team scenario assessments, a completed assistant source-reference comparison, and current direct browser exports.
-
-91
-00:06:42,607 --> 00:06:45,860
-Compass supports source-based human review of registry information.
-
-92
-00:06:45,860 --> 00:06:51,663
-It does not rank treatments, prescribe care, replace a systematic review, or establish clinical effectiveness.
-
-93
-00:06:51,663 --> 00:06:54,247
-Thank you for reviewing T two D Compass.
+00:06:53,084 --> 00:06:53,775
+Thank you.

@@ -1,0 +1,20 @@
+T2D Compass demo — narration credits
+Prepared 23 November 2026
+
+This edition uses generic synthetic narration generated locally. It is not a human recording and does not imitate or clone a team member. A separate timed script is supplied for a team member to record a human narration edition.
+
+Voice: af_heart, American English, normal speed (1.0).
+Model: Kokoro-82M v1.0, Apache License 2.0.
+Model and model-card attribution:
+https://huggingface.co/hexgrad/Kokoro-82M
+Voice catalogue:
+https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md
+
+Inference: kokoro-onnx 0.6.1, MIT License.
+Copyright (c) 2025 github.com/thewh1teagle.
+https://github.com/thewh1teagle/kokoro-onnx
+https://github.com/thewh1teagle/kokoro-onnx/blob/main/LICENSE
+Official ONNX model export and voice assets:
+https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.1
+
+The narration was generated on this computer; no project text was uploaded to a speech-generation service. The delivery package contains rendered media and documentation, not model weights, software dependencies, or their download caches. These component credits identify the production tools and do not relabel the submitted project or its output with the tools' licenses.

@@ -1,0 +1,16 @@
+FRESH APP DEMONSTRATION — NOVEMBER 23, 2026
+
+Version 0.4.1 / prompt t2d-compass-1.1. The actual search, two cards, assistant
+response and trace export were captured through the hosted browser. The video
+uses real sequential captures with edited pauses and detail crops; no app
+response was drawn or simulated.
+
+The separate assistant demonstration completed in 11.091 seconds, two model
+turns and one live card tool call. Both final primary outcome/timeframe pairs
+match the retrieved card exactly. The raw model draft already retained correct
+timing; Markdown trailing spaces caused the conservative formatting fallback.
+
+Search: three candidates, bounded coverage. Secondary card: completed, results
+not posted, pediatric eligibility retained. These observations do not change
+the historical source-audit or model-scenario denominators. No human clinical
+approval claimed. Raw fresh traces remain in the local package.
