@@ -1,0 +1,355 @@
+1
+00:00:00,000 --> 00:00:06,077
+T two D Compass helps researchers inspect public ClinicalTrials dot gov records for completed type two diabetes intervention studies.
+
+2
+00:00:06,077 --> 00:00:09,646
+This narrated recorded-evidence walkthrough uses automated speech and captions.
+
+3
+00:00:09,646 --> 00:00:15,434
+It combines dated browser evidence, exported tool results, real-model traces, and a new source-reference audit.
+
+4
+00:00:15,434 --> 00:00:20,747
+The panels summarize those saved artifacts; this video is not a fresh screen recording or a new assistant run.
+
+5
+00:00:20,747 --> 00:00:27,084
+Researchers repeatedly collect study identifiers, design, enrollment, interventions, registered outcomes, and results availability.
+
+6
+00:00:27,084 --> 00:00:32,457
+Compass organizes the registry fields into a consistent evidence card, keeping source links and review flags attached.
+
+7
+00:00:32,457 --> 00:00:35,316
+Its intended output is a starting point for human review.
+
+8
+00:00:35,316 --> 00:00:38,739
+It does not turn registry descriptions into a treatment recommendation.
+
+9
+00:00:38,739 --> 00:00:43,816
+The first tool searches for completed interventional studies with an explicit supported type two diabetes condition label.
+
+10
+00:00:43,816 --> 00:00:47,300
+The second retrieves an evidence card for a specified trial identifier.
+
+11
+00:00:47,300 --> 00:00:51,363
+Both tools are read only and use a fixed public source, with no patient records.
+
+12
+00:00:51,363 --> 00:00:54,687
+The browser and optional Databricks assistant use these same tools.
+
+13
+00:00:54,687 --> 00:00:59,515
+The November twenty third signed-in browser review searched for MEDI zero three eight two, with a limit of three.
+
+14
+00:00:59,515 --> 00:01:04,093
+The exported response reports live source mode, completed status, and interventional study type.
+
+15
+00:01:04,093 --> 00:01:07,016
+The app also applied its explicit condition-label screen.
+
+16
+00:01:07,016 --> 00:01:11,545
+The response is preserved so the visible summary can be checked against the actual returned JSON.
+
+17
+00:01:11,545 --> 00:01:16,458
+The response returned these three study identifiers, each with its registry title and source URL.
+
+18
+00:01:16,458 --> 00:01:20,956
+These are candidate records to inspect, not recommendations or a ranked evidence synthesis.
+
+19
+00:01:20,956 --> 00:01:25,584
+A matching condition label also does not prove that every enrolled participant had type two diabetes.
+
+20
+00:01:25,584 --> 00:01:30,032
+Population context and the complete registry record still need review before drawing conclusions.
+
+21
+00:01:30,032 --> 00:01:35,590
+The same response reports three returned records, four examined records, and one excluded for its condition labels.
+
+22
+00:01:35,590 --> 00:01:38,803
+It marks the search incomplete because the requested limit was reached.
+
+23
+00:01:38,803 --> 00:01:41,287
+This is deliberately a bounded candidate search.
+
+24
+00:01:41,287 --> 00:01:44,271
+Broadly labeled studies can be missed by the conservative screen.
+
+25
+00:01:44,271 --> 00:01:50,728
+Users should therefore retain the coverage warning when exporting or explaining results, rather than presenting this list as an exhaustive literature search.
+
+26
+00:01:50,728 --> 00:01:53,956
+The same review retrieved this specific study by its identifier.
+
+27
+00:01:53,956 --> 00:02:00,328
+Its exported card reports a completed interventional study, a randomized parallel design, and enrollment of sixty five labeled actual.
+
+28
+00:02:00,328 --> 00:02:04,062
+The card retains the notice, registry extraction pending human review.
+
+29
+00:02:04,062 --> 00:02:09,665
+Enrollment also remains separate from the number analyzed for a particular outcome, which the current card does not determine.
+
+30
+00:02:09,665 --> 00:02:12,229
+This record contains two primary outcomes.
+
+31
+00:02:12,229 --> 00:02:18,171
+The example shown here is percent change in body weight to day fifty, paired with the reported timeframe, day one through day fifty.
+
+32
+00:02:18,171 --> 00:02:22,035
+The full export also retains the glucose outcome and its timed sampling schedule.
+
+33
+00:02:22,035 --> 00:02:25,908
+Compass keeps outcomes and timeframes together instead of reducing them to names alone.
+
+34
+00:02:25,908 --> 00:02:31,126
+These are registry descriptions, not extracted numerical findings or proof of prospective specification.
+
+35
+00:02:31,126 --> 00:02:37,643
+The export lets a reviewer trace enrollment back to the registry design module and enrollment count field, preserving the original value sixty five.
+
+36
+00:02:37,643 --> 00:02:42,221
+It also retains the canonical study URL, retrieval timestamp, and registry update date.
+
+37
+00:02:42,221 --> 00:02:47,619
+These dates answer different questions: when the app retrieved information, and when the registry record was updated.
+
+38
+00:02:47,619 --> 00:02:51,373
+A second exported card is completed but has no results posted in the registry.
+
+39
+00:02:51,373 --> 00:02:53,092
+Those are separate facts.
+
+40
+00:02:53,092 --> 00:02:59,404
+Completed does not mean successful treatment, and no posted registry results does not prove that findings or publications are absent elsewhere.
+
+41
+00:02:59,404 --> 00:03:02,468
+This study also has pediatric eligibility criteria.
+
+42
+00:03:02,468 --> 00:03:08,346
+The complete eligibility text is retained as entry rules, not as observed characteristics of the actual enrolled participants.
+
+43
+00:03:08,346 --> 00:03:14,648
+The reviewer used visible browser controls to export the search, three evidence cards, an error response, and assistant traces.
+
+44
+00:03:14,648 --> 00:03:18,137
+Those files were downloaded and parsed during the November twenty third review.
+
+45
+00:03:18,137 --> 00:03:24,629
+A reviewer can carry the source fields, review flags, and interpretation limits into a separate review rather than relying on a copied summary.
+
+46
+00:03:24,629 --> 00:03:29,187
+The direct browser checks also retrieved an active study and retained its outside-completed-scope warning.
+
+47
+00:03:29,187 --> 00:03:32,576
+A missing identifier returned not found without a substitute card.
+
+48
+00:03:32,576 --> 00:03:36,209
+A no-match search returned zero candidates without claiming global absence.
+
+49
+00:03:36,209 --> 00:03:39,348
+An invalid identifier triggered browser format validation.
+
+50
+00:03:39,348 --> 00:03:43,616
+These are observed direct workflow behaviors, not four extra model-quality passes.
+
+51
+00:03:43,616 --> 00:03:47,899
+The active exclusion record is separate from the ten-card source-reference accuracy denominator.
+
+52
+00:03:47,899 --> 00:03:51,572
+The November twenty first model scenarios used frozen public snapshots.
+
+53
+00:03:51,572 --> 00:03:54,791
+The November twenty third direct browser checks used the live registry.
+
+54
+00:03:54,791 --> 00:03:59,968
+Frozen inputs make comparisons reproducible, while live retrieval separately tests current source access.
+
+55
+00:03:59,968 --> 00:04:04,097
+The two modes can return different candidate sets, and neither should be relabeled as the other.
+
+56
+00:04:04,097 --> 00:04:10,089
+Two current live cards also matched all twenty eight corresponding frozen reference groups, a limited two-card consistency check.
+
+57
+00:04:10,089 --> 00:04:15,272
+This preserved October twenty eighth browser image illustrates the evidence-card layout for the same study identifier.
+
+58
+00:04:15,272 --> 00:04:22,505
+Visible fields include completed status, results posted, actual enrollment, a review flag, a source link, and the export control.
+
+59
+00:04:22,505 --> 00:04:25,753
+The image is historical evidence, not a new screen recording.
+
+60
+00:04:25,753 --> 00:04:31,801
+The November twenty third exports just discussed are separate artifacts and provide the current direct browser observations and downloaded data.
+
+61
+00:04:31,801 --> 00:04:37,749
+The saved automated suite passed two hundred ninety four tests, with no failures or errors, alongside static checks.
+
+62
+00:04:37,749 --> 00:04:42,617
+Earlier package verification covered startup, browser assets, health, and both MCP tools.
+
+63
+00:04:42,617 --> 00:04:46,226
+Actual local MCP replays also tested live and snapshot retrieval.
+
+64
+00:04:46,226 --> 00:04:50,614
+These are software and integration checks, not two hundred ninety four clinical cases.
+
+65
+00:04:50,614 --> 00:04:55,832
+Some tests use synthetic inputs or mocked model responses, so real-model evidence is reported separately.
+
+66
+00:04:55,832 --> 00:05:01,749
+The delivered November twenty first archive contains twelve scenarios repeated twice, with all twenty four executions completing.
+
+67
+00:05:01,749 --> 00:05:04,738
+The recorded model is Databricks G P T five five.
+
+68
+00:05:04,738 --> 00:05:09,466
+The traces preserve fifty two model turns and thirty eight tool calls, all using snapshot data.
+
+69
+00:05:09,466 --> 00:05:14,940
+Median case time was seventeen point five seconds, with a range of two point eight to thirty six point four seconds.
+
+70
+00:05:14,940 --> 00:05:17,664
+These timings are not hosted load-test results.
+
+71
+00:05:17,664 --> 00:05:24,571
+The supplied review documents naming Chinelo and Mohammad report twelve of twelve scenario passes, including seven critical cases, in each run.
+
+72
+00:05:24,571 --> 00:05:29,174
+Both injected upstream-failure scenarios visibly returned the controlled error and avoided invented evidence.
+
+73
+00:05:29,174 --> 00:05:32,882
+These are reported team assessments, distinct from execution completion.
+
+74
+00:05:32,882 --> 00:05:40,774
+Some document sign-off wording remains inconsistent and is disclosed in the evaluation report; raw trace review fields remain unchanged rather than being retrospectively overwritten.
+
+75
+00:05:40,774 --> 00:05:46,512
+Two separate assistant passes extracted references from the saved source records and field contract before candidate cards were generated.
+
+76
+00:05:46,512 --> 00:05:54,124
+After reconciliation, exact comparison matched all one hundred forty field groups across ten cards: eighty four development groups and fifty six held-out groups.
+
+77
+00:05:54,124 --> 00:05:56,633
+Candidate and source hashes stayed unchanged.
+
+78
+00:05:56,633 --> 00:06:00,851
+This completes an assistant source-reference audit, not independent human clinical approval.
+
+79
+00:06:00,851 --> 00:06:05,194
+The original human approval gate remains pending, separate from the completed assistant audit.
+
+80
+00:06:05,194 --> 00:06:09,243
+The signed-in direct browser workflow passed nine checks, including downloads.
+
+81
+00:06:09,243 --> 00:06:14,726
+The initial two hosted assistant attempts failed at model authentication, with zero model turns and zero tool calls.
+
+82
+00:06:14,726 --> 00:06:16,465
+Their traces are preserved.
+
+83
+00:06:16,465 --> 00:06:23,727
+The hosted configuration differs from the November twenty first snapshot model, so those successful scenario runs do not by themselves prove the current hosted assistant.
+
+84
+00:06:23,727 --> 00:06:28,460
+Any later successful run must be recorded and reviewed separately, rather than erasing these failures.
+
+85
+00:06:28,460 --> 00:06:36,277
+The public repository and delivery package let reviewers inspect the source, tool contracts, saved records, model traces, and evaluation results.
+
+86
+00:06:36,277 --> 00:06:44,839
+The evidence now includes real snapshot model executions, supplied team scenario assessments, a completed assistant source-reference comparison, and current direct browser exports.
+
+87
+00:06:44,839 --> 00:06:48,092
+Compass supports source-based human review of registry information.
+
+88
+00:06:48,092 --> 00:06:53,895
+It does not rank treatments, prescribe care, replace a systematic review, or establish clinical effectiveness.
+
+89
+00:06:53,895 --> 00:06:56,479
+Thank you for reviewing T two D Compass.

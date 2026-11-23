@@ -1,0 +1,51 @@
+{
+  "pdf": "C:\\Users\\by49\\OneDrive - CDC\\ChatGPT\\MCP Hackathon Project\\output\\submission-final-2026-11-23\\03-T2D-Compass-Slides.pdf",
+  "pages": 9,
+  "bytes": 2059504,
+  "sha256": "6db03b9ebe840b245aa16a7a23852c036165d226c081f26889e72bef783ce020",
+  "page_size_points": [
+    960,
+    540
+  ],
+  "method": "High-resolution Artifact Tool slide renders embedded without cropping; editable text and native table retained in companion PPTX. Native PDF export failed because bundled #standard-fonts/Helvetica module alias was unavailable.",
+  "render_source_dimensions": [
+    2560,
+    1440
+  ],
+  "visual_inspection": "passed",
+  "slide_count_preserved": true,
+  "source_unchanged": true,
+  "pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "visual_findings": "All nine final PDF pages inspected at 1280x720 after Poppler rendering; no unintended overlap, clipping, missing glyphs or distorted media observed. Source and updated slides compared; original style and nine-slide order preserved.",
+  "final_pptx": {
+    "path": "C:\\Users\\by49\\OneDrive - CDC\\ChatGPT\\MCP Hackathon Project\\output\\submission-final-2026-11-23\\03-T2D-Compass-Slides.pptx",
+    "sha256": "da47bcb34fb15c8935b6d9c35c979f4dda6cf119d9c05df283f314a7f4119524",
+    "bytes": 519064
+  },
+  "source_sha256": "5ecc178895eb122b569c4a3dc4b798adec289abb7240b01e01b8ca110e3e8cc1",
+  "original_media_unchanged": true,
+  "pdf_matches_latest_render_pixels": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "pptx_native_text_and_table": true,
+  "pdf_text_format": "Rendered slide images; use companion PPTX for editable/selectable slide text",
+  "powerpoint_native_ui_tested": false
+}

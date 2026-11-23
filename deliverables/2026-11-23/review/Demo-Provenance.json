@@ -1,0 +1,72 @@
+{
+  "created_date": "2026-11-23",
+  "duration_seconds": 416.47877551020383,
+  "size_bytes": 7325778,
+  "video": "output\\submission-final-2026-11-23\\01-T2D-Compass-Demo.mp4",
+  "narration": "Microsoft Zira Desktop; automated",
+  "mode": "Narrated recorded-evidence walkthrough; not a fresh screen recording or a new assistant execution",
+  "candidate_reference": "output/reference-review-2026-11-23/candidate-freeze.json",
+  "human_clinical_approval": "not claimed; pending",
+  "evidence": [
+    {
+      "file": "output\\reference-review-2026-11-23\\live-app-review\\review-summary.json",
+      "sha256": "65372a2bd36c3f5aae8e877f454c631dc6a4750fe3e5b7e226de5182109f8af1"
+    },
+    {
+      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-search-MEDI0382.json",
+      "sha256": "6feaa40b9041a372fb4dceaf0fe57960a0320208b3aeea5b822ac16844e37049"
+    },
+    {
+      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-card-NCT03244800.json",
+      "sha256": "6e7eed87151822309648ae319c4dd72ed316e37fac11f46fa07191a1a591f4a2"
+    },
+    {
+      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-card-NCT05790681.json",
+      "sha256": "b5cfdf6c2964e19ce76738787f915977243e9f2d2d11f3bca94d5eb0c34697eb"
+    },
+    {
+      "file": "output\\reference-review-2026-11-23\\live-app-review\\live-card-NCT05743387.json",
+      "sha256": "77f214beaa972e918d807357efdcb4e45790ee98509b08472c5f68dd78d8e9fb"
+    },
+    {
+      "file": "output\\reference-review-2026-11-23\\reference-evaluation.json",
+      "sha256": "f82add997640c6160056f349ec4ff09e875858cee60f228080fe0be4498dc373"
+    },
+    {
+      "file": "output\\reference-review-2026-11-23\\human-gated-reference-evaluation.json",
+      "sha256": "f5e57cc94a6c25ff5f618dde24004b6066a4eb141bfea49d383b3ad5a2c893dc"
+    },
+    {
+      "file": "output\\reference-review-2026-11-23\\candidate-freeze.json",
+      "sha256": "fe04eec8a2c22b9f894783e638d1d6ab1f8c10e70e6eedb3e94f3d88bed869c7"
+    },
+    {
+      "file": "research\\evaluation-delivery-2026-11-23\\trace-audit.json",
+      "sha256": "7501af3e547d2b4bef069aca04be140534ca3c7bd7ee611fd297af51899d0eeb"
+    },
+    {
+      "file": "submission\\T2D-compass\\eval\\type2diabetes\\results\\submission-2026-11-12\\validation-summary.json",
+      "sha256": "7ee5ed08aa8bfe0f6bcd5f04b2529262ea3020854cbe6cf3df353aaf942ff67a"
+    },
+    {
+      "file": "submission\\T2D-compass\\eval\\type2diabetes\\results\\browser-evidence-card.png",
+      "sha256": "65c759b7541786f7a8a8c0364ae42e23e56aaea1e4af2bdb1278c77726cef38c"
+    },
+    {
+      "file": "tmp\\certifi-fix-2026-11-17\\repair-summary.json",
+      "sha256": "5ebed4db2b3bde145068ead931ee95042bb8d54c93d350783a33b245afe51b1e"
+    },
+    {
+      "file": "research\\evaluation-delivery-2026-11-23\\Individual_reviewer1.docx",
+      "sha256": "3a81125b59d0049f1f6fbecd7b3589d499bfbd07fb455faf25a5fbfc514838da"
+    },
+    {
+      "file": "research\\evaluation-delivery-2026-11-23\\Individual_reviewer2.docx",
+      "sha256": "60a7076ab640f61c286ffe12f9ff597bc121bfc6ea47b1ff097fdd9860710b16"
+    },
+    {
+      "file": "research\\evaluation-delivery-2026-11-23\\MCP_document_final.docx",
+      "sha256": "cf751872593ea3f351ec3a9f7759584897ae160f77a95bf06aa29a64b9ebe22f"
+    }
+  ]
+}

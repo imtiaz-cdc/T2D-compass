@@ -1,0 +1,20 @@
+00:00  T2D Compass
+00:20  A repeatable research task
+00:38  Two tools with clear purposes
+00:54  Start with the recorded live search
+01:11  Three candidates returned
+01:30  Coverage limits stay visible
+01:50  Retrieve a specific evidence card
+02:09  Keep outcomes with their timeframes
+02:31  Trace a field to the source
+02:47  Completion and results are separate
+03:08  Export the evidence for review
+03:24  Boundary cases remain distinct
+03:47  Source modes are explicit
+04:10  Evidence cards in the browser
+04:31  Software checks support the workflow
+04:55  Real-model scenarios were completed
+05:17  Team assessments and failure evidence
+05:40  A complete source-reference comparison
+06:05  Hosted assistant status is separate
+06:28  Inspect the source and evidence

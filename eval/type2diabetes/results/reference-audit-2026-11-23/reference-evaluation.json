@@ -1,0 +1,3507 @@
+{
+  "schema_version": "1.0",
+  "type": "assistant_source_reference_comparison",
+  "first_execution_started_at_utc": "2026-11-23T15:29:01.317+00:00",
+  "reference_sha256": "52c5c7f3bd755154abda254cef9aa1fa8bb88a8766a8f25b1d6f2bee0dbc85ed",
+  "candidate_freeze_sha256": "fe04eec8a2c22b9f894783e638d1d6ab1f8c10e70e6eedb3e94f3d88bed869c7",
+  "data_mode": "snapshot",
+  "model_calls": 0,
+  "network_required": false,
+  "human_approval": "pending",
+  "reviewed_by": [],
+  "overwrite_policy": "Exclusive file creation; first execution and cards preserved",
+  "evaluation_status": "passed",
+  "review_status": "pending_human_review",
+  "python_version": "3.12.15",
+  "runner_sha256": "8da5ae8bbf2282a337267f85e0a0d89fba5078995c273c5ade39cdc62db665d4",
+  "candidate_version": "0.4.0",
+  "scoring_rule": "Exact JSON equality of 14 configured groups per card; array order and scalar types preserved; six development and four held-out records reported separately; full-card pass requires all 14 groups match",
+  "groups": [
+    "identity.nct_id",
+    "identity.title",
+    "identity.conditions",
+    "status.study_type",
+    "status.overall_status",
+    "status.completion_date",
+    "status.completion_date_type",
+    "design",
+    "enrollment",
+    "population",
+    "arms",
+    "interventions",
+    "primary_outcomes",
+    "results.has_results"
+  ],
+  "source_mode": "snapshot",
+  "records": [
+    {
+      "nct_id": "NCT03244800",
+      "split": "development",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.330+00:00",
+      "duration_seconds": 0.005932,
+      "actual_response_file": "actual-cards/development/NCT03244800.json",
+      "actual_response_sha256": "fe8d0f3f90d10f87e2c5eceeb268ee6bde1c05837446b81ce8d2887476dc7fd6",
+      "source_url": "https://clinicaltrials.gov/study/NCT03244800",
+      "snapshot_sha256": "9c397473ff92bdbdc7df4203ef7e38098a40ded5f1f6ed493e9097d3a86563cf",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT03244800",
+          "actual": "NCT03244800",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "A Study to Investigate Different Doses of 0382 in Overweight and Obese Subjects With Type 2 Diabetes Mellitus.",
+          "actual": "A Study to Investigate Different Doses of 0382 in Overweight and Obese Subjects With Type 2 Diabetes Mellitus.",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Type 2 Diabetes Mellitus"
+          ],
+          "actual": [
+            "Type 2 Diabetes Mellitus"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2018-01-23",
+          "actual": "2018-01-23",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "DOUBLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "INVESTIGATOR"
+            ]
+          },
+          "actual": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "DOUBLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "INVESTIGATOR"
+            ]
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 65,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 65,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n1. Male and female subjects aged ≥ 18 years at screening\n2. Provision of signed and dated written informed consent\n3. BMI between 27 and 40 kg/m2\n4. HbA1c range of 6.5% to 8.5%\n5. Diagnosed with T2DM with glucose control managed with metformin monotherapy where no significant dose change (increase or decrease ≥ 500 mg/day) has occurred in the 3 months prior to screening\n6. Subjects prescribed oral dual therapy with a dipeptidyl peptidase-4 inhibitor, sulphonylurea, glitinide, or a sodium-glucose co-transporter 2 inhibitor in addition to metformin at screening may be eligible to enter the study following a 4-week washout period\n7. Female subjects of childbearing potential must have a negative pregnancy test at screening and randomisation, and must not be lactating\n8. Females of childbearing potential who are sexually active with a nonsterilised male partner must use at least one highly effective method of contraception from screening and must agree to continue using such precautions through to the end of the study. It is strongly recommended for the male partner of a female subject to also use male condom plus spermicide throughout this period. Cessation of contraception after this point should be discussed with a responsible physician. Periodic abstinence, the rhythm method, and the withdrawal method are not acceptable methods of contraception.\n\nExclusion Criteria:\n\n1. History of, or any existing condition that, in the opinion of the investigator, would interfere with evaluation of the investigational product, put the subject at risk, influence the subject's ability to participate or affect the interpretation of the results of the study and/or any subject unable or unwilling to follow study procedures\n2. Concurrent participation in another study of any kind and repeat randomisation in this study is prohibited\n3. Severe allergy/hypersensitivity to any of the proposed study treatments\n4. Symptoms of acutely decompensated blood glucose control (eg, thirst, polyuria, weight loss), a history of type 1 diabetes mellitus or diabetic ketoacidosis, or if the subject has been treated with daily SC insulin within 90 days prior to screening\n5. Significant inflammatory bowel disease, gastroparesis, or other severe disease or surgery affecting the upper GI tract (including weight-reducing surgery and procedures) which may affect gastric emptying or could affect the interpretation of safety and tolerability data\n6. Significant hepatic disease (except for non-alcoholic steatohepatitis or non-alcoholic fatty liver disease without portal hypertension or cirrhosis) and/or subjects with any of the following results at screening:\n\n   * Aspartate transaminase (AST) ≥ 3 × upper limit of normal (ULN)\n   * Alanine transaminase (ALT) ≥ 3 × ULN\n   * Total bilirubin ≥ 2 × ULN\n7. Impaired renal function defined as estimated glomerular filtration rate (GFR) \\< 60 mL/minute/1.73 m2 at screening (GFR estimated according to Modification of Diet in Renal Disease \\[MDRD\\] using the isotope dilution mass spectrometry \\[IDMS\\] traceable MDRD Study Equation \\[SI units\\])\n8. Poorly controlled hypertension defined as:\n\n   * Systolic BP \\> 160 mm Hg\n   * Diastolic BP ≥ 95 mm Hg after 10 minutes of seated rest and confirmed by repeated measurement at screening.\n9. Unstable angina pectoris, myocardial infarction, transient ischemic attack or stroke within 3 months prior to screening, or subjects who have undergone percutaneous coronary intervention or a coronary artery bypass graft within the past 6 months or who are due to undergo these procedures at the time of screening\n10. Severe congestive heart failure (New York Heart Association Class III or IV)\n11. Basal calcitonin level \\> 50 ng/L at screening or history/family history of medullary thyroid carcinoma or multiple endocrine neoplasia\n12. Haemoglobinopathy, haemolytic anemia, or chronic anaemia (haemoglobin concentration \\< 11.5 g/dL \\[115 g/L\\] for males, \\< 10.5 g/dL \\[105 g/L\\] for females) at screening or any other condition known to interfere with interpretation of HbA1c measurement\n13. History of neoplastic disease within 5 years prior to screening, except for adequately treated basal cell, squamous cell skin cancer, or in situ cervical cancer\n14. Any positive results for serum hepatitis B surface antigen (HBsAg), hepatitis C antibody, and human immunodeficiency virus (HIV) antibody\n15. History of substance dependence, alcohol abuse, or excessive alcohol intake (defined as an average weekly intake of \\> 21 alcoholic drinks for men or \\> 10 alcoholic drinks for women) within 3 years prior to screening, and/or a positive screen for drugs of abuse or alcohol at screening or on admission to the study unit. Subjects who use tricyclic antidepressants or benzodiazepines for an established clinical indication may be permitted to enter the study based upon the judgement of the investigator.\n16. Involvement of any AstraZeneca, MedImmune, contract research organization, or study site employee or their close relatives\n17. History of acute or chronic pancreatitis or other diseases of the pancreas",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": "130 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n1. Male and female subjects aged ≥ 18 years at screening\n2. Provision of signed and dated written informed consent\n3. BMI between 27 and 40 kg/m2\n4. HbA1c range of 6.5% to 8.5%\n5. Diagnosed with T2DM with glucose control managed with metformin monotherapy where no significant dose change (increase or decrease ≥ 500 mg/day) has occurred in the 3 months prior to screening\n6. Subjects prescribed oral dual therapy with a dipeptidyl peptidase-4 inhibitor, sulphonylurea, glitinide, or a sodium-glucose co-transporter 2 inhibitor in addition to metformin at screening may be eligible to enter the study following a 4-week washout period\n7. Female subjects of childbearing potential must have a negative pregnancy test at screening and randomisation, and must not be lactating\n8. Females of childbearing potential who are sexually active with a nonsterilised male partner must use at least one highly effective method of contraception from screening and must agree to continue using such precautions through to the end of the study. It is strongly recommended for the male partner of a female subject to also use male condom plus spermicide throughout this period. Cessation of contraception after this point should be discussed with a responsible physician. Periodic abstinence, the rhythm method, and the withdrawal method are not acceptable methods of contraception.\n\nExclusion Criteria:\n\n1. History of, or any existing condition that, in the opinion of the investigator, would interfere with evaluation of the investigational product, put the subject at risk, influence the subject's ability to participate or affect the interpretation of the results of the study and/or any subject unable or unwilling to follow study procedures\n2. Concurrent participation in another study of any kind and repeat randomisation in this study is prohibited\n3. Severe allergy/hypersensitivity to any of the proposed study treatments\n4. Symptoms of acutely decompensated blood glucose control (eg, thirst, polyuria, weight loss), a history of type 1 diabetes mellitus or diabetic ketoacidosis, or if the subject has been treated with daily SC insulin within 90 days prior to screening\n5. Significant inflammatory bowel disease, gastroparesis, or other severe disease or surgery affecting the upper GI tract (including weight-reducing surgery and procedures) which may affect gastric emptying or could affect the interpretation of safety and tolerability data\n6. Significant hepatic disease (except for non-alcoholic steatohepatitis or non-alcoholic fatty liver disease without portal hypertension or cirrhosis) and/or subjects with any of the following results at screening:\n\n   * Aspartate transaminase (AST) ≥ 3 × upper limit of normal (ULN)\n   * Alanine transaminase (ALT) ≥ 3 × ULN\n   * Total bilirubin ≥ 2 × ULN\n7. Impaired renal function defined as estimated glomerular filtration rate (GFR) \\< 60 mL/minute/1.73 m2 at screening (GFR estimated according to Modification of Diet in Renal Disease \\[MDRD\\] using the isotope dilution mass spectrometry \\[IDMS\\] traceable MDRD Study Equation \\[SI units\\])\n8. Poorly controlled hypertension defined as:\n\n   * Systolic BP \\> 160 mm Hg\n   * Diastolic BP ≥ 95 mm Hg after 10 minutes of seated rest and confirmed by repeated measurement at screening.\n9. Unstable angina pectoris, myocardial infarction, transient ischemic attack or stroke within 3 months prior to screening, or subjects who have undergone percutaneous coronary intervention or a coronary artery bypass graft within the past 6 months or who are due to undergo these procedures at the time of screening\n10. Severe congestive heart failure (New York Heart Association Class III or IV)\n11. Basal calcitonin level \\> 50 ng/L at screening or history/family history of medullary thyroid carcinoma or multiple endocrine neoplasia\n12. Haemoglobinopathy, haemolytic anemia, or chronic anaemia (haemoglobin concentration \\< 11.5 g/dL \\[115 g/L\\] for males, \\< 10.5 g/dL \\[105 g/L\\] for females) at screening or any other condition known to interfere with interpretation of HbA1c measurement\n13. History of neoplastic disease within 5 years prior to screening, except for adequately treated basal cell, squamous cell skin cancer, or in situ cervical cancer\n14. Any positive results for serum hepatitis B surface antigen (HBsAg), hepatitis C antibody, and human immunodeficiency virus (HIV) antibody\n15. History of substance dependence, alcohol abuse, or excessive alcohol intake (defined as an average weekly intake of \\> 21 alcoholic drinks for men or \\> 10 alcoholic drinks for women) within 3 years prior to screening, and/or a positive screen for drugs of abuse or alcohol at screening or on admission to the study unit. Subjects who use tricyclic antidepressants or benzodiazepines for an established clinical indication may be permitted to enter the study based upon the judgement of the investigator.\n16. Involvement of any AstraZeneca, MedImmune, contract research organization, or study site employee or their close relatives\n17. History of acute or chronic pancreatitis or other diseases of the pancreas",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": "130 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Placebo Cohort 1",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Participants will receive placebo matching with MEDI0382 subcutaneously once daily for 49 days.",
+              "intervention_names": [
+                "Drug: Placebo"
+              ]
+            },
+            {
+              "label": "MEDI0382 Cohort 1",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive subcutaneous injection of MEDI0382 once daily for 49 days as Dose 1 for 7 days, followed by Dose 2 for 7 days, Dose 3 for 7 days, and Dose 4 for 28 days",
+              "intervention_names": [
+                "Drug: MEDI0382"
+              ]
+            },
+            {
+              "label": "PLacebo Cohort 2",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Participants will receive placebo matching with MEDI0382 subcutaneously once daily for 49 days.",
+              "intervention_names": [
+                "Drug: Placebo"
+              ]
+            },
+            {
+              "label": "MEDI0382 Cohort 2",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive subcutaneous injection of MEDI0382 once daily for 49 days as Dose 1 for 14 days, followed by Dose 2 for 14 days, Dose 3 for 14 days, and Dose 4 for 7 days.",
+              "intervention_names": [
+                "Drug: MEDI0382"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Placebo Cohort 1",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Participants will receive placebo matching with MEDI0382 subcutaneously once daily for 49 days.",
+              "intervention_names": [
+                "Drug: Placebo"
+              ]
+            },
+            {
+              "label": "MEDI0382 Cohort 1",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive subcutaneous injection of MEDI0382 once daily for 49 days as Dose 1 for 7 days, followed by Dose 2 for 7 days, Dose 3 for 7 days, and Dose 4 for 28 days",
+              "intervention_names": [
+                "Drug: MEDI0382"
+              ]
+            },
+            {
+              "label": "PLacebo Cohort 2",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Participants will receive placebo matching with MEDI0382 subcutaneously once daily for 49 days.",
+              "intervention_names": [
+                "Drug: Placebo"
+              ]
+            },
+            {
+              "label": "MEDI0382 Cohort 2",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive subcutaneous injection of MEDI0382 once daily for 49 days as Dose 1 for 14 days, followed by Dose 2 for 14 days, Dose 3 for 14 days, and Dose 4 for 7 days.",
+              "intervention_names": [
+                "Drug: MEDI0382"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "MEDI0382",
+              "type": "DRUG",
+              "description": "MEDI0382 will be administered subcutaneously once daily for 49 days.",
+              "arm_group_labels": [
+                "MEDI0382 Cohort 1",
+                "MEDI0382 Cohort 2"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Placebo",
+              "type": "DRUG",
+              "description": "Placebo will be administered subcutaneously once daily for 49 days.",
+              "arm_group_labels": [
+                "PLacebo Cohort 2",
+                "Placebo Cohort 1"
+              ],
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "MEDI0382",
+              "type": "DRUG",
+              "description": "MEDI0382 will be administered subcutaneously once daily for 49 days.",
+              "arm_group_labels": [
+                "MEDI0382 Cohort 1",
+                "MEDI0382 Cohort 2"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Placebo",
+              "type": "DRUG",
+              "description": "Placebo will be administered subcutaneously once daily for 49 days.",
+              "arm_group_labels": [
+                "PLacebo Cohort 2",
+                "Placebo Cohort 1"
+              ],
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "Cohort 1: Percent Change From Baseline in Plasma Glucose Area Under the Concentration-time Curve From Time 0 to 4 Hours (AUC0-4h) by Mixed-meal Tolerance Test (MMTT) to Day 49",
+              "description": "The MMTT test involved the consumption of a standardised liquid meal within 5 minutes and timed serial blood samples obtained for the measurement of glucose and parameters related to glucose metabolism through 240 minutes after consumption of the standardised meal (with no additional food intake during this time). The percent change in the MMTT plasma glucose AUC 0-4h from the baseline (Day -1) to Day 49 is reported.",
+              "time_frame": "Zero minutes before and 15, 30, 45, 60, 90, 120, 180, and 240 minutes after consumption of the standardised liquid meal"
+            },
+            {
+              "measure": "Cohort 1: Percent Change From Baseline in Body Weight to Day 50",
+              "description": "The percent change in body weight from baseline to Day 50 is reported.",
+              "time_frame": "Day 1 through Day 50"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "Cohort 1: Percent Change From Baseline in Plasma Glucose Area Under the Concentration-time Curve From Time 0 to 4 Hours (AUC0-4h) by Mixed-meal Tolerance Test (MMTT) to Day 49",
+              "description": "The MMTT test involved the consumption of a standardised liquid meal within 5 minutes and timed serial blood samples obtained for the measurement of glucose and parameters related to glucose metabolism through 240 minutes after consumption of the standardised meal (with no additional food intake during this time). The percent change in the MMTT plasma glucose AUC 0-4h from the baseline (Day -1) to Day 49 is reported.",
+              "time_frame": "Zero minutes before and 15, 30, 45, 60, 90, 120, 180, and 240 minutes after consumption of the standardised liquid meal"
+            },
+            {
+              "measure": "Cohort 1: Percent Change From Baseline in Body Weight to Day 50",
+              "description": "The percent change in body weight from baseline to Day 50 is reported.",
+              "time_frame": "Day 1 through Day 50"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": true,
+          "actual": true,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT05790681",
+      "split": "development",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.338+00:00",
+      "duration_seconds": 0.003044,
+      "actual_response_file": "actual-cards/development/NCT05790681.json",
+      "actual_response_sha256": "924ebd955fa8fb50fff604262261a1ca87a029ca6ecdd2a1d62f0da2a0322f3b",
+      "source_url": "https://clinicaltrials.gov/study/NCT05790681",
+      "snapshot_sha256": "a48024687bd5493e93e769a34520b786a8f2d112d8d699bd830b630c337364fc",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT05790681",
+          "actual": "NCT05790681",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "A Study to Test How New Long-acting Insulin (Insulin Icodec) Works in the Body of Children and Teenagers",
+          "actual": "A Study to Test How New Long-acting Insulin (Insulin Icodec) Works in the Body of Children and Teenagers",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Diabetes Mellitus, Type 2"
+          ],
+          "actual": [
+            "Diabetes Mellitus, Type 2"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2024-02-08",
+          "actual": "2024-02-08",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE1"
+            ],
+            "allocation": "NA",
+            "intervention_model": "SINGLE_GROUP",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "actual": {
+            "phases": [
+              "PHASE1"
+            ],
+            "allocation": "NA",
+            "intervention_model": "SINGLE_GROUP",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 18,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 18,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Male or female\n* Aged 10 to less than (\\<) 18 years at the time of signing informed consent\n* Diagnosed with type 2 diabetes mellitus greater than or equal to (\\>=) 30 days prior to the day of screening\n* Glycated haemoglobin (HbA1c) less than or equal to (\\<=) 10% (86 millimoles per mole \\[mmol/mol\\]) at screening\n* Treated with basal insulin, premix insulin or continuous subcutaneous insulin infusion (CSII) with or without bolus insulin or additional anti-diabetic drug(s).\n* Current daily basal insulin treatment \\>= 0.2 (I) units per kilogram per day (U/kg/day) with stable doses \\>=30 days prior to the day of screening\n\nExclusion Criteria:\n\n* Known or suspected hypersensitivity to study interventions or related products\n* Female who is pregnant, breast-feeding or intends to become pregnant or is of childbearing potential and not using adequate contraceptive method",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "10 Years",
+            "maximum_age": "18 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Male or female\n* Aged 10 to less than (\\<) 18 years at the time of signing informed consent\n* Diagnosed with type 2 diabetes mellitus greater than or equal to (\\>=) 30 days prior to the day of screening\n* Glycated haemoglobin (HbA1c) less than or equal to (\\<=) 10% (86 millimoles per mole \\[mmol/mol\\]) at screening\n* Treated with basal insulin, premix insulin or continuous subcutaneous insulin infusion (CSII) with or without bolus insulin or additional anti-diabetic drug(s).\n* Current daily basal insulin treatment \\>= 0.2 (I) units per kilogram per day (U/kg/day) with stable doses \\>=30 days prior to the day of screening\n\nExclusion Criteria:\n\n* Known or suspected hypersensitivity to study interventions or related products\n* Female who is pregnant, breast-feeding or intends to become pregnant or is of childbearing potential and not using adequate contraceptive method",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "10 Years",
+            "maximum_age": "18 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Participants with Type 2 Diabetes",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive single subcutaneous (s.c.) fixed dose of insulin icodec (700 units per milliliter \\[U/mL\\]) that is 5.6 units per kilogram (U/kg) bodyweight. Subjects will be followed up for 5 weeks after dosing.",
+              "intervention_names": [
+                "Drug: Insulin icodec"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Participants with Type 2 Diabetes",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive single subcutaneous (s.c.) fixed dose of insulin icodec (700 units per milliliter \\[U/mL\\]) that is 5.6 units per kilogram (U/kg) bodyweight. Subjects will be followed up for 5 weeks after dosing.",
+              "intervention_names": [
+                "Drug: Insulin icodec"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Insulin icodec",
+              "type": "DRUG",
+              "description": "Participants will receive subcutaneously fixed dose of insulin icodec (700 U/mL) that is 5.6 U/kg bodyweight.",
+              "arm_group_labels": [
+                "Participants with Type 2 Diabetes"
+              ],
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "Insulin icodec",
+              "type": "DRUG",
+              "description": "Participants will receive subcutaneously fixed dose of insulin icodec (700 U/mL) that is 5.6 U/kg bodyweight.",
+              "arm_group_labels": [
+                "Participants with Type 2 Diabetes"
+              ],
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "Area under the serum insulin icodec concentration-time curve after a single dose (AUCIco,0-inf,SD)",
+              "description": "Measured in picomoles\\*hours per liter (pmol\\*h/L).",
+              "time_frame": "From 0 hours until infinity after trial product administration (day 1)"
+            },
+            {
+              "measure": "Maximum observed serum insulin icodec concentration after a single dose (Cmax,Ico,SD)",
+              "description": "Measured in picomoles per liter (pmol/L).",
+              "time_frame": "From 0 hours until last measurement time after trial product administration (day 1)"
+            },
+            {
+              "measure": "Time to maximum observed serum insulin icodec concentration after a single dose (tmax,Ico,SD)",
+              "description": "Measured in hours.",
+              "time_frame": "From 0 hours until last measurement time after trial product administration (day 1)"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "Area under the serum insulin icodec concentration-time curve after a single dose (AUCIco,0-inf,SD)",
+              "description": "Measured in picomoles\\*hours per liter (pmol\\*h/L).",
+              "time_frame": "From 0 hours until infinity after trial product administration (day 1)"
+            },
+            {
+              "measure": "Maximum observed serum insulin icodec concentration after a single dose (Cmax,Ico,SD)",
+              "description": "Measured in picomoles per liter (pmol/L).",
+              "time_frame": "From 0 hours until last measurement time after trial product administration (day 1)"
+            },
+            {
+              "measure": "Time to maximum observed serum insulin icodec concentration after a single dose (tmax,Ico,SD)",
+              "description": "Measured in hours.",
+              "time_frame": "From 0 hours until last measurement time after trial product administration (day 1)"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": false,
+          "actual": false,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT04214600",
+      "split": "development",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.345+00:00",
+      "duration_seconds": 0.003629,
+      "actual_response_file": "actual-cards/development/NCT04214600.json",
+      "actual_response_sha256": "a4f71142841a0dacc789d7e58d522c116839a6b6da6a48b2d4190514d2526e8d",
+      "source_url": "https://clinicaltrials.gov/study/NCT04214600",
+      "snapshot_sha256": "eae68f66d47001072cff7662ff7e17949bc55374e72aa1b56c7fb6b3f33deda9",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT04214600",
+          "actual": "NCT04214600",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Cognitive Behavioral Therapy for Adherence in Patients With Type 2 Diabetes",
+          "actual": "Cognitive Behavioral Therapy for Adherence in Patients With Type 2 Diabetes",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Type 2 Diabetes",
+            "Depression"
+          ],
+          "actual": [
+            "Type 2 Diabetes",
+            "Depression"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2020-03-18",
+          "actual": "2020-03-18",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "NA"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "SINGLE",
+            "who_masked": [
+              "PARTICIPANT"
+            ]
+          },
+          "actual": {
+            "phases": [
+              "NA"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "SINGLE",
+            "who_masked": [
+              "PARTICIPANT"
+            ]
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 100,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 100,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Patients meeting the American Diabetes Association (ADA) criteria for T2D (glycated hemoglobin (HbA1c) ≥6.5%, fasting glucose ≥126mg/dL) with diagnosis confirmed by the participants' medical clinicians.\n* Participants aged more than 35 years; ambulatory; able to give informed consent; and able to obtain reliable information.\n* Eligible patients will be screened for depressive symptoms using the Beck Depression Inventory (BDI). They will be included if they score 11-30 based on BDI (Mild mood disturbance to Moderate depression).\n\nExclusion Criteria:\n\n* Participants will be excluded if they have type I diabetes and psychiatric disorders other than mood or personality disorders. Depressed patients on treatment for depression will not be included.\n* Suicidal patients and those diagnosed with major depressive disorder will be referred to a psychiatrist.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "35 Years",
+            "maximum_age": "80 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Patients meeting the American Diabetes Association (ADA) criteria for T2D (glycated hemoglobin (HbA1c) ≥6.5%, fasting glucose ≥126mg/dL) with diagnosis confirmed by the participants' medical clinicians.\n* Participants aged more than 35 years; ambulatory; able to give informed consent; and able to obtain reliable information.\n* Eligible patients will be screened for depressive symptoms using the Beck Depression Inventory (BDI). They will be included if they score 11-30 based on BDI (Mild mood disturbance to Moderate depression).\n\nExclusion Criteria:\n\n* Participants will be excluded if they have type I diabetes and psychiatric disorders other than mood or personality disorders. Depressed patients on treatment for depression will not be included.\n* Suicidal patients and those diagnosed with major depressive disorder will be referred to a psychiatrist.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "35 Years",
+            "maximum_age": "80 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Cognitive Behavioral Therapy",
+              "type": "EXPERIMENTAL",
+              "description": "This group will receive four CBT sessions twice a month for two months",
+              "intervention_names": [
+                "Behavioral: Cognitive Behavioral Therapy (CBT)"
+              ]
+            },
+            {
+              "label": "Control",
+              "type": "NO_INTERVENTION",
+              "description": "This group will be scheduled the same number of visits as a follow up for diabetes",
+              "intervention_names": null
+            }
+          ],
+          "actual": [
+            {
+              "label": "Cognitive Behavioral Therapy",
+              "type": "EXPERIMENTAL",
+              "description": "This group will receive four CBT sessions twice a month for two months",
+              "intervention_names": [
+                "Behavioral: Cognitive Behavioral Therapy (CBT)"
+              ]
+            },
+            {
+              "label": "Control",
+              "type": "NO_INTERVENTION",
+              "description": "This group will be scheduled the same number of visits as a follow up for diabetes",
+              "intervention_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Cognitive Behavioral Therapy (CBT)",
+              "type": "BEHAVIORAL",
+              "description": "Patients in the CBT intervention group will receive four educational sessions for 30-45 minutes on one to one basis every two weeks during patients' regular follow up visits. The visits will be scheduled depending on the patient's availability. The sessions will be delivered by a trained physician. The sessions will include:\n\nSession 1: Dealing with thoughts of sadness and depression Session 2: Dealing with thoughts of anxiety and stress Session 3: Dealing with anger Session 4: Enhancement of coping and problem-solving skills",
+              "arm_group_labels": [
+                "Cognitive Behavioral Therapy"
+              ],
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "Cognitive Behavioral Therapy (CBT)",
+              "type": "BEHAVIORAL",
+              "description": "Patients in the CBT intervention group will receive four educational sessions for 30-45 minutes on one to one basis every two weeks during patients' regular follow up visits. The visits will be scheduled depending on the patient's availability. The sessions will be delivered by a trained physician. The sessions will include:\n\nSession 1: Dealing with thoughts of sadness and depression Session 2: Dealing with thoughts of anxiety and stress Session 3: Dealing with anger Session 4: Enhancement of coping and problem-solving skills",
+              "arm_group_labels": [
+                "Cognitive Behavioral Therapy"
+              ],
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "Change of Glycated Hemoglobin A1c (Hb A1c) After the Cognitive Behavioral Therapy Sessions",
+              "description": "Assess the effect of the CBT combined with diabetes education versus control receiving diabetes education alone on glycemic measures of patients with T2D and depression",
+              "time_frame": "Baseline and 3 months"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "Change of Glycated Hemoglobin A1c (Hb A1c) After the Cognitive Behavioral Therapy Sessions",
+              "description": "Assess the effect of the CBT combined with diabetes education versus control receiving diabetes education alone on glycemic measures of patients with T2D and depression",
+              "time_frame": "Baseline and 3 months"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": true,
+          "actual": true,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT01596244",
+      "split": "development",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.345+00:00",
+      "duration_seconds": 0.002634,
+      "actual_response_file": "actual-cards/development/NCT01596244.json",
+      "actual_response_sha256": "7d94733ad6c43a66876dd946c8fe66f55b09dd54f6059c80df8fdf11345cd1d8",
+      "source_url": "https://clinicaltrials.gov/study/NCT01596244",
+      "snapshot_sha256": "88cafa7a07cdbfadd00d5ae7df376fd0f32404cbef34d48e42d69892099efe92",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT01596244",
+          "actual": "NCT01596244",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Jordan Diabetes Microclinic Project",
+          "actual": "Jordan Diabetes Microclinic Project",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Diabetes Mellitus, Type II"
+          ],
+          "actual": [
+            "Diabetes Mellitus, Type II"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2012-08",
+          "actual": "2012-08",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "NA"
+            ],
+            "allocation": "NA",
+            "intervention_model": "SINGLE_GROUP",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "actual": {
+            "phases": [
+              "NA"
+            ],
+            "allocation": "NA",
+            "intervention_model": "SINGLE_GROUP",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 2400,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 2400,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Over 18 years old\n* Mentally competent\n* Have diabetes or pre-diabetes or brought a family member who was diabetic/pre-diabetic (Diabetes: Fasting blood glucose higher than 125 mg/dl; Pre-diabetes: Fasting blood glucose between 100 and 124 mg/dl.)\n\nExclusion Criteria:\n\n* They do not meet the above criteria\n* They are pregnant\n* They have significant medical complications that prevent them from making changes to diet or level of physical activity.",
+            "healthy_volunteers": true,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Over 18 years old\n* Mentally competent\n* Have diabetes or pre-diabetes or brought a family member who was diabetic/pre-diabetic (Diabetes: Fasting blood glucose higher than 125 mg/dl; Pre-diabetes: Fasting blood glucose between 100 and 124 mg/dl.)\n\nExclusion Criteria:\n\n* They do not meet the above criteria\n* They are pregnant\n* They have significant medical complications that prevent them from making changes to diet or level of physical activity.",
+            "healthy_volunteers": true,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Microclinics training",
+              "type": "EXPERIMENTAL",
+              "description": "Diabetic, pre-diabetic, or those with family members who are diabetic/pre-diabetic who participated in a 4 month long intervention with a focus on disease management, health behavior change, and social network supports in order to improve chronic disease risk factors.",
+              "intervention_names": [
+                "Behavioral: Microclinic"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Microclinics training",
+              "type": "EXPERIMENTAL",
+              "description": "Diabetic, pre-diabetic, or those with family members who are diabetic/pre-diabetic who participated in a 4 month long intervention with a focus on disease management, health behavior change, and social network supports in order to improve chronic disease risk factors.",
+              "intervention_names": [
+                "Behavioral: Microclinic"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Microclinic",
+              "type": "BEHAVIORAL",
+              "description": "Microclinics consist of 2-8 individuals from pre-existing social networks (friends, relatives, coworkers, neighbors, etc) that voluntarily participate in ongoing education and medical monitoring from local health care professionals, learning and practicing diabetes management strategies, sharing much-needed medical supplies, and exchanging social support in the form of regular microclinic meetings.",
+              "arm_group_labels": [
+                "Microclinics training"
+              ],
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "Microclinic",
+              "type": "BEHAVIORAL",
+              "description": "Microclinics consist of 2-8 individuals from pre-existing social networks (friends, relatives, coworkers, neighbors, etc) that voluntarily participate in ongoing education and medical monitoring from local health care professionals, learning and practicing diabetes management strategies, sharing much-needed medical supplies, and exchanging social support in the form of regular microclinic meetings.",
+              "arm_group_labels": [
+                "Microclinics training"
+              ],
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "Weight (kg)",
+              "description": "Change in weight overtime",
+              "time_frame": "Baseline, 4 months (intervention), and 12 months (post-intervention)"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "Weight (kg)",
+              "description": "Change in weight overtime",
+              "time_frame": "Baseline, 4 months (intervention), and 12 months (post-intervention)"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": false,
+          "actual": false,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT01614769",
+      "split": "development",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.353+00:00",
+      "duration_seconds": 0.003755,
+      "actual_response_file": "actual-cards/development/NCT01614769.json",
+      "actual_response_sha256": "afff4276cae573e30439ce5fa71d50ad7e091c75bd9b731e009780e4864ef4ba",
+      "source_url": "https://clinicaltrials.gov/study/NCT01614769",
+      "snapshot_sha256": "55dafa1bd395e17d62380eb5cb931e623f856c64d132eaf0b50ee49354caeff2",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT01614769",
+          "actual": "NCT01614769",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Effects of Glimepiride on Recovery From Hypoglycemia in Participants With Type 2 Diabetes Mellitus (MK-0000-253)",
+          "actual": "Effects of Glimepiride on Recovery From Hypoglycemia in Participants With Type 2 Diabetes Mellitus (MK-0000-253)",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Type 2 Diabetes Mellitus"
+          ],
+          "actual": [
+            "Type 2 Diabetes Mellitus"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2013-01-23",
+          "actual": "2013-01-23",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE1"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "CROSSOVER",
+            "masking": "DOUBLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "INVESTIGATOR"
+            ]
+          },
+          "actual": {
+            "phases": [
+              "PHASE1"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "CROSSOVER",
+            "masking": "DOUBLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "INVESTIGATOR"
+            ]
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 10,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 10,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Has clinically confirmed diagnosis of type 2 diabetes mellitus (T2DM) controlled by diet and exercise alone, or treated by metformin only with same dose for \\>= 12 weeks prior to screening visit.\n* Females of reproductive potential who demonstrate nongravid state, agree to use (and/or have partner use) two acceptable methods of birth control starting at least two weeks prior to study, throughout study, and at least two weeks after last dose of study drug.\n* Females of non-reproductive potential, post menopausal, status post hysterectomy, oophorectomy or tubal ligation.\n* Is in good health, other than T2DM.\n* Has been a nonsmoker and/or non user of nicotine-containing products for the previous 6 months. If discontinued use for previous 3 months, may be enrolled at investigator's discretion.\n* Will follow American Heart Association weight maintaining diet and exercise program or equivalent beginning 2 weeks prior to study until poststudy visit.\n* At screening visit has a Body Mass Index (BMI) =\\< 40 kg/m\\^2.\n* At screening visit has a Hemoglobin A1c (HbA1c) of \\>= 7% and \\< 10% (+/- 0.1%).\n* On the morning of randomization at predose has fasting plasma glucose (FPG) \\>= 126 mg/dL, and =\\< 250 mg/dL.\n\nExclusion Criteria:\n\n* Has a history of stroke, chronic seizures, or major neurological disorder.\n* Has a history of any illness that might confound the results of the study or pose additional risk to the participant.\n* Has a history of type 1 diabetes mellitus, ketoacidosis, C-peptide =\\< 0.8 ng/mL, secondary forms of diabetes or diabetic complications.\n* Has a history of neoplastic disease.\n* Is a nursing mother.\n* Has been treated =\\< one year of screening visit with sulfonylurea agents, meglitinides, dipeptidyl peptidase-4 (DPP-4) inhibitors, glucagon-like peptide-1 (GLP-1) analogs, or insulin.\n* Has received treatment within =\\< 12 weeks of screening visit with a peroxisome proliferator-activated receptor γ (PPARγ) agonist.\n* Is taking medications for a co-morbid condition or anticipates taking new medications beginning 2 weeks prior to study.\n* Consumes excessive amounts of alcohol or caffeinated beverages.\n* Is a regular user of illicit drugs, or has a history of drug abuse within the previous 6 months.\n* Has had major surgery, lost 500 mL of blood, or participated in another investigational study within 4 weeks prior to screening visit.\n* Is on a weight loss program, but not in the maintenance phase, or treated with a weight loss medication within 8 weeks of prestudy visit.\n* Has a history of severe allergies, anaphylactic reaction or intolerability to drugs, food, insulin, glimepiride or sulfonamide derivatives.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": "60 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Has clinically confirmed diagnosis of type 2 diabetes mellitus (T2DM) controlled by diet and exercise alone, or treated by metformin only with same dose for \\>= 12 weeks prior to screening visit.\n* Females of reproductive potential who demonstrate nongravid state, agree to use (and/or have partner use) two acceptable methods of birth control starting at least two weeks prior to study, throughout study, and at least two weeks after last dose of study drug.\n* Females of non-reproductive potential, post menopausal, status post hysterectomy, oophorectomy or tubal ligation.\n* Is in good health, other than T2DM.\n* Has been a nonsmoker and/or non user of nicotine-containing products for the previous 6 months. If discontinued use for previous 3 months, may be enrolled at investigator's discretion.\n* Will follow American Heart Association weight maintaining diet and exercise program or equivalent beginning 2 weeks prior to study until poststudy visit.\n* At screening visit has a Body Mass Index (BMI) =\\< 40 kg/m\\^2.\n* At screening visit has a Hemoglobin A1c (HbA1c) of \\>= 7% and \\< 10% (+/- 0.1%).\n* On the morning of randomization at predose has fasting plasma glucose (FPG) \\>= 126 mg/dL, and =\\< 250 mg/dL.\n\nExclusion Criteria:\n\n* Has a history of stroke, chronic seizures, or major neurological disorder.\n* Has a history of any illness that might confound the results of the study or pose additional risk to the participant.\n* Has a history of type 1 diabetes mellitus, ketoacidosis, C-peptide =\\< 0.8 ng/mL, secondary forms of diabetes or diabetic complications.\n* Has a history of neoplastic disease.\n* Is a nursing mother.\n* Has been treated =\\< one year of screening visit with sulfonylurea agents, meglitinides, dipeptidyl peptidase-4 (DPP-4) inhibitors, glucagon-like peptide-1 (GLP-1) analogs, or insulin.\n* Has received treatment within =\\< 12 weeks of screening visit with a peroxisome proliferator-activated receptor γ (PPARγ) agonist.\n* Is taking medications for a co-morbid condition or anticipates taking new medications beginning 2 weeks prior to study.\n* Consumes excessive amounts of alcohol or caffeinated beverages.\n* Is a regular user of illicit drugs, or has a history of drug abuse within the previous 6 months.\n* Has had major surgery, lost 500 mL of blood, or participated in another investigational study within 4 weeks prior to screening visit.\n* Is on a weight loss program, but not in the maintenance phase, or treated with a weight loss medication within 8 weeks of prestudy visit.\n* Has a history of severe allergies, anaphylactic reaction or intolerability to drugs, food, insulin, glimepiride or sulfonamide derivatives.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": "60 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received placebo in the first period, 2 mg glimepiride in the second period and 4 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 2 mg glimepiride in the first period, 4 mg glimepiride in the second period and placebo in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 4 mg glimepiride in the first period, placebo in the second period and 2 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Placebo → Glimepiride 4 mg → Glimepiride 2 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received placebo in the first period, 4 mg glimepiride in the second period and 2 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 2 mg glimepiride in the first period, placebo in the second period and 4 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 4 mg glimepiride in the first period, 2 mg glimepiride in the second period and placebo in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received placebo in the first period, 2 mg glimepiride in the second period and 4 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 2 mg glimepiride in the first period, 4 mg glimepiride in the second period and placebo in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 4 mg glimepiride in the first period, placebo in the second period and 2 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Placebo → Glimepiride 4 mg → Glimepiride 2 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received placebo in the first period, 4 mg glimepiride in the second period and 2 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 2 mg glimepiride in the first period, placebo in the second period and 4 mg glimepiride in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            },
+            {
+              "label": "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+              "type": "EXPERIMENTAL",
+              "description": "Participants received 4 mg glimepiride in the first period, 2 mg glimepiride in the second period and placebo in the third period, with a 7-day washout between each period.",
+              "intervention_names": [
+                "Drug: Placebo",
+                "Drug: Glimepiride 2 mg",
+                "Drug: Glimepiride 4 mg",
+                "Procedure: Hypoglycemic Clamp"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Placebo",
+              "type": "DRUG",
+              "description": "Two gross-matched glimepiride placebo tablets taken on Day -1 and Day 1 of the three treatment periods.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Glimepiride 2 mg",
+              "type": "DRUG",
+              "description": "One placebo tablet and one 2-mg glimepiride tablet taken on Day -1 and Day 1 of the three treatment periods.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Glimepiride 4 mg",
+              "type": "DRUG",
+              "description": "Two 2-mg glimepiride tablets taken on Day -1 and Day 1 of the three treatment periods.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Hypoglycemic Clamp",
+              "type": "PROCEDURE",
+              "description": "On Day 1 of the three treatment periods, 180 minutes after drug treatment, a fixed-rate insulin infusion is combined with a variable-rate dextrose infusion to maintain plasma glucose concentrations at close to 50 mg/dL for 30 minutes.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "Placebo",
+              "type": "DRUG",
+              "description": "Two gross-matched glimepiride placebo tablets taken on Day -1 and Day 1 of the three treatment periods.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Glimepiride 2 mg",
+              "type": "DRUG",
+              "description": "One placebo tablet and one 2-mg glimepiride tablet taken on Day -1 and Day 1 of the three treatment periods.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Glimepiride 4 mg",
+              "type": "DRUG",
+              "description": "Two 2-mg glimepiride tablets taken on Day -1 and Day 1 of the three treatment periods.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Hypoglycemic Clamp",
+              "type": "PROCEDURE",
+              "description": "On Day 1 of the three treatment periods, 180 minutes after drug treatment, a fixed-rate insulin infusion is combined with a variable-rate dextrose infusion to maintain plasma glucose concentrations at close to 50 mg/dL for 30 minutes.",
+              "arm_group_labels": [
+                "Glimepiride 2 mg → Glimepiride 4 mg → Placebo",
+                "Glimepiride 2 mg → Placebo → Glimepiride 4 mg",
+                "Glimepiride 4 mg → Glimepiride 2 mg → Placebo",
+                "Glimepiride 4 mg → Placebo → Glimepiride 2 mg",
+                "Placebo → Glimepiride 2 mg → Glimepiride 4 mg",
+                "Placebo → Glimepiride 4 mg → Glimepiride 2 mg"
+              ],
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "Recovery Time From Hypoglycemia to Euglycemia",
+              "description": "Immediately after release of the hypoglycemic clamp, which maintained blood glucose close to 50 mg/dL, the time taken until glucose reached euglycemia, defined as 3 consecutive measurements \\>= 70 mg/dL, is called the recovery time.",
+              "time_frame": "From 1 to 180 minutes post hypoglycemic clamp"
+            },
+            {
+              "measure": "Rate of Recovery From Hypoglycemia to Euglycemia",
+              "description": "The rate of recovery is the difference in concentration between blood glucose at euglycemia and at the end of the hypoglycemic clamp, divided by the recovery time.",
+              "time_frame": "From 1 to 180 minutes post hypoglycemic clamp"
+            },
+            {
+              "measure": "Incremental Weighted Average Blood Glucose Concentration Over 3 Hours of Hypoglycemic Recovery",
+              "description": "The incremental weighted average qualitatively assesses overall hypoglycemic recovery by measuring mean glycemia over the 3 hour recovery period. Blood glucose measured at the release of the hypoglycemic clamp, considered the baseline value, was subtracted from blood glucose values measured over the ensuing 3 hours of hypoglycemic recovery. These differences from baseline were averaged to calculate the incremental weighted average blood glucose concentration.",
+              "time_frame": "From 1 to 180 minutes post hypoglycemic clamp"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "Recovery Time From Hypoglycemia to Euglycemia",
+              "description": "Immediately after release of the hypoglycemic clamp, which maintained blood glucose close to 50 mg/dL, the time taken until glucose reached euglycemia, defined as 3 consecutive measurements \\>= 70 mg/dL, is called the recovery time.",
+              "time_frame": "From 1 to 180 minutes post hypoglycemic clamp"
+            },
+            {
+              "measure": "Rate of Recovery From Hypoglycemia to Euglycemia",
+              "description": "The rate of recovery is the difference in concentration between blood glucose at euglycemia and at the end of the hypoglycemic clamp, divided by the recovery time.",
+              "time_frame": "From 1 to 180 minutes post hypoglycemic clamp"
+            },
+            {
+              "measure": "Incremental Weighted Average Blood Glucose Concentration Over 3 Hours of Hypoglycemic Recovery",
+              "description": "The incremental weighted average qualitatively assesses overall hypoglycemic recovery by measuring mean glycemia over the 3 hour recovery period. Blood glucose measured at the release of the hypoglycemic clamp, considered the baseline value, was subtracted from blood glucose values measured over the ensuing 3 hours of hypoglycemic recovery. These differences from baseline were averaged to calculate the incremental weighted average blood glucose concentration.",
+              "time_frame": "From 1 to 180 minutes post hypoglycemic clamp"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": true,
+          "actual": true,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT02811055",
+      "split": "development",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.357+00:00",
+      "duration_seconds": 0.003418,
+      "actual_response_file": "actual-cards/development/NCT02811055.json",
+      "actual_response_sha256": "c1f551487784980b4525b6a9c1406aad48ff59104917e7f652033c9f965cee6e",
+      "source_url": "https://clinicaltrials.gov/study/NCT02811055",
+      "snapshot_sha256": "dbe35f935ed6da0bad00efbf1b8770ab00b3de6ecd0b18b9371f0ec683156b3d",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT02811055",
+          "actual": "NCT02811055",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Pilot Study of Aprepitant Effect on Aldosterone Secretion in Diabetic Patient (Diabetes Mellitus) With Hypertension Associated With Low Renin",
+          "actual": "Pilot Study of Aprepitant Effect on Aldosterone Secretion in Diabetic Patient (Diabetes Mellitus) With Hypertension Associated With Low Renin",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Type 2 Diabetes",
+            "Hypertension"
+          ],
+          "actual": [
+            "Type 2 Diabetes",
+            "Hypertension"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2020-12-05",
+          "actual": "2020-12-05",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "CROSSOVER",
+            "masking": "DOUBLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "INVESTIGATOR"
+            ]
+          },
+          "actual": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "CROSSOVER",
+            "masking": "DOUBLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "INVESTIGATOR"
+            ]
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 5,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 5,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Male or menopausal female subjects;\n* Age ranging 18-30 years old;\n* Submitted to a social security regimen;\n* Agreeing to the study \\& Informed consent form signed;\n* Body mass index (\\[weight (kg)/height (m)\\]²) \\< 27;\n* No treatment received 6 weeks before inclusion;\n* No anomaly after: complete clinical examination, pulse and blood pressure measurement, ECG;\n* No biological abnormality after the following biological testing:\n\nHematology: white \\& red blood cells \\& platelets count, haemoglobin, hematocrit, Blood biochemistry: sodium, potassium, chloride, bicarbonate, creatinine, urea, Urinary biochemistry (24 h collection): cortisol, aldosterone, Serologies: HIV, HBV, HCV,\n\n* No participation in a clinical trial 3 months ago before inclusion,\n* Subscription to national social security,\n* Signed informed consent.\n\nExclusion Criteria:\n\n* Female subject potentially pregnant,\n* Subject younger than 18 year-old and older than 70 year-old,\n* Subject without diabetes condition or with diabetes but normal blood pressure (below 130/80 mmHg),\n* Subject with glycated hemoglobin HbA1c \\< 6.5% or \\>11%,\n* Subject with leuconeutropenia (neutrophils below 1700/mm3),\n* Subject with severe medical or surgical history,\n* Patients treated with drugs metabolized by CYP3A4 and CYP2C9: corticosteroids, vitamin K , hormonal contraceptives, tolbutamide, benzodiazepines, derived from ergot, antiepileptics, hypericum, macrolides, azole antifungals.\n* Patients treated with drugs interfering with the renin-angiotensin- aldosterone system : beta-blockers, diuretics , anti -aldosterone drugs , direct renin inhibitors , insulin,\n* type 2 diabetes patients with a vegetative autonomic neuropathy,\n* Patients with adrenal mass was diagnosed at imaging,\n* hepatic or renal impairment (defined respectively by secondary clinical and biological manifestations altered hepatocyte functions or estimated glomerular filtration rate less than 60 mL / min / 1.73 m2);nephrotic syndrome (defined by hypoalbuminemia less than 30 g / L associated with proteinuria at 3 grams / 24 hours);edematous syndrome (defined by the presence of edema of the lower limbs),\n* Orthostatic hypotension (defined by a decrease in systolic blood pressure of 20 mmHg and at least the diastolic blood pressure of 10 mmHg or more),\n* arrhythmias or cardiac conduction,\n* heart failure (NYHA class II minimum),\n* epilepsy,\n* serious psychiatric condition,\n* Severe allergic history, hypersensitivity to aprepitant,\n* People with hereditary problems of fructose intolerance, glucose malabsorption, galactose, or sucrase-isomaltase,\n* People with lactose intolerance,\n* subject unwilling or cannot be followed regularly. Persons deprived of their liberty by a judicial or administrative decision, those hospitalized without consent and those admitted to a health or social establishment for purposes other than research, the adults subject to a measure of legal protection or unable to consent may not be included.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Male or menopausal female subjects;\n* Age ranging 18-30 years old;\n* Submitted to a social security regimen;\n* Agreeing to the study \\& Informed consent form signed;\n* Body mass index (\\[weight (kg)/height (m)\\]²) \\< 27;\n* No treatment received 6 weeks before inclusion;\n* No anomaly after: complete clinical examination, pulse and blood pressure measurement, ECG;\n* No biological abnormality after the following biological testing:\n\nHematology: white \\& red blood cells \\& platelets count, haemoglobin, hematocrit, Blood biochemistry: sodium, potassium, chloride, bicarbonate, creatinine, urea, Urinary biochemistry (24 h collection): cortisol, aldosterone, Serologies: HIV, HBV, HCV,\n\n* No participation in a clinical trial 3 months ago before inclusion,\n* Subscription to national social security,\n* Signed informed consent.\n\nExclusion Criteria:\n\n* Female subject potentially pregnant,\n* Subject younger than 18 year-old and older than 70 year-old,\n* Subject without diabetes condition or with diabetes but normal blood pressure (below 130/80 mmHg),\n* Subject with glycated hemoglobin HbA1c \\< 6.5% or \\>11%,\n* Subject with leuconeutropenia (neutrophils below 1700/mm3),\n* Subject with severe medical or surgical history,\n* Patients treated with drugs metabolized by CYP3A4 and CYP2C9: corticosteroids, vitamin K , hormonal contraceptives, tolbutamide, benzodiazepines, derived from ergot, antiepileptics, hypericum, macrolides, azole antifungals.\n* Patients treated with drugs interfering with the renin-angiotensin- aldosterone system : beta-blockers, diuretics , anti -aldosterone drugs , direct renin inhibitors , insulin,\n* type 2 diabetes patients with a vegetative autonomic neuropathy,\n* Patients with adrenal mass was diagnosed at imaging,\n* hepatic or renal impairment (defined respectively by secondary clinical and biological manifestations altered hepatocyte functions or estimated glomerular filtration rate less than 60 mL / min / 1.73 m2);nephrotic syndrome (defined by hypoalbuminemia less than 30 g / L associated with proteinuria at 3 grams / 24 hours);edematous syndrome (defined by the presence of edema of the lower limbs),\n* Orthostatic hypotension (defined by a decrease in systolic blood pressure of 20 mmHg and at least the diastolic blood pressure of 10 mmHg or more),\n* arrhythmias or cardiac conduction,\n* heart failure (NYHA class II minimum),\n* epilepsy,\n* serious psychiatric condition,\n* Severe allergic history, hypersensitivity to aprepitant,\n* People with hereditary problems of fructose intolerance, glucose malabsorption, galactose, or sucrase-isomaltase,\n* People with lactose intolerance,\n* subject unwilling or cannot be followed regularly. Persons deprived of their liberty by a judicial or administrative decision, those hospitalized without consent and those admitted to a health or social establishment for purposes other than research, the adults subject to a measure of legal protection or unable to consent may not be included.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Administration of Aprepitant",
+              "type": "EXPERIMENTAL",
+              "description": "Administration of Aprepitant 80 mg once per day during 14 days; Blood sampling, electrocardiogram, orthostatic test and Blood Pressure Measurement are done after 14 days",
+              "intervention_names": [
+                "Biological: Blood sampling",
+                "Procedure: Blood Pressure Measurement",
+                "Device: electrocardiogram",
+                "Procedure: orthostatic test",
+                "Drug: Administration of Aprepitant"
+              ]
+            },
+            {
+              "label": "Administration of placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Administration of Placebo once per day during 14 days; Blood sampling, electrocardiogram, orthostatic test and Blood Pressure Measurement are done after 14 days",
+              "intervention_names": [
+                "Biological: Blood sampling",
+                "Procedure: Blood Pressure Measurement",
+                "Device: electrocardiogram",
+                "Procedure: orthostatic test",
+                "Drug: Administration of placebo"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Administration of Aprepitant",
+              "type": "EXPERIMENTAL",
+              "description": "Administration of Aprepitant 80 mg once per day during 14 days; Blood sampling, electrocardiogram, orthostatic test and Blood Pressure Measurement are done after 14 days",
+              "intervention_names": [
+                "Biological: Blood sampling",
+                "Procedure: Blood Pressure Measurement",
+                "Device: electrocardiogram",
+                "Procedure: orthostatic test",
+                "Drug: Administration of Aprepitant"
+              ]
+            },
+            {
+              "label": "Administration of placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Administration of Placebo once per day during 14 days; Blood sampling, electrocardiogram, orthostatic test and Blood Pressure Measurement are done after 14 days",
+              "intervention_names": [
+                "Biological: Blood sampling",
+                "Procedure: Blood Pressure Measurement",
+                "Device: electrocardiogram",
+                "Procedure: orthostatic test",
+                "Drug: Administration of placebo"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Blood sampling",
+              "type": "BIOLOGICAL",
+              "description": "Blood sampling for Plasma aldosterone, Plasma cortisol, plasma renin, plasma electrolytes after before and after administration of Aprepitant 80 mg once per day during 14 days or Administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Blood Pressure Measurement",
+              "type": "PROCEDURE",
+              "description": "Blood Pressure Measurement before and after Administration of Aprepitant 80 mg once per day during 14 days or administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "electrocardiogram",
+              "type": "DEVICE",
+              "description": "Electrocardiogram before and after Administration of Aprepitant 80 mg once per day during 14 days or administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "orthostatic test",
+              "type": "PROCEDURE",
+              "description": "Orthostatic test after Administration of Aprepitant 80 mg once per day during 14 days or administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Administration of Aprepitant",
+              "type": "DRUG",
+              "description": "Administration of Aprepitant 80 mg once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Administration of placebo",
+              "type": "DRUG",
+              "description": "Administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of placebo"
+              ],
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "Blood sampling",
+              "type": "BIOLOGICAL",
+              "description": "Blood sampling for Plasma aldosterone, Plasma cortisol, plasma renin, plasma electrolytes after before and after administration of Aprepitant 80 mg once per day during 14 days or Administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Blood Pressure Measurement",
+              "type": "PROCEDURE",
+              "description": "Blood Pressure Measurement before and after Administration of Aprepitant 80 mg once per day during 14 days or administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "electrocardiogram",
+              "type": "DEVICE",
+              "description": "Electrocardiogram before and after Administration of Aprepitant 80 mg once per day during 14 days or administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "orthostatic test",
+              "type": "PROCEDURE",
+              "description": "Orthostatic test after Administration of Aprepitant 80 mg once per day during 14 days or administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant",
+                "Administration of placebo"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Administration of Aprepitant",
+              "type": "DRUG",
+              "description": "Administration of Aprepitant 80 mg once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of Aprepitant"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Administration of placebo",
+              "type": "DRUG",
+              "description": "Administration of placebo once per day during 14 days",
+              "arm_group_labels": [
+                "Administration of placebo"
+              ],
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "Difference from baseline in Plasma aldosterone concentration",
+              "description": "Plasma aldosterone concentration is analyzed",
+              "time_frame": "Baseline and Day 14"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "Difference from baseline in Plasma aldosterone concentration",
+              "description": "Plasma aldosterone concentration is analyzed",
+              "time_frame": "Baseline and Day 14"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": false,
+          "actual": false,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00004266",
+      "split": "heldout",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.361+00:00",
+      "duration_seconds": 0.003791,
+      "actual_response_file": "actual-cards/heldout/NCT00004266.json",
+      "actual_response_sha256": "8d9a44b890bc5bc853543163fa68cda40f4ecd91762407ec3d06bab95aeee8c8",
+      "source_url": "https://clinicaltrials.gov/study/NCT00004266",
+      "snapshot_sha256": "0072c47b38ee91871a58dbdeeece970ea339002d28f15d2afac88237ae8daeb8",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT00004266",
+          "actual": "NCT00004266",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Drugs for High Blood Pressure and High Cholesterol in American Indians With Type 2 Diabetes",
+          "actual": "Drugs for High Blood Pressure and High Cholesterol in American Indians With Type 2 Diabetes",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Diabetic Nephropathy"
+          ],
+          "actual": [
+            "Diabetic Nephropathy"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "1999-07",
+          "actual": "1999-07",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE3"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "actual": {
+            "phases": [
+              "PHASE3"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 160,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 160,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "PROTOCOL ENTRY CRITERIA:\n\n--Disease Characteristics-- Non-insulin-dependent diabetes mellitus with documented fasting hyperglycemia Microalbuminuria OR clinically detectable albuminuria; Urine albumin excretion rate at least 30 mg/24 hours Low-density lipoproteins (fasting) at least 80 mg/dL Recruitment from American Indian population at Red Lake and Leech Lake reservations\n\n--Prior/Concurrent Therapy-- At least 5 days since antihypertensives or antilipemics\n\n--Patient Characteristics-- Renal: Urine albumin-to-creatinine ratio at least 30 mg/g; Creatinine clearance or estimated creatinine clearance at least 30 mL/min; No active urine sediment suggestive of glomerulonephritis, i.e.: No RBCs greater than 10/high-power field; No WBCs greater than 15/high-power field; No RBC casts\n\nCardiovascular: No symptomatic orthostatic hypotension; No poorly-compensated congestive heart failure; No requirement for angiotensin-converting enzyme inhibitors; No angina pectoris requiring nifedipine; No unstable angina; No episodes of angina occurring more than once a month; No chest pain of undetermined cause within 1 month; No severe hypertension requiring multiple antihypertensives; No myocardial infarction within 1 year; No stroke or transient ischemic attack within 1 year\n\nOther: No known allergy to nifedipine, lisinopril, or simvastatin; No untreated proliferative retinopathy; Documented retinal exam within 1 year prior to entry; No alcohol or drug abuse affecting compliance; No other debilitating or acute illness; No pregnant or nursing women; Effective contraception required of fertile women",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "PROTOCOL ENTRY CRITERIA:\n\n--Disease Characteristics-- Non-insulin-dependent diabetes mellitus with documented fasting hyperglycemia Microalbuminuria OR clinically detectable albuminuria; Urine albumin excretion rate at least 30 mg/24 hours Low-density lipoproteins (fasting) at least 80 mg/dL Recruitment from American Indian population at Red Lake and Leech Lake reservations\n\n--Prior/Concurrent Therapy-- At least 5 days since antihypertensives or antilipemics\n\n--Patient Characteristics-- Renal: Urine albumin-to-creatinine ratio at least 30 mg/g; Creatinine clearance or estimated creatinine clearance at least 30 mL/min; No active urine sediment suggestive of glomerulonephritis, i.e.: No RBCs greater than 10/high-power field; No WBCs greater than 15/high-power field; No RBC casts\n\nCardiovascular: No symptomatic orthostatic hypotension; No poorly-compensated congestive heart failure; No requirement for angiotensin-converting enzyme inhibitors; No angina pectoris requiring nifedipine; No unstable angina; No episodes of angina occurring more than once a month; No chest pain of undetermined cause within 1 month; No severe hypertension requiring multiple antihypertensives; No myocardial infarction within 1 year; No stroke or transient ischemic attack within 1 year\n\nOther: No known allergy to nifedipine, lisinopril, or simvastatin; No untreated proliferative retinopathy; Documented retinal exam within 1 year prior to entry; No alcohol or drug abuse affecting compliance; No other debilitating or acute illness; No pregnant or nursing women; Effective contraception required of fertile women",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "18 Years",
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Nifedipine",
+              "type": "EXPERIMENTAL",
+              "description": "Daily nifedipine at a dose adjusted for high blood pressure. Cholestyramine or gemfibrozil is administered per National Cholesterol Education Program guidelines. Diuretics and doxazosin may be given concurrently.",
+              "intervention_names": [
+                "Drug: Nifedipine"
+              ]
+            },
+            {
+              "label": "Lisinopril",
+              "type": "EXPERIMENTAL",
+              "description": "Daily lisinopril at a dose adjusted for high blood pressure. Cholestyramine or gemfibrozil is administered per National Cholesterol Education Program guidelines. Diuretics and doxazosin may be given concurrently.",
+              "intervention_names": [
+                "Drug: Lisinopril"
+              ]
+            },
+            {
+              "label": "Nifedipine and simvastatin",
+              "type": "EXPERIMENTAL",
+              "description": "Daily nifedipine at a dose adjusted for high blood pressure, and simvastatin at a dose adjusted for high low-density lipoproteins. Supplemental cholestyramine may be given as needed. If cholestyramine is not tolerated or if triglycerides are high, gemfibrozil is substituted for cholestyramine.",
+              "intervention_names": [
+                "Drug: Nifedipine",
+                "Drug: Simvastatin"
+              ]
+            },
+            {
+              "label": "Lisinopril and simvastatin",
+              "type": "EXPERIMENTAL",
+              "description": "Lisinopril at a dose adjusted for high blood pressure and simvastatin at a dose adjusted for high low-density lipoproteins.",
+              "intervention_names": [
+                "Drug: Lisinopril",
+                "Drug: Simvastatin"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Nifedipine",
+              "type": "EXPERIMENTAL",
+              "description": "Daily nifedipine at a dose adjusted for high blood pressure. Cholestyramine or gemfibrozil is administered per National Cholesterol Education Program guidelines. Diuretics and doxazosin may be given concurrently.",
+              "intervention_names": [
+                "Drug: Nifedipine"
+              ]
+            },
+            {
+              "label": "Lisinopril",
+              "type": "EXPERIMENTAL",
+              "description": "Daily lisinopril at a dose adjusted for high blood pressure. Cholestyramine or gemfibrozil is administered per National Cholesterol Education Program guidelines. Diuretics and doxazosin may be given concurrently.",
+              "intervention_names": [
+                "Drug: Lisinopril"
+              ]
+            },
+            {
+              "label": "Nifedipine and simvastatin",
+              "type": "EXPERIMENTAL",
+              "description": "Daily nifedipine at a dose adjusted for high blood pressure, and simvastatin at a dose adjusted for high low-density lipoproteins. Supplemental cholestyramine may be given as needed. If cholestyramine is not tolerated or if triglycerides are high, gemfibrozil is substituted for cholestyramine.",
+              "intervention_names": [
+                "Drug: Nifedipine",
+                "Drug: Simvastatin"
+              ]
+            },
+            {
+              "label": "Lisinopril and simvastatin",
+              "type": "EXPERIMENTAL",
+              "description": "Lisinopril at a dose adjusted for high blood pressure and simvastatin at a dose adjusted for high low-density lipoproteins.",
+              "intervention_names": [
+                "Drug: Lisinopril",
+                "Drug: Simvastatin"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Lisinopril",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": [
+                "Lisinopril",
+                "Lisinopril and simvastatin"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Nifedipine",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": [
+                "Nifedipine",
+                "Nifedipine and simvastatin"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Simvastatin",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": [
+                "Lisinopril and simvastatin",
+                "Nifedipine and simvastatin"
+              ],
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "Lisinopril",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": [
+                "Lisinopril",
+                "Lisinopril and simvastatin"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Nifedipine",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": [
+                "Nifedipine",
+                "Nifedipine and simvastatin"
+              ],
+              "other_names": null
+            },
+            {
+              "name": "Simvastatin",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": [
+                "Lisinopril and simvastatin",
+                "Nifedipine and simvastatin"
+              ],
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": null,
+          "actual": null,
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": false,
+          "actual": false,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00000620",
+      "split": "heldout",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.364+00:00",
+      "duration_seconds": 0.0042,
+      "actual_response_file": "actual-cards/heldout/NCT00000620.json",
+      "actual_response_sha256": "b3e620df81029ac2203b13c8468477c293d993045c975a758233ffe6e3fb07a5",
+      "source_url": "https://clinicaltrials.gov/study/NCT00000620",
+      "snapshot_sha256": "60c8ec2b1bd38f9322b452a222c04d1b3d6eac8b28ac135127eaa32275ec914a",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT00000620",
+          "actual": "NCT00000620",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Action to Control Cardiovascular Risk in Diabetes (ACCORD)",
+          "actual": "Action to Control Cardiovascular Risk in Diabetes (ACCORD)",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Atherosclerosis",
+            "Cardiovascular Diseases",
+            "Hypercholesterolemia",
+            "Hypertension",
+            "Diabetes Mellitus, Type 2",
+            "Diabetes Mellitus",
+            "Coronary Disease"
+          ],
+          "actual": [
+            "Atherosclerosis",
+            "Cardiovascular Diseases",
+            "Hypercholesterolemia",
+            "Hypertension",
+            "Diabetes Mellitus, Type 2",
+            "Diabetes Mellitus",
+            "Coronary Disease"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2012-12",
+          "actual": "2012-12",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE3"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "FACTORIAL",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "actual": {
+            "phases": [
+              "PHASE3"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "FACTORIAL",
+            "masking": "NONE",
+            "who_masked": null
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 10251,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 10251,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Diagnosed with type 2 diabetes mellitus, as determined by the new American Diabetes Association guidelines, which include a fasting plasma glucose level greater than 126 mg/dl (7.0 mmol/l), or a 2-hour postload value in the oral glucose tolerance test of greater than 200 mg/dl, with confirmation by a retest\n* For participants aged 40 years or older, history of CVD (heart attack, stroke, history of coronary revascularization, history of peripheral or carotid revascularization, or demonstrated angina)\n* For participants aged 55 years or older, a history of CVD is not required, but participant must be considered to be at high risk for experiencing a CVD event due to existing CVD, subclinical disease, or 2+ CVD risk factors\n* HbA1c 7.5%-9% (if on more drugs) or 7.5%-11% (if on fewer drugs)",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "40 Years",
+            "maximum_age": "79 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "Inclusion Criteria:\n\n* Diagnosed with type 2 diabetes mellitus, as determined by the new American Diabetes Association guidelines, which include a fasting plasma glucose level greater than 126 mg/dl (7.0 mmol/l), or a 2-hour postload value in the oral glucose tolerance test of greater than 200 mg/dl, with confirmation by a retest\n* For participants aged 40 years or older, history of CVD (heart attack, stroke, history of coronary revascularization, history of peripheral or carotid revascularization, or demonstrated angina)\n* For participants aged 55 years or older, a history of CVD is not required, but participant must be considered to be at high risk for experiencing a CVD event due to existing CVD, subclinical disease, or 2+ CVD risk factors\n* HbA1c 7.5%-9% (if on more drugs) or 7.5%-11% (if on fewer drugs)",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "40 Years",
+            "maximum_age": "79 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Glycemia Trial: intensive control",
+              "type": "EXPERIMENTAL",
+              "description": "Open label administration of oral anti-hyperglycemic agents and/or insulin in combination with dietary/lifestyle advice as needed to achieve glycated hemoglobin (HbA1c) levels \\<6.0%.",
+              "intervention_names": [
+                "Drug: Anti-hyperglycemic Agents"
+              ]
+            },
+            {
+              "label": "Glycemia Trial: standard control",
+              "type": "ACTIVE_COMPARATOR",
+              "description": "Open label administration of oral anti-hyperglycemic agents and/or insulin in combination with dietary/lifestyle advice as needed to achieve glycated hemoglobin (HbA1c) levels of 7.0 - 7.9%.",
+              "intervention_names": [
+                "Drug: Anti-hyperglycemic Agents"
+              ]
+            },
+            {
+              "label": "BP Trial: intensive control",
+              "type": "EXPERIMENTAL",
+              "description": "Open label administration of anti-hypertensive agents to reduce and maintain systolic blood pressure (SBP) level to \\<120 mmHg.",
+              "intervention_names": [
+                "Drug: Anti-hypertensive Agents"
+              ]
+            },
+            {
+              "label": "BP Trial: standard control",
+              "type": "ACTIVE_COMPARATOR",
+              "description": "Open label administration of multiple anti-hypertensive agents to maintain SBP level \\<140 mm Hg.",
+              "intervention_names": [
+                "Drug: Anti-hypertensive Agents"
+              ]
+            },
+            {
+              "label": "Lipid Trial: fenofibrate",
+              "type": "EXPERIMENTAL",
+              "description": "Double blind administration of 160 mg/day of fenofibrate in participants with estimated glomerular filtration rate (eGFR) ≥50 mL/min/1.73m2 or 54 mg/day in patients with eGFR \\<50 mL/min/1.73m2 in combination with open label simvastatin.",
+              "intervention_names": [
+                "Drug: Blinded fenofibrate or placebo plus simvastatin"
+              ]
+            },
+            {
+              "label": "Lipid Trial: placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Double blind administration of placebo matching either 160 mg/day in participants with eGFR ≥50 mL/min/1.73m2 or 54 mg/day in participants with eGFR \\<50 mL/min/1.73m2 in combination with open label simvastatin.",
+              "intervention_names": [
+                "Drug: Blinded fenofibrate or placebo plus simvastatin"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Glycemia Trial: intensive control",
+              "type": "EXPERIMENTAL",
+              "description": "Open label administration of oral anti-hyperglycemic agents and/or insulin in combination with dietary/lifestyle advice as needed to achieve glycated hemoglobin (HbA1c) levels \\<6.0%.",
+              "intervention_names": [
+                "Drug: Anti-hyperglycemic Agents"
+              ]
+            },
+            {
+              "label": "Glycemia Trial: standard control",
+              "type": "ACTIVE_COMPARATOR",
+              "description": "Open label administration of oral anti-hyperglycemic agents and/or insulin in combination with dietary/lifestyle advice as needed to achieve glycated hemoglobin (HbA1c) levels of 7.0 - 7.9%.",
+              "intervention_names": [
+                "Drug: Anti-hyperglycemic Agents"
+              ]
+            },
+            {
+              "label": "BP Trial: intensive control",
+              "type": "EXPERIMENTAL",
+              "description": "Open label administration of anti-hypertensive agents to reduce and maintain systolic blood pressure (SBP) level to \\<120 mmHg.",
+              "intervention_names": [
+                "Drug: Anti-hypertensive Agents"
+              ]
+            },
+            {
+              "label": "BP Trial: standard control",
+              "type": "ACTIVE_COMPARATOR",
+              "description": "Open label administration of multiple anti-hypertensive agents to maintain SBP level \\<140 mm Hg.",
+              "intervention_names": [
+                "Drug: Anti-hypertensive Agents"
+              ]
+            },
+            {
+              "label": "Lipid Trial: fenofibrate",
+              "type": "EXPERIMENTAL",
+              "description": "Double blind administration of 160 mg/day of fenofibrate in participants with estimated glomerular filtration rate (eGFR) ≥50 mL/min/1.73m2 or 54 mg/day in patients with eGFR \\<50 mL/min/1.73m2 in combination with open label simvastatin.",
+              "intervention_names": [
+                "Drug: Blinded fenofibrate or placebo plus simvastatin"
+              ]
+            },
+            {
+              "label": "Lipid Trial: placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Double blind administration of placebo matching either 160 mg/day in participants with eGFR ≥50 mL/min/1.73m2 or 54 mg/day in participants with eGFR \\<50 mL/min/1.73m2 in combination with open label simvastatin.",
+              "intervention_names": [
+                "Drug: Blinded fenofibrate or placebo plus simvastatin"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Anti-hyperglycemic Agents",
+              "type": "DRUG",
+              "description": "Multiple drugs including insulins and oral anti-hyperglycemic agents as needed to reach Glycemia Trial arm-specific goals (intensive control \\<6%; standard control 7.0-7.9%).",
+              "arm_group_labels": [
+                "Glycemia Trial: intensive control",
+                "Glycemia Trial: standard control"
+              ],
+              "other_names": [
+                "glimepiride (Amaryl)",
+                "metformin (Glucophage)",
+                "repaglinide (Gluconorm, Prandin)",
+                "rosiglitazone (Avandia)",
+                "pioglitazone (Actos)",
+                "human regular insulin (Novolin ge Toronto)",
+                "human NPH (Novolin N)",
+                "human mixed (Novolin 70/30)",
+                "human isophane (Novolin ge NPH)",
+                "human 30/70 (Novolin ge 30/70)",
+                "insulin aspart (NovoRapid, NovoLog)",
+                "insulin detemir (Levemir)",
+                "human regular insulin (Novolin R)",
+                "insulin glargine (Lantus)",
+                "Acarbose"
+              ]
+            },
+            {
+              "name": "Anti-hypertensive Agents",
+              "type": "DRUG",
+              "description": "Multiple anti-hypertensive agents as needed to reach Blood Pressure Trial arm-specific goals (intensive control \\<120 mm Hg; standard control \\<140 mm Hg).",
+              "arm_group_labels": [
+                "BP Trial: intensive control",
+                "BP Trial: standard control"
+              ],
+              "other_names": [
+                "benazepril (Lotensin, Zestril, Altace)",
+                "chlorthalidone (Thalitone)",
+                "metoprolol (Toprol XL)",
+                "diltiazem (Tiazac)",
+                "plendil (Felodipine)",
+                "terazosin (Hytrin)",
+                "candesartan (Atacand)",
+                "valsartan (Diovan)",
+                "furosemide",
+                "reserpine",
+                "hydralazine",
+                "carvedilol (Coreg)",
+                "triamterene / hydrochlorothiazide (Dyazide)",
+                "metoprolol / hydrochlorothiazide(Lopressor HCT)",
+                "benazepril / hydrochlorothiazide (Lotensin HCT)",
+                "lisinopril / hydrochlorothiazide (Zestoretic)",
+                "candesartan / hydrochlorothiazide (Atacand HCT)",
+                "valsartan / hydrochlorothiazide (Diovan HCT)",
+                "amlodipine / benazepril (Lotrel)"
+              ]
+            },
+            {
+              "name": "Blinded fenofibrate or placebo plus simvastatin",
+              "type": "DRUG",
+              "description": "Double blind administration of 160 mg/day of fenofibrate in participants with estimated glomerular filtration rate (eGFR) ≥50 mL/min/1.73m2 or 54 mg/day in patients with eGFR \\<50 mL/min/1.73m2 or matching placebo in combination with open label simvastatin 20 - 40 mg/day.",
+              "arm_group_labels": [
+                "Lipid Trial: fenofibrate",
+                "Lipid Trial: placebo"
+              ],
+              "other_names": [
+                "fenofibrate (Tricor)"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "name": "Anti-hyperglycemic Agents",
+              "type": "DRUG",
+              "description": "Multiple drugs including insulins and oral anti-hyperglycemic agents as needed to reach Glycemia Trial arm-specific goals (intensive control \\<6%; standard control 7.0-7.9%).",
+              "arm_group_labels": [
+                "Glycemia Trial: intensive control",
+                "Glycemia Trial: standard control"
+              ],
+              "other_names": [
+                "glimepiride (Amaryl)",
+                "metformin (Glucophage)",
+                "repaglinide (Gluconorm, Prandin)",
+                "rosiglitazone (Avandia)",
+                "pioglitazone (Actos)",
+                "human regular insulin (Novolin ge Toronto)",
+                "human NPH (Novolin N)",
+                "human mixed (Novolin 70/30)",
+                "human isophane (Novolin ge NPH)",
+                "human 30/70 (Novolin ge 30/70)",
+                "insulin aspart (NovoRapid, NovoLog)",
+                "insulin detemir (Levemir)",
+                "human regular insulin (Novolin R)",
+                "insulin glargine (Lantus)",
+                "Acarbose"
+              ]
+            },
+            {
+              "name": "Anti-hypertensive Agents",
+              "type": "DRUG",
+              "description": "Multiple anti-hypertensive agents as needed to reach Blood Pressure Trial arm-specific goals (intensive control \\<120 mm Hg; standard control \\<140 mm Hg).",
+              "arm_group_labels": [
+                "BP Trial: intensive control",
+                "BP Trial: standard control"
+              ],
+              "other_names": [
+                "benazepril (Lotensin, Zestril, Altace)",
+                "chlorthalidone (Thalitone)",
+                "metoprolol (Toprol XL)",
+                "diltiazem (Tiazac)",
+                "plendil (Felodipine)",
+                "terazosin (Hytrin)",
+                "candesartan (Atacand)",
+                "valsartan (Diovan)",
+                "furosemide",
+                "reserpine",
+                "hydralazine",
+                "carvedilol (Coreg)",
+                "triamterene / hydrochlorothiazide (Dyazide)",
+                "metoprolol / hydrochlorothiazide(Lopressor HCT)",
+                "benazepril / hydrochlorothiazide (Lotensin HCT)",
+                "lisinopril / hydrochlorothiazide (Zestoretic)",
+                "candesartan / hydrochlorothiazide (Atacand HCT)",
+                "valsartan / hydrochlorothiazide (Diovan HCT)",
+                "amlodipine / benazepril (Lotrel)"
+              ]
+            },
+            {
+              "name": "Blinded fenofibrate or placebo plus simvastatin",
+              "type": "DRUG",
+              "description": "Double blind administration of 160 mg/day of fenofibrate in participants with estimated glomerular filtration rate (eGFR) ≥50 mL/min/1.73m2 or 54 mg/day in patients with eGFR \\<50 mL/min/1.73m2 or matching placebo in combination with open label simvastatin 20 - 40 mg/day.",
+              "arm_group_labels": [
+                "Lipid Trial: fenofibrate",
+                "Lipid Trial: placebo"
+              ],
+              "other_names": [
+                "fenofibrate (Tricor)"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "First Occurrence of a Major Cardiovascular Event (MCE); Specifically Nonfatal Heart Attack, Nonfatal Stroke, or Cardiovascular Death (Measured Throughout the Study) in the Glycemia Trial.",
+              "description": "Time to first occurrence of nonfatal myocardial infarction, nonfatal stroke, or cardiovascular death. This was the primary outcome measure in all three trials: Glycemia (all participants), Blood Pressure (subgroup of participants not in Lipid Trial), and Lipid (subgroup of participants not in Blood Pressure Trial).\n\nIn the Glycemia Trial, a finding of higher mortality in the intensive arm group led to an early discontinuation of therapy after a mean of 3.5 years of follow-up. Intensive arm participants were transitioned to standard arm strategy over a period of 0.2 year and followed for an additional 1.2 years to the planned end of the Glycemia Trial while participating in one of the other sub-trials (BP or Lipid) to their planned completion.",
+              "time_frame": "4.9 years"
+            },
+            {
+              "measure": "First Occurrence of Major Cardiovascular Event (MCE) in the Blood Pressure Trial.",
+              "description": "Time to first occurrence of nonfatal myocardial infarction, nonfatal stroke, or cardiovascular death. Primary outcome for Blood Pressure Trial.",
+              "time_frame": "4.7 years"
+            },
+            {
+              "measure": "First Occurrence of Major Cardiovascular Event (MCE) in the Lipid Trial.",
+              "description": "Time to first occurrence of nonfatal myocardial infarction, nonfatal stroke, or cardiovascular death in Lipid Trial participants.",
+              "time_frame": "4.7 years"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "First Occurrence of a Major Cardiovascular Event (MCE); Specifically Nonfatal Heart Attack, Nonfatal Stroke, or Cardiovascular Death (Measured Throughout the Study) in the Glycemia Trial.",
+              "description": "Time to first occurrence of nonfatal myocardial infarction, nonfatal stroke, or cardiovascular death. This was the primary outcome measure in all three trials: Glycemia (all participants), Blood Pressure (subgroup of participants not in Lipid Trial), and Lipid (subgroup of participants not in Blood Pressure Trial).\n\nIn the Glycemia Trial, a finding of higher mortality in the intensive arm group led to an early discontinuation of therapy after a mean of 3.5 years of follow-up. Intensive arm participants were transitioned to standard arm strategy over a period of 0.2 year and followed for an additional 1.2 years to the planned end of the Glycemia Trial while participating in one of the other sub-trials (BP or Lipid) to their planned completion.",
+              "time_frame": "4.9 years"
+            },
+            {
+              "measure": "First Occurrence of Major Cardiovascular Event (MCE) in the Blood Pressure Trial.",
+              "description": "Time to first occurrence of nonfatal myocardial infarction, nonfatal stroke, or cardiovascular death. Primary outcome for Blood Pressure Trial.",
+              "time_frame": "4.7 years"
+            },
+            {
+              "measure": "First Occurrence of Major Cardiovascular Event (MCE) in the Lipid Trial.",
+              "description": "Time to first occurrence of nonfatal myocardial infarction, nonfatal stroke, or cardiovascular death in Lipid Trial participants.",
+              "time_frame": "4.7 years"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": true,
+          "actual": true,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00001870",
+      "split": "heldout",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.371+00:00",
+      "duration_seconds": 0.00248,
+      "actual_response_file": "actual-cards/heldout/NCT00001870.json",
+      "actual_response_sha256": "03cba9d5b2dd6fad3ead11be882f700501fe2aba2079cf9bfc571e54f4cd3da7",
+      "source_url": "https://clinicaltrials.gov/study/NCT00001870",
+      "snapshot_sha256": "145c3a6b3d4bf9baed5603922699487e6b16afd8c4684fcdd192bf467255237c",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT00001870",
+          "actual": "NCT00001870",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Study of the Effects of Vitamin C on Patients With Type 2 Diabetes",
+          "actual": "Study of the Effects of Vitamin C on Patients With Type 2 Diabetes",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Diabetes Mellitus, Non-Insulin Dependent",
+            "Non-Insulin Dependent"
+          ],
+          "actual": [
+            "Diabetes Mellitus, Non-Insulin Dependent",
+            "Non-Insulin Dependent"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2004-12",
+          "actual": "2004-12",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": null,
+          "actual": null,
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": null,
+            "intervention_model": null,
+            "masking": null,
+            "who_masked": null
+          },
+          "actual": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": null,
+            "intervention_model": null,
+            "masking": null,
+            "who_masked": null
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 150,
+            "type": null
+          },
+          "actual": {
+            "count": 150,
+            "type": null
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "INCLUSION CRITERIA:\n\nDIABETIC SUBJECTS:\n\nMales and non-pregnant females between the ages of 18 and 65 in good general health except for type 2 diabetes controlled with diet and/or oral hypoglycemic agents.\n\nPatients found to have plasma vitamin C levels less than 40 microliter M, will be enrolled into the protocol and taken off hypoglycemic agents approximately one week prior to each study.\n\nVITAMIN C-DEFICIENT CLINICAL RESEARCH VOLUNTEERS:\n\nAdults between the ages of 18 and 35 in good general health and on no drugs or medications.\n\nEXCLUSION CRITERIA:\n\nALL SUBJECTS:\n\nPregnancy, liver disease, pulmonary disease, renal insufficiency, coronary heart disease, heart failure, peripheral vascular disease, coagulopathy, disease predisposing to vasculitis or Raynaud's phenomenon, bleeding disorders, kidney stones, glucose-6-phosphate dehydrogenase deficiency, family history of hemochromatosis/iron overload, platelet count less than 150,000/ml blood, prothrombin time/partial thromboplastin time (PT/PTT) greater than 1 second above the normal range, inability to give informed consent for all procedures, and positive tests for HIV, or hepatitis B or C.\n\nDIABETIC SUBJECTS:\n\nIn addition, to the above exclusion criteria, the presence of proteinuria greater than 500 mg/24 hrs, proliferative retinipathy, or diabetic neuropathy\n\nVITAMIN C-DEFICIENT CLINICAL RESEARCH VOLUNTEERS:\n\nAll the above exclusion criteria.",
+            "healthy_volunteers": true,
+            "sex": "ALL",
+            "minimum_age": null,
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "INCLUSION CRITERIA:\n\nDIABETIC SUBJECTS:\n\nMales and non-pregnant females between the ages of 18 and 65 in good general health except for type 2 diabetes controlled with diet and/or oral hypoglycemic agents.\n\nPatients found to have plasma vitamin C levels less than 40 microliter M, will be enrolled into the protocol and taken off hypoglycemic agents approximately one week prior to each study.\n\nVITAMIN C-DEFICIENT CLINICAL RESEARCH VOLUNTEERS:\n\nAdults between the ages of 18 and 35 in good general health and on no drugs or medications.\n\nEXCLUSION CRITERIA:\n\nALL SUBJECTS:\n\nPregnancy, liver disease, pulmonary disease, renal insufficiency, coronary heart disease, heart failure, peripheral vascular disease, coagulopathy, disease predisposing to vasculitis or Raynaud's phenomenon, bleeding disorders, kidney stones, glucose-6-phosphate dehydrogenase deficiency, family history of hemochromatosis/iron overload, platelet count less than 150,000/ml blood, prothrombin time/partial thromboplastin time (PT/PTT) greater than 1 second above the normal range, inability to give informed consent for all procedures, and positive tests for HIV, or hepatitis B or C.\n\nDIABETIC SUBJECTS:\n\nIn addition, to the above exclusion criteria, the presence of proteinuria greater than 500 mg/24 hrs, proliferative retinipathy, or diabetic neuropathy\n\nVITAMIN C-DEFICIENT CLINICAL RESEARCH VOLUNTEERS:\n\nAll the above exclusion criteria.",
+            "healthy_volunteers": true,
+            "sex": "ALL",
+            "minimum_age": null,
+            "maximum_age": null,
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": null,
+          "actual": null,
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Acetylcholine",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": null,
+              "other_names": null
+            }
+          ],
+          "actual": [
+            {
+              "name": "Acetylcholine",
+              "type": "DRUG",
+              "description": null,
+              "arm_group_labels": null,
+              "other_names": null
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": null,
+          "actual": null,
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": false,
+          "actual": false,
+          "source_location": "$.hasResults"
+        }
+      ]
+    },
+    {
+      "nct_id": "NCT00001723",
+      "split": "heldout",
+      "status": "passed",
+      "started_at_utc": "2026-11-23T15:29:01.374+00:00",
+      "duration_seconds": 0.003797,
+      "actual_response_file": "actual-cards/heldout/NCT00001723.json",
+      "actual_response_sha256": "7e261ed3c6adfdf0c356e014cde64db8c1381c11285a1f2970b34c74677439c2",
+      "source_url": "https://clinicaltrials.gov/study/NCT00001723",
+      "snapshot_sha256": "a2812840683e8646f5d1510e6e310555538f38f341352d8e02488e6411151a25",
+      "review_status": "pending_human_review",
+      "reviewed_by": [],
+      "checks": [
+        {
+          "path": "identity.nct_id",
+          "passed": true,
+          "expected": "NCT00001723",
+          "actual": "NCT00001723",
+          "source_location": "$.protocolSection.identificationModule.nctId"
+        },
+        {
+          "path": "identity.title",
+          "passed": true,
+          "expected": "Safety and Efficacy of Xenical in Children and Adolescents With Obesity-Related Diseases",
+          "actual": "Safety and Efficacy of Xenical in Children and Adolescents With Obesity-Related Diseases",
+          "source_location": "$.protocolSection.identificationModule.briefTitle"
+        },
+        {
+          "path": "identity.conditions",
+          "passed": true,
+          "expected": [
+            "Diabetes Mellitus",
+            "Hypertension",
+            "Metabolic Disease",
+            "Obesity",
+            "Sleep Apnea Syndrome"
+          ],
+          "actual": [
+            "Diabetes Mellitus",
+            "Hypertension",
+            "Metabolic Disease",
+            "Obesity",
+            "Sleep Apnea Syndrome"
+          ],
+          "source_location": "$.protocolSection.conditionsModule.conditions"
+        },
+        {
+          "path": "status.study_type",
+          "passed": true,
+          "expected": "INTERVENTIONAL",
+          "actual": "INTERVENTIONAL",
+          "source_location": "$.protocolSection.designModule.studyType"
+        },
+        {
+          "path": "status.overall_status",
+          "passed": true,
+          "expected": "COMPLETED",
+          "actual": "COMPLETED",
+          "source_location": "$.protocolSection.statusModule.overallStatus"
+        },
+        {
+          "path": "status.completion_date",
+          "passed": true,
+          "expected": "2011-10",
+          "actual": "2011-10",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.date"
+        },
+        {
+          "path": "status.completion_date_type",
+          "passed": true,
+          "expected": "ACTUAL",
+          "actual": "ACTUAL",
+          "source_location": "$.protocolSection.statusModule.completionDateStruct.type"
+        },
+        {
+          "path": "design",
+          "passed": true,
+          "expected": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "QUADRUPLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "CARE_PROVIDER",
+              "INVESTIGATOR",
+              "OUTCOMES_ASSESSOR"
+            ]
+          },
+          "actual": {
+            "phases": [
+              "PHASE2"
+            ],
+            "allocation": "RANDOMIZED",
+            "intervention_model": "PARALLEL",
+            "masking": "QUADRUPLE",
+            "who_masked": [
+              "PARTICIPANT",
+              "CARE_PROVIDER",
+              "INVESTIGATOR",
+              "OUTCOMES_ASSESSOR"
+            ]
+          },
+          "source_location": "$.protocolSection.designModule"
+        },
+        {
+          "path": "enrollment",
+          "passed": true,
+          "expected": {
+            "count": 200,
+            "type": "ACTUAL"
+          },
+          "actual": {
+            "count": 200,
+            "type": "ACTUAL"
+          },
+          "source_location": "$.protocolSection.designModule.enrollmentInfo"
+        },
+        {
+          "path": "population",
+          "passed": true,
+          "expected": {
+            "eligibility_criteria": "* INCLUSION CRITERIA:\n\nGood general health. Individuals taking medications for obesity-related comorbid conditions will not be excluded.\n\nObesity: body mass index for age and triceps skinfold above the 95th percentile (determined by NHANES I age-, sex-, and race- specific data). All subjects will be required to be over 60 kg in body weight.\n\nEvidence for a quantifiable obesity-related comorbidity. Examples include: systolic or diastolic hypertension (determined by age-specific charts); frank Type 2 diabetes, impaired glucose tolerance assessed by oral glucose tolerance testing; hyperinsulinemia (defined as a fasting insulin greater than 15 mIU/mL); significant hyperlipidemia (total cholesterol greater than 200 mg/dL, LDL cholesterol greater than 129 mg/dL or fasting triglycerides greater than 200 mg/dL); hepatic steatosis (SGPT or SGOT above normal range with negative hepatitis studies) or sleep apnea documented by a sleep study.\n\nAge 12 to 17 years at the start of the study.\n\nFor girls with childbearing potential, a negative pregnancy test before taking and while taking study medication. Sexually active females must be using an effective form of birth control. These methods include total abstinence (no sex), oral contraceptives (\"the pill\"), an intrauterine device (IUD), levonogestrol implants (Norplant), or medroxyprogesterone acetate injections (Depo-provera shots). If one of these cannot be used, contraceptive foam with a condom is recommended.\n\nRace of all four grandparents self-identified as either all Caucasian or all African American.\n\nEXCLUSION CRITERIA:\n\nVolunteers will be excluded (and referred to non-experimental treatment programs) for the following reasons:\n\nPresence of renal, hepatic (other than obesity-related steatosis), gastrointestinal, most endocrinologic (e.g., Cushing syndrome), or pulmonary disorders (other than either asthma not requiring continuous medication or sleep apnea-related disorders);\n\nAdolescent girls who are pregnant, who are currently nursing an infant, or who are having unprotected intercourse;\n\nIndividuals who have, or whose parent or guardians have, current substance abuse or a psychiatric disorder or other condition which, in the opinion of the investigators, would impede competence or compliance or possibly hinder completion of the study;\n\nSubjects who regularly use prescription medications unrelated to the complications of obesity. Oral contraceptive use will be permitted, provided the contraceptive has been used for at least two months before starting study medication. The use of over-the-counter and prescription medications will be reviewed on a case-by-case basis; depending on the medication, subjects who have continued to take prescription medication for at least 3 months prior to study entry may be eligible;\n\nRecent use (within six months) of anorexiant medications for the purpose of weight reduction;\n\nInability to undergo MRI (e.g., volunteers with metal within their bodies including cardiac pacemakers, neural pacemakers, aneurysmal clips, shrapnel, ocular foreign bodies, cochlear implants, non-detachable electronic or electromechanical devices such as infusion pumps, nerve stimulators, bone growth stimulators, etc. that are contraindications).\n\nFor pilot study participants, hypersensitivity or allergy to methylene blue. Individuals with documented G6PD deficiency will be excluded.\n\nINCLUSION CRITERIA: HEALTHY CONTROL CHILDREN AND ADOLESCENTS:\n\nVolunteers will qualify for inclusion if they meet the following criteria:\n\n1. Good general health.\n2. Age 12-17 years at study entry.\n3. Body mass index (BMI) for age above the 5th percentile and below 85th percentile, which is considered normal weight by CDC growth chart standards.\n4. For females with childbearing potential, a negative pregnancy test at initial evaluation.\n5. Race of all four grandparents self-identified as either all Caucasian or all African American.\n\nEXCLUSION CRITERIA: HEALTHY CONTROL CHILDREN AND ADOLESCENTS:\n\nVolunteers will be excluded for the following reasons:\n\n1. Presence of past or present medical problems which would impair performance during the exercise tests;\n2. Females who are pregnant, or who are currently nursing an infant;\n3. Individuals who have, or whose parent or guardian has, current substance abuse or a psychiatric disorder or other condition that in the opinion of the investigators would impede competence or possibly hinder completion of the study;\n4. Recent weight change of more than 3% of body weight in the past two months;\n5. Recent use (within six months) of anorexiant medications for the purpose of weight reduction;\n6. Physical impairments that would prevent completion of either the walk/run test or the cycle test.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "12 Years",
+            "maximum_age": "17 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "actual": {
+            "eligibility_criteria": "* INCLUSION CRITERIA:\n\nGood general health. Individuals taking medications for obesity-related comorbid conditions will not be excluded.\n\nObesity: body mass index for age and triceps skinfold above the 95th percentile (determined by NHANES I age-, sex-, and race- specific data). All subjects will be required to be over 60 kg in body weight.\n\nEvidence for a quantifiable obesity-related comorbidity. Examples include: systolic or diastolic hypertension (determined by age-specific charts); frank Type 2 diabetes, impaired glucose tolerance assessed by oral glucose tolerance testing; hyperinsulinemia (defined as a fasting insulin greater than 15 mIU/mL); significant hyperlipidemia (total cholesterol greater than 200 mg/dL, LDL cholesterol greater than 129 mg/dL or fasting triglycerides greater than 200 mg/dL); hepatic steatosis (SGPT or SGOT above normal range with negative hepatitis studies) or sleep apnea documented by a sleep study.\n\nAge 12 to 17 years at the start of the study.\n\nFor girls with childbearing potential, a negative pregnancy test before taking and while taking study medication. Sexually active females must be using an effective form of birth control. These methods include total abstinence (no sex), oral contraceptives (\"the pill\"), an intrauterine device (IUD), levonogestrol implants (Norplant), or medroxyprogesterone acetate injections (Depo-provera shots). If one of these cannot be used, contraceptive foam with a condom is recommended.\n\nRace of all four grandparents self-identified as either all Caucasian or all African American.\n\nEXCLUSION CRITERIA:\n\nVolunteers will be excluded (and referred to non-experimental treatment programs) for the following reasons:\n\nPresence of renal, hepatic (other than obesity-related steatosis), gastrointestinal, most endocrinologic (e.g., Cushing syndrome), or pulmonary disorders (other than either asthma not requiring continuous medication or sleep apnea-related disorders);\n\nAdolescent girls who are pregnant, who are currently nursing an infant, or who are having unprotected intercourse;\n\nIndividuals who have, or whose parent or guardians have, current substance abuse or a psychiatric disorder or other condition which, in the opinion of the investigators, would impede competence or compliance or possibly hinder completion of the study;\n\nSubjects who regularly use prescription medications unrelated to the complications of obesity. Oral contraceptive use will be permitted, provided the contraceptive has been used for at least two months before starting study medication. The use of over-the-counter and prescription medications will be reviewed on a case-by-case basis; depending on the medication, subjects who have continued to take prescription medication for at least 3 months prior to study entry may be eligible;\n\nRecent use (within six months) of anorexiant medications for the purpose of weight reduction;\n\nInability to undergo MRI (e.g., volunteers with metal within their bodies including cardiac pacemakers, neural pacemakers, aneurysmal clips, shrapnel, ocular foreign bodies, cochlear implants, non-detachable electronic or electromechanical devices such as infusion pumps, nerve stimulators, bone growth stimulators, etc. that are contraindications).\n\nFor pilot study participants, hypersensitivity or allergy to methylene blue. Individuals with documented G6PD deficiency will be excluded.\n\nINCLUSION CRITERIA: HEALTHY CONTROL CHILDREN AND ADOLESCENTS:\n\nVolunteers will qualify for inclusion if they meet the following criteria:\n\n1. Good general health.\n2. Age 12-17 years at study entry.\n3. Body mass index (BMI) for age above the 5th percentile and below 85th percentile, which is considered normal weight by CDC growth chart standards.\n4. For females with childbearing potential, a negative pregnancy test at initial evaluation.\n5. Race of all four grandparents self-identified as either all Caucasian or all African American.\n\nEXCLUSION CRITERIA: HEALTHY CONTROL CHILDREN AND ADOLESCENTS:\n\nVolunteers will be excluded for the following reasons:\n\n1. Presence of past or present medical problems which would impair performance during the exercise tests;\n2. Females who are pregnant, or who are currently nursing an infant;\n3. Individuals who have, or whose parent or guardian has, current substance abuse or a psychiatric disorder or other condition that in the opinion of the investigators would impede competence or possibly hinder completion of the study;\n4. Recent weight change of more than 3% of body weight in the past two months;\n5. Recent use (within six months) of anorexiant medications for the purpose of weight reduction;\n6. Physical impairments that would prevent completion of either the walk/run test or the cycle test.",
+            "healthy_volunteers": false,
+            "sex": "ALL",
+            "minimum_age": "12 Years",
+            "maximum_age": "17 Years",
+            "interpretation": "Eligibility criteria only; not actual enrolled-participant characteristics."
+          },
+          "source_location": "$.protocolSection.eligibilityModule; specification: population.interpretation"
+        },
+        {
+          "path": "arms",
+          "passed": true,
+          "expected": [
+            {
+              "label": "Placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Matching placebo 120 mg TID x 6 months plus a behavioral weight loss program",
+              "intervention_names": [
+                "Drug: Placebo"
+              ]
+            },
+            {
+              "label": "Orlistat",
+              "type": "EXPERIMENTAL",
+              "description": "Orlistat 120 mg TID for 6 months plus a behavioral weight loss program",
+              "intervention_names": [
+                "Drug: Orlistat"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "label": "Placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Matching placebo 120 mg TID x 6 months plus a behavioral weight loss program",
+              "intervention_names": [
+                "Drug: Placebo"
+              ]
+            },
+            {
+              "label": "Orlistat",
+              "type": "EXPERIMENTAL",
+              "description": "Orlistat 120 mg TID for 6 months plus a behavioral weight loss program",
+              "intervention_names": [
+                "Drug: Orlistat"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.armGroups"
+        },
+        {
+          "path": "interventions",
+          "passed": true,
+          "expected": [
+            {
+              "name": "Orlistat",
+              "type": "DRUG",
+              "description": "Subjects receive drug for 6 months plus a 12 week intensive behavioral weight los program. Subjects return for monthly visits for 3 more months.",
+              "arm_group_labels": [
+                "Orlistat"
+              ],
+              "other_names": [
+                "Xenical (orlistat)capsules"
+              ]
+            },
+            {
+              "name": "Placebo",
+              "type": "DRUG",
+              "description": "Subjects receive drug for 6 months plus a 12 week intensive behavioral weight los program. Subjects return for monthly visits for 3 more months.",
+              "arm_group_labels": [
+                "Placebo"
+              ],
+              "other_names": [
+                "Placebo capsule"
+              ]
+            }
+          ],
+          "actual": [
+            {
+              "name": "Orlistat",
+              "type": "DRUG",
+              "description": "Subjects receive drug for 6 months plus a 12 week intensive behavioral weight los program. Subjects return for monthly visits for 3 more months.",
+              "arm_group_labels": [
+                "Orlistat"
+              ],
+              "other_names": [
+                "Xenical (orlistat)capsules"
+              ]
+            },
+            {
+              "name": "Placebo",
+              "type": "DRUG",
+              "description": "Subjects receive drug for 6 months plus a 12 week intensive behavioral weight los program. Subjects return for monthly visits for 3 more months.",
+              "arm_group_labels": [
+                "Placebo"
+              ],
+              "other_names": [
+                "Placebo capsule"
+              ]
+            }
+          ],
+          "source_location": "$.protocolSection.armsInterventionsModule.interventions"
+        },
+        {
+          "path": "primary_outcomes",
+          "passed": true,
+          "expected": [
+            {
+              "measure": "Change in BMI Standard Deviation Score",
+              "description": "Body Mass index standard deviation score calculated for age and sex according to Centers for Disease Control standards. See: Kuczmarski RJ, Ogden CL, Guo SS, Grummer-Strawn LM, Flegal KM, Mei Z et al. 2000 CDC Growth Charts for the United States: methods and development. Vital Health Stat 11 2002; (246): 1-190.",
+              "time_frame": "baseline to 6 months"
+            }
+          ],
+          "actual": [
+            {
+              "measure": "Change in BMI Standard Deviation Score",
+              "description": "Body Mass index standard deviation score calculated for age and sex according to Centers for Disease Control standards. See: Kuczmarski RJ, Ogden CL, Guo SS, Grummer-Strawn LM, Flegal KM, Mei Z et al. 2000 CDC Growth Charts for the United States: methods and development. Vital Health Stat 11 2002; (246): 1-190.",
+              "time_frame": "baseline to 6 months"
+            }
+          ],
+          "source_location": "$.protocolSection.outcomesModule.primaryOutcomes"
+        },
+        {
+          "path": "results.has_results",
+          "passed": true,
+          "expected": true,
+          "actual": true,
+          "source_location": "$.hasResults"
+        }
+      ]
+    }
+  ],
+  "provenance_before": {
+    "candidate": [
+      {
+        "file": "data/type2diabetes/manifest.json",
+        "expected_sha256": "e2b20587a419556be4337e9a465831962d2606f4acf21c36472a31ade6d24c98",
+        "actual_sha256": "e2b20587a419556be4337e9a465831962d2606f4acf21c36472a31ade6d24c98",
+        "matches": true
+      },
+      {
+        "file": "data/type2diabetes/review/reference-annotations.json",
+        "expected_sha256": "7253922b4ce9bd21e6a4da767083fcaa315a5d12de5c408552e804ab62fddee8",
+        "actual_sha256": "7253922b4ce9bd21e6a4da767083fcaa315a5d12de5c408552e804ab62fddee8",
+        "matches": true
+      },
+      {
+        "file": "docs/EVALUATION.md",
+        "expected_sha256": "5c2c3c06a168ac8ca324910f80f71412a7222f87b047837c895a8d987001051d",
+        "actual_sha256": "5c2c3c06a168ac8ca324910f80f71412a7222f87b047837c895a8d987001051d",
+        "matches": true
+      },
+      {
+        "file": "docs/FIELD_DICTIONARY.md",
+        "expected_sha256": "aca8360bd13cd5430d3bca6cc2c9be036f8859bb3e7a3500a2eeb25d506a0875",
+        "actual_sha256": "aca8360bd13cd5430d3bca6cc2c9be036f8859bb3e7a3500a2eeb25d506a0875",
+        "matches": true
+      },
+      {
+        "file": "pyproject.toml",
+        "expected_sha256": "075fd8197c0fef3dbb35a07ad1beddd113cd3612941714c9834d86933b5720d1",
+        "actual_sha256": "075fd8197c0fef3dbb35a07ad1beddd113cd3612941714c9834d86933b5720d1",
+        "matches": true
+      },
+      {
+        "file": "requirements.txt",
+        "expected_sha256": "e7ad2503ab50ceda942cce9044c41afdae172f469f94d606606ae37de7e9d591",
+        "actual_sha256": "e7ad2503ab50ceda942cce9044c41afdae172f469f94d606606ae37de7e9d591",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/__init__.py",
+        "expected_sha256": "f46a410a4263eaa4c8f587e8e953e7b8a1b9aecca479b5635bd095ff27e95ef4",
+        "actual_sha256": "f46a410a4263eaa4c8f587e8e953e7b8a1b9aecca479b5635bd095ff27e95ef4",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/agent_prompt.txt",
+        "expected_sha256": "ed2dd9e9771ff82bfd0b4a0a3609990bb929148ec75d36c3f54fe634dd7b78a4",
+        "actual_sha256": "ed2dd9e9771ff82bfd0b4a0a3609990bb929148ec75d36c3f54fe634dd7b78a4",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/agent.py",
+        "expected_sha256": "1887499a542e248831dbf5a15b0dd7ff68a7a301635fd80acff0e36943212d46",
+        "actual_sha256": "1887499a542e248831dbf5a15b0dd7ff68a7a301635fd80acff0e36943212d46",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/app.py",
+        "expected_sha256": "d23332e037feb69cfcf1bef586ba12741cba466c8f43f651531fbfef1b98d0a2",
+        "actual_sha256": "d23332e037feb69cfcf1bef586ba12741cba466c8f43f651531fbfef1b98d0a2",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/config.py",
+        "expected_sha256": "82ac2f4d3d8bc317eda6f38300f0360c25d3279e860d85c6978cd4e7c433fde1",
+        "actual_sha256": "82ac2f4d3d8bc317eda6f38300f0360c25d3279e860d85c6978cd4e7c433fde1",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/disease.py",
+        "expected_sha256": "77a67c33b9721f8a282bb4b1571d982f1ee05b6b3f5a93e23ba448c247dea85c",
+        "actual_sha256": "77a67c33b9721f8a282bb4b1571d982f1ee05b6b3f5a93e23ba448c247dea85c",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/gateway.py",
+        "expected_sha256": "8141e8dccf0b11f5c29de70757d2c3332d2071702309e4eac69cc9bfa9704468",
+        "actual_sha256": "8141e8dccf0b11f5c29de70757d2c3332d2071702309e4eac69cc9bfa9704468",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/mapping.py",
+        "expected_sha256": "c7cf120edc12d7c4b9898ac97e3df8c3771804298e4f871b0c0686f6ddfc9226",
+        "actual_sha256": "c7cf120edc12d7c4b9898ac97e3df8c3771804298e4f871b0c0686f6ddfc9226",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/registry.py",
+        "expected_sha256": "704e4f92251826eb748eda560f8826b77df0577519f8accca1dbad4a4605baa8",
+        "actual_sha256": "704e4f92251826eb748eda560f8826b77df0577519f8accca1dbad4a4605baa8",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/review.py",
+        "expected_sha256": "4f68d6bba6496d2225095c38c63b51036ca959e1f02d268aadc0082f9e42a21b",
+        "actual_sha256": "4f68d6bba6496d2225095c38c63b51036ca959e1f02d268aadc0082f9e42a21b",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/service.py",
+        "expected_sha256": "37f42d47ad2e8628681499f3d7465632dfa92996cefb05e09cae05e8233bb8b6",
+        "actual_sha256": "37f42d47ad2e8628681499f3d7465632dfa92996cefb05e09cae05e8233bb8b6",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/tools/__init__.py",
+        "expected_sha256": "797e470430791b27480c54d882bd279a2618c5a9ac725ff73aa3bfbe880e49d8",
+        "actual_sha256": "797e470430791b27480c54d882bd279a2618c5a9ac725ff73aa3bfbe880e49d8",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/tools/find_completed_trials.py",
+        "expected_sha256": "02f7c87a0835cd7dfdac91c9ea19ae641558d5c02d1dfcc8285d810d5f705997",
+        "actual_sha256": "02f7c87a0835cd7dfdac91c9ea19ae641558d5c02d1dfcc8285d810d5f705997",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/tools/get_trial_evidence_card.py",
+        "expected_sha256": "566ec4cc1bb56b1271c57738fc64cf802c0dfd6f5bb5faf333cdebd85b2f2485",
+        "actual_sha256": "566ec4cc1bb56b1271c57738fc64cf802c0dfd6f5bb5faf333cdebd85b2f2485",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/verify_http.py",
+        "expected_sha256": "f2cc0ca898bb2273635f5f90f862cf8f3e51e4d561775a82ab345c2713e02fc3",
+        "actual_sha256": "f2cc0ca898bb2273635f5f90f862cf8f3e51e4d561775a82ab345c2713e02fc3",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/verify.py",
+        "expected_sha256": "f748a9adcaeea3d7a5d455da0f05dd3f371e149b53abd53d2630dbc0b96341aa",
+        "actual_sha256": "f748a9adcaeea3d7a5d455da0f05dd3f371e149b53abd53d2630dbc0b96341aa",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/webapp.py",
+        "expected_sha256": "9ab3aa201670d1e01dd216566a072d29fb8e1de8cfcf9006259843260b82d8b3",
+        "actual_sha256": "9ab3aa201670d1e01dd216566a072d29fb8e1de8cfcf9006259843260b82d8b3",
+        "matches": true
+      },
+      {
+        "file": "uv.lock",
+        "expected_sha256": "32f80ec58efc74d3add2ec9819fdd8dba8757c7e149359a1d7bc15977d55d936",
+        "actual_sha256": "32f80ec58efc74d3add2ec9819fdd8dba8757c7e149359a1d7bc15977d55d936",
+        "matches": true
+      }
+    ],
+    "sources": [
+      {
+        "nct_id": "NCT03244800",
+        "split": "development",
+        "file": "public/development/NCT03244800.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT03244800",
+        "expected_sha256": "9c397473ff92bdbdc7df4203ef7e38098a40ded5f1f6ed493e9097d3a86563cf",
+        "actual_sha256": "9c397473ff92bdbdc7df4203ef7e38098a40ded5f1f6ed493e9097d3a86563cf",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT05790681",
+        "split": "development",
+        "file": "public/development/NCT05790681.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT05790681",
+        "expected_sha256": "a48024687bd5493e93e769a34520b786a8f2d112d8d699bd830b630c337364fc",
+        "actual_sha256": "a48024687bd5493e93e769a34520b786a8f2d112d8d699bd830b630c337364fc",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT04214600",
+        "split": "development",
+        "file": "public/development/NCT04214600.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT04214600",
+        "expected_sha256": "eae68f66d47001072cff7662ff7e17949bc55374e72aa1b56c7fb6b3f33deda9",
+        "actual_sha256": "eae68f66d47001072cff7662ff7e17949bc55374e72aa1b56c7fb6b3f33deda9",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT01596244",
+        "split": "development",
+        "file": "public/development/NCT01596244.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT01596244",
+        "expected_sha256": "88cafa7a07cdbfadd00d5ae7df376fd0f32404cbef34d48e42d69892099efe92",
+        "actual_sha256": "88cafa7a07cdbfadd00d5ae7df376fd0f32404cbef34d48e42d69892099efe92",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT01614769",
+        "split": "development",
+        "file": "public/development/NCT01614769.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT01614769",
+        "expected_sha256": "55dafa1bd395e17d62380eb5cb931e623f856c64d132eaf0b50ee49354caeff2",
+        "actual_sha256": "55dafa1bd395e17d62380eb5cb931e623f856c64d132eaf0b50ee49354caeff2",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT02811055",
+        "split": "development",
+        "file": "public/development/NCT02811055.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT02811055",
+        "expected_sha256": "dbe35f935ed6da0bad00efbf1b8770ab00b3de6ecd0b18b9371f0ec683156b3d",
+        "actual_sha256": "dbe35f935ed6da0bad00efbf1b8770ab00b3de6ecd0b18b9371f0ec683156b3d",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00004266",
+        "split": "heldout",
+        "file": "public/heldout/NCT00004266.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00004266",
+        "expected_sha256": "0072c47b38ee91871a58dbdeeece970ea339002d28f15d2afac88237ae8daeb8",
+        "actual_sha256": "0072c47b38ee91871a58dbdeeece970ea339002d28f15d2afac88237ae8daeb8",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00000620",
+        "split": "heldout",
+        "file": "public/heldout/NCT00000620.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00000620",
+        "expected_sha256": "60c8ec2b1bd38f9322b452a222c04d1b3d6eac8b28ac135127eaa32275ec914a",
+        "actual_sha256": "60c8ec2b1bd38f9322b452a222c04d1b3d6eac8b28ac135127eaa32275ec914a",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00001870",
+        "split": "heldout",
+        "file": "public/heldout/NCT00001870.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00001870",
+        "expected_sha256": "145c3a6b3d4bf9baed5603922699487e6b16afd8c4684fcdd192bf467255237c",
+        "actual_sha256": "145c3a6b3d4bf9baed5603922699487e6b16afd8c4684fcdd192bf467255237c",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00001723",
+        "split": "heldout",
+        "file": "public/heldout/NCT00001723.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00001723",
+        "expected_sha256": "a2812840683e8646f5d1510e6e310555538f38f341352d8e02488e6411151a25",
+        "actual_sha256": "a2812840683e8646f5d1510e6e310555538f38f341352d8e02488e6411151a25",
+        "matches": true
+      }
+    ]
+  },
+  "limitations": [
+    "Assistant reference comparison, not human clinical approval",
+    "Measures fourteen extraction groups, not all card fields or agent answers",
+    "Four held-out source records were annotated only after candidate freeze",
+    "No network, hosted-app, model, effectiveness, or clinical validation claimed"
+  ],
+  "mapper_changed_for_evaluation": false,
+  "provenance_after": {
+    "candidate": [
+      {
+        "file": "data/type2diabetes/manifest.json",
+        "expected_sha256": "e2b20587a419556be4337e9a465831962d2606f4acf21c36472a31ade6d24c98",
+        "actual_sha256": "e2b20587a419556be4337e9a465831962d2606f4acf21c36472a31ade6d24c98",
+        "matches": true
+      },
+      {
+        "file": "data/type2diabetes/review/reference-annotations.json",
+        "expected_sha256": "7253922b4ce9bd21e6a4da767083fcaa315a5d12de5c408552e804ab62fddee8",
+        "actual_sha256": "7253922b4ce9bd21e6a4da767083fcaa315a5d12de5c408552e804ab62fddee8",
+        "matches": true
+      },
+      {
+        "file": "docs/EVALUATION.md",
+        "expected_sha256": "5c2c3c06a168ac8ca324910f80f71412a7222f87b047837c895a8d987001051d",
+        "actual_sha256": "5c2c3c06a168ac8ca324910f80f71412a7222f87b047837c895a8d987001051d",
+        "matches": true
+      },
+      {
+        "file": "docs/FIELD_DICTIONARY.md",
+        "expected_sha256": "aca8360bd13cd5430d3bca6cc2c9be036f8859bb3e7a3500a2eeb25d506a0875",
+        "actual_sha256": "aca8360bd13cd5430d3bca6cc2c9be036f8859bb3e7a3500a2eeb25d506a0875",
+        "matches": true
+      },
+      {
+        "file": "pyproject.toml",
+        "expected_sha256": "075fd8197c0fef3dbb35a07ad1beddd113cd3612941714c9834d86933b5720d1",
+        "actual_sha256": "075fd8197c0fef3dbb35a07ad1beddd113cd3612941714c9834d86933b5720d1",
+        "matches": true
+      },
+      {
+        "file": "requirements.txt",
+        "expected_sha256": "e7ad2503ab50ceda942cce9044c41afdae172f469f94d606606ae37de7e9d591",
+        "actual_sha256": "e7ad2503ab50ceda942cce9044c41afdae172f469f94d606606ae37de7e9d591",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/__init__.py",
+        "expected_sha256": "f46a410a4263eaa4c8f587e8e953e7b8a1b9aecca479b5635bd095ff27e95ef4",
+        "actual_sha256": "f46a410a4263eaa4c8f587e8e953e7b8a1b9aecca479b5635bd095ff27e95ef4",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/agent_prompt.txt",
+        "expected_sha256": "ed2dd9e9771ff82bfd0b4a0a3609990bb929148ec75d36c3f54fe634dd7b78a4",
+        "actual_sha256": "ed2dd9e9771ff82bfd0b4a0a3609990bb929148ec75d36c3f54fe634dd7b78a4",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/agent.py",
+        "expected_sha256": "1887499a542e248831dbf5a15b0dd7ff68a7a301635fd80acff0e36943212d46",
+        "actual_sha256": "1887499a542e248831dbf5a15b0dd7ff68a7a301635fd80acff0e36943212d46",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/app.py",
+        "expected_sha256": "d23332e037feb69cfcf1bef586ba12741cba466c8f43f651531fbfef1b98d0a2",
+        "actual_sha256": "d23332e037feb69cfcf1bef586ba12741cba466c8f43f651531fbfef1b98d0a2",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/config.py",
+        "expected_sha256": "82ac2f4d3d8bc317eda6f38300f0360c25d3279e860d85c6978cd4e7c433fde1",
+        "actual_sha256": "82ac2f4d3d8bc317eda6f38300f0360c25d3279e860d85c6978cd4e7c433fde1",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/disease.py",
+        "expected_sha256": "77a67c33b9721f8a282bb4b1571d982f1ee05b6b3f5a93e23ba448c247dea85c",
+        "actual_sha256": "77a67c33b9721f8a282bb4b1571d982f1ee05b6b3f5a93e23ba448c247dea85c",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/gateway.py",
+        "expected_sha256": "8141e8dccf0b11f5c29de70757d2c3332d2071702309e4eac69cc9bfa9704468",
+        "actual_sha256": "8141e8dccf0b11f5c29de70757d2c3332d2071702309e4eac69cc9bfa9704468",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/mapping.py",
+        "expected_sha256": "c7cf120edc12d7c4b9898ac97e3df8c3771804298e4f871b0c0686f6ddfc9226",
+        "actual_sha256": "c7cf120edc12d7c4b9898ac97e3df8c3771804298e4f871b0c0686f6ddfc9226",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/registry.py",
+        "expected_sha256": "704e4f92251826eb748eda560f8826b77df0577519f8accca1dbad4a4605baa8",
+        "actual_sha256": "704e4f92251826eb748eda560f8826b77df0577519f8accca1dbad4a4605baa8",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/review.py",
+        "expected_sha256": "4f68d6bba6496d2225095c38c63b51036ca959e1f02d268aadc0082f9e42a21b",
+        "actual_sha256": "4f68d6bba6496d2225095c38c63b51036ca959e1f02d268aadc0082f9e42a21b",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/service.py",
+        "expected_sha256": "37f42d47ad2e8628681499f3d7465632dfa92996cefb05e09cae05e8233bb8b6",
+        "actual_sha256": "37f42d47ad2e8628681499f3d7465632dfa92996cefb05e09cae05e8233bb8b6",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/tools/__init__.py",
+        "expected_sha256": "797e470430791b27480c54d882bd279a2618c5a9ac725ff73aa3bfbe880e49d8",
+        "actual_sha256": "797e470430791b27480c54d882bd279a2618c5a9ac725ff73aa3bfbe880e49d8",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/tools/find_completed_trials.py",
+        "expected_sha256": "02f7c87a0835cd7dfdac91c9ea19ae641558d5c02d1dfcc8285d810d5f705997",
+        "actual_sha256": "02f7c87a0835cd7dfdac91c9ea19ae641558d5c02d1dfcc8285d810d5f705997",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/tools/get_trial_evidence_card.py",
+        "expected_sha256": "566ec4cc1bb56b1271c57738fc64cf802c0dfd6f5bb5faf333cdebd85b2f2485",
+        "actual_sha256": "566ec4cc1bb56b1271c57738fc64cf802c0dfd6f5bb5faf333cdebd85b2f2485",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/verify_http.py",
+        "expected_sha256": "f2cc0ca898bb2273635f5f90f862cf8f3e51e4d561775a82ab345c2713e02fc3",
+        "actual_sha256": "f2cc0ca898bb2273635f5f90f862cf8f3e51e4d561775a82ab345c2713e02fc3",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/verify.py",
+        "expected_sha256": "f748a9adcaeea3d7a5d455da0f05dd3f371e149b53abd53d2630dbc0b96341aa",
+        "actual_sha256": "f748a9adcaeea3d7a5d455da0f05dd3f371e149b53abd53d2630dbc0b96341aa",
+        "matches": true
+      },
+      {
+        "file": "src/alz_compass/webapp.py",
+        "expected_sha256": "9ab3aa201670d1e01dd216566a072d29fb8e1de8cfcf9006259843260b82d8b3",
+        "actual_sha256": "9ab3aa201670d1e01dd216566a072d29fb8e1de8cfcf9006259843260b82d8b3",
+        "matches": true
+      },
+      {
+        "file": "uv.lock",
+        "expected_sha256": "32f80ec58efc74d3add2ec9819fdd8dba8757c7e149359a1d7bc15977d55d936",
+        "actual_sha256": "32f80ec58efc74d3add2ec9819fdd8dba8757c7e149359a1d7bc15977d55d936",
+        "matches": true
+      }
+    ],
+    "sources": [
+      {
+        "nct_id": "NCT03244800",
+        "split": "development",
+        "file": "public/development/NCT03244800.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT03244800",
+        "expected_sha256": "9c397473ff92bdbdc7df4203ef7e38098a40ded5f1f6ed493e9097d3a86563cf",
+        "actual_sha256": "9c397473ff92bdbdc7df4203ef7e38098a40ded5f1f6ed493e9097d3a86563cf",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT05790681",
+        "split": "development",
+        "file": "public/development/NCT05790681.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT05790681",
+        "expected_sha256": "a48024687bd5493e93e769a34520b786a8f2d112d8d699bd830b630c337364fc",
+        "actual_sha256": "a48024687bd5493e93e769a34520b786a8f2d112d8d699bd830b630c337364fc",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT04214600",
+        "split": "development",
+        "file": "public/development/NCT04214600.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT04214600",
+        "expected_sha256": "eae68f66d47001072cff7662ff7e17949bc55374e72aa1b56c7fb6b3f33deda9",
+        "actual_sha256": "eae68f66d47001072cff7662ff7e17949bc55374e72aa1b56c7fb6b3f33deda9",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT01596244",
+        "split": "development",
+        "file": "public/development/NCT01596244.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT01596244",
+        "expected_sha256": "88cafa7a07cdbfadd00d5ae7df376fd0f32404cbef34d48e42d69892099efe92",
+        "actual_sha256": "88cafa7a07cdbfadd00d5ae7df376fd0f32404cbef34d48e42d69892099efe92",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT01614769",
+        "split": "development",
+        "file": "public/development/NCT01614769.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT01614769",
+        "expected_sha256": "55dafa1bd395e17d62380eb5cb931e623f856c64d132eaf0b50ee49354caeff2",
+        "actual_sha256": "55dafa1bd395e17d62380eb5cb931e623f856c64d132eaf0b50ee49354caeff2",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT02811055",
+        "split": "development",
+        "file": "public/development/NCT02811055.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT02811055",
+        "expected_sha256": "dbe35f935ed6da0bad00efbf1b8770ab00b3de6ecd0b18b9371f0ec683156b3d",
+        "actual_sha256": "dbe35f935ed6da0bad00efbf1b8770ab00b3de6ecd0b18b9371f0ec683156b3d",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00004266",
+        "split": "heldout",
+        "file": "public/heldout/NCT00004266.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00004266",
+        "expected_sha256": "0072c47b38ee91871a58dbdeeece970ea339002d28f15d2afac88237ae8daeb8",
+        "actual_sha256": "0072c47b38ee91871a58dbdeeece970ea339002d28f15d2afac88237ae8daeb8",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00000620",
+        "split": "heldout",
+        "file": "public/heldout/NCT00000620.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00000620",
+        "expected_sha256": "60c8ec2b1bd38f9322b452a222c04d1b3d6eac8b28ac135127eaa32275ec914a",
+        "actual_sha256": "60c8ec2b1bd38f9322b452a222c04d1b3d6eac8b28ac135127eaa32275ec914a",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00001870",
+        "split": "heldout",
+        "file": "public/heldout/NCT00001870.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00001870",
+        "expected_sha256": "145c3a6b3d4bf9baed5603922699487e6b16afd8c4684fcdd192bf467255237c",
+        "actual_sha256": "145c3a6b3d4bf9baed5603922699487e6b16afd8c4684fcdd192bf467255237c",
+        "matches": true
+      },
+      {
+        "nct_id": "NCT00001723",
+        "split": "heldout",
+        "file": "public/heldout/NCT00001723.json",
+        "source_url": "https://clinicaltrials.gov/study/NCT00001723",
+        "expected_sha256": "a2812840683e8646f5d1510e6e310555538f38f341352d8e02488e6411151a25",
+        "actual_sha256": "a2812840683e8646f5d1510e6e310555538f38f341352d8e02488e6411151a25",
+        "matches": true
+      }
+    ]
+  },
+  "candidate_and_sources_unchanged": true,
+  "overall": {
+    "expected_cards": 10,
+    "expected_groups": 140,
+    "compared_cards": 10,
+    "compared_groups": 140,
+    "matched_groups": 140,
+    "mismatched_groups": 0,
+    "passed_cards": 10,
+    "failed_cards": 0,
+    "field_group_accuracy": 1.0,
+    "full_card_accuracy": 1.0
+  },
+  "by_split": {
+    "development": {
+      "expected_cards": 6,
+      "expected_groups": 84,
+      "compared_cards": 6,
+      "compared_groups": 84,
+      "matched_groups": 84,
+      "mismatched_groups": 0,
+      "passed_cards": 6,
+      "failed_cards": 0,
+      "field_group_accuracy": 1.0,
+      "full_card_accuracy": 1.0
+    },
+    "heldout": {
+      "expected_cards": 4,
+      "expected_groups": 56,
+      "compared_cards": 4,
+      "compared_groups": 56,
+      "matched_groups": 56,
+      "mismatched_groups": 0,
+      "passed_cards": 4,
+      "failed_cards": 0,
+      "field_group_accuracy": 1.0,
+      "full_card_accuracy": 1.0
+    }
+  },
+  "by_field_group": {
+    "identity.nct_id": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "identity.title": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "identity.conditions": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "status.study_type": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "status.overall_status": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "status.completion_date": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "status.completion_date_type": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "design": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "enrollment": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "population": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "arms": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "interventions": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "primary_outcomes": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    },
+    "results.has_results": {
+      "compared": 10,
+      "matched": 10,
+      "mismatched": 0
+    }
+  },
+  "mismatches": [],
+  "finished_at_utc": "2026-11-23T15:29:01.403+00:00",
+  "duration_seconds": 0.084234
+}

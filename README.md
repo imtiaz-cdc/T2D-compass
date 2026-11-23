@@ -8,7 +8,7 @@ T2D Compass is an independent hackathon prototype built with the [GSA MCP server
 
 [Open the app](https://t2d-compass-7474654188777746.aws.databricksapps.com) · [Quick start](QUICKSTART.md) · [Evaluation report](docs/EVALUATION.md) · [Presentation](presentation/README.md) · [Submission checklist](docs/SUBMISSION.md)
 
-The hosted app requires authorized Databricks access. Deployment is reported by the team; access for judges and a current deployed T2D assistant trace still need verification. The [management page](https://dbc-aae0ba16-8727.cloud.databricks.com/apps-v2/app/t2d-compass/overview?o=7474654188777746) is for users with **CAN MANAGE**, not the reviewer entry point.
+The hosted app requires authorized Databricks access. Authorized browser search, card retrieval, scope warnings and exports were verified on November 23. Nine direct browser checks passed. Two hosted assistant attempts failed with `model_authentication_failed` and zero tool calls, including one retry after reopening the app. This is an observed authentication limitation, not a passing live model suite.
 
 ## Problem and mission
 
@@ -76,7 +76,9 @@ uv run python -m alz_compass.verify_http --output eval/type2diabetes/results/my-
 
 The [evaluation report](docs/EVALUATION.md) separates automated software tests, actual MCP tool replays, model evaluation and independent clinical review. **November 12 verification passed 294 tests, lint, live and snapshot MCP replays, local HTTP checks, and generated-package startup.** Reports are under [`eval/type2diabetes/results/submission-2026-11-12/`](eval/type2diabetes/results/submission-2026-11-12/). The preserved October 28 evidence retains its original date.
 
-The frozen baseline contains ten core records (six development/four held-out), one separate active-study exclusion and twelve model scenarios. Independent references, a scored real-model suite and clinical sign-off are **pending**. The final demo video is **pending**. See the [submission checklist](docs/SUBMISSION.md) for remaining evidence and access checks.
+The November 21 archive contains **24 completed model executions** (12 scenarios twice). Chinelo's and Mohammad's supplied reviews report **12/12 scenario passes and 7/7 critical passes in each run**. The November 23 assistant source audit completed all **140 configured reference groups**, with **84/84 development groups, 56/56 held-out groups and 10/10 whole cards matching**. These are separate evidence types; the reference audit does not claim independent human clinical approval.
+
+The dated [delivery package](deliverables/2026-11-23/README.md) includes the updated narrated evidence walkthrough, evaluation PDF, slide deck and public-code-link PDF. [Reference annotations and results](eval/type2diabetes/results/reference-audit-2026-11-23/README.md) preserve actual values, source checks, first-run results and limitations. The frozen baseline remains ten core records plus one separate active-study exclusion.
 
 ## Repository map
 
@@ -86,7 +88,7 @@ pyproject.toml, uv.lock     Package metadata and locked dependencies
 requirements.txt           Locked runtime dependencies for Databricks
 src/alz_compass/            MCP tools, mapping, registry adapter, agent and browser
 tests/                     Software, transport and synthetic model tests
-data/type2diabetes/         Public snapshots, manifests and pending references
+data/type2diabetes/         Public snapshots, manifests and original review form
 eval/type2diabetes/         Scenario suite, bindings and dated evidence
 docs/                      Architecture, evaluation, security and submission
 deploy/                    Packaging template and labeled historical connector
@@ -106,6 +108,8 @@ Only public registry data and labeled synthetic fixtures belong in this project.
 
 ## Team and provenance
 
-Imtiaz leads the project and repository. Chinelo leads delivery and evaluation. Mohammad leads clinical source and interpretation review. Review ownership does not imply that the pending sign-offs are complete.
+Imtiaz leads the project and repository. Chinelo leads delivery and evaluation. Mohammad leads clinical source and interpretation review. Their November 21 documents supply scenario assessments. The November 23 source audit is explicitly assistant-authored and does not sign on either reviewer's behalf.
 
 Adapted from the GSA starter at commit `6e5fb39b4de044de4f39950ded44fa128416f11a`; aligned with the current template structure at `f39249f1768309e3ef8b31742390a4f3a656b5f3` on November 12, 2026. See [provenance](docs/PROVENANCE.md). [MIT license](LICENSE), retaining the original Technology Transformation Services notice. This independent prototype does not imply endorsement by GSA, CDC or any vendor.
+
+The user subsequently reported that the hosted assistant also failed in a private browser session. No successful live assistant result is claimed. Detailed operational diagnostics are retained locally.

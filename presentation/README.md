@@ -1,16 +1,7 @@
 # T2D Compass presentation
 
-[Download the editable PowerPoint deck](T2D-Compass-Hackathon.pptx).
+The updated nine-slide presentation is included in [the November 23 delivery package](../deliverables/2026-11-23/README.md). It covers the research problem, the two-tool workflow, architecture and design choices, evaluation, security, limitations and recorded demonstration.
 
-Prepared November 12, 2026 for T2D Compass version 0.4.0. The nine slides follow the topic coverage of the [official GSA sample deck](https://www.gsa.gov/system/files/MCP-hackathon-sample-deck.pptx): problem, solution, server design, technical decisions, demonstration, evaluation, security and lessons learned. The sample's CDC PLACES implementation and evaluation numbers are not T2D Compass results.
+The evidence distinguishes dated software checks, the 24 November 21 snapshot model executions and attributed scenario scores, the November 23 assistant source audit (140/140 configured groups), and observed live browser behavior. The original October 28 browser capture remains explicitly dated. The narrated demo is an updated recorded-evidence walkthrough with automated narration.
 
-The deck includes the T2D browser capture from October 28 and the 294 passing software tests rerun on November 12. It clearly separates software evidence from the real-model evaluation and clinical review that remain pending. Source references appear in the slide notes.
-
-## Before the final recording
-
-1. Confirm judge access to the [Databricks app](https://t2d-compass-7474654188777746.aws.databricksapps.com).
-2. Run and save a T2D-specific model demonstration, then score the output and complete independent clinical review.
-3. Update the evaluation and access slides only when those results exist. Keep the dated local screenshot labeled unless replacing it with a new verified capture.
-4. Record the demonstrated workflow using [the demo guide](../docs/DEMO.md). The presentation does not replace the required video demonstration.
-
-The current deck makes no clinical-accuracy, treatment-benefit, time-savings or model-quality claim. The dedicated comparison tool and expanded benchmark remain outside the submitted two-tool scope.
+The deck makes no general clinical-accuracy, treatment-benefit, measured time-saving or production-readiness claim. New assistant-authored source annotations do not sign on either human reviewer's behalf.
