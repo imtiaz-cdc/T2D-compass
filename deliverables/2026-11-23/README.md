@@ -1,6 +1,7 @@
 # November 23 delivery files
 
-- [App demonstration MP4 — synthetic narration](01-T2D-Compass-Demo.mp4)
+The demonstration video is supplied separately and is not included in the current repository files.
+
 - [Timed human recording script PDF](review/T2D-Compass-Human-Recording-Script.pdf)
 - [Editable narration TXT](review/T2D-Compass-Human-Recording-Script.txt)
 - [Editor cue sheet](review/T2D-Compass-Editor-Cue-Sheet.txt)

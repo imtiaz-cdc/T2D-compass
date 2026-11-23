@@ -78,7 +78,7 @@ The [evaluation report](docs/EVALUATION.md) separates automated software tests, 
 
 The November 21 archive contains **24 completed model executions** (12 scenarios twice). Chinelo's and Mohammad's supplied reviews report **12/12 scenario passes and 7/7 critical passes in each run**. The November 23 assistant source audit completed all **140 configured reference groups**, with **84/84 development groups, 56/56 held-out groups and 10/10 whole cards matching**. These are separate evidence types; the reference audit does not claim independent human clinical approval.
 
-The dated [delivery package](deliverables/2026-11-23/README.md) includes the 6:54 app walkthrough with fresh browser captures and natural synthetic narration, evaluation PDF, slide deck and public-code-link PDF. Timed human-recording scripts and editor cues accompany the video. [Reference annotations and results](eval/type2diabetes/results/reference-audit-2026-11-23/README.md) preserve actual values, source checks, first-run results and limitations. The frozen baseline remains ten core records plus one separate active-study exclusion.
+The dated [delivery package](deliverables/2026-11-23/README.md) includes the evaluation PDF, slide deck and public-code-link PDF. The demonstration video is supplied separately and is not included in the current repository files. Timed human-recording scripts and editor cues remain available. [Reference annotations and results](eval/type2diabetes/results/reference-audit-2026-11-23/README.md) preserve actual values, source checks, first-run results and limitations. The frozen baseline remains ten core records plus one separate active-study exclusion.
 
 ## Repository map
 
