@@ -1,6 +1,6 @@
 # Architecture and tool contracts
 
-T2D Compass 0.4.0 uses a single FastMCP application with two tools and an optional model-driven agent. `main.py` imports the source package directly, so Databricks can start the app from the complete checkout after installing `requirements.txt`.
+T2D Compass 0.4.1 uses a single FastMCP application with two tools and an optional model-driven agent. `main.py` imports the source package directly, so Databricks can start the app from the complete checkout after installing `requirements.txt`.
 
 ## Responsibilities
 
@@ -13,6 +13,7 @@ T2D Compass 0.4.0 uses a single FastMCP application with two tools and an option
 | `mapping.py` | Evidence-card extraction with original ordering, source paths, missing values and review flags |
 | `webapp.py`, `web/` | Browser search/card workflow, JSON exports and optional assistant |
 | `agent.py`, `agent_prompt.txt` | Tool-use loop, limits, trace recording and scenario harness |
+| `answer_fidelity.py` | Check outcome/timeframe blocks against retrieved cards and retain the original model draft when source-backed output is used |
 | `gateway.py` | Browser Responses adapter using the current user's forwarded Databricks token |
 | `review.py` | Fourteen-group comparison against independently approved reference annotations |
 

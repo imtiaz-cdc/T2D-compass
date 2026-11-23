@@ -1,11 +1,19 @@
-# Source and template provenance
+# Source provenance
 
-The application was originally adapted from [GSA-TTS/mcp-hackathon-template at `6e5fb39`](https://github.com/GSA-TTS/mcp-hackathon-template/tree/6e5fb39b4de044de4f39950ded44fa128416f11a). The original [provenance record](../upstream/PROVENANCE.json) is preserved. Its statement about saved upstream sources refers to the original project workspace, not a promise that all upstream files are duplicated here.
+## Application foundation
 
-On November 12, 2026, this submission was aligned with [current template commit `f39249f`](https://github.com/GSA-TTS/mcp-hackathon-template/tree/f39249f1768309e3ef8b31742390a4f3a656b5f3): a thin entry point, source package, one file per tool, tests, evaluation documentation, environment example and platform deployment configuration. The CI workflow follows the starter's checkout/uv/test pattern and uses the project's locked dependencies and applicable checks. This alignment does not claim that all later upstream implementation changes were merged.
+T2D Compass adapts the [GSA MCP server template](https://github.com/GSA-TTS/mcp-hackathon-template/tree/6e5fb39b4de044de4f39950ded44fa128416f11a), originally captured at commit `6e5fb39b4de044de4f39950ded44fa128416f11a`. The [upstream provenance record](../upstream/PROVENANCE.json) preserves that reference. Original upstream source copies remain in the project workspace.
 
-The original MIT license and Technology Transformation Services copyright are unchanged. T2D-specific code and documentation build on that foundation. Third-party Python dependencies keep their own licenses. Public registry records are source data rather than authored project code; study contributors supply their content.
+On November 12, 2026, the repository was aligned with template commit [`f39249f1768309e3ef8b31742390a4f3a656b5f3`](https://github.com/GSA-TTS/mcp-hackathon-template/tree/f39249f1768309e3ef8b31742390a4f3a656b5f3): a thin entry point, source package, one file per tool, tests, evaluation documentation, environment example and deployment configuration. CI follows the template's checkout, dependency installation and test pattern using this project's locked dependencies. This records structural alignment, not a merge of every upstream change.
 
-The public source package intentionally excludes unrelated conversation exports, training transcripts, credentials, local environments, historical disease packages and personal team handbooks. Original materials remain preserved in the team's workspace. Historical connector code is explicitly labeled and retained only for regression tests.
+## License
 
-ClinicalTrials.gov is the sole study-data source. The [dataset guide](../data/type2diabetes/README.md), manifests and source hashes document capture and selection. Current model, clinical-review and demonstration gaps are listed in [SUBMISSION.md](SUBMISSION.md).
+The [MIT license](../LICENSE) retains the original Technology Transformation Services copyright notice. Third-party Python dependencies retain their own licenses. ClinicalTrials.gov records are study-source data supplied by registry contributors, rather than project-authored software.
+
+## Data and evaluation records
+
+ClinicalTrials.gov is the sole study-data source. The [dataset guide](../data/type2diabetes/README.md), manifests and source hashes record capture, selection and split assignment. Original snapshots, team review documents and evaluation traces retain their dates and authorship.
+
+The [evaluation report](EVALUATION.md) distinguishes software tests, model runs, reported team assessments and the AI-assisted source-reference audit. The original frozen candidate and first held-out results are preserved separately from later application changes.
+
+Repository content excludes credentials, local environments, private working material and operational troubleshooting. Historical connector code is labeled in [deployment documentation](../deploy/README.md) and retained for regression checks.

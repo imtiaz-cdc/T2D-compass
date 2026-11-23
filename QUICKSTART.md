@@ -60,7 +60,7 @@ uv run python -m alz_compass.verify_http --output eval/type2diabetes/results/my-
 uv run python -m alz_compass.review evaluate --output eval/type2diabetes/results/my-reference-check.json
 ```
 
-The reference check deliberately reports pending/null accuracy until independent answers are approved. It is not an accuracy pass. Use `verify --live` for a separate network check and a new filename. Avoid overwriting dated evidence.
+The last command uses the original human-approval form, whose approval fields remain blank; its accuracy result is therefore null. The completed [source-reference technical audit](eval/type2diabetes/results/reference-audit-2026-11-23/README.md) is a separate record, with reproduction instructions pinned to the original version 0.4.0 candidate. See the [evaluation report](docs/EVALUATION.md) for current results. Use `verify --live` for a separate network check and a new filename. Avoid overwriting dated evidence.
 
 ## Configuration
 

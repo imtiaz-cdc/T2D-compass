@@ -1,17 +1,27 @@
-# November 23 delivery files
+# T2D Compass deliverables
 
-The demonstration video is supplied separately and is not included in the current repository files.
+November 23, 2026 · Application version 0.4.1
 
-- [Timed human recording script PDF](review/T2D-Compass-Human-Recording-Script.pdf)
-- [Editable narration TXT](review/T2D-Compass-Human-Recording-Script.txt)
-- [Editor cue sheet](review/T2D-Compass-Editor-Cue-Sheet.txt)
-- [Evaluation report PDF](02-T2D-Compass-Evaluation-Report.pdf)
-- [Editable presentation PPTX](03-T2D-Compass-Slides.pptx)
-- [Presentation PDF](03-T2D-Compass-Slides.pdf)
-- [Public code-link PDF](04-T2D-Compass-Code-Submission.pdf)
-- [Complete original reference audit](T2D-Compass-Reference-Audit-2026-11-23.zip)
-- [Original November 21 model traces](t2d_eval_runs_traces_2026-11-21.zip)
+## Submission documents
 
-The video, slides and report describe corrected version 0.4.1 and the two earlier verified November 23 hosted checks (11.548 and 11.571 seconds). The new 6:54 video includes three minutes of actual app captures, natural Kokoro synthetic narration and captions. Pauses are edited; it is not a continuous screen recording. Its fresh assistant demonstration completed in 11.091 seconds and is documented separately from historical evaluation counts. The report preserves the seven-page original evaluation after the current release addendum. The original 0.4.0 source audit and first held-out results remain unchanged.
+| Document | Format |
+| --- | --- |
+| [Evaluation report](02-T2D-Compass-Evaluation-Report.pdf) | PDF |
+| [Public code submission](04-T2D-Compass-Code-Submission.pdf) | PDF |
 
-Raw current live traces stay in the local delivery package. Operational diagnostics and administrator correspondence are separate. Preparing and publishing these files is not a claim that an event form has been submitted or that independent clinical approval was obtained.
+The final presentation and demo video are distributed separately.
+
+## Supporting evidence
+
+| Record | Contents |
+| --- | --- |
+| [Reference audit](T2D-Compass-Reference-Audit-2026-11-23.zip) | Original sources, reference annotations, source reconciliation, and comparison results |
+| [Scenario traces](t2d_eval_runs_traces_2026-11-21.zip) | 24 November 21 model executions across 12 scenarios |
+| [Team evaluation report](review/MCP_document_final.docx) | Original supplied report |
+| [Reviewer 1 assessment](review/Individual_reviewer1.docx) | Original supplied reviewer document |
+| [Reviewer 2 assessment](review/Individual_reviewer2.docx) | Original supplied reviewer document |
+| [Demonstration check](review/Live-Demonstration-Check.txt) | Separate November 23 app observation |
+
+The [evaluation guide](../../docs/EVALUATION.md) explains the methods, version boundaries, and review status. The original 0.4.0 source audit and first held-out comparison are retained unchanged; the 0.4.1 validation is recorded separately.
+
+Download integrity checks are available in [SHA256SUMS](SHA256SUMS).

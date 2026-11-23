@@ -1,6 +1,6 @@
-# Type 2 diabetes starter source set
+# Type 2 diabetes source dataset
 
-Captured October 28, 2026 from the public ClinicalTrials.gov API for T2D Compass. This new baseline is separate from the preserved Alzheimer and obesity source sets and their historical reports. ClinicalTrials.gov remains the only project source.
+Captured October 28, 2026 from the public ClinicalTrials.gov API for T2D Compass. These frozen records support reproducible extraction checks and model scenarios. ClinicalTrials.gov is the only study-data source.
 
 `manifest.json` contains **10 core records: six development and four held-out**. `manifest-agent.json` contains the six development records plus one active interventional exclusion; the exclusion is outside the accuracy benchmark. The snapshot reader loads development records only unless held-out inclusion is explicitly requested for approved evaluation.
 
@@ -32,10 +32,12 @@ All six core development records are completed and interventional at capture. Th
 
 One development-query candidate was [NCT05024032](https://clinicaltrials.gov/study/NCT05024032), an obesity/overweight study whose title says participants were without type 2 diabetes. Its labels did not establish type 2 diabetes, so it was excluded. This illustrates why a disease query alone is insufficient: source relevance needs an explicit screen and human review.
 
-## Review and evaluation status
+## Reference audit and evaluation
 
-[review/reference-annotations.json](review/reference-annotations.json) is blank and pending independent review. All 14 expected field groups per record remain unannotated. Mohammad and Chinelo should prepare source-first references and approve them independently; generated cards must not be substituted for reference answers. Keep held-out answers out of development and prompt tuning.
+The [completed source-reference audit](../../eval/type2diabetes/results/reference-audit-2026-11-23/README.md) contains annotations for all 14 field groups across ten records, source locations and hashes, reconciliation records and first-run comparison results. Two assistant source-reading passes prepared the references before comparison with the frozen version 0.4.0 candidate. Results were **84/84 development groups, 56/56 held-out groups and 10/10 whole cards matched**. This technical audit is separate from independent human clinical approval.
 
-The [capture checks](../../eval/type2diabetes/results/fixture-validation.json) verify record counts, strata, hashes and scenario placeholders. The [actual snapshot binding checks](../../eval/type2diabetes/results/binding-validation.json) verify the current reader and service, including posted/unposted records, intervention search, active exclusion, absent ID and no-match behavior. The [reference readiness check](../../eval/type2diabetes/results/pending-reference-check.json) correctly reports six pending development references and zero compared cards. These are mechanical checks, not clinical validation or real-model evaluation.
+The original [review/reference-annotations.json](review/reference-annotations.json) remains a blank human-review form. Its approval fields were not replaced by the technical audit, so the approval-gated scorer still reports null accuracy. The [original readiness check](../../eval/type2diabetes/results/pending-reference-check.json) retains its six unapproved development references and zero compared cards. Keep held-out answers out of implementation and prompt tuning.
+
+The [capture checks](../../eval/type2diabetes/results/fixture-validation.json) verify counts, strata, hashes and scenario placeholders. The [snapshot binding checks](../../eval/type2diabetes/results/binding-validation.json) verify reader and service behavior, including posted/unposted records, intervention search, active exclusion, absent ID and no-match behavior. The [evaluation report](../../docs/EVALUATION.md) separates these checks from the 24 completed snapshot model executions, reported team assessments and version 0.4.1 hosted checks.
 
 The expanded 24-record benchmark has not been collected for type 2 diabetes. Preserve this baseline and agree on broader clinical relevance/diversity criteria before expansion and evaluation.

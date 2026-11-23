@@ -1,22 +1,31 @@
-# T2D Compass demonstration script
+# App walkthrough
 
-Recording status: **pending**. This is a rehearsal plan, not a claim that a video or model run exists. The team recommends approximately six to seven minutes, subject to the organizer's confirmed instructions. See [SUBMISSION.md](SUBMISSION.md) for the kickoff wording and remaining checks.
+This walkthrough covers search, evidence-card review and an assistant answer with an inspectable tool trace. The demonstration video is distributed separately.
 
-| Approximate segment | Demonstration |
-| --- | --- |
-| 0:00–0:45 | Explain the researcher's repeated registry-review task and the app's two-tool scope. State source mode, version and demonstration date. |
-| 0:45–2:00 | Search for three completed T2D intervention studies. Show exact search criteria, bounded coverage and condition-label screening. |
-| 2:00–3:15 | Open an evidence card, inspect an outcome/timeframe or enrollment label, follow the source link and download its JSON. |
-| 3:15–4:15 | Explain completed status versus posted results and eligibility versus enrolled characteristics. Show an out-of-scope or invalid-input example. |
-| 4:15–5:30 | If verified, ask the assistant to retrieve a card and show its actual tool trace. Otherwise explicitly demonstrate tools only and retain the pending model status. |
-| 5:30–6:30 | Present software checks separately from model and clinical review. Explain what remains pending and the app's research limits. |
+Use an authorized [Databricks app session](https://t2d-compass-7474654188777746.aws.databricksapps.com/) or the [local snapshot setup](../QUICKSTART.md). Confirm the source mode before starting: live registry records can differ from the preserved snapshots.
 
-Suggested assistant question after the model route works:
+## 1. Find completed studies
 
-> Retrieve the evidence card for NCT03244800. Describe its design, enrollment with its actual/estimated label, interventions and primary outcomes with timeframes. Show results availability, source links and review flags. Do not rank treatments or infer treatment benefit.
+Search for `MEDI0382` with a limit of three candidates. Inspect the returned study identifiers and the search-coverage note. The tool checks completed/interventional status and supported type 2 diabetes condition labels within a bounded candidate set; it is not an exhaustive literature search.
 
-For a broader tested question, request three completed T2D intervention candidates and a card for each. Inspect actual tool calls before describing the task as successful. The snapshot examples are frozen October 28, 2026; current live records may differ.
+## 2. Open an evidence card
 
-`NCT05790681` is the frozen completed/no-posted-results example and has pediatric context. `NCT05743387` is the separate active-study exclusion. Snapshot direct lookup of that exclusion requires `data/type2diabetes/manifest-agent.json`; the default core manifest intentionally omits it.
+Open `NCT03244800`. Review the study design, enrollment and its actual/estimated label, eligibility, arms, interventions and primary outcomes. Follow the ClinicalTrials.gov source link and export the card as JSON.
 
-Save the accepted source revision, source mode, model identity (when used), trace, video link and reviewer/date together. Keep private account screens and credentials out of the recording. A video of tool use does not replace a scored model evaluation.
+## 3. Check outcomes in context
+
+Read each primary outcome together with its full timeframe, including before-meal and after-meal boundaries. Inspect source paths and review flags. Missing fields remain missing. Eligibility and enrollment labels should not be presented as measured treatment outcomes.
+
+## 4. Ask the assistant and inspect the trace
+
+Use this question:
+
+> Prepare a source-linked evidence card for NCT03244800. Include design, enrollment, interventions, each primary outcome and its timeframe, and results availability.
+
+Inspect the actual card-tool call, retrieved evidence, model draft and final answer. Export the trace. Version 0.4.1 checks the required outcome/timeframe blocks and can display source-backed cards when a block is changed or omitted. The trace retains the draft and check result.
+
+## 5. Distinguish completion from results
+
+Open `NCT05790681` and inspect status, posted-results availability and population context. The preserved snapshot is a completed study without posted results and includes pediatric eligibility. A completed study alone does not establish results or effectiveness.
+
+The [evaluation report](EVALUATION.md) separates this workflow from the frozen model scenarios, reference audit and selected hosted checks. A successful demonstration is not a substitute for those evaluations.
